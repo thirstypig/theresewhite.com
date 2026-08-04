@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# theresewhite.com
 
-## Getting Started
+Marketing site for **L. Therese White** — employment mediator and workplace
+conflict coach, Culver City CA. A rebuild of her live Wix site as a static
+Next.js export.
 
-First, run the development server:
+The site has one job: get an HR leader or general counsel with a live,
+emotionally-charged conflict to book a confidential assessment.
+
+| | |
+|---|---|
+| **Dev port** | **3160** (block 3160–3169 — see [PORTS.md](./PORTS.md)) |
+| **Stack** | Next.js 16 (App Router), Tailwind v4, TypeScript, static export |
+| **Staging** | https://theresewhite.bahtzang.com (GitHub Pages, `noindex`) |
+| **Production** | https://www.theresewhite.com — still on Wix, not yet cut over |
+| **Deploy** | Push to `main` → GitHub Actions → Pages. See [DEPLOY.md](./DEPLOY.md) |
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3160
+npm run build    # static export to ./out
+npm run serve    # preview the built output on :3160
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+There is no `npm start`: `output: "export"` produces static files with no Node
+server to run.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things live
 
-## Learn More
+```
+src/content/site.ts     All page copy. Edit here, never in components.
+src/content/legal.ts    Privacy and terms text.
+src/lib/site-config.ts  Deployment URL + the staging noindex switch.
+src/components/         Shared UI.
+src/app/                One folder per route.
+public/logos/           Panel and affiliation logos, normalized to uniform tiles.
+```
 
-To learn more about Next.js, take a look at the following resources:
+**Copy is migrated verbatim** from the live Wix site, with one exception: the
+About page is drafted, marked `DRAFT COPY` in `site.ts`, and awaits Therese's
+own words. Nothing biographical was invented.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content that still needs a human
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **About page** — assembled from claims evidenced elsewhere on the site. Needs
+  rewriting in her voice.
+- **Privacy and terms** — generic templates, not reviewed by a lawyer.
+- **EEOC and Kenneth Cloke** entries in `credentials` — read off cropped logo
+  images, so worth confirming.
 
-## Deploy on Vercel
+## Design notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Palette is carried over from the live Wix theme (`color_36`–`color_65`): deep
+teal `#22495A`, slate `#486573`, sand `#D8C7BD`, cream `#F4EFEB`, charcoal
+`#414141`. Dark mode is derived from the same hues rather than inverted.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tokens in `globals.css` are named for their **role**, not their colour —
+`heading`, `btn-fg`, `band-fg` — because the colour flips between themes and
+the role doesn't. Using colour names here is how you end up with dark text on
+dark buttons.
+
+## Analytics and consent
+
+Microsoft Clarity (`xxajqpw2g7`) and GA4 (`G-4QVRMZJVWS`) are both gated behind
+the cookie banner and only load in production builds. Nothing fires in `npm run
+dev`, and nothing fires until a visitor accepts — so GA4 will under-report
+compared to an ungated install. That is deliberate.
+
+The contact form carries `data-clarity-mask="True"`: visitors describe
+confidential workplace conflicts there, and session replay must never capture
+it.
+
+## Contact form
+
+Static hosting means no server to receive a POST. Set
+`NEXT_PUBLIC_FORM_ENDPOINT` to a Formspree or Web3Forms URL to enable the form;
+leave it unset and `/contact` shows phone and email instead, rather than a form
+that silently goes nowhere.
+
+## Not in scope (yet)
+
+Blog, newsletter, pricing plans, and booking were all dropped from the Wix site
+by agreement. `workplace-conflict-calculator-COMPLETE.html` sits in the repo
+root awaiting its own landing page — it is not part of the build.
+
+The 15 Wix redirects can't run on GitHub Pages (no server to issue a 301).
+They're preserved as a table in [DEPLOY.md](./DEPLOY.md) and must be restored
+at cutover, or every existing link and search ranking breaks.

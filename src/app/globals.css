@@ -1,26 +1,226 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Palette carried over from the live Wix site's applied theme
+ * (Wix color_36–color_65):
+ *
+ *   #FFFFFF  white     #F4EFEB  cream     #D8C7BD  sand
+ *   #22495A  deep      #486573  slate     #414141  charcoal
+ *
+ * Tokens are named for their ROLE, not their colour, because the colour
+ * changes between themes and the role doesn't. `heading` is the display
+ * colour whatever theme you're in; `deep` is the literal brand teal and stays
+ * put. Getting this wrong is how dark modes end up with dark text on dark
+ * buttons.
+ *
+ * The dark theme is derived from the same hues rather than inverted: the page
+ * ground is the brand teal taken almost to black, surfaces are the same teal
+ * lifted slightly, and text warms towards the cream so it never reads as cold
+ * grey on blue.
+ */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  /* Surfaces */
+  --paper: #ffffff;
+  --cream: #f4efeb;
+  --band: #22495a;
+
+  /* Text on those surfaces */
+  --heading: #22495a;
+  --charcoal: #414141;
+  --muted: #6e6e6b;
+  --slate: #486573;
+
+  /* Lines */
+  --rule: #e3ddd8;
+  --rule-strong: #d8c7bd;
+
+  /* Primary button */
+  --btn: #22495a;
+  --btn-fg: #ffffff;
+  --btn-hover: #486573;
+
+  /* Link underline decoration */
+  --accent-line: #d8c7bd;
+
+  /*
+   * Constants. These always sit on the dark band, which is dark in both
+   * themes, so they must not flip.
+   */
+  --sand: #d8c7bd;
+  --deep: #22495a;
+  --band-fg: #f7f4f0;
+  --band-muted: #b6c4cb;
+  --band-rule: #3c6274;
+
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #0f1d22;
+    --cream: #16272e;
+    --band: #1b3540;
+
+    --heading: #ede4dc;
+    --charcoal: #c7d0d2;
+    --muted: #8fa1a7;
+    --slate: #9db0b6;
+
+    --rule: #27383f;
+    --rule-strong: #33505c;
+
+    --btn: #d8c7bd;
+    --btn-fg: #16303a;
+    --btn-hover: #eadcd2;
+
+    --accent-line: #5e7a85;
+
+    color-scheme: dark;
   }
 }
 
+/* The viewer's explicit choice wins over the OS preference, both directions. */
+:root[data-theme="dark"] {
+  --paper: #0f1d22;
+  --cream: #16272e;
+  --band: #1b3540;
+
+  --heading: #ede4dc;
+  --charcoal: #c7d0d2;
+  --muted: #8fa1a7;
+  --slate: #9db0b6;
+
+  --rule: #27383f;
+  --rule-strong: #33505c;
+
+  --btn: #d8c7bd;
+  --btn-fg: #16303a;
+  --btn-hover: #eadcd2;
+
+  --accent-line: #5e7a85;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --paper: #ffffff;
+  --cream: #f4efeb;
+  --band: #22495a;
+
+  --heading: #22495a;
+  --charcoal: #414141;
+  --muted: #6e6e6b;
+  --slate: #486573;
+
+  --rule: #e3ddd8;
+  --rule-strong: #d8c7bd;
+
+  --btn: #22495a;
+  --btn-fg: #ffffff;
+  --btn-hover: #486573;
+
+  --accent-line: #d8c7bd;
+
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-cream: var(--cream);
+  --color-band: var(--band);
+
+  --color-heading: var(--heading);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-slate: var(--slate);
+
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+
+  --color-btn: var(--btn);
+  --color-btn-fg: var(--btn-fg);
+  --color-btn-hover: var(--btn-hover);
+
+  --color-accent-line: var(--accent-line);
+
+  --color-sand: var(--sand);
+  --color-deep: var(--deep);
+  --color-band-fg: var(--band-fg);
+  --color-band-muted: var(--band-muted);
+  --color-band-rule: var(--band-rule);
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-mono: var(--font-martian-mono), ui-monospace, monospace;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+/*
+ * Signature: the hero's opposing positions settle inward on load, and the
+ * divide between them draws down. One orchestrated moment; the rest is still.
+ */
+@keyframes settle-left {
+  from { opacity: 0; transform: translateX(-1.25rem); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes settle-right {
+  from { opacity: 0; transform: translateX(1.25rem); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes draw-rule {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+.settle-left  { animation: settle-left  0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.settle-right { animation: settle-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.rise         { animation: rise         0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.draw-rule    { transform-origin: top; animation: draw-rule 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--btn);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Inside a dark band the button colour can be too dark to see as an outline. */
+.on-dark :focus-visible {
+  outline-color: var(--sand);
 }

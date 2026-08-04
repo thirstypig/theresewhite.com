@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Workplace Conflict Calculator | Therese White</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); min-height: 100vh; padding: 20px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2.3em; margin-bottom: 15px; font-weight: 800; line-height: 1.2; }
+        .header .subtitle { font-size: 1.2em; opacity: 0.95; font-weight: 400; line-height: 1.5; }
+        .intro { padding: 40px 30px; background: #f0f9ff; border-bottom: 3px solid #bfdbfe; }
+        .intro h3 { font-size: 1.3em; color: #1e40af; margin: 25px 0 15px 0; }
+        .intro h3:first-child { margin-top: 0; }
+        .intro p { font-size: 1.1em; line-height: 1.8; color: #475569; margin-bottom: 15px; }
+        .intro .callout { background: #dbeafe; border-left: 4px solid #2563eb; padding: 20px; margin: 25px 0; font-weight: 500; color: #1e40af; border-radius: 8px; font-size: 1.05em; line-height: 1.7; }
+        .calculator-section { padding: 40px 30px; }
+        .section-header { background: #1e40af; color: white; padding: 15px 20px; margin: 0 -30px 30px -30px; font-size: 1.3em; font-weight: 700; }
+        .input-group { margin-bottom: 35px; }
+        .input-group label { display: block; font-size: 1.1em; font-weight: 600; margin-bottom: 10px; color: #1e40af; }
+        .input-group input[type="number"] { width: 100%; padding: 15px; font-size: 1.1em; border: 2px solid #bfdbfe; border-radius: 10px; transition: all 0.3s; }
+        .input-group input[type="number"]:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+        .input-group .helper-text { font-size: 0.9em; color: #64748b; margin-top: 5px; font-style: italic; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .slider-group { margin-bottom: 35px; }
+        .slider-group label { display: block; font-size: 1.1em; font-weight: 600; margin-bottom: 10px; color: #1e40af; }
+        .slider-container { position: relative; padding: 20px 0; }
+        .slider-value { display: inline-block; background: #2563eb; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 1em; margin-bottom: 10px; }
+        input[type="range"] { width: 100%; height: 8px; border-radius: 5px; background: #bfdbfe; outline: none; -webkit-appearance: none; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #2563eb; cursor: pointer; transition: all 0.3s; }
+        input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); background: #1e40af; }
+        input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: #2563eb; cursor: pointer; border: none; transition: all 0.3s; }
+        .calculate-btn { width: 100%; padding: 20px; font-size: 1.3em; font-weight: 700; color: white; background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4); }
+        .calculate-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5); }
+        .results { display: none; padding: 40px 30px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-top: 4px solid #2563eb; animation: slideIn 0.5s ease-out; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .results.active { display: block; }
+        .results h2 { font-size: 2em; margin-bottom: 15px; color: #1e40af; text-align: center; }
+        .results .intro-text { text-align: center; font-size: 1.1em; color: #1e40af; margin-bottom: 30px; line-height: 1.6; }
+        .time-summary { background: white; border-radius: 12px; padding: 20px; margin-bottom: 30px; text-align: center; border: 2px solid #2563eb; }
+        .time-summary .duration { font-size: 1.8em; font-weight: 900; color: #2563eb; }
+        .loss-section { background: white; border-radius: 12px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .loss-section h3 { font-size: 1.6em; margin-bottom: 20px; color: #1e40af; text-align: center; padding-bottom: 15px; border-bottom: 2px solid #bfdbfe; }
+        .cost-breakdown { margin-bottom: 20px; }
+        .cost-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #e0e7ff; }
+        .cost-item:last-child { border-bottom: none; }
+        .cost-label { font-size: 1.05em; font-weight: 500; color: #475569; }
+        .cost-amount { font-size: 1.2em; font-weight: 700; color: #2563eb; }
+        .total-box { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); color: white; padding: 25px; border-radius: 12px; text-align: center; margin-top: 20px; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3); }
+        .total-box .label { font-size: 1.2em; margin-bottom: 10px; opacity: 0.95; }
+        .total-box .amount { font-size: 1.8em; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .projection-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+        .projection-table th { background: #1e40af; color: white; padding: 15px; text-align: left; font-weight: 600; }
+        .projection-table td { padding: 15px; border-bottom: 1px solid #e0e7ff; }
+        .projection-table tr:last-child td { border-bottom: none; }
+        .projection-table .category-cell { font-weight: 500; color: #475569; }
+        .projection-table .amount-cell { text-align: right; font-weight: 700; color: #2563eb; }
+        .projection-table .total-row { background: #f0f9ff; font-weight: 700; }
+        .projection-table .total-row td { padding: 20px 15px; font-size: 1.1em; }
+        .reality-check { background: white; border-radius: 12px; padding: 25px; margin: 25px 0; border-left: 5px solid #2563eb; }
+        .reality-check h3 { font-size: 1.5em; margin-bottom: 15px; color: #1e40af; }
+        .reality-check p { font-size: 1.05em; line-height: 1.7; color: #475569; margin-bottom: 12px; }
+        .footer { padding: 30px; text-align: center; background: #f0f9ff; color: #64748b; font-size: 0.95em; }
+        .author { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 30px; background: white; border-top: 1px solid #bfdbfe; text-align: center; }
+        .author-info h4 { font-size: 1.2em; color: #1e40af; margin-bottom: 5px; }
+        .author-info p { font-size: 0.95em; color: #64748b; }
+        .disclaimer { padding: 20px 30px; text-align: center; background: #f8fafc; color: #94a3b8; font-size: 0.85em; line-height: 1.6; border-top: 1px solid #e2e8f0; }
+        @media (max-width: 768px) { .header h1 { font-size: 1.8em; } .header .subtitle { font-size: 1em; } .two-column { grid-template-columns: 1fr; } .total-box .amount { font-size: 1.5em; } .projection-table { font-size: 0.9em; } .projection-table th, .projection-table td { padding: 10px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💸 The Workplace Conflict Calculator</h1>
+            <p class="subtitle">Quantify The Financial Impact Of Unresolved Conflict Between Two Valuable Team Members</p>
+        </div>
+
+        <div class="intro">
+            <h3>What This Calculator Does</h3>
+            <p>This tool calculates the financial impact of unresolved conflict between two important team members. It provides two critical figures: what the conflict has already cost your organization, and what you can expect to lose over the next 12 months if the situation continues.</p>
+            <p><strong>Anticipated Future Conflict Costs:</strong> Use this calculator proactively to forecast the potential financial impact of emerging conflicts before they escalate. By modeling different scenarios and productivity loss percentages, you can make informed decisions about when and how to intervene, helping you prevent costly outcomes rather than just measuring damage after the fact.</p>
+
+            <h3>Key Benefits</h3>
+            <div class="callout">
+                <strong>Quantify Hidden Costs:</strong> See the real dollar impact of productivity losses and time wasted managing the conflict.
+                <br><br>
+                <strong>Make Data-Driven Decisions:</strong> Use concrete numbers to justify intervention and allocate resources appropriately.
+                <br><br>
+                <strong>Account for Future Impact:</strong> Projections show the compounding cost of inaction over 3, 6, and 12 months.
+            </div>
+
+            <h3>How to Use This Calculator</h3>
+            <p><strong>1. Enter Basic Information:</strong> Input the conflict duration, salaries of both individuals, and details about affected team members.</p>
+            <p><strong>2. Adjust Impact Sliders:</strong> Use the sliding scales to estimate productivity losses and time spent managing the conflict.</p>
+            <p><strong>3. Review Results:</strong> The calculator will show past losses (already incurred) and projected costs at 3, 6, and 12-month intervals.</p>
+        </div>
+
+        <div class="calculator-section">
+            <div class="section-header">Tell Me About Your Situation</div>
+            
+            <div class="input-group">
+                <label for="conflictDuration">How long has this conflict been going on? (weeks)</label>
+                <input type="number" id="conflictDuration" placeholder="e.g., 24" value="24" min="1">
+                <div class="helper-text">Enter the duration in weeks since the conflict began</div>
+            </div>
+
+            <div class="input-group">
+                <label for="sunkLosses">Sunk Losses Already Incurred (Optional)</label>
+                <input type="number" id="sunkLosses" placeholder="e.g., 50000" value="">
+                <div class="helper-text">Enter any direct losses already occurred due to this conflict (e.g., lost client contracts, missed sales opportunities, failed deadlines, project delays, damaged business relationships).</div>
+            </div>
+
+            <h3 style="margin: 40px 0 25px 0; color: #1e40af; font-size: 1.4em;">The Two People in Conflict</h3>
+
+            <div class="two-column">
+                <div class="input-group">
+                    <label for="person1Salary">Person #1 Annual Salary</label>
+                    <input type="number" id="person1Salary" placeholder="e.g., 125000" value="125000">
+                </div>
+
+                <div class="input-group">
+                    <label for="person2Salary">Person #2 Annual Salary</label>
+                    <input type="number" id="person2Salary" placeholder="e.g., 110000" value="110000">
+                </div>
+            </div>
+
+            <h3 style="margin: 40px 0 25px 0; color: #1e40af; font-size: 1.4em;">The Ripple Effect</h3>
+
+            <div class="input-group">
+                <label for="affectedTeam">How many other people are directly affected by this conflict?</label>
+                <input type="number" id="affectedTeam" placeholder="e.g., 12" value="12">
+                <div class="helper-text">Include teams, direct reports, and colleagues who work with both individuals</div>
+            </div>
+
+            <div class="input-group">
+                <label for="avgTeamSalary">What's the average salary of those affected people?</label>
+                <input type="number" id="avgTeamSalary" placeholder="e.g., 75000" value="75000">
+            </div>
+
+            <h3 style="margin: 40px 0 25px 0; color: #1e40af; font-size: 1.4em;">The Impact On Productivity/Performance</h3>
+
+            <div class="slider-group">
+                <label>How much is their conflict hurting THEIR productivity?</label>
+                <div class="slider-container">
+                    <div class="slider-value"><span id="mainProductivityValue">25</span>% productivity loss</div>
+                    <input type="range" id="mainProductivityLoss" min="0" max="100" value="25">
+                </div>
+                <div class="helper-text">Consider time spent in unproductive meetings, communication delays, and avoidance behaviors</div>
+            </div>
+
+            <div class="slider-group">
+                <label>How much is the conflict affecting the people around them?</label>
+                <div class="slider-container">
+                    <div class="slider-value"><span id="teamProductivityValue">15</span>% productivity loss</div>
+                    <input type="range" id="teamProductivityLoss" min="0" max="100" value="15">
+                </div>
+                <div class="helper-text">Account for all non-work-related distractions, workaround strategies, inefficiencies, and reductions in performance of duties.</div>
+            </div>
+
+            <div class="slider-group">
+                <label>How much of your time wasted/distracted</label>
+                <div class="slider-container">
+                    <div class="slider-value"><span id="managementValue">6</span> hours per week</div>
+                    <input type="range" id="managementHours" min="0" max="40" value="6">
+                </div>
+                <div class="helper-text">How many hours per week do you spend dealing with this conflict?</div>
+            </div>
+
+            <div class="input-group">
+                <label for="userSalary">Your Annual Salary (Optional)</label>
+                <input type="number" id="userSalary" placeholder="Leave blank if you prefer not to disclose" value="">
+                <div class="helper-text">Used to calculate the cost of your time. If left blank, your time cost will be set to $0.</div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateConflictCost()">Calculate Financial Impact</button>
+        </div>
+
+        <div class="results" id="results">
+            <h2>Your Monetary Cost of Unresolved Conflict Analysis</h2>
+            <p class="intro-text">Based on the information provided, here is the financial impact of this workplace conflict.</p>
+
+            <div class="time-summary">
+                <div class="duration" id="durationDisplay">0 Weeks of Unresolved Conflict</div>
+            </div>
+
+            <div class="loss-section">
+                <h3>💔 What You've Already Lost</h3>
+                <div class="cost-breakdown">
+                    <div class="cost-item">
+                        <span class="cost-label">Lost productivity (the two in conflict)</span>
+                        <span class="cost-amount" id="pastMainProductivity">$0</span>
+                    </div>
+                    <div class="cost-item">
+                        <span class="cost-label">Lost productivity (affected team members)</span>
+                        <span class="cost-amount" id="pastTeamProductivity">$0</span>
+                    </div>
+                    <div class="cost-item">
+                        <span class="cost-label">Your time wasted</span>
+                        <span class="cost-amount" id="pastManagementTime">$0</span>
+                    </div>
+                    <div class="cost-item" id="sunkLossesItem" style="display: none;">
+                        <span class="cost-label">Sunk losses (direct damages)</span>
+                        <span class="cost-amount" id="pastSunkLosses">$0</span>
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div class="label">Money Already Gone</div>
+                    <div class="amount" id="totalPastLoss">$0</div>
+                </div>
+            </div>
+
+            <div class="loss-section">
+                <h3>📉 What You'll Lose If Nothing Changes</h3>
+                
+                <table class="projection-table">
+                    <thead>
+                        <tr>
+                            <th>Cost Category</th>
+                            <th style="text-align: right;">Next 3 Months</th>
+                            <th style="text-align: right;">Next 6 Months</th>
+                            <th style="text-align: right;">Next 12 Months</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="category-cell">Lost productivity (the two in conflict)</td>
+                            <td class="amount-cell" id="future3MainProductivity">$0</td>
+                            <td class="amount-cell" id="future6MainProductivity">$0</td>
+                            <td class="amount-cell" id="future12MainProductivity">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="category-cell">Lost productivity (affected team members)</td>
+                            <td class="amount-cell" id="future3TeamProductivity">$0</td>
+                            <td class="amount-cell" id="future6TeamProductivity">$0</td>
+                            <td class="amount-cell" id="future12TeamProductivity">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="category-cell">Your time wasted</td>
+                            <td class="amount-cell" id="future3ManagementTime">$0</td>
+                            <td class="amount-cell" id="future6ManagementTime">$0</td>
+                            <td class="amount-cell" id="future12ManagementTime">$0</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>Total Projected Loss</strong></td>
+                            <td class="amount-cell" id="total3MonthLoss">$0</td>
+                            <td class="amount-cell" id="total6MonthLoss">$0</td>
+                            <td class="amount-cell" id="total12MonthLoss">$0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="loss-section">
+                <h3>💰 Total Financial Impact</h3>
+                
+                <table class="projection-table">
+                    <thead>
+                        <tr>
+                            <th>Time Period</th>
+                            <th style="text-align: right;">Total Impact (Past + Future)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="category-cell"><strong>Past + Next 3 Months</strong></td>
+                            <td class="amount-cell" id="grandTotal3">$0</td>
+                        </tr>
+                        <tr>
+                            <td class="category-cell"><strong>Past + Next 6 Months</strong></td>
+                            <td class="amount-cell" id="grandTotal6">$0</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td><strong>Past + Next 12 Months</strong></td>
+                            <td class="amount-cell" id="grandTotal12">$0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="text-align: center; color: #64748b; margin-top: 15px; font-style: italic;">Money already lost plus projected future costs</p>
+            </div>
+
+            <div class="reality-check">
+                <h3>Understanding These Costs</h3>
+                <p>The figures above represent real financial impact to your organization. Past losses reflect money already spent on reduced productivity and management intervention.</p>
+                <p>Future projections show the compounding effect of unresolved conflict over time. These costs will continue to accumulate until the underlying issues are addressed.</p>
+                <p><strong>Key Considerations:</strong></p>
+                <p>• Lost productivity compounds as conflict duration increases</p>
+                <p>• Management time diverted from strategic priorities has significant opportunity costs</p>
+                <p>• Team morale and engagement are negatively affected, impacting broader organizational performance</p>
+            </div>
+
+            <div class="reality-check">
+                <h3>Recommended Next Steps</h3>
+                <p>Organizations that successfully resolve conflicts between valuable team members typically employ structured intervention approaches that include:</p>
+                <p><strong>Professional Mediation:</strong> Engaging experienced conflict resolution specialists who can facilitate constructive dialogue and relationship repair.</p>
+                <p><strong>Skills Development:</strong> Providing both parties with communication and emotional intelligence training to prevent future escalation.</p>
+                <p><strong>Structural Changes:</strong> Adjusting workflows, reporting structures, or collaboration processes to reduce friction points.</p>
+                <p><strong>Ongoing Support:</strong> Implementing follow-up mechanisms to ensure sustainable resolution and prevent recurrence.</p>
+                <p>The goal is not simply conflict cessation, but restoration of collaborative working relationships that enable both individuals to contribute their full value to the organization.</p>
+            </div>
+        </div>
+
+        <div class="author">
+            <div class="author-info">
+                <h4>L. Therese White</h4>
+                <p>Employment Mediator & Workplace Conflict Resolution Specialist</p>
+                <p>📞 323-291-4813 | ✉️ Therese@ThereseWhite.com</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Kennedy White, Inc. | All Rights Reserved</p>
+        </div>
+
+        <div class="disclaimer">
+            <p><strong>Legal Disclaimer:</strong> This calculator is provided for illustrative and educational purposes only. The calculations and projections are estimates based on user-provided inputs and generalized assumptions. Results should not be considered as financial advice, legal counsel, or guaranteed outcomes. Actual costs and impacts may vary significantly based on specific circumstances, organizational factors, and other variables not captured by this tool. Kennedy White, Inc. and L. Therese White make no representations or warranties regarding the accuracy, completeness, or reliability of the information provided. Users are encouraged to consult with qualified professionals for specific guidance related to their unique situations.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mainProductivityLoss').addEventListener('input', function() {
+            document.getElementById('mainProductivityValue').textContent = this.value;
+        });
+
+        document.getElementById('teamProductivityLoss').addEventListener('input', function() {
+            document.getElementById('teamProductivityValue').textContent = this.value;
+        });
+
+        document.getElementById('managementHours').addEventListener('input', function() {
+            document.getElementById('managementValue').textContent = this.value;
+        });
+
+        function calculateConflictCost() {
+            const conflictDuration = parseFloat(document.getElementById('conflictDuration').value) || 0;
+            const sunkLosses = parseFloat(document.getElementById('sunkLosses').value) || 0;
+            const person1Salary = parseFloat(document.getElementById('person1Salary').value) || 0;
+            const person2Salary = parseFloat(document.getElementById('person2Salary').value) || 0;
+            const affectedTeam = parseFloat(document.getElementById('affectedTeam').value) || 0;
+            const avgTeamSalary = parseFloat(document.getElementById('avgTeamSalary').value) || 0;
+            const mainProductivityLoss = parseFloat(document.getElementById('mainProductivityLoss').value) / 100;
+            const teamProductivityLoss = parseFloat(document.getElementById('teamProductivityLoss').value) / 100;
+            const managementHours = parseFloat(document.getElementById('managementHours').value);
+            const userSalary = parseFloat(document.getElementById('userSalary').value) || 0;
+
+            // PAST LOSSES (weeks-based)
+            const weeklyMainProductivity = ((person1Salary + person2Salary) / 52) * mainProductivityLoss;
+            const pastMainProductivity = weeklyMainProductivity * conflictDuration;
+
+            const weeklyTeamProductivity = (affectedTeam * avgTeamSalary / 52) * teamProductivityLoss;
+            const pastTeamProductivity = weeklyTeamProductivity * conflictDuration;
+
+            let pastManagementTime = 0;
+            if (userSalary > 0) {
+                const userHourlyCost = userSalary / (50 * 40);
+                const weeklyManagementCost = managementHours * userHourlyCost;
+                pastManagementTime = weeklyManagementCost * conflictDuration;
+            }
+
+            const totalPastLoss = pastMainProductivity + pastTeamProductivity + pastManagementTime + sunkLosses;
+
+            // FUTURE LOSSES (weeks-based, no salary increase)
+            const weeklyFutureMainProductivity = ((person1Salary + person2Salary) / 52) * mainProductivityLoss;
+            const weeklyFutureTeamProductivity = (affectedTeam * avgTeamSalary / 52) * teamProductivityLoss;
+            
+            let weeklyFutureManagementTime = 0;
+            if (userSalary > 0) {
+                const userFutureHourlyCost = userSalary / (50 * 40);
+                weeklyFutureManagementTime = managementHours * userFutureHourlyCost;
+            }
+
+            // 3-MONTH (13 weeks)
+            const future3MainProductivity = weeklyFutureMainProductivity * 13;
+            const future3TeamProductivity = weeklyFutureTeamProductivity * 13;
+            const future3ManagementTime = weeklyFutureManagementTime * 13;
+            const total3MonthLoss = future3MainProductivity + future3TeamProductivity + future3ManagementTime;
+
+            // 6-MONTH (26 weeks)
+            const future6MainProductivity = weeklyFutureMainProductivity * 26;
+            const future6TeamProductivity = weeklyFutureTeamProductivity * 26;
+            const future6ManagementTime = weeklyFutureManagementTime * 26;
+            const total6MonthLoss = future6MainProductivity + future6TeamProductivity + future6ManagementTime;
+
+            // 12-MONTH (52 weeks)
+            const future12MainProductivity = weeklyFutureMainProductivity * 52;
+            const future12TeamProductivity = weeklyFutureTeamProductivity * 52;
+            const future12ManagementTime = weeklyFutureManagementTime * 52;
+            const total12MonthLoss = future12MainProductivity + future12TeamProductivity + future12ManagementTime;
+
+            // GRAND TOTALS
+            const grandTotal3 = totalPastLoss + total3MonthLoss;
+            const grandTotal6 = totalPastLoss + total6MonthLoss;
+            const grandTotal12 = totalPastLoss + total12MonthLoss;
+
+            // DISPLAY
+            document.getElementById('durationDisplay').textContent = conflictDuration + ' Week' + (conflictDuration !== 1 ? 's' : '') + ' of Unresolved Conflict';
+            
+            document.getElementById('pastMainProductivity').textContent = '$' + Math.round(pastMainProductivity).toLocaleString();
+            document.getElementById('pastTeamProductivity').textContent = '$' + Math.round(pastTeamProductivity).toLocaleString();
+            document.getElementById('pastManagementTime').textContent = '$' + Math.round(pastManagementTime).toLocaleString();
+            
+            if (sunkLosses > 0) {
+                document.getElementById('sunkLossesItem').style.display = 'flex';
+                document.getElementById('pastSunkLosses').textContent = '$' + Math.round(sunkLosses).toLocaleString();
+            } else {
+                document.getElementById('sunkLossesItem').style.display = 'none';
+            }
+            
+            document.getElementById('totalPastLoss').textContent = '$' + Math.round(totalPastLoss).toLocaleString();
+
+            document.getElementById('future3MainProductivity').textContent = '$' + Math.round(future3MainProductivity).toLocaleString();
+            document.getElementById('future3TeamProductivity').textContent = '$' + Math.round(future3TeamProductivity).toLocaleString();
+            document.getElementById('future3ManagementTime').textContent = '$' + Math.round(future3ManagementTime).toLocaleString();
+            document.getElementById('total3MonthLoss').textContent = '$' + Math.round(total3MonthLoss).toLocaleString();
+
+            document.getElementById('future6MainProductivity').textContent = '$' + Math.round(future6MainProductivity).toLocaleString();
+            document.getElementById('future6TeamProductivity').textContent = '$' + Math.round(future6TeamProductivity).toLocaleString();
+            document.getElementById('future6ManagementTime').textContent = '$' + Math.round(future6ManagementTime).toLocaleString();
+            document.getElementById('total6MonthLoss').textContent = '$' + Math.round(total6MonthLoss).toLocaleString();
+
+            document.getElementById('future12MainProductivity').textContent = '$' + Math.round(future12MainProductivity).toLocaleString();
+            document.getElementById('future12TeamProductivity').textContent = '$' + Math.round(future12TeamProductivity).toLocaleString();
+            document.getElementById('future12ManagementTime').textContent = '$' + Math.round(future12ManagementTime).toLocaleString();
+            document.getElementById('total12MonthLoss').textContent = '$' + Math.round(total12MonthLoss).toLocaleString();
+
+            document.getElementById('grandTotal3').textContent = '$' + Math.round(grandTotal3).toLocaleString();
+            document.getElementById('grandTotal6').textContent = '$' + Math.round(grandTotal6).toLocaleString();
+            document.getElementById('grandTotal12').textContent = '$' + Math.round(grandTotal12).toLocaleString();
+
+            const resultsSection = document.getElementById('results');
+            resultsSection.classList.add('active');
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>

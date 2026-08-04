@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3160",
     "build": "next build",
-    "start": "next start",
+    "serve": "npx serve out -l 3160",
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.3.0",
     "next": "16.3.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
