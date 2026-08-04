@@ -23,6 +23,7 @@ export const privacy = {
       heading: "What this site collects",
       body: [
         "If you use the contact form, we receive what you type into it: your name, email, organization, role, phone number if you give one, how urgent the matter is, and your description of the situation. That goes to Therese and is used to respond to you and prepare for a conversation. Nothing more.",
+      "The form is delivered by Web3Forms, which passes the message to Therese's inbox and acts as a processor on our behalf. It is not used to build a marketing list.",
         "If you email or call instead, we hold whatever you send us, for the same purpose.",
         "The site also collects anonymous usage data through the analytics tools described below. That data is about how pages are used, not about who you are.",
       ],

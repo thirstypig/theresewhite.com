@@ -1,22 +1,24 @@
 import { contact } from "@/content/site";
+import { SITE_URL } from "@/lib/site-config";
 
 /**
- * Static contact form.
+ * Contact form, posting to Web3Forms.
  *
- * On a static host there's no server to receive a POST, so the form submits
- * directly to a form-handling endpoint set via NEXT_PUBLIC_FORM_ENDPOINT
- * (Formspree, Web3Forms, or anything else that accepts a plain form POST).
+ * A static host has no server to receive a POST, so the form submits directly
+ * to Web3Forms (https://web3forms.com) — no JavaScript, so it works before
+ * hydration and with JS disabled entirely.
  *
- * With no endpoint configured we don't render a form that quietly goes
- * nowhere — a broken form is worse than no form. Direct contact details show
- * instead. When the site moves to a host with a server, this goes back to the
- * Resend server action.
+ * With no access key configured we don't render a form that quietly goes
+ * nowhere; direct contact details show instead. A broken form is worse than
+ * no form.
  *
- * No client JavaScript: validation is HTML5, so the form works before hydration
- * and would still work with JS disabled entirely.
+ * The access key is public by design — it lives in client HTML and only
+ * identifies which inbox to deliver to. It is not a secret, but keep it in a
+ * repo variable so it can be rotated without a code change.
  */
 
-const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
+const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+const ENDPOINT = "https://api.web3forms.com/submit";
 
 const fieldClass =
   "mt-2 w-full rounded-sm border border-rule bg-paper px-3.5 py-2.5 text-base text-charcoal outline-none transition-colors focus:border-btn";
@@ -52,7 +54,7 @@ function Field({
   );
 }
 
-function NoEndpointFallback() {
+function NoKeyFallback() {
   return (
     <div className="border-l-2 border-rule-strong pl-6">
       <h2 className="display text-2xl text-heading">Get in touch</h2>
@@ -84,20 +86,22 @@ function NoEndpointFallback() {
 }
 
 export function ContactForm() {
-  if (!FORM_ENDPOINT) return <NoEndpointFallback />;
+  if (!ACCESS_KEY) return <NoKeyFallback />;
 
   return (
     /* Clarity records sessions. This form invites someone to describe a
        confidential conflict — possibly naming employees and allegations — so
        it is masked explicitly rather than trusting the default masking mode. */
     <form
-      action={FORM_ENDPOINT}
+      action={ENDPOINT}
       method="POST"
       data-clarity-mask="True"
       className="flex flex-col gap-6"
     >
       <div className="grid gap-6 sm:grid-cols-2">
         <Field label="Your name" name="name" required autoComplete="name" />
+        {/* Web3Forms uses the field literally named `email` as the reply-to,
+            so replying to the notification reaches the sender directly. */}
         <Field
           label="Email"
           name="email"
@@ -145,24 +149,29 @@ export function ContactForm() {
         </span>
       </p>
 
-      {/* Honeypot — hidden from people, catches most bots. */}
-      <input
-        type="text"
-        name="_gotcha"
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        className="absolute left-[-9999px] h-0 w-0 opacity-0"
-      />
-
-      {/* Where to send the visitor afterwards. Formspree reads `_next`,
-          Web3Forms reads `redirect`; sending both keeps this portable. */}
-      <input type="hidden" name="_next" value="/contact/thank-you/" />
-      <input type="hidden" name="redirect" value="/contact/thank-you/" />
+      <input type="hidden" name="access_key" value={ACCESS_KEY} />
       <input
         type="hidden"
-        name="_subject"
+        name="subject"
         value="Assessment request from theresewhite.com"
+      />
+      <input type="hidden" name="from_name" value="theresewhite.com" />
+      {/* Web3Forms requires an absolute https URL here; a relative path is
+          ignored and the visitor lands on Web3Forms' own success page. */}
+      <input
+        type="hidden"
+        name="redirect"
+        value={`${SITE_URL}/contact/thank-you/`}
+      />
+
+      {/* Web3Forms' honeypot. Must be named exactly `botcheck` — a differently
+          named decoy field is submitted as ordinary form data and ignored. */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        aria-hidden="true"
+        className="hidden"
       />
 
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3">

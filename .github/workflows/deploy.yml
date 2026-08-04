@@ -23,9 +23,11 @@ jobs:
       NEXT_PUBLIC_SITE_URL: https://theresewhite.bahtzang.com
       NEXT_PUBLIC_CLARITY_ID: xxajqpw2g7
       NEXT_PUBLIC_GA_ID: G-4QVRMZJVWS
-      # Set this once a form provider is chosen; until then the contact page
-      # shows direct phone and email instead of a form that goes nowhere.
-      NEXT_PUBLIC_FORM_ENDPOINT: ${{ vars.NEXT_PUBLIC_FORM_ENDPOINT }}
+      # Web3Forms access key. Public by design (it ships in the HTML), but
+      # kept as a repo variable so it can be rotated without a code change.
+      # Until it is set, the contact page shows phone and email instead of a
+      # form that goes nowhere.
+      NEXT_PUBLIC_WEB3FORMS_KEY: ${{ vars.NEXT_PUBLIC_WEB3FORMS_KEY }}
     steps:
       - uses: actions/checkout@v4
 
