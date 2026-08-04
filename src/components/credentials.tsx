@@ -32,9 +32,20 @@ function LogoRow({ items }: { items: readonly Item[] }) {
   );
 }
 
-export function Credentials() {
+/**
+ * `surface` exists because pages alternate paper/cream for rhythm, and this
+ * block appears at different points in that sequence. Hardcoding a background
+ * put two identical surfaces back-to-back on Home and About.
+ */
+export function Credentials({
+  surface = "cream",
+}: {
+  surface?: "paper" | "cream";
+}) {
   return (
-    <section className="border-b border-rule bg-paper">
+    <section
+      className={`border-b border-rule ${surface === "cream" ? "bg-cream" : "bg-paper"}`}
+    >
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         <p className="label text-muted">{credentials.title}</p>
 

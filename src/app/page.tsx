@@ -29,7 +29,7 @@ export default function HomePage() {
 
       {/* Qualification before persuasion — unusual, and the strongest thing
           on the page. It stays near the top for that reason. */}
-      <section className="border-b border-rule bg-cream">
+      <section className="border-b border-rule bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <h2 className="display max-w-2xl text-3xl text-heading sm:text-4xl">
             {beforeWeTalk.title}
@@ -48,7 +48,7 @@ export default function HomePage() {
       </section>
 
       {/* Three reasons. Not a sequence, so no numbers. */}
-      <section className="border-b border-rule bg-paper">
+      <section className="border-b border-rule bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <p className="label text-muted">Why me</p>
           <h2 className="display mt-4 max-w-3xl text-3xl text-heading sm:text-4xl">
@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       {/* A real ordered sequence, so it earns its numbers. */}
-      <section className="border-b border-rule bg-cream">
+      <section className="border-b border-rule bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <p className="label text-muted">The process</p>
           <h2 className="display mt-4 max-w-3xl text-3xl text-heading sm:text-4xl">

@@ -58,23 +58,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #0f1d22;
-    --cream: #16272e;
-    --band: #1b3540;
+    --paper: #15252c;
+    --cream: #1c313a;
+    --band: #24404c;
 
     --heading: #ede4dc;
-    --charcoal: #c7d0d2;
-    --muted: #8fa1a7;
+    --charcoal: #ccd6d8;
+    --muted: #97a9af;
     --slate: #9db0b6;
 
-    --rule: #27383f;
-    --rule-strong: #33505c;
+    --rule: #2f454f;
+    --rule-strong: #3c5c69;
 
     --btn: #d8c7bd;
     --btn-fg: #16303a;
     --btn-hover: #eadcd2;
 
-    --accent-line: #5e7a85;
+    --accent-line: #6c8996;
 
     color-scheme: dark;
   }
@@ -82,23 +82,23 @@
 
 /* The viewer's explicit choice wins over the OS preference, both directions. */
 :root[data-theme="dark"] {
-  --paper: #0f1d22;
-  --cream: #16272e;
-  --band: #1b3540;
+  --paper: #15252c;
+  --cream: #1c313a;
+  --band: #24404c;
 
   --heading: #ede4dc;
-  --charcoal: #c7d0d2;
-  --muted: #8fa1a7;
+  --charcoal: #ccd6d8;
+  --muted: #97a9af;
   --slate: #9db0b6;
 
-  --rule: #27383f;
-  --rule-strong: #33505c;
+  --rule: #2f454f;
+  --rule-strong: #3c5c69;
 
   --btn: #d8c7bd;
   --btn-fg: #16303a;
   --btn-hover: #eadcd2;
 
-  --accent-line: #5e7a85;
+  --accent-line: #6c8996;
 
   color-scheme: dark;
 }
