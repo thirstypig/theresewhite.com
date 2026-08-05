@@ -6,6 +6,8 @@
     "dev": "next dev -p 3160",
     "build": "next build",
     "serve": "npx serve out -l 3160",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "eslint"
   },
   "dependencies": {
@@ -22,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }

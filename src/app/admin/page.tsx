@@ -90,6 +90,19 @@ const pages = [
   { path: "/admin/todo", note: "Outstanding work, from src/content/todos.ts" },
 ];
 
+const tests = [
+  {
+    file: "src/lib/conflict-cost.test.ts",
+    count: 8,
+    note: "Calculator arithmetic, pinned to a golden vector from the original HTML",
+  },
+  {
+    file: "src/lib/site-config.test.ts",
+    count: 7,
+    note: "The staging noindex switch — guards against both a crawlable duplicate and deindexing the live site",
+  },
+];
+
 function Card({
   title,
   children,
@@ -222,6 +235,31 @@ export default function AdminPage() {
                 </dd>
               </div>
             </dl>
+          </Card>
+
+          <Card title="Tests">
+            <p className="text-sm leading-relaxed text-charcoal">
+              {tests.reduce((n, t) => n + t.count, 0)} tests via{" "}
+              <code className="font-mono text-heading">npm test</code> (Vitest).
+              They run in CI before the build, so a failure blocks the deploy.
+            </p>
+            <ul className="mt-4 space-y-3">
+              {tests.map((t) => (
+                <li key={t.file} className="border-b border-rule pb-3">
+                  <code className="font-mono text-sm text-heading">
+                    {t.file}
+                  </code>
+                  <span className="ml-2 text-sm text-muted">
+                    · {t.count} tests
+                  </span>
+                  <p className="mt-1 text-sm text-muted">{t.note}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm leading-relaxed text-muted">
+              Page components and copy are deliberately untested — asserting
+              that the copy is the copy costs maintenance and prevents nothing.
+            </p>
           </Card>
 
           <Card title="Changing the admin password">

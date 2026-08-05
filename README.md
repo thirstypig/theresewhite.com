@@ -18,6 +18,7 @@ emotionally-charged conflict to book a confidential assessment.
 ```bash
 npm install
 npm run dev      # http://localhost:3160
+npm test         # vitest, unit tests only
 npm run build    # static export to ./out
 npm run serve    # preview the built output on :3160
 ```
@@ -39,6 +40,20 @@ src/components/         Shared UI.
 src/app/                One folder per route.
 public/logos/           Panel and affiliation logos, normalized to uniform tiles.
 ```
+
+## Tests
+
+`npm test` — Vitest, node environment, 15 tests across two files. They run in
+CI before the build, so a failure blocks the deploy.
+
+| File | What it protects |
+|---|---|
+| `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to a golden vector verified against the original HTML. These figures may already be in Therese's proposals — a "cleanup" that changes them is the regression this exists to catch. |
+| `src/lib/site-config.test.ts` | The staging `noindex` switch. Fails in two directions: a crawlable duplicate competing with her live site, or the launched site shipping `noindex` and vanishing from search. |
+
+Deliberately **not** tested: page components and copy. Asserting that the copy
+is the copy is a maintenance cost with no regression behind it. If you can't
+name the failure a test prevents, don't add it.
 
 ## Documentation sweep
 

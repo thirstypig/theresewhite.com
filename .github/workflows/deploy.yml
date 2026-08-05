@@ -53,6 +53,7 @@ jobs:
           cache: npm
 
       - run: npm ci
+      - run: npm test
       - run: npm run build
 
       # A 200 on / proves nothing here: the HTML is always fine, it's the
