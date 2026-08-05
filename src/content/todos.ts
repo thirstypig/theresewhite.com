@@ -51,6 +51,17 @@ export const todos: Todo[] = [
     added: "2026-08-05",
   },
   {
+    id: "youtube-account",
+    title: "Move the homepage video to Therese's YouTube account",
+    detail:
+      "The video (6DDxPMJ6L-Q) is published on The Thirsty Pig channel (@thethirstypig3601), confirmed via YouTube's oEmbed. That channel name is visible to visitors — it shows in the player chrome and on 'Watch on YouTube' — which reads oddly on a mediator's site, and it means the asset lives in an account she doesn't control. YouTube cannot transfer a video between accounts, so this means re-uploading from her own channel, which produces a NEW video ID. Update `video.id` in src/content/site.ts when that happens; the thumbnail URL and the click-to-load facade derive from it automatically.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Content",
+    added: "2026-08-05",
+  },
+  {
     id: "about-voice",
     title: "Rewrite the About page in Therese's voice",
     detail:
