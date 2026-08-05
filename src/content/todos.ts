@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-08-04";
+export const TODOS_UPDATED = "2026-08-05";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -32,12 +32,23 @@ export const todos: Todo[] = [
     id: "web3forms-key",
     title: "Set the Web3Forms access key",
     detail:
-      "Until NEXT_PUBLIC_WEB3FORMS_KEY exists as a repo variable, the contact page shows phone and email instead of a form, and the calculator's email gate can't capture anything. Get a key at web3forms.com, add it under Settings → Secrets and variables → Actions → Variables, then re-run the deploy.",
-    status: "open",
+      "Done 2026-08-05. NEXT_PUBLIC_WEB3FORMS_KEY is set as a repo variable and verified live: the contact form renders with the key, the redirect points at /contact/thank-you/, and the fallback is gone. The same key powers the calculator's email gate. The key is public by design — it ships in the page HTML and only routes mail to the verified address, so rotate it if it ever attracts spam.",
+    status: "done",
     owner: "James",
     priority: "blocker",
     area: "Forms",
     added: "2026-08-04",
+  },
+  {
+    id: "web3forms-live-test",
+    title: "Send one real test submission",
+    detail:
+      "Everything is verified up to the point of actually sending — that last step delivers a real email to Therese's inbox, so it needs a person to decide when. Submit the form at /contact/, confirm you land on /contact/thank-you/, that the mail arrives, and that hitting reply reaches the sender rather than a noreply address.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Forms",
+    added: "2026-08-05",
   },
   {
     id: "about-voice",
