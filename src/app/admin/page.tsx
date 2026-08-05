@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AdminGate } from "@/components/admin-gate";
+import { todos } from "@/content/todos";
+
+const openCount = todos.filter((t) => t.status !== "done").length;
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -45,8 +48,18 @@ const links = [
     items: [
       {
         name: "Web3Forms",
-        note: "Delivers the contact form and the calculator email gate. Free tier is 250 submissions/month.",
+        note: "Delivers the contact form and the calculator email gate. Free tier is 250 submissions/month, shared between the two.",
         href: "https://web3forms.com/",
+      },
+    ],
+  },
+  {
+    group: "Reference",
+    items: [
+      {
+        name: "Proposed sitemap & information architecture",
+        note: "The audit of the live Wix site, the approved page structure, the navigation model and the redirect map. Private to James's claude.ai account.",
+        href: "https://claude.ai/code/artifact/60165f6a-2c91-491b-bfaf-5760bace9958",
       },
     ],
   },
@@ -73,6 +86,8 @@ const pages = [
   { path: "/conflict-calculator", note: "Ad landing page. Unlinked and noindex until the campaign runs." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
   { path: "/terms", note: "Generic template — not lawyer-reviewed" },
+  { path: "/admin", note: "This page. Gated, noindex." },
+  { path: "/admin/todo", note: "Outstanding work, from src/content/todos.ts" },
 ];
 
 function Card({
@@ -222,24 +237,21 @@ export default function AdminPage() {
             </pre>
           </Card>
 
-          <Card title="Still outstanding">
-            <ul className="space-y-2.5 text-sm text-charcoal">
-              <li className="border-b border-rule pb-2.5">
-                About page copy — currently drafted, needs Therese&rsquo;s voice
-              </li>
-              <li className="border-b border-rule pb-2.5">
-                Privacy and terms — generic templates, want a lawyer&rsquo;s eye
-              </li>
-              <li className="border-b border-rule pb-2.5">
-                Confirm the EEOC and Kenneth Cloke credential entries — both
-                read off cropped logos
-              </li>
-              <li className="border-b border-rule pb-2.5">
-                Wix cutover: restore the 15 redirects, flip{" "}
-                <code className="font-mono">NEXT_PUBLIC_SITE_URL</code> to the
-                production domain, submit to Search Console
-              </li>
-            </ul>
+          <Card title="Outstanding work">
+            <p className="text-sm leading-relaxed text-charcoal">
+              {openCount} open item{openCount === 1 ? "" : "s"}, tracked in{" "}
+              <code className="font-mono text-heading">
+                src/content/todos.ts
+              </code>{" "}
+              and refreshed by the{" "}
+              <code className="font-mono text-heading">/doc</code> sweep.
+            </p>
+            <Link
+              href="/admin/todo"
+              className="mt-4 inline-block rounded-sm bg-btn px-5 py-2.5 text-sm font-medium text-btn-fg transition-colors hover:bg-btn-hover"
+            >
+              Open the todo list
+            </Link>
           </Card>
         </div>
       </section>

@@ -32,11 +32,27 @@ server to run.
 ```
 src/content/site.ts     All page copy. Edit here, never in components.
 src/content/legal.ts    Privacy and terms text.
+src/content/todos.ts    Outstanding work. Backs /admin/todo.
 src/lib/site-config.ts  Deployment URL + the staging noindex switch.
+src/lib/conflict-cost.ts  Calculator maths, ported verbatim from the original.
 src/components/         Shared UI.
 src/app/                One folder per route.
 public/logos/           Panel and affiliation logos, normalized to uniform tiles.
 ```
+
+## Documentation sweep
+
+`/doc` keeps the docs in sync. Its surface for this project:
+
+| File | Role |
+|---|---|
+| `README.md` | This file — update when top-level architecture changes |
+| `DEPLOY.md` | Deploy steps, DNS, the Wix redirect map, cutover checklist |
+| `src/content/todos.ts` | **Admin data.** Backs `/admin/todo`. Mark shipped items `done` rather than deleting them, add anything new, and bump `TODOS_UPDATED` |
+| `src/app/admin/page.tsx` | Page inventory, palette and type reference — refresh when routes or tokens change |
+
+There is no `CHANGELOG.md` or `ROADMAP.md`; the git log and `todos.ts` cover
+both. Don't create them without asking.
 
 **Copy is migrated verbatim** from the live Wix site, with one exception: the
 About page is drafted, marked `DRAFT COPY` in `site.ts`, and awaits Therese's

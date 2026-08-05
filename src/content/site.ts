@@ -73,8 +73,8 @@ export const proof = [
  * screenshots, and reproducing federal seals and trademarks needs the real
  * assets and usually permission. Names alone still carry the credential.
  *
- * TODO(therese): confirm the EEOC and Kenneth Cloke entries — both logos were
- * cropped in Wix's rendering, so those two are read with less certainty.
+ * The EEOC and Kenneth Cloke logos were cropped in Wix's rendering and so were
+ * read with less certainty; Therese confirmed both on 2026-08-04.
  */
 export const credentials = {
   title: "Panels and affiliations",
