@@ -31,6 +31,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Nothing in the toolchain checks this, and getting it wrong is silent:
+      # with the source on "Deploy from a branch", the last good artifact keeps
+      # serving, so the site looks fine until the next push republishes the
+      # repo source as a Jekyll site. Fail loudly instead.
+      # See docs/solutions/deployment-issues/nextjs-static-export-github-pages-source-and-subpath.md
+      - name: Assert Pages is on the GitHub Actions source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          build_type=$(gh api "repos/${{ github.repository }}/pages" --jq '.build_type')
+          echo "Pages build_type: $build_type"
+          if [ "$build_type" != "workflow" ]; then
+            echo "::error::Pages source is '$build_type', expected 'workflow'. Settings → Pages → Source must be 'GitHub Actions', not 'Deploy from a branch'."
+            exit 1
+          fi
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -38,6 +54,17 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+
+      # A 200 on / proves nothing here: the HTML is always fine, it's the
+      # root-absolute /_next/* paths that break when the served root isn't the
+      # site root. Check the built output instead of trusting the exit code.
+      - name: Assert assets are addressed from the site root
+        run: |
+          if ! grep -q '"/_next/' out/index.html; then
+            echo "::error::out/index.html has no root-absolute /_next/ asset paths — did basePath change?"
+            exit 1
+          fi
+          test -f out/CNAME && echo "CNAME present (safety net for branch-deploy only)"
 
       - uses: actions/upload-pages-artifact@v3
         with:

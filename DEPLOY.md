@@ -95,9 +95,17 @@ TTL:    300 (or leave default)
 The value is your GitHub **username**, not the repo name — always
 `<owner>.github.io.` regardless of what the repo is called.
 
-**In GitHub:** Settings → Pages → Custom domain. It should already read
-`theresewhite.bahtzang.com` — `public/CNAME` is committed, so the domain
-persists across deploys instead of being wiped each time.
+**In GitHub:** Settings → Pages → Custom domain → `theresewhite.bahtzang.com`.
+
+This has to be set in Settings (or via the API). A `CNAME` file in the built
+artifact does **not** set it — GitHub's docs are explicit that with a custom
+Actions workflow, "no `CNAME` file is created, and any existing `CNAME` file is
+ignored and is not required." The widespread `touch out/CNAME` advice applies to
+branch-based deploys only.
+
+`public/CNAME` is committed anyway, alongside `public/.nojekyll`: both are
+harmless, and both are the safety net if the Pages source is ever flipped to
+"Deploy from a branch", where the legacy pipeline *does* read them.
 
 Wait for the DNS check to go green, then tick **Enforce HTTPS**. The
 certificate is issued automatically and can take up to an hour.
