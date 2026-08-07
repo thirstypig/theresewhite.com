@@ -1,6 +1,6 @@
 # Port Quick-Reference — All Projects
 > Full registry with reserved blocks, conventions, and conflict-check: **[MASTER-PORTS.md](./MASTER-PORTS.md)**
-> Last Updated: 2026-08-04
+> Last Updated: 2026-08-05
 
 | Project                     | Frontend | API  | WebSocket | PG   | Redis |
 |-----------------------------|----------|------|-----------|------|-------|
@@ -26,4 +26,5 @@
 | jarrenchang                 | 3140     | —    | —         | —    | —     |
 | rhyschang                   | 3150     | —    | —         | —    | —     |
 | theresewhite.com            | 3160     | —    | —         | —    | —     |
-| **FUTURE-5**                | 3170     | 4170 | —         | 5455 | 6394  |
+| minmeychang                 | 3170     | —    | —         | —    | —     |
+| **FUTURE-6**                | 3180     | 4180 | —         | 5456 | 6395  |
