@@ -89,6 +89,8 @@ const pages = [
   { path: "/faq", note: "12 questions, verbatim, with FAQ schema" },
   { path: "/contact", note: "Web3Forms; falls back to phone/email without a key" },
   { path: "/contact/thank-you", note: "Post-submit confirmation. noindex." },
+  { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav." },
+  { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Ad landing page. Unlinked and noindex until the campaign runs." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
   { path: "/terms", note: "Generic template — not lawyer-reviewed" },

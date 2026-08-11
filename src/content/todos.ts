@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-08-05";
+export const TODOS_UPDATED = "2026-08-11";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -126,5 +126,27 @@ export const todos: Todo[] = [
     priority: "normal",
     area: "Content",
     added: "2026-08-04",
+  },
+  {
+    id: "collaborate-voice",
+    title: "Rewrite the /collaborate copy in Therese's voice",
+    detail:
+      "The whole page is drafted, not migrated — the Wix site has no equivalent, so there was nothing to copy. The six handoff descriptions under `partnerTypes` matter most: they assert things about other people's professional boundaries, including whether an ombuds keeps confidentiality over what they learn and whether outside counsel stays lead on the matter. Those need to be right rather than plausible. Copy lives in the `collaborate` export in src/content/site.ts.",
+    status: "open",
+    owner: "Therese",
+    priority: "high",
+    area: "Content",
+    added: "2026-08-11",
+  },
+  {
+    id: "referral-compensation",
+    title: "Decide whether to offer paid referrals",
+    detail:
+      "The page currently says nothing about money in either direction, which was the safe launch position. Before adding any fee, commission or affiliate arrangement, check it against the panel rules Therese is bound by. The Model Standards of Conduct for Mediators govern the AAA/ICDR panel and restrict giving or receiving commissions for referrals, and lawyers cannot split fees with non-lawyers at all — so a paid scheme aimed at employment counsel is the riskiest version. If it goes ahead it likely needs disclosure to clients as well. Reasoning in docs/superpowers/specs/2026-08-11-collaborate-page-design.md.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Business",
+    added: "2026-08-11",
   },
 ];
