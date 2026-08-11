@@ -22,6 +22,7 @@ const NOT_IN_SITEMAP: Record<string, string> = {
   "/conflict-calculator":
     "Unlinked and noindex until the ad campaign runs. Launching it is a todo.",
   "/contact/thank-you": "Post-submit confirmation. noindex.",
+  "/collaborate/thank-you": "Post-submit confirmation. noindex.",
 };
 
 /** Every route in the app directory, derived from the page.tsx files. */
