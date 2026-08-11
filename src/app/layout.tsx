@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Instrument_Sans, Martian_Mono } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
 import { Consent } from "@/components/consent";
 import { contact } from "@/content/site";
 import { SITE_URL, IS_PRODUCTION_SITE } from "@/lib/site-config";
@@ -121,18 +119,15 @@ export default function RootLayout({
           }}
         />
       </head>
+      {/*
+        Deliberately thin. The header, footer and skip link live in
+        src/app/(site)/layout.tsx so landing pages under (landing) can render
+        without them. Everything kept here is needed by both: the document
+        shell, fonts, the pre-paint theme script, JSON-LD and the consent
+        banner, which has to run wherever analytics might load.
+      */}
       <body className="flex min-h-full flex-col">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-sm focus:bg-btn focus:px-4 focus:py-2 focus:text-btn-fg"
-        >
-          Skip to content
-        </a>
-        <SiteHeader />
-        <main id="main" className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
+        {children}
         {/* JSON-LD is built from static content above — no user input reaches
             it. `<` is still escaped so a stray "</script>" in any future copy
             edit can't break out of the tag. */}

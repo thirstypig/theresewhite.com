@@ -25,13 +25,34 @@ const NOT_IN_SITEMAP: Record<string, string> = {
   "/collaborate/thank-you": "Post-submit confirmation. noindex.",
 };
 
-/** Every route in the app directory, derived from the page.tsx files. */
+/**
+ * Every route in the app directory, derived from the page files.
+ *
+ * The folder-name-to-URL mapping is not one-to-one, and getting it wrong
+ * fails in the dangerous direction: a derived path that matches nothing in
+ * the sitemap looks like a missing page, and the honest fix — adding it to
+ * the exclusion list — would permanently hide a real page from this check.
+ *
+ * Route groups are the case that actually bit. Moving the site into
+ * `(site)/` to give landing pages a chrome-free layout changed no URLs, but
+ * turned every derived path into `/(site)/about` and failed all three
+ * assertions at once.
+ */
+const PAGE_FILES = new Set(["page.tsx", "page.ts", "page.jsx", "page.js"]);
+
 function routesInAppDir(dir: string = APP_DIR, prefix = ""): string[] {
   const found: string[] = [];
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.isDirectory()) {
-      found.push(...routesInAppDir(join(dir, entry.name), `${prefix}/${entry.name}`));
-    } else if (entry.name === "page.tsx") {
+      // `_private` folders are opted out of routing by Next entirely.
+      if (entry.name.startsWith("_")) continue;
+      // Route groups `(name)` and parallel-route slots `@slot` organize files
+      // without contributing a URL segment.
+      const isTransparent =
+        /^\(.+\)$/.test(entry.name) || entry.name.startsWith("@");
+      const next = isTransparent ? prefix : `${prefix}/${entry.name}`;
+      found.push(...routesInAppDir(join(dir, entry.name), next));
+    } else if (PAGE_FILES.has(entry.name)) {
       found.push(prefix === "" ? "/" : prefix);
     }
   }
