@@ -70,12 +70,16 @@ name the failure a test prevents, don't add it.
 There is no `CHANGELOG.md` or `ROADMAP.md`; the git log and `todos.ts` cover
 both. Don't create them without asking.
 
-**Copy is migrated verbatim** from the live Wix site, with one exception: the
-About page is drafted, marked `DRAFT COPY` in `site.ts`, and awaits Therese's
-own words. Nothing biographical was invented.
+**Copy is migrated verbatim** from the live Wix site, with two exceptions: the
+About page and the Collaborate page are drafted, marked `DRAFT COPY` in
+`site.ts`, and await Therese's own words. Nothing biographical was invented
+for either.
 
 ## Content that still needs a human
 
+- **Collaborate page** — the whole page is drafted, not migrated; the Wix site
+  has no equivalent. Highest priority open content item — see `collaborate-voice`
+  in `todos.ts`.
 - **About page** — assembled from claims evidenced elsewhere on the site. Needs
   rewriting in her voice.
 - **Privacy and terms** — generic templates, not reviewed by a lawyer.
@@ -100,9 +104,9 @@ the cookie banner and only load in production builds. Nothing fires in `npm run
 dev`, and nothing fires until a visitor accepts — so GA4 will under-report
 compared to an ungated install. That is deliberate.
 
-The contact form carries `data-clarity-mask="True"`: visitors describe
-confidential workplace conflicts there, and session replay must never capture
-it.
+Both the contact form and the Collaborate partner form carry
+`data-clarity-mask="True"`: visitors describe confidential workplace
+conflicts there, and session replay must never capture it.
 
 ## Contact form
 

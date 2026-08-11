@@ -12,7 +12,11 @@ export default function robots(): MetadataRoute.Robots {
   }
 
   return {
-    rules: { userAgent: "*", allow: "/", disallow: "/contact/thank-you" },
+    rules: {
+      userAgent: "*",
+      allow: "/",
+      disallow: ["/contact/thank-you", "/collaborate/thank-you"],
+    },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

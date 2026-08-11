@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { contact } from "@/content/site";
 
+/**
+ * DRAFT COPY: the prose on this page is drafted, not migrated — see the
+ * `collaborate-voice` todo in src/content/todos.ts.
+ */
+
 export const metadata: Metadata = {
   title: "Thanks for reaching out",
   robots: { index: false, follow: true },
