@@ -66,12 +66,14 @@ function NumberField({
 
 function SliderField({
   label,
+  hint,
   value,
   onChange,
   max,
   suffix,
 }: {
   label: string;
+  hint?: string;
   value: number;
   onChange: (n: number) => void;
   max: number;
@@ -94,6 +96,9 @@ function SliderField({
         onChange={(e) => onChange(Number(e.target.value))}
         className="mt-3 w-full accent-[var(--btn)]"
       />
+      {hint ? (
+        <span className="mt-1.5 block text-xs text-muted">{hint}</span>
+      ) : null}
     </p>
   );
 }
@@ -229,9 +234,13 @@ export function ConflictCalculator() {
                       value={inputs.durationWeeks}
                       onChange={(v) => set("durationWeeks", v)}
                     />
+                    {/* The standalone calculator defines this field as direct
+                        business losses, not internal spend. Keeping its
+                        definition — the arithmetic is the same either way, but
+                        the two readings produce very different numbers. */}
                     <NumberField
                       label="Already spent"
-                      hint="Investigations, legal, temp cover."
+                      hint="Direct losses already incurred — lost client contracts, missed sales opportunities, failed deadlines, project delays, damaged business relationships."
                       value={inputs.sunkLosses}
                       onChange={(v) => set("sunkLosses", v)}
                       prefix="$"
@@ -246,6 +255,7 @@ export function ConflictCalculator() {
                   <div className="grid gap-5 sm:grid-cols-2">
                     <NumberField
                       label="Others affected"
+                      hint="Teams, direct reports, and colleagues who work with both individuals."
                       value={inputs.affectedTeam}
                       onChange={(v) => set("affectedTeam", v)}
                     />
@@ -265,6 +275,7 @@ export function ConflictCalculator() {
                   <div className="space-y-7">
                     <SliderField
                       label="Productivity lost by the two"
+                      hint="Time spent in unproductive meetings, communication delays, and avoidance behaviors."
                       value={inputs.mainProductivityLossPct}
                       onChange={(v) => set("mainProductivityLossPct", v)}
                       max={100}
@@ -272,6 +283,7 @@ export function ConflictCalculator() {
                     />
                     <SliderField
                       label="Productivity lost by the team"
+                      hint="Non-work distractions, workaround strategies, inefficiencies, and reduced performance of duties."
                       value={inputs.teamProductivityLossPct}
                       onChange={(v) => set("teamProductivityLossPct", v)}
                       max={100}

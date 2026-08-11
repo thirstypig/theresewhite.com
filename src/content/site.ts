@@ -432,10 +432,121 @@ export const collaborate = {
  * Footer-only links.
  *
  * Kept out of `nav` on purpose. The header is a buying path — every item
- * there answers "should I hire her?" — while /collaborate answers "should I
- * work with her?", asked by a peer. Adding it to `nav` would put it in the
- * header, since the footer builds its list from `nav`.
+ * there answers "should I hire her?" Collaborate answers "should I work with
+ * her?", asked by a peer, and the calculator is an ad landing page that most
+ * visitors reach from paid traffic rather than from browsing. Adding either
+ * to `nav` would put it in the header, since the footer builds its list from
+ * `nav`.
  */
 export const footerNav = [
   { label: "Collaborate", href: "/collaborate" },
+  { label: "Conflict calculator", href: "/conflict-calculator" },
 ] as const;
+
+/**
+ * Supporting copy for /conflict-calculator.
+ *
+ * MIGRATED, not drafted — unlike `about` and `collaborate`, this is carried
+ * over verbatim from `workplace-conflict-calculator-COMPLETE.html` in the repo
+ * root, which is Therese's own standalone version of the tool. The rebuild
+ * brought across the calculator itself and left this explanatory copy behind.
+ *
+ * Wording is unchanged. Two presentational departures from the source: the
+ * decorative emoji in its headings are dropped, because no other heading on
+ * this site carries one, and the "Name: body" items are split at the colon to
+ * suit the dt/dd pattern used everywhere else.
+ *
+ * The source's title-case tagline ("Quantify The Financial Impact Of...") is
+ * deliberately not carried over — the page header already says the same thing
+ * in her voice.
+ */
+export const calculator = {
+  whatItDoes: {
+    title: "What this calculator does",
+    body: [
+      "This tool calculates the financial impact of unresolved conflict between two important team members. It provides two critical figures: what the conflict has already cost your organization, and what you can expect to lose over the next 12 months if the situation continues.",
+      "Anticipated Future Conflict Costs: Use this calculator proactively to forecast the potential financial impact of emerging conflicts before they escalate. By modeling different scenarios and productivity loss percentages, you can make informed decisions about when and how to intervene, helping you prevent costly outcomes rather than just measuring damage after the fact.",
+    ],
+  },
+
+  benefits: {
+    title: "Key benefits",
+    items: [
+      {
+        name: "Quantify hidden costs",
+        body: "See the real dollar impact of productivity losses and time wasted managing the conflict.",
+      },
+      {
+        name: "Make data-driven decisions",
+        body: "Use concrete numbers to justify intervention and allocate resources appropriately.",
+      },
+      {
+        name: "Account for future impact",
+        body: "Projections show the compounding cost of inaction over 3, 6, and 12 months.",
+      },
+    ],
+  },
+
+  howToUse: {
+    title: "How to use this calculator",
+    steps: [
+      {
+        name: "Enter basic information",
+        body: "Input the conflict duration, salaries of both individuals, and details about affected team members.",
+      },
+      {
+        name: "Adjust impact sliders",
+        body: "Use the sliding scales to estimate productivity losses and time spent managing the conflict.",
+      },
+      {
+        name: "Review results",
+        body: "The calculator will show past losses (already incurred) and projected costs at 3, 6, and 12-month intervals.",
+      },
+    ],
+  },
+
+  understanding: {
+    title: "Understanding these costs",
+    body: [
+      "The figures above represent real financial impact to your organization. Past losses reflect money already spent on reduced productivity and management intervention.",
+      "Future projections show the compounding effect of unresolved conflict over time. These costs will continue to accumulate until the underlying issues are addressed.",
+    ],
+    considerationsTitle: "Key considerations",
+    considerations: [
+      "Lost productivity compounds as conflict duration increases",
+      "Management time diverted from strategic priorities has significant opportunity costs",
+      "Team morale and engagement are negatively affected, impacting broader organizational performance",
+    ],
+  },
+
+  nextSteps: {
+    title: "Recommended next steps",
+    intro:
+      "Organizations that successfully resolve conflicts between valuable team members typically employ structured intervention approaches that include:",
+    items: [
+      {
+        name: "Professional mediation",
+        body: "Engaging experienced conflict resolution specialists who can facilitate constructive dialogue and relationship repair.",
+      },
+      {
+        name: "Skills development",
+        body: "Providing both parties with communication and emotional intelligence training to prevent future escalation.",
+      },
+      {
+        name: "Structural changes",
+        body: "Adjusting workflows, reporting structures, or collaboration processes to reduce friction points.",
+      },
+      {
+        name: "Ongoing support",
+        body: "Implementing follow-up mechanisms to ensure sustainable resolution and prevent recurrence.",
+      },
+    ],
+    outro:
+      "The goal is not simply conflict cessation, but restoration of collaborative working relationships that enable both individuals to contribute their full value to the organization.",
+  },
+
+  disclaimer: {
+    title: "Legal disclaimer",
+    body: "This calculator is provided for illustrative and educational purposes only. The calculations and projections are estimates based on user-provided inputs and generalized assumptions. Results should not be considered as financial advice, legal counsel, or guaranteed outcomes. Actual costs and impacts may vary significantly based on specific circumstances, organizational factors, and other variables not captured by this tool. Kennedy White, Inc. and L. Therese White make no representations or warranties regarding the accuracy, completeness, or reliability of the information provided. Users are encouraged to consult with qualified professionals for specific guidance related to their unique situations.",
+  },
+} as const;

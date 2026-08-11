@@ -91,7 +91,7 @@ const pages = [
   { path: "/contact/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav. DRAFT COPY — needs rewriting in Therese's voice" },
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
-  { path: "/conflict-calculator", note: "Ad landing page. Unlinked and noindex until the campaign runs." },
+  { path: "/conflict-calculator", note: "Ad landing page. Footer-linked, but noindex until the campaign runs. Supporting copy is migrated verbatim from workplace-conflict-calculator-COMPLETE.html." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
   { path: "/terms", note: "Generic template — not lawyer-reviewed" },
   { path: "/admin", note: "This page. Gated, noindex." },
