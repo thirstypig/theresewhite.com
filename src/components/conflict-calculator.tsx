@@ -83,7 +83,10 @@ function SliderField({
     <p className="m-0">
       <span className="flex items-baseline justify-between gap-4">
         <label className="label text-muted">{label}</label>
-        <span className="display text-lg text-heading tabular-nums">
+        {/* Mono, not the display serif: globals.css assigns figures to the
+            mono face, and a value that updates while you drag a slider needs
+            fixed-width digits or it visibly jitters. */}
+        <span className="font-mono text-lg tabular-nums text-heading">
           {value}
           {suffix}
         </span>
@@ -136,7 +139,29 @@ function Row({
   );
 }
 
-export function ConflictCalculator() {
+export function ConflictCalculator({
+  ctaHref = cta.href,
+  ctaLabel = cta.short,
+  className = "border-b border-rule bg-paper",
+  fontClass = "display",
+}: {
+  /**
+   * Where the post-unlock button goes. The landing pages override this to an
+   * on-page anchor — they have no nav, so sending someone to /contact would
+   * drop them out of the page they arrived on and end the funnel.
+   */
+  ctaHref?: string;
+  ctaLabel?: string;
+  /** Outer section classes, so a host page can own its own surface. */
+  className?: string;
+  /**
+   * Face for the headings inside the tool. Defaults to the site's display
+   * serif. Landing page A sets the mono face instead — it builds its whole
+   * argument in a ledger voice, and a serif appearing only once the reader
+   * reaches the calculator reads as an inconsistency rather than a choice.
+   */
+  fontClass?: string;
+} = {}) {
   const [inputs, setInputs] = useState<ConflictInputs>(DEFAULTS);
   const [calculated, setCalculated] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
@@ -197,12 +222,12 @@ export function ConflictCalculator() {
 
   return (
     <>
-      <section className="border-b border-rule bg-paper">
+      <section className={className}>
         <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
           <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
             {/* ---------------- Inputs ---------------- */}
             <div>
-              <h2 className="display text-2xl text-heading">
+              <h2 className={`${fontClass} text-2xl text-heading`}>
                 Your situation
               </h2>
               <p className="mt-3 max-w-md text-base leading-relaxed text-charcoal">
@@ -212,7 +237,7 @@ export function ConflictCalculator() {
               </p>
 
               <div className="mt-10 space-y-10">
-                <fieldset className="m-0 border-0 p-0">
+                <fieldset className="border-0 p-0">
                   <legend className="label mb-4 p-0 text-slate">
                     The two people in conflict
                   </legend>
@@ -248,7 +273,7 @@ export function ConflictCalculator() {
                   </div>
                 </fieldset>
 
-                <fieldset className="m-0 border-0 p-0">
+                <fieldset className="border-0 p-0">
                   <legend className="label mb-4 p-0 text-slate">
                     The ripple effect
                   </legend>
@@ -268,7 +293,7 @@ export function ConflictCalculator() {
                   </div>
                 </fieldset>
 
-                <fieldset className="m-0 border-0 p-0">
+                <fieldset className="border-0 p-0">
                   <legend className="label mb-4 p-0 text-slate">
                     The impact
                   </legend>
@@ -323,7 +348,7 @@ export function ConflictCalculator() {
               {!calculated ? (
                 <div className="rounded-sm border border-rule bg-cream p-8">
                   <p className="label text-muted">Your result</p>
-                  <p className="display mt-4 text-2xl text-heading">
+                  <p className={`${fontClass} mt-4 text-2xl text-heading`}>
                     Fill in what you know, then calculate.
                   </p>
                   <p className="mt-4 text-base leading-relaxed text-charcoal">
@@ -340,7 +365,7 @@ export function ConflictCalculator() {
                     conflict
                   </p>
 
-                  <h2 className="display mt-4 text-2xl text-heading">
+                  <h2 className={`${fontClass} mt-4 text-2xl text-heading`}>
                     What you&rsquo;ve already lost
                   </h2>
                   <div className="mt-5">
@@ -372,7 +397,7 @@ export function ConflictCalculator() {
                   {/* The projections are the persuasive part, so they sit
                       behind the email gate; the sunk cost above is given
                       freely so the page proves its worth first. */}
-                  <h2 className="display mt-10 text-2xl text-heading">
+                  <h2 className={`${fontClass} mt-10 text-2xl text-heading`}>
                     If nothing changes
                   </h2>
 
@@ -392,10 +417,10 @@ export function ConflictCalculator() {
                         argument.
                       </p>
                       <Link
-                        href={cta.href}
+                        href={ctaHref}
                         className="mt-6 inline-block rounded-sm bg-btn px-6 py-3.5 text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover"
                       >
-                        {cta.short}
+                        {ctaLabel}
                       </Link>
                     </div>
                   ) : (

@@ -550,3 +550,40 @@ export const calculator = {
     body: "This calculator is provided for illustrative and educational purposes only. The calculations and projections are estimates based on user-provided inputs and generalized assumptions. Results should not be considered as financial advice, legal counsel, or guaranteed outcomes. Actual costs and impacts may vary significantly based on specific circumstances, organizational factors, and other variables not captured by this tool. Kennedy White, Inc. and L. Therese White make no representations or warranties regarding the accuracy, completeness, or reliability of the information provided. Users are encouraged to consult with qualified professionals for specific guidance related to their unique situations.",
   },
 } as const;
+
+/**
+ * Landing-page copy for the LinkedIn campaign.
+ *
+ * DRAFT — written for this campaign, not migrated. The substance of both
+ * landing pages is the `calculator` export above, carried over verbatim from
+ * her own tool; this covers only the wrapper each page needs: the statement
+ * framing used by variant A, the contact section, and the minimal foot that
+ * replaces the site footer.
+ *
+ * TODO(therese): read the statement labels and the contact copy. Everything
+ * else on these pages is already your own words.
+ */
+export const landing = {
+  /** Variant A frames the page as an unpaid invoice. These are its labels. */
+  statement: {
+    eyebrow: "Statement of account",
+    rows: [
+      { label: "Issued to", value: "Your organization" },
+      { label: "Matter", value: "Two people who can't be in the same room" },
+      { label: "Period", value: "Ongoing" },
+    ],
+    amountLabel: "Amount due",
+    amountHint: "Nobody has sent you this bill. You are paying it anyway.",
+    lede: "Unresolved conflict does not sit still and it does not sit free. Work out what this one has cost so far, and what it costs if it runs another year.",
+  },
+
+  talk: {
+    title: "Or just tell me what's going on",
+    intro:
+      "You don't need a number to start a conversation. Tell me the situation in a couple of sentences and I'll tell you honestly whether I'm the right person for it.",
+  },
+
+  foot: {
+    note: "Mediation and coaching services. Not legal advice.",
+  },
+} as const;
