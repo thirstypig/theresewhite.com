@@ -340,3 +340,124 @@ export const endorsements = {
     },
   ],
 } as const;
+
+/**
+ * DRAFT COPY — like `about`, none of this is migrated from the live Wix site,
+ * which has no equivalent page.
+ *
+ * The page addresses allied professionals rather than clients, and says
+ * nothing about money in either direction. That is deliberate: mediator
+ * ethics codes — including the Model Standards of Conduct for Mediators,
+ * which govern the AAA/ICDR panel she sits on — restrict fees for referrals,
+ * and lawyers cannot split fees with non-lawyers at all. A paid model needs
+ * her to check her own panel rules first.
+ *
+ * Reasoning in full:
+ * docs/superpowers/specs/2026-08-11-collaborate-page-design.md
+ *
+ * TODO(therese): rewrite in your own voice. The six handoff descriptions
+ * under `partnerTypes` matter most — they describe other people's
+ * professional boundaries, so they need to be right rather than plausible.
+ */
+export const collaborate = {
+  eyebrow: "Collaborate",
+  title: "Your client stays your client",
+  lede: "I take the conflict, resolve it, and hand the working relationship back to you. I'm not looking for your retainer, your HR work, or your seat at the table.",
+
+  boundaries: {
+    title: "What I don't do",
+    items: [
+      {
+        name: "I don't practice HR.",
+        body: "No policy work, no investigations-for-cause, no restructures. When the fix is procedural, it's yours.",
+      },
+      {
+        name: "I don't give legal advice.",
+        body: "I'm not an attorney — deliberately. Counsel stays counsel.",
+      },
+      {
+        name: "I don't pitch adjacent work.",
+        body: "One conflict, scoped and quoted. If I spot something outside it, I tell you, not your client.",
+      },
+      {
+        name: "I leave.",
+        body: "Follow-up runs a few weeks past the agreement, then I'm gone.",
+      },
+    ],
+  },
+
+  partnerTypes: {
+    title: "Who I work with",
+    items: [
+      {
+        name: "HR leaders and People teams",
+        body: "You own the policy, the record, and the relationship afterwards. I take the conversation you can't be neutral in, because you're also the person who has to manage both of them next quarter.",
+      },
+      {
+        name: "Fractional and interim HR",
+        body: "You're often the only HR in the building, and a live conflict eats the engagement you were actually hired for. I take it off your critical path.",
+      },
+      {
+        name: "Ombuds and internal neutrals",
+        body: "Your confidentiality is yours. I don't ask you to breach it and I don't report back to the organization through you. When a matter needs a documented resolution your office can't produce, I can.",
+      },
+      {
+        name: "Employment counsel, in-house and outside",
+        body: "You stay lead on the matter. I don't give legal advice and I don't touch strategy. I work the part that isn't legal, which is usually the part blocking settlement.",
+      },
+      {
+        name: "Executive and leadership coaches",
+        body: "Coaching one party rarely resolves a two-party conflict. I can take the joint conversation while your coaching relationship stays intact and uncompromised.",
+      },
+      {
+        name: "EAP and workplace wellbeing providers",
+        body: "You're supporting the individual. I'm resolving the dispute between them. Different work, and neither substitutes for the other.",
+      },
+    ],
+  },
+
+  ways: {
+    title: "Four ways to work together",
+    items: [
+      {
+        name: "Refer a matter out",
+        body: "Send the whole thing to me. I scope it, quote it, resolve it, and tell you when it's finished.",
+      },
+      {
+        name: "Bring me in alongside you",
+        body: "Your engagement, your client, your name on it. I do the mediation as part of your programme.",
+      },
+      {
+        name: "Co-deliver a workshop",
+        body: "Conflict prevention training for managers, built with you and taught together.",
+      },
+      {
+        name: "Send me your hard one",
+        body: "The conflict that's stopped responding to everything you've tried. That's the one I want.",
+      },
+    ],
+  },
+
+  reciprocal: {
+    title: "What comes back",
+    body: "I refer out constantly. When the problem turns out to be policy, or legal, or clinical, I say so and name someone — and I'd rather name someone I've actually met.",
+  },
+
+  form: {
+    title: "Introduce yourself",
+    intro: "No obligation and no follow-up sequence. I'd rather know who you are before either of us has a live matter.",
+    otherLabel: "Something else",
+  },
+} as const;
+
+/**
+ * Footer-only links.
+ *
+ * Kept out of `nav` on purpose. The header is a buying path — every item
+ * there answers "should I hire her?" — while /collaborate answers "should I
+ * work with her?", asked by a peer. Adding it to `nav` would put it in the
+ * header, since the footer builds its list from `nav`.
+ */
+export const footerNav = [
+  { label: "Collaborate", href: "/collaborate" },
+] as const;
