@@ -1,5 +1,6 @@
 import { contact } from "@/content/site";
 import { SITE_URL } from "@/lib/site-config";
+import { Field, fieldClass } from "@/components/form-field";
 
 /**
  * Contact form, posting to Web3Forms.
@@ -19,40 +20,6 @@ import { SITE_URL } from "@/lib/site-config";
 
 const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 const ENDPOINT = "https://api.web3forms.com/submit";
-
-const fieldClass =
-  "mt-2 w-full rounded-sm border border-rule bg-paper px-3.5 py-2.5 text-base text-charcoal outline-none transition-colors focus:border-btn";
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-  autoComplete,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-  autoComplete?: string;
-}) {
-  return (
-    <p className="m-0">
-      <label htmlFor={name} className="label text-muted">
-        {label}
-        {required ? "" : " (optional)"}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        autoComplete={autoComplete}
-        className={fieldClass}
-      />
-    </p>
-  );
-}
 
 function NoKeyFallback() {
   return (
