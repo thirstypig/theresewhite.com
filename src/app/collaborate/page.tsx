@@ -22,24 +22,6 @@ export default function CollaboratePage() {
       <section className="border-b border-rule bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <h2 className="display text-3xl text-heading sm:text-4xl">
-            {collaborate.boundaries.title}
-          </h2>
-          <dl className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2">
-            {collaborate.boundaries.items.map((item) => (
-              <div key={item.name} className="border-t border-rule pt-5">
-                <dt className="display text-xl text-heading">{item.name}</dt>
-                <dd className="mt-3 text-base leading-relaxed text-charcoal">
-                  {item.body}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
-      <section className="border-b border-rule bg-cream">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <h2 className="display text-3xl text-heading sm:text-4xl">
             {collaborate.partnerTypes.title}
           </h2>
           <dl className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2">
@@ -56,8 +38,8 @@ export default function CollaboratePage() {
       </section>
 
       {/* Four options, not a sequence — no numbers. Same dl treatment as the
-          two sections above. */}
-      <section className="border-b border-rule bg-paper">
+          section above. */}
+      <section className="border-b border-rule bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <h2 className="display text-3xl text-heading sm:text-4xl">
             {collaborate.ways.title}
@@ -75,7 +57,7 @@ export default function CollaboratePage() {
         </div>
       </section>
 
-      <section className="border-b border-rule bg-cream">
+      <section className="border-b border-rule bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <h2 className="display text-3xl text-heading sm:text-4xl">
             {collaborate.reciprocal.title}
@@ -86,7 +68,7 @@ export default function CollaboratePage() {
         </div>
       </section>
 
-      <section className="bg-paper">
+      <section className="bg-cream">
         <div className="mx-auto max-w-3xl px-6 py-20 sm:py-24">
           <h2 className="display text-3xl text-heading sm:text-4xl">
             {collaborate.form.title}
