@@ -109,7 +109,7 @@ export const todos: Todo[] = [
     id: "wix-cutover",
     title: "Cut over from Wix to theresewhite.com",
     detail:
-      "Four steps, in order: flip NEXT_PUBLIC_SITE_URL to https://www.theresewhite.com (this turns indexing on and restores the sitemap); update public/CNAME; move DNS off Wix, checking for MX records first so her email doesn't stop; and restore the 15 Wix redirects, which GitHub Pages cannot serve. The full redirect table is in DEPLOY.md. Then submit to Search Console.",
+      "Four steps, in order: flip NEXT_PUBLIC_SITE_URL to the production domain (either https://www.theresewhite.com or the apex https://theresewhite.com — both are accepted, and this turns indexing on and restores the sitemap); set the custom domain in Settings → Pages, which is what actually governs it, not the CNAME file; move DNS off Wix, checking for MX records first so her email doesn't stop; and restore the 15 Wix redirects, which GitHub Pages cannot serve. The full redirect table is in DEPLOY.md. Then submit to Search Console.",
     status: "open",
     owner: "James",
     priority: "normal",

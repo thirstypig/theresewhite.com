@@ -61,6 +61,11 @@ const links = [
         note: "The audit of the live Wix site, the approved page structure, the navigation model and the redirect map. Private to James's claude.ai account.",
         href: "https://claude.ai/code/artifact/60165f6a-2c91-491b-bfaf-5760bace9958",
       },
+      {
+        name: "Post-mortem: GitHub Pages static export",
+        note: "Why the github.io URL renders unstyled, why 'Deploy from a branch' breaks nothing until the next push, and why an artifact CNAME is ignored. Read before touching Settings → Pages.",
+        href: `${REPO}/blob/main/docs/solutions/deployment-issues/nextjs-static-export-github-pages-source-and-subpath.md`,
+      },
     ],
   },
 ];
@@ -83,6 +88,7 @@ const pages = [
   { path: "/endorsements", note: "Four endorsements, verbatim" },
   { path: "/faq", note: "12 questions, verbatim, with FAQ schema" },
   { path: "/contact", note: "Web3Forms; falls back to phone/email without a key" },
+  { path: "/contact/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Ad landing page. Unlinked and noindex until the campaign runs." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
   { path: "/terms", note: "Generic template — not lawyer-reviewed" },

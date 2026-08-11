@@ -64,7 +64,8 @@ name the failure a test prevents, don't add it.
 | `README.md` | This file — update when top-level architecture changes |
 | `DEPLOY.md` | Deploy steps, DNS, the Wix redirect map, cutover checklist |
 | `src/content/todos.ts` | **Admin data.** Backs `/admin/todo`. Mark shipped items `done` rather than deleting them, add anything new, and bump `TODOS_UPDATED` |
-| `src/app/admin/page.tsx` | Page inventory, palette and type reference — refresh when routes or tokens change |
+| `src/app/admin/page.tsx` | Page inventory, palette, type and test reference — refresh when routes, tokens or test counts change |
+| `docs/solutions/**` | Post-mortems, one per solved problem. **Append only** — never edit a past write-up; a new occurrence gets a new file |
 
 There is no `CHANGELOG.md` or `ROADMAP.md`; the git log and `todos.ts` cover
 both. Don't create them without asking.
