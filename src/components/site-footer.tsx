@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { contact, nav, legalNav, cta } from "@/content/site";
+import { contact, nav, legalNav, footerNav, cta } from "@/content/site";
 import { CookiePreferencesButton } from "@/components/consent";
 
 export function SiteFooter() {
@@ -40,7 +40,7 @@ export function SiteFooter() {
         <nav aria-label="Footer">
           <p className="label text-band-muted">Pages</p>
           <ul className="mt-4 space-y-2 text-sm text-sand">
-            {[...nav, { label: "Contact", href: cta.href }].map((item) => (
+            {[...nav, { label: "Contact", href: cta.href }, ...footerNav].map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
