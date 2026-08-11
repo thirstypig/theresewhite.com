@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { AssessmentCta } from "@/components/assessment-cta";
 import { services, reasons } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Services",
   description:
     "Mediation, one-on-one coaching, facilitated team discussions, fact-finding interviews, and prevention workshops — matched to the conflict rather than sold as a package.",
-  alternates: { canonical: "/services" },
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

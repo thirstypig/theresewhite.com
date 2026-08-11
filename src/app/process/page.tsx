@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { AssessmentCta } from "@/components/assessment-cta";
 import { process, beforeWeTalk } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "The process",
   description:
     "Interviews, mediation, a signed written agreement, and follow-up coaching in the weeks after. How a workplace conflict actually gets finished rather than quieted.",
-  alternates: { canonical: "/process" },
-};
+  path: "/process",
+});
 
 export default function ProcessPage() {
   return (

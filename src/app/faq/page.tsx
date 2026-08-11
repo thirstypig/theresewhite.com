@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { AssessmentCta } from "@/components/assessment-cta";
 import { faq } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "FAQ",
   description:
     "Straight answers on cost, urgency, toxic high performers, legal exposure, and what to tell your bottom-line bosses about investing in conflict resolution.",
-  alternates: { canonical: "/faq" },
-};
+  path: "/faq",
+});
 
 /** FAQPage markup — one of the few schema types Google still surfaces. */
 const faqSchema = {

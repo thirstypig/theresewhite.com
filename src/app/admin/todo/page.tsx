@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 import { AdminGate } from "@/components/admin-gate";
 import {
@@ -8,10 +9,13 @@ import {
   type TodoPriority,
 } from "@/content/todos";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Todo",
-  robots: { index: false, follow: false },
-};
+  description:
+    "Outstanding work on this build. Password-gated.",
+  path: "/admin/todo",
+  noindex: true,
+});
 
 const PRIORITY_ORDER: Record<TodoPriority, number> = {
   blocker: 0,

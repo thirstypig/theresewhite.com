@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { PartnerForm } from "@/components/partner-form";
 import { collaborate } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Collaborate",
   description:
     "For HR leaders, fractional HR, ombuds, employment counsel and coaches who come across conflicts they can't take on themselves. I resolve the conflict and hand the relationship back.",
-  alternates: { canonical: "/collaborate" },
-};
+  path: "/collaborate",
+});
 
 export default function CollaboratePage() {
   return (

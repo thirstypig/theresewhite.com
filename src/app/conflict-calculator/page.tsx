@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { ConflictCalculator } from "@/components/conflict-calculator";
 import { AssessmentCta } from "@/components/assessment-cta";
@@ -17,13 +18,13 @@ import { calculator } from "@/content/site";
  * calculator both have fixed backgrounds, so the explanatory sections are
  * split around them to keep the sequence intact — see the comments below.
  */
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "The Workplace Conflict Calculator",
   description:
     "Put a number on what an unresolved workplace conflict has already cost you, and what it costs over the next twelve months if nothing changes.",
-  alternates: { canonical: "/conflict-calculator" },
-  robots: { index: false, follow: false },
-};
+  path: "/conflict-calculator",
+  noindex: true,
+});
 
 export default function ConflictCalculatorPage() {
   return (
