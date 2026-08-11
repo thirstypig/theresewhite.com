@@ -6,6 +6,11 @@ import { SiteFooter } from "@/components/site-footer";
 import { Consent } from "@/components/consent";
 import { contact } from "@/content/site";
 import { SITE_URL, IS_PRODUCTION_SITE } from "@/lib/site-config";
+import {
+  OG_IMAGE,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+} from "@/lib/page-metadata";
 
 /* Display: high-contrast serif — authority with a pulse. */
 const fraunces = Fraunces({
@@ -29,9 +34,8 @@ const martianMono = Martian_Mono({
   display: "swap",
 });
 
-const title = `${contact.name} — Employment Mediator & Workplace Conflict Coach`;
-const description =
-  "Employment mediation and workplace conflict coaching for organizations with a conflict internal processes can't resolve. 30+ years, 1,100+ mediations. Confidential assessment, no pitch.";
+const title = SITE_TITLE;
+const description = SITE_DESCRIPTION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -45,14 +49,20 @@ export const metadata: Metadata = {
     siteName: contact.name,
     locale: "en_US",
     type: "website",
+    // Named explicitly to override the opengraph-image.tsx convention, which
+    // would otherwise inject the extensionless `/opengraph-image` path here.
+    // GitHub Pages serves that as application/octet-stream. See OG_IMAGE.
+    images: [OG_IMAGE],
   },
-  // Every other page sets this through pageMetadata(). The homepage does not
-  // go through that helper, so without this it would keep Next's default
-  // `summary` card and share as a thumbnail while the rest share wide.
+  // Every page, homepage included, sets its own through pageMetadata(). This
+  // is the fallback for any page added later that forgets to — without it,
+  // such a page would silently ship Next's default `summary` card and share
+  // as a thumbnail while the rest of the site shares wide.
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: [OG_IMAGE],
   },
   // Staging must never be indexed — it would compete with the live Wix site
   // for her own name and split the ranking.
