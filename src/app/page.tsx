@@ -1,9 +1,31 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/hero";
 import { VideoPlayer } from "@/components/video-player";
 import { AssessmentCta } from "@/components/assessment-cta";
 import { Credentials } from "@/components/credentials";
 import { pullQuote, beforeWeTalk, reasons, process } from "@/content/site";
+import {
+  pageMetadata,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+} from "@/lib/page-metadata";
+
+/*
+ * The homepage needs its own metadata even though the root layout already
+ * describes the site. Without it, the opengraph-image.tsx file convention
+ * attaches to the root segment and wins over anything the layout sets, so
+ * the homepage alone would advertise the extensionless /opengraph-image
+ * path that GitHub Pages serves as application/octet-stream.
+ *
+ * A page-level openGraph replaces the parent's, which is how every other
+ * page already gets /og.png. This puts the homepage on the same footing.
+ */
+export const metadata: Metadata = pageMetadata({
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  path: "/",
+});
 
 export default function HomePage() {
   return (

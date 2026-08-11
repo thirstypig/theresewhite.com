@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3160",
-    "build": "next build",
+    "build": "next build && cp out/opengraph-image out/og.png",
     "serve": "npx serve out -l 3160",
     "test": "vitest run",
     "test:watch": "vitest",
