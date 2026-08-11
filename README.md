@@ -43,13 +43,14 @@ public/logos/           Panel and affiliation logos, normalized to uniform tiles
 
 ## Tests
 
-`npm test` — Vitest, node environment, 15 tests across two files. They run in
+`npm test` — Vitest, node environment, 18 tests across three files. They run in
 CI before the build, so a failure blocks the deploy.
 
 | File | What it protects |
 |---|---|
 | `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to a golden vector verified against the original HTML. These figures may already be in Therese's proposals — a "cleanup" that changes them is the regression this exists to catch. |
 | `src/lib/site-config.test.ts` | The staging `noindex` switch. Fails in two directions: a crawlable duplicate competing with her live site, or the launched site shipping `noindex` and vanishing from search. |
+| `src/app/sitemap.test.ts` | That every page reaches the sitemap or is on the documented exclusion list. A new page can ship, return 200, look fine, and never be submitted to a search engine — a failure with no symptom. The exclusion list is the durable part: it records *why* each absent route is absent. |
 
 Deliberately **not** tested: page components and copy. Asserting that the copy
 is the copy is a maintenance cost with no regression behind it. If you can't
@@ -92,9 +93,9 @@ Palette is carried over from the live Wix theme (`color_36`–`color_65`): deep
 teal `#22495A`, slate `#486573`, sand `#D8C7BD`, cream `#F4EFEB`, charcoal
 `#414141`. Dark mode is derived from the same hues rather than inverted.
 
-Tokens in `globals.css` are named for their **role**, not their colour —
-`heading`, `btn-fg`, `band-fg` — because the colour flips between themes and
-the role doesn't. Using colour names here is how you end up with dark text on
+Tokens in `globals.css` are named for their **role**, not their color —
+`heading`, `btn-fg`, `band-fg` — because the color flips between themes and
+the role doesn't. Using color names here is how you end up with dark text on
 dark buttons.
 
 ## Analytics and consent
@@ -108,12 +109,20 @@ Both the contact form and the Collaborate partner form carry
 `data-clarity-mask="True"`: visitors describe confidential workplace
 conflicts there, and session replay must never capture it.
 
-## Contact form
+## Forms
 
-Static hosting means no server to receive a POST. Set
-`NEXT_PUBLIC_FORM_ENDPOINT` to a Formspree or Web3Forms URL to enable the form;
-leave it unset and `/contact` shows phone and email instead, rather than a form
-that silently goes nowhere.
+Static hosting means no server to receive a POST, so all three forms —
+`/contact`, `/collaborate`, and the calculator's email gate — submit directly
+to Web3Forms as plain HTML, with no JavaScript.
+
+They share one repo variable, `NEXT_PUBLIC_WEB3FORMS_KEY`. Leave it unset and
+each form renders contact details instead of a form that silently goes
+nowhere. The key is public by design: it ships in the page HTML and only
+identifies which verified inbox to deliver to.
+
+Free tier is 250 submissions/month across all three. Mechanics and gotchas —
+the absolute `redirect` URL, the `botcheck` honeypot name — are in `DEPLOY.md`
+Step 5.
 
 ## Not in scope (yet)
 

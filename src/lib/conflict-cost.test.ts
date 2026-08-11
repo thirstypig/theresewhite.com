@@ -76,7 +76,7 @@ describe("calculateConflictCost", () => {
     const withoutSunk = calculateConflictCost(GOLDEN);
 
     // toBeCloseTo, not toBe: these are floating-point sums, and exact equality
-    // here asserts IEEE-754 behaviour rather than the property we care about.
+    // here asserts IEEE-754 behavior rather than the property we care about.
     expect(withSunk.past.total - withoutSunk.past.total).toBeCloseTo(40_000, 6);
     expect(withSunk.future[12].total).toBe(withoutSunk.future[12].total);
     expect(
