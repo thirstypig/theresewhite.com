@@ -16,11 +16,15 @@ import { SITE_URL } from "@/lib/site-config";
 const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 const ENDPOINT = "https://api.web3forms.com/submit";
 
+/**
+ * Unlike the contact form's fallback, this one has no heading of its own.
+ * The /collaborate page already puts a section heading above `<PartnerForm />`
+ * in both the form and no-key branches, so adding one here would duplicate it.
+ */
 function NoKeyFallback() {
   return (
     <div className="border-l-2 border-rule-strong pl-6">
-      <h2 className="display text-2xl text-heading">{collaborate.form.title}</h2>
-      <p className="mt-4 text-base leading-relaxed text-charcoal">
+      <p className="text-base leading-relaxed text-charcoal">
         Email or call. Tell me what you do and the kind of work you come
         across, and we&rsquo;ll find a time to talk.
       </p>
