@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Image from "next/image";
 import { PageHeader } from "@/components/page-header";
 import { AssessmentCta } from "@/components/assessment-cta";
 import { Credentials } from "@/components/credentials";
 import { about, contact, portrait } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
     "L. Therese White has spent 30+ years and 1,100+ mediations working in employment disputes where the stated problem isn't the real one.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

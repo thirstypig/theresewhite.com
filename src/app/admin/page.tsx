@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 import { AdminGate } from "@/components/admin-gate";
 import { todos } from "@/content/todos";
 
 const openCount = todos.filter((t) => t.status !== "done").length;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Admin",
-  robots: { index: false, follow: false },
-};
+  description:
+    "Internal reference for this build. Password-gated.",
+  path: "/admin",
+  noindex: true,
+});
 
 const REPO = "https://github.com/thirstypig/theresewhite.com";
 

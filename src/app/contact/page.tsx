@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { ContactForm } from "@/components/contact-form";
 import { assessment, contact } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
     "Request a confidential conflict assessment. 30 to 45 minutes, real work, no sales pitch. Call (323) 291-4813 or send a note.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

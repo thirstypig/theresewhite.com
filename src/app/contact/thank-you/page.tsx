@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 import { contact } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Your note is on the way",
-  robots: { index: false, follow: true },
-};
+  description:
+    "Your message is with Therese. Expect a reply within one business day.",
+  path: "/contact/thank-you",
+  noindex: true,
+  follow: true,
+});
 
 export default function ThankYouPage() {
   return (

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import { PageHeader } from "@/components/page-header";
 import { AssessmentCta } from "@/components/assessment-cta";
 import { endorsements } from "@/content/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Endorsements",
   description:
     "Endorsements from Candice Gottlieb-Clark, Kenneth Cloke, Joan Goldsmith, and a senior compliance officer at a 110,000-person organization.",
-  alternates: { canonical: "/endorsements" },
-};
+  path: "/endorsements",
+});
 
 export default function EndorsementsPage() {
   return (

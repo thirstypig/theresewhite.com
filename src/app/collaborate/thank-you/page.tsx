@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/page-metadata";
 import Link from "next/link";
 import { contact } from "@/content/site";
 
@@ -7,10 +8,14 @@ import { contact } from "@/content/site";
  * `collaborate-voice` todo in src/content/todos.ts.
  */
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Thanks for reaching out",
-  robots: { index: false, follow: true },
-};
+  description:
+    "Your introduction is with Therese. She answers these herself.",
+  path: "/collaborate/thank-you",
+  noindex: true,
+  follow: true,
+});
 
 export default function CollaborateThankYouPage() {
   return (

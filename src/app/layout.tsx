@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  // Every other page sets this through pageMetadata(). The homepage does not
+  // go through that helper, so without this it would keep Next's default
+  // `summary` card and share as a thumbnail while the rest share wide.
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
   // Staging must never be indexed — it would compete with the live Wix site
   // for her own name and split the ranking.
   robots: IS_PRODUCTION_SITE
