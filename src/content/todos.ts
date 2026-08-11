@@ -98,7 +98,7 @@ export const todos: Todo[] = [
     id: "calculator-launch",
     title: "Launch the conflict calculator with the ad campaign",
     detail:
-      "Built and styled at /conflict-calculator, currently unlinked and noindex. To launch: remove the robots block in the page metadata, add it to src/app/sitemap.ts, and point the ads at it. Watch the Web3Forms cap — ad traffic and the contact form share the same 250 submissions a month.",
+      "Built and styled at /conflict-calculator, now linked from the footer but still noindex. To launch: remove the robots block in the page metadata, add it to src/app/sitemap.ts, remove its entry from NOT_IN_SITEMAP in src/app/sitemap.test.ts, and point the ads at it. Watch the Web3Forms cap — ad traffic, the contact form and the partner form all share the same 250 submissions a month.",
     status: "open",
     owner: "James",
     priority: "normal",

@@ -20,7 +20,7 @@ const NOT_IN_SITEMAP: Record<string, string> = {
   "/admin": "Password-gated. Nothing there should be discoverable.",
   "/admin/todo": "Password-gated. Nothing there should be discoverable.",
   "/conflict-calculator":
-    "Unlinked and noindex until the ad campaign runs. Launching it is a todo.",
+    "noindex until the ad campaign runs. Footer-linked, so it is reachable by browsing — but deliberately kept out of search until launch. Launching it is a todo.",
   "/contact/thank-you": "Post-submit confirmation. noindex.",
   "/collaborate/thank-you": "Post-submit confirmation. noindex.",
 };

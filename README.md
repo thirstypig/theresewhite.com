@@ -127,8 +127,14 @@ Step 5.
 ## Not in scope (yet)
 
 Blog, newsletter, pricing plans, and booking were all dropped from the Wix site
-by agreement. `workplace-conflict-calculator-COMPLETE.html` sits in the repo
-root awaiting its own landing page — it is not part of the build.
+by agreement.
+
+`workplace-conflict-calculator-COMPLETE.html` in the repo root is Therese's
+standalone version of the tool. It is not part of the build — it is the source
+the `/conflict-calculator` page was rebuilt from. The calculator itself and its
+supporting copy have both been carried across, so the file is now reference
+only. Treat it as the provenance record for the `calculator` export in
+`src/content/site.ts`, not as something still awaiting a home.
 
 The 15 Wix redirects can't run on GitHub Pages (no server to issue a 301).
 They're preserved as a table in [DEPLOY.md](./DEPLOY.md) and must be restored
