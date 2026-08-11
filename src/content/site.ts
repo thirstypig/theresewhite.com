@@ -364,28 +364,6 @@ export const collaborate = {
   title: "Your client stays your client",
   lede: "I take the conflict, resolve it, and hand the working relationship back to you. I'm not looking for your retainer, your HR work, or your seat at the table.",
 
-  boundaries: {
-    title: "What I don't do",
-    items: [
-      {
-        name: "I don't practice HR.",
-        body: "No policy work, no investigations-for-cause, no restructures. When the fix is procedural, it's yours.",
-      },
-      {
-        name: "I don't give legal advice.",
-        body: "I'm not an attorney — deliberately. Counsel stays counsel.",
-      },
-      {
-        name: "I don't pitch adjacent work.",
-        body: "One conflict, scoped and quoted. If I spot something outside it, I tell you, not your client.",
-      },
-      {
-        name: "I leave.",
-        body: "Follow-up runs a few weeks past the agreement, then I'm gone.",
-      },
-    ],
-  },
-
   partnerTypes: {
     title: "Who I work with",
     items: [
