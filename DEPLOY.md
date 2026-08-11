@@ -77,6 +77,25 @@ every push to `main`. It builds the static export and publishes `out/`.
 
 Watch the first run under the **Actions** tab. It takes about two minutes.
 
+### What the build checks before it publishes
+
+Three gates, in order. Any of them failing stops the deploy, which is the
+point — each one exists because the corresponding failure is otherwise silent.
+
+1. **Pages source is `workflow`.** Queries the Pages API and fails if the
+   source has been switched to "Deploy from a branch". Without this, that
+   change breaks nothing until the *next* push, which then republishes the
+   repo source as a Jekyll site while still returning 200.
+2. **`npm test`.** 15 unit tests. The calculator figures are pinned to a
+   golden vector, and the staging `noindex` switch is covered in both
+   directions.
+3. **Asset paths.** Confirms `out/index.html` still addresses `/_next/*` from
+   the site root. A stray `basePath` would 404 every stylesheet and script
+   while the HTML kept returning 200.
+
+Background on all three:
+`docs/solutions/deployment-issues/nextjs-static-export-github-pages-source-and-subpath.md`
+
 ---
 
 ## Step 3 — Point the subdomain at it
