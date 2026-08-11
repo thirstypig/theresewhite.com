@@ -152,30 +152,52 @@ and the legal pages.
 
 ---
 
-## Step 5 — Wiring up the contact form
+## Step 5 — How the forms are wired
 
-Right now `/contact` shows phone and email rather than a form, because a static
-site has no server to receive a POST and a form that goes nowhere is worse than
-no form.
+Already done — this section is reference, not a task.
 
-To turn the form on, pick a service that accepts a plain HTML form submission:
+A static site has no server to receive a POST, so all three forms submit
+directly to **Web3Forms** (<https://web3forms.com>) as plain HTML forms. No
+JavaScript, so they work before hydration and with JS disabled entirely.
 
-- **Formspree** — <https://formspree.io>, 50 submissions/month free
-- **Web3Forms** — <https://web3forms.com>, 250/month free, no account needed
+| Form | Subject line it sends |
+|---|---|
+| `/contact` | Assessment request from theresewhite.com |
+| `/collaborate` | Partner inquiry from theresewhite.com |
+| `/conflict-calculator` email gate | (shares the same key) |
 
-Then add the endpoint as a repository variable:
+The subjects differ on purpose: all three land in the same inbox, and a peer
+making an introduction should be distinguishable from an organization in
+crisis without opening the mail.
 
-1. Repo → Settings → Secrets and variables → **Actions** → **Variables** tab.
-2. New variable: `NEXT_PUBLIC_FORM_ENDPOINT`, value = the URL the service gives
-   you.
-3. Re-run the workflow (Actions → Deploy → Run workflow).
+### The access key
 
-The form already posts `_next` and `redirect` fields pointing at
-`/contact/thank-you/`, which both services understand.
+One repository variable, `NEXT_PUBLIC_WEB3FORMS_KEY`, read by all three forms.
 
-Note this sends inquiry details through a third party. Given people describe
-confidential workplace conflicts here, check the provider's data handling, and
-add them to the processor list in `src/content/legal.ts` when you choose one.
+Repo → Settings → Secrets and variables → **Actions** → **Variables** tab.
+Changing it needs a re-run (Actions → Deploy → Run workflow) because it is
+baked in at build time.
+
+**The key is public by design.** It ships in the page HTML and only identifies
+which verified inbox to deliver to — it is not a secret. It lives in a repo
+variable so it can be rotated without a code change. Rotate it if it ever
+starts attracting spam.
+
+With the variable unset, the forms render contact details instead of a form
+that silently goes nowhere. That fallback is deliberate; if you ever see phone
+and email where a form should be, the key is missing.
+
+### Things worth knowing
+
+- The `redirect` field must be an **absolute** `https` URL ending in a slash —
+  a relative path is ignored and the visitor lands on Web3Forms' own success
+  page. It is built from `SITE_URL`, so it follows whichever domain the build
+  targets.
+- The honeypot field must be named exactly `botcheck`. A differently named
+  decoy is submitted as ordinary form data and ignored.
+- The free tier is **250 submissions/month, shared across all three forms**.
+- Web3Forms is already listed as a processor in `src/content/legal.ts`.
+  Changing providers means updating that disclosure too.
 
 ---
 

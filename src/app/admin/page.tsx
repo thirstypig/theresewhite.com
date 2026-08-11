@@ -193,7 +193,7 @@ export default function AdminPage() {
           <Card title="Palette">
             <p className="mb-4 text-sm leading-relaxed text-muted">
               Carried over from the live Wix theme. Tokens are named for their
-              role, not their colour, because the colour changes between themes
+              role, not their color, because the color changes between themes
               and the role doesn&rsquo;t.
             </p>
             <div className="overflow-x-auto">

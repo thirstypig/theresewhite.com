@@ -7,16 +7,16 @@
  *   #FFFFFF  white     #F4EFEB  cream     #D8C7BD  sand
  *   #22495A  deep      #486573  slate     #414141  charcoal
  *
- * Tokens are named for their ROLE, not their colour, because the colour
+ * Tokens are named for their ROLE, not their color, because the color
  * changes between themes and the role doesn't. `heading` is the display
- * colour whatever theme you're in; `deep` is the literal brand teal and stays
+ * color whatever theme you're in; `deep` is the literal brand teal and stays
  * put. Getting this wrong is how dark modes end up with dark text on dark
  * buttons.
  *
  * The dark theme is derived from the same hues rather than inverted: the page
  * ground is the brand teal taken almost to black, surfaces are the same teal
- * lifted slightly, and text warms towards the cream so it never reads as cold
- * grey on blue.
+ * lifted slightly, and text warms toward the cream so it never reads as cold
+ * gray on blue.
  */
 
 :root {
@@ -220,7 +220,7 @@ body {
   border-radius: 2px;
 }
 
-/* Inside a dark band the button colour can be too dark to see as an outline. */
+/* Inside a dark band the button color can be too dark to see as an outline. */
 .on-dark :focus-visible {
   outline-color: var(--sand);
 }
