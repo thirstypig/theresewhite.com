@@ -131,7 +131,7 @@ export const todos: Todo[] = [
     id: "collaborate-voice",
     title: "Rewrite the /collaborate copy in Therese's voice",
     detail:
-      "The whole page is drafted, not migrated — the Wix site has no equivalent, so there was nothing to copy. The six handoff descriptions under `partnerTypes` matter most: they assert things about other people's professional boundaries, including whether an ombuds keeps confidentiality over what they learn and whether outside counsel stays lead on the matter. Those need to be right rather than plausible. Copy lives in the `collaborate` export in src/content/site.ts.",
+      "The whole page is drafted, not migrated — the Wix site has no equivalent, so there was nothing to copy. Review covers the whole `collaborate` export in src/content/site.ts, plus the drafted prose living outside it in src/app/collaborate/thank-you/page.tsx and src/components/partner-form.tsx. The six handoff descriptions under `partnerTypes` matter most: they assert things about other people's professional boundaries, including whether an ombuds keeps confidentiality over what they learn and whether outside counsel stays lead on the matter. Those need to be right rather than plausible. One line needs an explicit yes or no, not just a wording pass: under `ways`, \"Bring me in alongside you\" says \"Your engagement, your client, your name on it\" — that describes white-label subcontracting, a business model nothing else on the site supports, and it sits next to the mediator-impartiality reasoning in the `collaborate` export's own header comment.",
     status: "open",
     owner: "Therese",
     priority: "high",

@@ -410,7 +410,7 @@ export const collaborate = {
         body: "Coaching one party rarely resolves a two-party conflict. I can take the joint conversation while your coaching relationship stays intact and uncompromised.",
       },
       {
-        name: "EAP and workplace wellbeing providers",
+        name: "EAP and workplace well-being providers",
         body: "You're supporting the individual. I'm resolving the dispute between them. Different work, and neither substitutes for the other.",
       },
     ],
@@ -425,7 +425,7 @@ export const collaborate = {
       },
       {
         name: "Bring me in alongside you",
-        body: "Your engagement, your client, your name on it. I do the mediation as part of your programme.",
+        body: "Your engagement, your client, your name on it. I do the mediation as part of your program.",
       },
       {
         name: "Co-deliver a workshop",

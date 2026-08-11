@@ -3,14 +3,18 @@ import { Field, fieldClass } from "@/components/form-field";
 import { SITE_URL } from "@/lib/site-config";
 
 /**
- * Partner enquiry form, posting to Web3Forms.
+ * Partner inquiry form, posting to Web3Forms.
  *
  * Same mechanics as the contact form — a static host has no server to receive
  * a POST, so the form submits directly to Web3Forms with no JavaScript.
  *
  * The `subject` differs on purpose. These land in the same inbox as client
- * enquiries, and Therese needs to tell a peer making an introduction apart
+ * inquiries, and Therese needs to tell a peer making an introduction apart
  * from an organization in crisis without opening the mail.
+ *
+ * DRAFT COPY: the visible prose in this file (fallback text, labels, hint,
+ * button copy) is drafted, not migrated — see the `collaborate-voice` todo
+ * in src/content/todos.ts.
  */
 
 const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
@@ -120,7 +124,7 @@ export function PartnerForm() {
       <input
         type="hidden"
         name="subject"
-        value="Partner enquiry from theresewhite.com"
+        value="Partner inquiry from theresewhite.com"
       />
       <input type="hidden" name="from_name" value="theresewhite.com" />
       {/* Web3Forms requires an absolute https URL here; a relative path is

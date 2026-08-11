@@ -89,7 +89,7 @@ const pages = [
   { path: "/faq", note: "12 questions, verbatim, with FAQ schema" },
   { path: "/contact", note: "Web3Forms; falls back to phone/email without a key" },
   { path: "/contact/thank-you", note: "Post-submit confirmation. noindex." },
-  { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav." },
+  { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav. DRAFT COPY — needs rewriting in Therese's voice" },
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Ad landing page. Unlinked and noindex until the campaign runs." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
@@ -108,6 +108,11 @@ const tests = [
     file: "src/lib/site-config.test.ts",
     count: 7,
     note: "The staging noindex switch — guards against both a crawlable duplicate and deindexing the live site",
+  },
+  {
+    file: "src/app/sitemap.test.ts",
+    count: 3,
+    note: "The sitemap is hand-maintained, so this guards against a new page reaching production with no symptom: every app route is either listed or has a recorded exclusion, and no exclusion is stale or contradicted by the sitemap",
   },
 ];
 

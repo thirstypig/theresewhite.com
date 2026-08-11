@@ -23,7 +23,8 @@ export const privacy = {
       heading: "What this site collects",
       body: [
         "If you use the contact form, we receive what you type into it: your name, email, organization, role, phone number if you give one, how urgent the matter is, and your description of the situation. That goes to Therese and is used to respond to you and prepare for a conversation. Nothing more.",
-      "The form is delivered by Web3Forms, which passes the message to Therese's inbox and acts as a processor on our behalf. It is not used to build a marketing list.",
+        "If you use the partner form on the Collaborate page, we receive a smaller set: your name, email, firm or practice, the kind of work you do if you tell us, and whatever you write in the note. That goes to Therese too, for the same reason.",
+        "Both forms are delivered by Web3Forms, which passes the message to Therese's inbox and acts as a processor on our behalf. Neither is used to build a marketing list.",
         "If you email or call instead, we hold whatever you send us, for the same purpose.",
         "The site also collects anonymous usage data through the analytics tools described below. That data is about how pages are used, not about who you are.",
       ],
@@ -37,7 +38,7 @@ export const privacy = {
     {
       heading: "Analytics and cookies",
       body: [
-        "With your consent, this site uses Microsoft Clarity and Google Analytics 4 to understand how visitors move through the pages. Both set cookies and both send data to their providers, who act as processors on our behalf. Clarity records anonymized session activity; the contact form is explicitly masked so its contents are never captured.",
+        "With your consent, this site uses Microsoft Clarity and Google Analytics 4 to understand how visitors move through the pages. Both set cookies and both send data to their providers, who act as processors on our behalf. Clarity records anonymized session activity; both forms are explicitly masked so their contents are never captured.",
         "Neither tool runs until you accept. If you decline, or ignore the banner, no analytics cookies are set and no data is sent. You can change your mind at any time from the link in the footer.",
         "No advertising, retargeting, or profiling cookies are used on this site, and nothing collected here is sold or shared for marketing.",
       ],

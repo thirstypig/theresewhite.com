@@ -55,24 +55,23 @@ export default function CollaboratePage() {
         </div>
       </section>
 
+      {/* Four options, not a sequence — no numbers. Same dl treatment as the
+          two sections above. */}
       <section className="border-b border-rule bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <h2 className="display text-3xl text-heading sm:text-4xl">
             {collaborate.ways.title}
           </h2>
-          <ol className="mt-12 grid gap-10 md:grid-cols-2">
-            {collaborate.ways.items.map((item, index) => (
-              <li key={item.name} className="border-t border-rule pt-5">
-                <p className="label text-muted">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="display mt-2 text-xl text-heading">{item.name}</h3>
-                <p className="mt-3 text-base leading-relaxed text-charcoal">
+          <dl className="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2">
+            {collaborate.ways.items.map((item) => (
+              <div key={item.name} className="border-t border-rule pt-5">
+                <dt className="display text-xl text-heading">{item.name}</dt>
+                <dd className="mt-3 text-base leading-relaxed text-charcoal">
                   {item.body}
-                </p>
-              </li>
+                </dd>
+              </div>
             ))}
-          </ol>
+          </dl>
         </div>
       </section>
 
