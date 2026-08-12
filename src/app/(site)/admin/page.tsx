@@ -70,6 +70,11 @@ const links = [
         note: "Why the github.io URL renders unstyled, why 'Deploy from a branch' breaks nothing until the next push, and why an artifact CNAME is ignored. Read before touching Settings → Pages.",
         href: `${REPO}/blob/main/docs/solutions/deployment-issues/nextjs-static-export-github-pages-source-and-subpath.md`,
       },
+      {
+        name: "Post-mortem: link previews",
+        note: "Why every shared link showed the homepage card, why the generated image was served as application/octet-stream, and why the 404 was still broken after the fix. Read before adding a page or changing anything about metadata.",
+        href: `${REPO}/blob/main/docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md`,
+      },
     ],
   },
 ];
