@@ -223,8 +223,14 @@ export function ConflictCalculator({
   return (
     <>
       <section className={className}>
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+          {/*
+              Narrower container and a tighter gap than the page around it, so
+              the two halves read as one instrument rather than two tables
+              sharing a row. The result column is the narrower of the two: it
+              holds figures, the input side holds fields.
+            */}
+          <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-10">
             {/* ---------------- Inputs ---------------- */}
             <div>
               <h2 className={`${fontClass} text-2xl text-heading`}>
@@ -344,7 +350,13 @@ export function ConflictCalculator({
             </div>
 
             {/* ---------------- Results ---------------- */}
-            <div>
+            {/*
+              Sticky on desktop. The inputs are taller than the result, so
+              without this the card sits alone at the top of a long empty
+              column, and the number scrolls out of sight at exactly the
+              moment someone is dragging a slider to change it.
+            */}
+            <div className="lg:sticky lg:top-8">
               {!calculated ? (
                 <div className="rounded-sm border border-rule bg-cream p-8">
                   <p className="label text-muted">Your result</p>
