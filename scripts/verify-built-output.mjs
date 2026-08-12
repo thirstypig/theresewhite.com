@@ -14,6 +14,10 @@
  * docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md
  */
 
+import { readdirSync, readFileSync, existsSync } from "node:fs";
+import { join, relative, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
 /**
  * Built path relative to out/ → the URL path that file should advertise.
  * Returns null for anything unrecognized, which the caller treats as a
@@ -156,4 +160,98 @@ export function auditPage({ relPath, html, origin, homepageTitle }) {
   }
 
   return problems;
+}
+
+/** Filenames Next emits for a page a visitor can land on. */
+const PAGE_FILES = new Set(["index.html", "404.html"]);
+
+/**
+ * Every built page under `dir`, as paths relative to it.
+ *
+ * @param {string} dir
+ * @param {string} [root]
+ * @returns {string[]}
+ */
+export function builtPages(dir, root = dir) {
+  const found = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name === "_next") continue; // assets, no pages
+      found.push(...builtPages(full, root));
+    } else if (PAGE_FILES.has(entry.name)) {
+      found.push(relative(root, full));
+    }
+  }
+  return found.sort();
+}
+
+/** The eight bytes every PNG starts with. */
+const PNG_MAGIC = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+
+/**
+ * @param {string} outDir
+ * @returns {string[]}
+ */
+export function auditOgImageFile(outDir) {
+  const file = join(outDir, "og.png");
+  if (!existsSync(file)) {
+    return [
+      `og.png: missing. The build script copies out/opengraph-image to it — ` +
+        `did next build stop emitting the generator?`,
+    ];
+  }
+  const head = readFileSync(file).subarray(0, 8);
+  return head.equals(PNG_MAGIC)
+    ? []
+    : [`og.png: not a PNG (first bytes ${head.toString("hex")})`];
+}
+
+function main() {
+  const outDir = "out";
+
+  if (!existsSync(join(outDir, "index.html"))) {
+    console.error(`::error::${outDir}/index.html not found. Run \`npm run build\` first.`);
+    process.exit(1);
+  }
+
+  const homepageHtml = readFileSync(join(outDir, "index.html"), "utf8");
+  const origin = originFromHomepage(homepageHtml);
+  if (!origin) {
+    console.error(
+      "::error::Could not read an absolute og:url from out/index.html. " +
+        "metadataBase in src/app/layout.tsx is what makes these absolute.",
+    );
+    process.exit(1);
+  }
+  const homepageTitle = metaContent(parseMetaTags(homepageHtml), "og:title") ?? "";
+
+  const pages = builtPages(outDir);
+  const problems = pages.flatMap((relPath) =>
+    auditPage({
+      relPath,
+      html: readFileSync(join(outDir, relPath), "utf8"),
+      origin,
+      homepageTitle,
+    }),
+  );
+  problems.push(...auditOgImageFile(outDir));
+
+  if (problems.length > 0) {
+    for (const p of problems) console.error(`  ${p}`);
+    console.error(
+      `::error::${problems.length} link-preview problem(s) in ${pages.length} built pages. ` +
+        `See docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md`,
+    );
+    process.exit(1);
+  }
+
+  console.log(`Link-preview audit clean: ${pages.length} pages on ${origin}`);
+}
+
+// Only run when invoked directly, so the test file can import the pure parts
+// without the walk firing. Compared as resolved absolute paths — a filename
+// comparison matches any file with the same basename.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main();
 }
