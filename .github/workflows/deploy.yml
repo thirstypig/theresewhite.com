@@ -105,7 +105,7 @@ jobs:
         run: |
           url="${{ steps.deployment.outputs.page_url }}og.png?ci=${{ github.run_id }}"
           for attempt in 1 2 3 4 5; do
-            ct=$(curl -sI "$url" | tr -d '\r' \
+            ct=$(curl -sI --max-time 10 "$url" | tr -d '\r' \
                  | awk -F': ' 'tolower($1)=="content-type"{print tolower($2)}')
             case "$ct" in
               image/png*) echo "og.png served as $ct"; exit 0 ;;
