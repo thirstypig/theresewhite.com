@@ -6,7 +6,6 @@ import { pageMetadata } from "@/lib/page-metadata";
 import {
   calculator,
   contact,
-  credentials,
   endorsements,
   landing,
   portrait,
@@ -101,24 +100,10 @@ export default function LandingB() {
         </div>
       </section>
 
-      {/* ---------------- Credibility strip ---------------- */}
-      <section className="border-b border-rule bg-paper">
-        <div className="mx-auto max-w-6xl px-6 py-7">
-          <p className="label text-slate">{credentials.title}</p>
-          <ul className="mt-3 flex flex-wrap gap-x-8 gap-y-2">
-            {credentials.panels.map((p) => (
-              <li key={p.name} className="text-sm text-charcoal">
-                {p.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* ---------------- The tool: the primary conversion ---------------- */}
       <div id="calculate" className="scroll-mt-4">
         <ConflictCalculator
-          className="border-b border-rule bg-cream"
+          className="border-b border-rule bg-paper"
           fontClass="display-wix"
           ctaHref="#talk"
           ctaLabel="Talk to Therese"
@@ -140,7 +125,7 @@ export default function LandingB() {
       </section>
 
       {/* ---------------- What the number means ---------------- */}
-      <section className="border-b border-rule bg-paper">
+      <section className="border-b border-rule bg-cream">
         <div className="mx-auto max-w-3xl px-6 py-16">
           <h2 className="display-wix text-3xl text-heading">
             {calculator.understanding.title}
@@ -185,7 +170,7 @@ export default function LandingB() {
       </section>
 
       {/* ---------------- Secondary path, deliberately quieter ---------- */}
-      <section id="talk" className="scroll-mt-4 border-b border-rule bg-cream">
+      <section id="talk" className="scroll-mt-4 border-b border-rule bg-paper">
         <div className="mx-auto max-w-2xl px-6 py-16">
           <h2 className="display-wix text-3xl text-heading">
             {landing.talk.title}
