@@ -56,6 +56,14 @@ jobs:
       - run: npm test
       - run: npm run build
 
+      # Every page's link-preview card, checked in the built HTML rather than
+      # the source. The source looked correct at three separate points while
+      # the output was wrong — that is the whole lesson of the 2026-08-11
+      # failure, which shipped for a week with every page returning 200.
+      # See docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md
+      - name: Assert every page ships its own link-preview card
+        run: npm run verify:build
+
       # A 200 on / proves nothing here: the HTML is always fine, it's the
       # root-absolute /_next/* paths that break when the served root isn't the
       # site root. Check the built output instead of trusting the exit code.
@@ -80,3 +88,30 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # The other half of the same failure, and the half no pre-deploy check
+      # can see: Next emits out/opengraph-image with no extension, GitHub
+      # Pages types files by extension, and an extensionless PNG is served as
+      # application/octet-stream. Valid bytes, 200 response, and LinkedIn,
+      # Facebook and iMessage all drop the image because they dispatch on the
+      # header. The build copies it to og.png, which fixes it; this proves the
+      # fix is still true on the wire.
+      #
+      # This cannot block the deploy — the artifact is live by the time it
+      # runs. It is an alarm, and it covers the one thing our code does not
+      # control: GitHub's typing behaviour, which the post-mortem records as
+      # observed rather than documented.
+      - name: Assert the link-preview image is served as an image
+        run: |
+          url="${{ steps.deployment.outputs.page_url }}og.png?ci=${{ github.run_id }}"
+          for attempt in 1 2 3 4 5; do
+            ct=$(curl -sI "$url" | tr -d '\r' \
+                 | awk -F': ' 'tolower($1)=="content-type"{print tolower($2)}')
+            case "$ct" in
+              image/png*) echo "og.png served as $ct"; exit 0 ;;
+            esac
+            echo "attempt $attempt: content-type was '${ct:-<none>}', retrying in 10s"
+            sleep 10
+          done
+          echo "::error::og.png is served as '${ct:-<none>}', not image/png. Link previews will drop the image on LinkedIn, Facebook and iMessage. See docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md"
+          exit 1
