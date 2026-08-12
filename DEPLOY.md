@@ -156,23 +156,31 @@ and the legal pages.
 
 Already done — this section is reference, not a task.
 
-A static site has no server to receive a POST, so all three forms submit
-directly to **Web3Forms** (<https://web3forms.com>) as plain HTML forms. No
-JavaScript, so they work before hydration and with JS disabled entirely.
+A static site has no server to receive a POST, so all four forms submit
+directly to **Web3Forms** (<https://web3forms.com>).
 
-| Form | Subject line it sends |
-|---|---|
-| `/contact` | Assessment request from theresewhite.com |
-| `/collaborate` | Partner inquiry from theresewhite.com |
-| `/conflict-calculator` email gate | (shares the same key) |
+| Form | Submits as | Subject line it sends |
+|---|---|---|
+| `/contact` | plain HTML POST | Assessment request from theresewhite.com |
+| `/collaborate` | plain HTML POST | Partner inquiry from theresewhite.com |
+| `/conflict-calculator` email gate | `fetch` | Conflict Calculator — new result request |
+| `/lp/a` and `/lp/b` | `fetch` | Landing page inquiry (lp-a / lp-b) |
 
-The subjects differ on purpose: all three land in the same inbox, and a peer
+The two plain-HTML forms need no JavaScript at all: they work before hydration
+and with JS disabled, then redirect to a thank-you page.
+
+The two `fetch` forms confirm in place instead. Both sit on pages where
+navigating away ends the visit — and the calculator gate has to reveal a
+result rather than leave for one.
+
+The subjects differ on purpose: all four land in the same inbox, and a peer
 making an introduction should be distinguishable from an organization in
-crisis without opening the mail.
+crisis without opening the mail. The landing form also stamps which variant
+produced the lead, which is the only reason to run two.
 
 ### The access key
 
-One repository variable, `NEXT_PUBLIC_WEB3FORMS_KEY`, read by all three forms.
+One repository variable, `NEXT_PUBLIC_WEB3FORMS_KEY`, read by all four forms.
 
 Repo → Settings → Secrets and variables → **Actions** → **Variables** tab.
 Changing it needs a re-run (Actions → Deploy → Run workflow) because it is
@@ -192,10 +200,11 @@ and email where a form should be, the key is missing.
 - The `redirect` field must be an **absolute** `https` URL ending in a slash —
   a relative path is ignored and the visitor lands on Web3Forms' own success
   page. It is built from `SITE_URL`, so it follows whichever domain the build
-  targets.
+  targets. Only the two plain-HTML forms use it; the `fetch` ones never
+  navigate.
 - The honeypot field must be named exactly `botcheck`. A differently named
   decoy is submitted as ordinary form data and ignored.
-- The free tier is **250 submissions/month, shared across all three forms**.
+- The free tier is **250 submissions/month, shared across all four forms**.
 - Web3Forms is already listed as a processor in `src/content/legal.ts`.
   Changing providers means updating that disclosure too.
 
