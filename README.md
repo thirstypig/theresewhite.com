@@ -43,14 +43,20 @@ public/logos/           Panel and affiliation logos, normalized to uniform tiles
 
 ## Tests
 
-`npm test` — Vitest, node environment, 18 tests across three files. They run in
+`npm test` — Vitest, node environment, 28 tests across five files. They run in
 CI before the build, so a failure blocks the deploy.
+
+Every one of them guards a failure that returns 200 and looks correct in a
+browser. That is the bar here: if a person would notice it, a test is not what
+catches it.
 
 | File | What it protects |
 |---|---|
 | `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to a golden vector verified against the original HTML. These figures may already be in Therese's proposals — a "cleanup" that changes them is the regression this exists to catch. |
 | `src/lib/site-config.test.ts` | The staging `noindex` switch. Fails in two directions: a crawlable duplicate competing with her live site, or the launched site shipping `noindex` and vanishing from search. |
 | `src/app/sitemap.test.ts` | That every page reaches the sitemap or is on the documented exclusion list. A new page can ship, return 200, look fine, and never be submitted to a search engine — a failure with no symptom. The exclusion list is the durable part: it records *why* each absent route is absent. |
+| `src/lib/page-metadata.test.ts` | What `pageMetadata()` produces: a page's own `og:title` rather than the site's, a canonical and `og:url` carrying the trailing slash, an `og:image` path with a real image extension, and `robots` omitted unless a page opts out. |
+| `src/app/page-metadata-coverage.test.ts` | That the helper is actually *used*. A page setting only `title` inherits the root layout's entire card — the homepage's title, the homepage's URL, and an image GitHub Pages serves as `application/octet-stream`. Shipped twice before this existed. |
 
 Deliberately **not** tested: page components and copy. Asserting that the copy
 is the copy is a maintenance cost with no regression behind it. If you can't
