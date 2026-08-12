@@ -6,7 +6,7 @@ export default defineConfig({
     // Node environment only. The units under test are pure logic; nothing here
     // needs a DOM, and adding jsdom would slow every run for no benefit.
     environment: "node",
-    include: ["src/**/*.test.ts"],
+    include: ["src/**/*.test.ts", "scripts/**/*.test.ts"],
   },
   resolve: {
     alias: {
