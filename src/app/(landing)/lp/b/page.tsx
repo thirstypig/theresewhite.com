@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Caudex } from "next/font/google";
 import { ConflictCalculator } from "@/components/conflict-calculator";
 import { LandingContactForm } from "@/components/landing-contact-form";
 import { pageMetadata } from "@/lib/page-metadata";
@@ -18,8 +17,8 @@ import {
  * Variant B — the live theresewhite.com identity.
  *
  * Values were read off the live Wix site rather than guessed: #0D63D1 is its
- * nav blue, #2E92E5 its button blue, #3D9BE9 its section bands, the headline
- * face is Caudex and the body is Arial, and its buttons are full pills. All
+ * nav blue, #2E92E5 its button blue, #3D9BE9 its section bands, headlines and
+ * body are both Arial (bold for headlines), and its buttons are full pills. All
  * of that lives in the `.lp-wix` scope in globals.css, which overrides the
  * design tokens so the shared calculator and form re-theme themselves rather
  * than being forked.
@@ -32,16 +31,11 @@ import {
  *    to and measurably slows scanning.
  *  - One primary action rather than a menu of them.
  *
- * Loading Caudex here rather than in the root layout keeps it off every other
- * page in the site; next/font only fetches it where the variable is applied.
+ * The headline face is Arial Bold, not a serif. The live site's h1 declares
+ * Caudex, but every visible string sits in a span that overrides it with
+ * Arial Bold, so the wrapper's font never renders. Reading the wrapper rather
+ * than the rendered text is how the first version of this page got it wrong.
  */
-const caudex = Caudex({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-caudex",
-  display: "swap",
-});
-
 export const metadata: Metadata = pageMetadata({
   title: landing.hero.headline,
   description:
@@ -52,7 +46,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function LandingB() {
   return (
-    <div className={`lp-wix lp-lock bg-paper ${caudex.variable}`}>
+    <div className="lp-wix lp-lock bg-paper">
       {/* ---------------- Above the fold ---------------- */}
       <section className="border-b border-rule bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
@@ -97,7 +91,10 @@ export default function LandingB() {
                 height={portrait.height}
                 alt={portrait.alt}
                 priority
-                className="mx-auto h-auto w-full max-w-[15rem] lg:max-w-none"
+                /* Small on a phone so the headline, proof and button still
+                    fit the first screen; full size once there is a column
+                    beside it. */
+                className="mx-auto h-auto w-36 sm:w-48 lg:w-full lg:max-w-none"
               />
             </div>
           </div>

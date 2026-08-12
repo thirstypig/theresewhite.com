@@ -259,9 +259,9 @@ body {
 }
 
 /*
- * Variant B wears the live theresewhite.com identity: its blues, its Caudex
- * headline face, Arial body, and fully rounded buttons. Values read off the
- * live site rather than guessed — #0D63D1 is its nav blue, #2E92E5 its button
+ * Variant B wears the live theresewhite.com identity: its blues, Arial Bold
+ * headlines, Arial body, and fully rounded buttons. Values read off the live
+ * site rather than guessed — #0D63D1 is its nav blue, #2E92E5 its button
  * blue, #3D9BE9 its section bands.
  */
 .lp-wix.lp-wix {
@@ -288,12 +288,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* The live site's headline face. Body stays Arial, as it is there. */
+/*
+ * The live site's headline treatment: Arial Bold, tight, black.
+ *
+ * Measured, and it corrected an earlier mistake. The semantic h1 on that site
+ * declares Caudex, but every piece of visible text sits in a <span> that
+ * overrides it with Arial Bold — the wrapper's font never renders. There is
+ * no serif anywhere on theresewhite.com.
+ */
 .lp-wix .display-wix {
-  font-family: var(--font-caudex), Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
   line-height: 1.15;
+}
+
+/* Its section headings are centered and black; only the hero is left-aligned. */
+.lp-wix .section-head {
+  text-align: center;
 }
 
 /* Its buttons are pills, not the square corners the main site uses. */
@@ -326,4 +338,19 @@ body {
 body:has(.lp-lock) {
   background: #ffffff;
   color-scheme: light;
+}
+
+/*
+ * Range inputs default to a 16px-tall box, which is a real problem on a
+ * phone: measured at a 390px viewport, the calculator's three sliders were
+ * the only controls on the page below the 44px touch-target minimum, and a
+ * slider is the one control you have to drag rather than tap.
+ *
+ * The box grows to 44px for the thumb; the visible track stays thin because
+ * the browser centers it in the taller box.
+ */
+input[type="range"] {
+  height: 2.75rem;
+  background: transparent;
+  cursor: pointer;
 }

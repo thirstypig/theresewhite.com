@@ -572,7 +572,7 @@ export const landing = {
   hero: {
     eyebrow: "Cost of conflict calculator",
     headline: "What is this conflict actually costing you?",
-    sub: "Two valued people who can't be in the same room is not a personality problem. It's a line item — in their salaries, in the team working around them, and in your own week. Put a number on it in about two minutes.",
+    sub: "Two valued people who can't be in the same room isn't a personality problem. It's a line item. Put a number on it in about two minutes.",
     cta: "Calculate the cost",
     ctaNote: "Free, and no sales call required to see your figure.",
   },
