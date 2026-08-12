@@ -224,3 +224,106 @@ body {
 .on-dark :focus-visible {
   outline-color: var(--sand);
 }
+
+/*
+ * Campaign landing page themes.
+ *
+ * These pages are brand-controlled: what Therese approves is what every
+ * visitor sees, so both lock to the light palette rather than following the
+ * OS. They also have no theme toggle, since that lives in the site header.
+ *
+ * Written as token overrides rather than new components. The calculator and
+ * the contact form already read their colors from these custom properties, so
+ * scoping the properties re-themes the shared components with no fork.
+ *
+ * The doubled class raises specificity to (0,2,0) so it beats
+ * `:root[data-theme="dark"]`, and it sits last in the file so it also wins
+ * the tie on source order. Both are needed: without either, a visitor with
+ * dark mode on gets half a theme.
+ */
+.lp-lock.lp-lock {
+  --paper: #ffffff;
+  --cream: #f4efeb;
+  --band: #22495a;
+  --heading: #22495a;
+  --charcoal: #414141;
+  --muted: #6e6e6b;
+  --slate: #486573;
+  --rule: #e3ddd8;
+  --rule-strong: #d8c7bd;
+  --btn: #22495a;
+  --btn-fg: #ffffff;
+  --btn-hover: #486573;
+  --accent-line: #d8c7bd;
+  color-scheme: light;
+}
+
+/*
+ * Variant B wears the live theresewhite.com identity: its blues, its Caudex
+ * headline face, Arial body, and fully rounded buttons. Values read off the
+ * live site rather than guessed — #0D63D1 is its nav blue, #2E92E5 its button
+ * blue, #3D9BE9 its section bands.
+ */
+.lp-wix.lp-wix {
+  --paper: #ffffff;
+  --cream: #eef4fb;
+  --band: #0d63d1;
+  --heading: #0d63d1;
+  --charcoal: #414141;
+  --muted: #667085;
+  --slate: #2e92e5;
+  --rule: #dbe6f5;
+  --rule-strong: #2e92e5;
+  --btn: #2e92e5;
+  --btn-fg: #ffffff;
+  --btn-hover: #0d63d1;
+  --accent-line: #3d9be9;
+  --band-fg: #ffffff;
+  --band-muted: #cfe1f7;
+  --band-rule: #3d7fd8;
+  --sand: #ffffff;
+  --deep: #0d63d1;
+  color-scheme: light;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The live site's headline face. Body stays Arial, as it is there. */
+.lp-wix .display-wix {
+  font-family: var(--font-caudex), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+/* Its buttons are pills, not the square corners the main site uses. */
+.lp-wix .rounded-sm {
+  border-radius: 100px;
+}
+
+/* Inputs stay legible rectangles — pill-shaped text fields are a usability
+   cost the live site does not actually pay anywhere. */
+.lp-wix input:not([type="range"]),
+.lp-wix textarea,
+.lp-wix select {
+  border-radius: 6px;
+}
+
+/* The live site has no monospace anywhere. `.label` is the main site's
+   utility face, so inside the Wix scope it reverts to bold Arial. */
+.lp-wix .label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/*
+ * The lock sits on a wrapper inside <body>, but body paints its own
+ * background from --paper. Without this a dark-mode visitor gets a correctly
+ * light page sitting on a dark body — visible in the overscroll area, and
+ * below the content on any page shorter than the viewport.
+ */
+body:has(.lp-lock) {
+  background: #ffffff;
+  color-scheme: light;
+}

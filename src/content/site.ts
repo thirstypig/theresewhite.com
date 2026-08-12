@@ -564,17 +564,17 @@ export const calculator = {
  * else on these pages is already your own words.
  */
 export const landing = {
-  /** Variant A frames the page as an unpaid invoice. These are its labels. */
-  statement: {
-    eyebrow: "Statement of account",
-    rows: [
-      { label: "Issued to", value: "Your organization" },
-      { label: "Matter", value: "Two people who can't be in the same room" },
-      { label: "Period", value: "Ongoing" },
-    ],
-    amountLabel: "Amount due",
-    amountHint: "Nobody has sent you this bill. You are paying it anyway.",
-    lede: "Unresolved conflict does not sit still and it does not sit free. Work out what this one has cost so far, and what it costs if it runs another year.",
+  /**
+   * Both variants lead with the same offer. A cold visitor arriving from a
+   * LinkedIn post needs the headline, the proof and the action inside the
+   * first screen; everything below it is for people already persuaded.
+   */
+  hero: {
+    eyebrow: "Cost of conflict calculator",
+    headline: "What is this conflict actually costing you?",
+    sub: "Two valued people who can't be in the same room is not a personality problem. It's a line item — in their salaries, in the team working around them, and in your own week. Put a number on it in about two minutes.",
+    cta: "Calculate the cost",
+    ctaNote: "Free, and no sales call required to see your figure.",
   },
 
   talk: {
