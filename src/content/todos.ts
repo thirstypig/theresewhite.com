@@ -139,6 +139,17 @@ export const todos: Todo[] = [
     added: "2026-08-11",
   },
   {
+    id: "og-image-content-type-gate",
+    title: "Add a post-deploy check that the link-preview image is served as an image",
+    detail:
+      "The generated card image is emitted by Next as out/opengraph-image with no file extension, and GitHub Pages served that as application/octet-stream — a valid PNG that LinkedIn and Facebook reject, because they dispatch on the Content-Type header rather than the bytes. The build now copies it to out/og.png, which fixes it, but nothing verifies the served header. The three existing CI gates are all pre-deploy and none of them fetch a URL, so a regression here would ship silently and only show up as a weak post. A pasteable workflow step is in the post-mortem at docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md.",
+    status: "open",
+    owner: "Dev",
+    priority: "normal",
+    area: "Deploy",
+    added: "2026-08-11",
+  },
+  {
     id: "referral-compensation",
     title: "Decide whether to offer paid referrals",
     detail:
