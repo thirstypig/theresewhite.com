@@ -37,7 +37,9 @@ src/content/todos.ts    Outstanding work. Backs /admin/todo.
 src/lib/site-config.ts  Deployment URL + the staging noindex switch.
 src/lib/conflict-cost.ts  Calculator maths, ported verbatim from the original.
 src/components/         Shared UI.
-src/app/                One folder per route.
+src/app/                One folder per route, inside two route groups:
+                        (site) carries the header and footer, (landing)
+                        renders bare. Parentheses never appear in a URL.
 public/logos/           Panel and affiliation logos, normalized to uniform tiles.
 ```
 
@@ -71,16 +73,20 @@ name the failure a test prevents, don't add it.
 | `README.md` | This file — update when top-level architecture changes |
 | `DEPLOY.md` | Deploy steps, DNS, the Wix redirect map, cutover checklist |
 | `src/content/todos.ts` | **Admin data.** Backs `/admin/todo`. Mark shipped items `done` rather than deleting them, add anything new, and bump `TODOS_UPDATED` |
-| `src/app/admin/page.tsx` | Page inventory, palette, type and test reference — refresh when routes, tokens or test counts change |
+| `src/app/(site)/admin/page.tsx` | Page inventory, palette, type and test reference — refresh when routes, tokens or test counts change |
 | `docs/solutions/**` | Post-mortems, one per solved problem. **Append only** — never edit a past write-up; a new occurrence gets a new file |
 
 There is no `CHANGELOG.md` or `ROADMAP.md`; the git log and `todos.ts` cover
 both. Don't create them without asking.
 
-**Copy is migrated verbatim** from the live Wix site, with two exceptions: the
-About page and the Collaborate page are drafted, marked `DRAFT COPY` in
-`site.ts`, and await Therese's own words. Nothing biographical was invented
-for either.
+**Copy is migrated verbatim** from the live Wix site, with three exceptions:
+the About page, the Collaborate page, and the campaign landing pages are
+drafted, marked `DRAFT COPY` or `TODO(therese)` in `site.ts`, and await
+Therese's own words. Nothing biographical was invented for any of them.
+
+The conflict calculator is the opposite case — its copy is migrated, but from
+`workplace-conflict-calculator-COMPLETE.html` in the repo root rather than
+from Wix.
 
 ## Content that still needs a human
 
@@ -89,6 +95,9 @@ for either.
   in `todos.ts`.
 - **About page** — assembled from claims evidenced elsewhere on the site. Needs
   rewriting in her voice.
+- **Landing pages** (`/lp/a`, `/lp/b`) — the hero and contact copy in the
+  `landing` export is drafted. The bulk of both pages is her own calculator
+  copy and needs nothing.
 - **Privacy and terms** — generic templates, not reviewed by a lawyer.
 - **EEOC and Kenneth Cloke** entries in `credentials` — read off cropped logo
   images, so worth confirming.
@@ -117,18 +126,28 @@ conflicts there, and session replay must never capture it.
 
 ## Forms
 
-Static hosting means no server to receive a POST, so all three forms —
-`/contact`, `/collaborate`, and the calculator's email gate — submit directly
-to Web3Forms as plain HTML, with no JavaScript.
+Static hosting means no server to receive a POST, so all four forms submit to
+Web3Forms. They split into two kinds:
+
+- **`/contact` and `/collaborate`** post as plain HTML with no JavaScript, so
+  they work before hydration and with JS disabled, then redirect to a
+  thank-you page.
+- **The calculator's email gate and the landing-page form** submit with
+  `fetch` and confirm in place. Both live on pages where navigating away ends
+  the visit, and the gate has to reveal a result rather than leave.
 
 They share one repo variable, `NEXT_PUBLIC_WEB3FORMS_KEY`. Leave it unset and
-each form renders contact details instead of a form that silently goes
-nowhere. The key is public by design: it ships in the page HTML and only
-identifies which verified inbox to deliver to.
+each renders contact details instead of a form that silently goes nowhere. The
+key is public by design: it ships in the page HTML and only identifies which
+verified inbox to deliver to.
 
-Free tier is 250 submissions/month across all three. Mechanics and gotchas —
-the absolute `redirect` URL, the `botcheck` honeypot name — are in `DEPLOY.md`
-Step 5.
+Each stamps a distinct subject line, so the four are filterable in one inbox —
+and the landing form also stamps which variant it came from, which is the only
+way to tell which design converted.
+
+Free tier is 250 submissions/month shared across all four. Mechanics and
+gotchas — the absolute `redirect` URL, the `botcheck` honeypot name — are in
+`DEPLOY.md` Step 5.
 
 ## Not in scope (yet)
 

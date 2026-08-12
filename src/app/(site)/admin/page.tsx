@@ -101,8 +101,11 @@ const pages = [
   { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav. DRAFT COPY — needs rewriting in Therese's voice" },
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Ad landing page. Footer-linked, but noindex until the campaign runs. Supporting copy is migrated verbatim from workplace-conflict-calculator-COMPLETE.html." },
+  { path: "/lp/a", note: "Campaign landing page for a LinkedIn post — best-practice layout in the site palette. No header or footer. noindex. One of two designs under test; the loser gets deleted." },
+  { path: "/lp/b", note: "The same page in the live theresewhite.com identity — its blues, Arial Bold, pill buttons. No header or footer. noindex." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
   { path: "/terms", note: "Generic template — not lawyer-reviewed" },
+  { path: "/404", note: "Not found. Exists as a real page mainly so it declares its own metadata — without a file it inherited a broken link-preview card." },
   { path: "/admin", note: "This page. Gated, noindex." },
   { path: "/admin/todo", note: "Outstanding work, from src/content/todos.ts" },
 ];

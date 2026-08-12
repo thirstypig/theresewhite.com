@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-08-11";
+export const TODOS_UPDATED = "2026-08-12";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -137,6 +137,17 @@ export const todos: Todo[] = [
     priority: "high",
     area: "Content",
     added: "2026-08-11",
+  },
+  {
+    id: "landing-page-winner",
+    title: "Pick a landing page and give it a real URL",
+    detail:
+      "Two designs are live for the LinkedIn post: /lp/a is a conventional high-converting layout in the site's own palette, /lp/b wears the live theresewhite.com identity — its blues, Arial Bold, pill buttons. Same calculator and same copy underneath, so the only variable is design. Both are noindex and both stamp their source into the Web3Forms subject line, so the inbox says which one produced a lead. Once one wins: delete the other, move the survivor off /lp/* to a real URL before the post goes out, and update the sitemap exclusion list in src/app/sitemap.test.ts. Therese should also read the hero and contact copy in the `landing` export — the rest of both pages is already her own calculator wording.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Marketing",
+    added: "2026-08-12",
   },
   {
     id: "og-image-content-type-gate",
