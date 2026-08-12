@@ -92,3 +92,68 @@ export function originFromHomepage(homepageHtml) {
     return null;
   }
 }
+
+/**
+ * Audits one built page. Returns every problem found rather than throwing on
+ * the first, so a single CI run reports all of them.
+ *
+ * @param {{ relPath: string, html: string, origin: string, homepageTitle: string }} input
+ * @returns {string[]}
+ */
+export function auditPage({ relPath, html, origin, homepageTitle }) {
+  const path = expectedPath(relPath);
+  if (path === null) {
+    return [
+      `${relPath}: unrecognized route path. Add a rule to expectedPath() — ` +
+        `a route that is silently skipped is how the 404 shipped a broken card.`,
+    ];
+  }
+
+  const problems = [];
+  const tags = parseMetaTags(html);
+  const ogTitle = metaContent(tags, "og:title");
+  const ogUrl = metaContent(tags, "og:url");
+  const ogImage = metaContent(tags, "og:image");
+  const twitterCard = metaContent(tags, "twitter:card");
+
+  // 1. The image must be the one with a file extension. GitHub Pages serves
+  //    the extensionless out/opengraph-image as application/octet-stream, and
+  //    scrapers drop it.
+  const wantImage = `${origin}/og.png`;
+  if (!ogImage) {
+    problems.push(`${relPath}: no og:image`);
+  } else if (ogImage !== wantImage) {
+    problems.push(`${relPath}: og:image is "${ogImage}", want "${wantImage}"`);
+  }
+
+  // 2. og:url must name this page, on this origin. An inherited card always
+  //    shows the homepage's "/" here, so this catches inheritance too.
+  const wantUrl = `${origin}${path}`;
+  if (!ogUrl) {
+    problems.push(`${relPath}: no og:url`);
+  } else if (ogUrl !== wantUrl) {
+    problems.push(`${relPath}: og:url is "${ogUrl}", want "${wantUrl}"`);
+  }
+
+  // 3. The bug that started all this: a page that sets only title and
+  //    description inherits the root layout's entire openGraph object, so its
+  //    og:title is the homepage's, verbatim.
+  if (!ogTitle) {
+    problems.push(`${relPath}: no og:title`);
+  } else if (relPath !== "index.html" && ogTitle === homepageTitle) {
+    problems.push(
+      `${relPath}: og:title is the homepage's ("${ogTitle}") — ` +
+        `this card is inherited, not its own. Route the page through pageMetadata().`,
+    );
+  }
+
+  // 4. summary is a small square thumbnail. A correct title with a weak card
+  //    is still a weak post.
+  if (twitterCard !== "summary_large_image") {
+    problems.push(
+      `${relPath}: twitter:card is "${twitterCard ?? "<none>"}", want "summary_large_image"`,
+    );
+  }
+
+  return problems;
+}
