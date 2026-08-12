@@ -123,6 +123,16 @@ const tests = [
     count: 3,
     note: "The sitemap is hand-maintained, so this guards against a new page reaching production with no symptom: every app route is either listed or has a recorded exclusion, and no exclusion is stale or contradicted by the sitemap",
   },
+  {
+    file: "src/lib/page-metadata.test.ts",
+    count: 6,
+    note: "What pageMetadata() produces — a page's own og:title rather than the site's, canonical and og:url with the trailing slash, an og:image path with a real image extension, and robots omitted unless a page opts out",
+  },
+  {
+    file: "src/app/page-metadata-coverage.test.ts",
+    count: 4,
+    note: "That the helper is actually used. A page setting only a title silently inherits the homepage's whole link-preview card, including an image GitHub Pages serves as application/octet-stream. That shipped twice before this test existed",
+  },
 ];
 
 function Card({
