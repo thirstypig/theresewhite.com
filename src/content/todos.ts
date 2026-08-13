@@ -171,4 +171,26 @@ export const todos: Todo[] = [
     area: "Business",
     added: "2026-08-11",
   },
+  {
+    id: "typecheck-gate",
+    title: "Run the TypeScript check somewhere on the way to production",
+    detail:
+      "Nothing between a commit and the live site checks TypeScript. `npx tsc --noEmit` is not in any npm script and not in the deploy workflow, so the only thing that ever runs it is a person choosing to. This is not theoretical: while writing the built-output tests on 2026-08-12 it caught a real type error that all 66 tests passed straight through, and without that manual run the error would have shipped. The fix is small — a `typecheck` script in package.json and one more step in .github/workflows/deploy.yml, placed before `npm test` so it fails fast. It takes about three seconds.",
+    status: "open",
+    owner: "Dev",
+    priority: "normal",
+    area: "Deploy",
+    added: "2026-08-12",
+  },
+  {
+    id: "actions-node20-deprecation",
+    title: "Update the GitHub Actions that still target Node 20",
+    detail:
+      "Every deploy now logs a warning that actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4 and actions/deploy-pages@v4 target Node 20, which GitHub has deprecated, and are being forced onto Node 24. Nothing is broken and no run has failed. The reason to act early is that the failure date is GitHub's to choose, not ours — the deploy keeps working until the day it doesn't, and that day will not be a convenient one. Bumping each action to its current major version is the whole job. Worth doing before the Wix cutover, so a broken pipeline is never in the way of that.",
+    status: "open",
+    owner: "Dev",
+    priority: "normal",
+    area: "Deploy",
+    added: "2026-08-12",
+  },
 ];
