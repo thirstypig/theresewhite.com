@@ -136,6 +136,11 @@ const tests = [
     count: 4,
     note: "That the helper is actually used. A page setting only a title silently inherits the homepage's whole link-preview card, including an image GitHub Pages serves as application/octet-stream. That shipped twice before this test existed",
   },
+  {
+    file: "scripts/verify-built-output.test.ts",
+    count: 38,
+    note: "The checker that reads the built site before it goes live. Its tests are written backwards — the examples fed to it are the broken pages that actually shipped, so if it ever stops catching them it fails its own suite. Also covers the two ways a checker can lie: finding no pages at all and calling that a pass, and trusting a file named .png instead of reading its first bytes",
+  },
 ];
 
 function Card({

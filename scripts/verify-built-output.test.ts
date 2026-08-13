@@ -1,9 +1,15 @@
-import { describe, it, expect } from "vitest";
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { dirname, join } from "node:path";
+import { afterEach, describe, it, expect } from "vitest";
 import {
   expectedPath,
   parseMetaTags,
   metaContent,
   originFromHomepage,
+  conflictingTags,
+  builtPages,
+  auditOgImageFile,
 } from "./verify-built-output.mjs";
 
 describe("expectedPath", () => {
@@ -260,5 +266,170 @@ describe("conflicting duplicate tags", () => {
     for (const p of problems) expect(p).toMatch(/^contact\/index\.html:/);
     expect(problems.join(" ")).toMatch(/og:title/);
     expect(problems.join(" ")).toMatch(/og:url/);
+  });
+});
+
+describe("conflictingTags", () => {
+  // Exercised through auditPage above; tested here directly because it is
+  // exported and because the "same value twice" rule is the part most likely
+  // to be tightened later into a false alarm.
+
+  // Open Graph carries its key in `property`, Twitter in `name`. The return
+  // type is stated rather than inferred: without it each branch infers the
+  // other key as `undefined`, which does not satisfy Record<string, string>.
+  const tags = (pairs: [string, string][]) =>
+    pairs.map(([k, v]): Record<string, string> =>
+      k.startsWith("og:") ? { property: k, content: v } : { name: k, content: v },
+    );
+
+  it("finds nothing when every audited key appears once", () => {
+    expect(
+      conflictingTags(
+        tags([
+          ["og:title", "Contact"],
+          ["og:url", "https://example.com/contact/"],
+          ["og:image", "https://example.com/og.png"],
+          ["twitter:card", "summary_large_image"],
+        ]),
+      ),
+    ).toEqual([]);
+  });
+
+  it("reports the key and both of its distinct values", () => {
+    expect(
+      conflictingTags(
+        tags([
+          ["og:title", "Contact"],
+          ["og:title", "Other"],
+        ]),
+      ),
+    ).toEqual([{ key: "og:title", values: ["Contact", "Other"] }]);
+  });
+
+  it("says nothing about keys outside the audited set", () => {
+    // out/404.html really does render two robots tags. Nothing reads robots,
+    // so widening this would fail a correct build.
+    expect(
+      conflictingTags(
+        tags([
+          ["robots", "noindex"],
+          ["robots", "noindex, follow"],
+        ]),
+      ),
+    ).toEqual([]);
+  });
+});
+
+/** Temp directories built by fixture(), removed after each test. */
+const tempDirs: string[] = [];
+
+/** Writes a throwaway directory tree and returns its path. */
+function fixture(files: Record<string, string | Buffer>): string {
+  const dir = mkdtempSync(join(tmpdir(), "verify-built-output-"));
+  tempDirs.push(dir);
+  for (const [relPath, content] of Object.entries(files)) {
+    const full = join(dir, relPath);
+    mkdirSync(dirname(full), { recursive: true });
+    writeFileSync(full, content);
+  }
+  return dir;
+}
+
+afterEach(() => {
+  for (const dir of tempDirs.splice(0)) rmSync(dir, { recursive: true, force: true });
+});
+
+describe("builtPages", () => {
+  it("finds every page, at any depth, as a path relative to the root", () => {
+    const dir = fixture({
+      "index.html": "",
+      "404.html": "",
+      "contact/index.html": "",
+      "contact/thank-you/index.html": "",
+      "lp/a/index.html": "",
+    });
+
+    expect(builtPages(dir)).toEqual([
+      "404.html",
+      "contact/index.html",
+      "contact/thank-you/index.html",
+      "index.html",
+      "lp/a/index.html",
+    ]);
+  });
+
+  it("returns paths in the exact shape expectedPath understands", () => {
+    // The two functions have to agree or every page reports as an unrecognized
+    // route. A leading "./", a backslash, or an absolute path would all break
+    // that agreement while each function still looked correct alone.
+    const dir = fixture({
+      "index.html": "",
+      "404.html": "",
+      "_not-found/index.html": "",
+      "conflict-calculator/index.html": "",
+    });
+
+    for (const relPath of builtPages(dir)) {
+      expect(expectedPath(relPath), `expectedPath rejected ${relPath}`).not.toBeNull();
+    }
+  });
+
+  it("skips _next, which holds assets rather than pages", () => {
+    const dir = fixture({
+      "index.html": "",
+      "_next/static/chunk/index.html": "",
+    });
+
+    expect(builtPages(dir)).toEqual(["index.html"]);
+  });
+
+  it("ignores files that are not pages a visitor can land on", () => {
+    const dir = fixture({
+      "index.html": "",
+      "sitemap.xml": "",
+      "og.png": "",
+      "robots.txt": "",
+    });
+
+    expect(builtPages(dir)).toEqual(["index.html"]);
+  });
+
+  it("returns an empty list for a tree with no pages at all", () => {
+    // Recorded deliberately: on its own the walk is SILENT about finding
+    // nothing, and "audited 0 pages" would otherwise read as a pass. What
+    // stops that is main()'s separate check that out/index.html exists before
+    // any walking starts. This test is the reminder that the guard lives
+    // there, not here.
+    expect(builtPages(fixture({ "readme.txt": "" }))).toEqual([]);
+  });
+});
+
+describe("auditOgImageFile", () => {
+  const PNG_HEADER = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+
+  it("accepts a file whose first bytes are a real PNG header", () => {
+    const dir = fixture({ "og.png": Buffer.concat([PNG_HEADER, Buffer.from("...")]) });
+    expect(auditOgImageFile(dir)).toEqual([]);
+  });
+
+  it("reports a missing og.png", () => {
+    const problems = auditOgImageFile(fixture({ "index.html": "" }));
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/^og\.png: missing/);
+  });
+
+  it("rejects a file that is named .png but is not one", () => {
+    // The whole reason this checks bytes rather than the filename. The original
+    // failure was a file whose contents and name disagreed with the type it was
+    // served as; trusting the name here would reproduce that blind spot.
+    const dir = fixture({ "og.png": "<!doctype html><title>404</title>" });
+    const problems = auditOgImageFile(dir);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/not a PNG/);
+  });
+
+  it("rejects a JPEG sitting where the PNG should be", () => {
+    const dir = fixture({ "og.png": Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0, 0, 0, 0]) });
+    expect(auditOgImageFile(dir).join(" ")).toMatch(/not a PNG/);
   });
 });
