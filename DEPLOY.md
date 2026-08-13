@@ -79,22 +79,39 @@ Watch the first run under the **Actions** tab. It takes about two minutes.
 
 ### What the build checks before it publishes
 
-Three gates, in order. Any of them failing stops the deploy, which is the
-point — each one exists because the corresponding failure is otherwise silent.
+Five gates. The first four run before anything is uploaded and any of them
+failing stops the deploy, which is the point — each exists because the
+corresponding failure is otherwise silent. The fifth runs after publish and can
+only raise the alarm.
 
 1. **Pages source is `workflow`.** Queries the Pages API and fails if the
    source has been switched to "Deploy from a branch". Without this, that
    change breaks nothing until the *next* push, which then republishes the
    repo source as a Jekyll site while still returning 200.
-2. **`npm test`.** 15 unit tests. The calculator figures are pinned to a
-   golden vector, and the staging `noindex` switch is covered in both
-   directions.
+2. **`npm test`.** The unit suite. The calculator figures are pinned to a
+   golden vector, the staging `noindex` switch is covered in both directions,
+   every route is asserted to build its metadata through `pageMetadata()`, and
+   the built-output auditor is itself tested against the broken shapes it has
+   to catch.
 3. **Asset paths.** Confirms `out/index.html` still addresses `/_next/*` from
    the site root. A stray `basePath` would 404 every stylesheet and script
    while the HTML kept returning 200.
+4. **Link-preview cards.** `npm run verify:build` walks the built HTML and
+   checks that every page names `/og.png`, advertises its own `og:url`, and
+   carries its own `og:title` rather than the homepage's. A page that sets only
+   a title and description inherits the whole homepage card, and nothing else
+   in the toolchain notices.
+5. **The served image header** *(post-deploy)*. Fetches `og.png` from the live
+   URL and fails unless it comes back as `image/png`. Next emits the generated
+   image with no file extension and GitHub Pages types files by extension, so
+   it was served as `application/octet-stream` — a valid PNG that every
+   scraper drops. This one runs after the artifact is live, so it reports
+   rather than prevents.
 
-Background on all three:
-`docs/solutions/deployment-issues/nextjs-static-export-github-pages-source-and-subpath.md`
+Gate 4 is runnable locally: `npm run build && npm run verify:build`.
+
+Background: `docs/solutions/deployment-issues/nextjs-static-export-github-pages-source-and-subpath.md`
+and `docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md`
 
 ---
 

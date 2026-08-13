@@ -153,8 +153,8 @@ export const todos: Todo[] = [
     id: "og-image-content-type-gate",
     title: "Add a post-deploy check that the link-preview image is served as an image",
     detail:
-      "The generated card image is emitted by Next as out/opengraph-image with no file extension, and GitHub Pages served that as application/octet-stream — a valid PNG that LinkedIn and Facebook reject, because they dispatch on the Content-Type header rather than the bytes. The build now copies it to out/og.png, which fixes it, but nothing verifies the served header. The three existing CI gates are all pre-deploy and none of them fetch a URL, so a regression here would ship silently and only show up as a weak post. A pasteable workflow step is in the post-mortem at docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md.",
-    status: "open",
+      "Done. Two gates now cover this, not one. npm run verify:build walks the built HTML before upload and fails if any page names the wrong image, advertises the wrong og:url, or carries the homepage's og:title instead of its own — that last one is the inheritance bug that started this, checked in the output rather than the source. A post-deploy step then fetches og.png from the live URL and fails unless it is served as image/png. The post-deploy half cannot prevent a bad deploy, only report it, which is acceptable because it covers the one thing our code does not control: GitHub types files by extension, and that behaviour is observed rather than documented. Plan: docs/superpowers/plans/2026-08-12-built-output-and-post-deploy-gates.md.",
+    status: "done",
     owner: "Dev",
     priority: "normal",
     area: "Deploy",
