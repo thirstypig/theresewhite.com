@@ -110,8 +110,10 @@ jobs:
             case "$ct" in
               image/png*) echo "og.png served as $ct"; exit 0 ;;
             esac
-            echo "attempt $attempt: content-type was '${ct:-<none>}', retrying in 10s"
-            sleep 10
+            echo "attempt $attempt: content-type was '${ct:-<none>}'"
+            # Not after the final attempt: there is nothing left to wait for,
+            # and it only delays the error report below by 10s.
+            if [ "$attempt" -lt 5 ]; then sleep 10; fi
           done
           echo "::error::og.png is served as '${ct:-<none>}', not image/png. Link previews will drop the image on LinkedIn, Facebook and iMessage. See docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md"
           exit 1

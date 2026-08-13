@@ -167,4 +167,98 @@ describe("auditPage", () => {
     expect(problems.length).toBeGreaterThan(0);
     for (const p of problems) expect(p).toMatch(/^contact\/index\.html:/);
   });
+
+  // The two "absent tag" branches. Their sibling — a missing og:image — has
+  // been covered since this file was written, and these two were left to lean
+  // on the resemblance. "Correct because it looks like the tested one next to
+  // it" is the reasoning that shipped the original bug; these close it.
+
+  it("rejects a page with no og:title", () => {
+    const html = `<html><head>
+      <meta property="og:url" content="${ORIGIN}/contact/"/>
+      <meta property="og:image" content="${ORIGIN}/og.png"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+    </head></html>`;
+    expect(audit(html)).toEqual(["contact/index.html: no og:title"]);
+  });
+
+  it("rejects a page with no og:url", () => {
+    const html = `<html><head>
+      <meta property="og:title" content="Contact"/>
+      <meta property="og:image" content="${ORIGIN}/og.png"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+    </head></html>`;
+    expect(audit(html)).toEqual(["contact/index.html: no og:url"]);
+  });
+});
+
+describe("conflicting duplicate tags", () => {
+  /**
+   * metaContent reads the FIRST matching tag. That is only safe while a key
+   * appears once. If an audited key ever rendered twice with different values,
+   * this checker would inspect one and a scraper might read the other — the
+   * audit would pass while the card was wrong.
+   *
+   * That is the original bug's exact shape: correct from where we stand, wrong
+   * from where it matters. It has never happened, and until now the tool would
+   * have taught us nothing if it did.
+   */
+
+  it("rejects an audited key that appears twice with different values", () => {
+    const html = `<html><head>
+      <meta property="og:title" content="Contact"/>
+      <meta property="og:title" content="Something else entirely"/>
+      <meta property="og:url" content="${ORIGIN}/contact/"/>
+      <meta property="og:image" content="${ORIGIN}/og.png"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+    </head></html>`;
+    const problems = audit(html);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/^contact\/index\.html: og:title appears 2 times/);
+  });
+
+  it("accepts an audited key repeated with the same value", () => {
+    // Untidy, but unambiguous — every reader gets the same answer, so there is
+    // nothing here for a scraper to get wrong. Flagging it would be crying wolf.
+    const html = `<html><head>
+      <meta property="og:title" content="Contact"/>
+      <meta property="og:title" content="Contact"/>
+      <meta property="og:url" content="${ORIGIN}/contact/"/>
+      <meta property="og:image" content="${ORIGIN}/og.png"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+    </head></html>`;
+    expect(audit(html)).toEqual([]);
+  });
+
+  it("ignores a duplicated tag it does not audit", () => {
+    // This is the real out/404.html: the root layout emits one robots tag and
+    // the page emits another. Harmless — nothing here reads robots, and search
+    // engines take the more restrictive of the two. Guarding only the keys we
+    // actually consume is what keeps this check honest instead of noisy.
+    const html = `<html><head>
+      <meta property="og:title" content="Page not found"/>
+      <meta property="og:url" content="${ORIGIN}/404/"/>
+      <meta property="og:image" content="${ORIGIN}/og.png"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="robots" content="noindex"/>
+      <meta name="robots" content="noindex, follow"/>
+    </head></html>`;
+    expect(audit(html, "404.html")).toEqual([]);
+  });
+
+  it("reports each conflicting key once, naming the file", () => {
+    const html = `<html><head>
+      <meta property="og:title" content="Contact"/>
+      <meta property="og:title" content="Other"/>
+      <meta property="og:url" content="${ORIGIN}/contact/"/>
+      <meta property="og:url" content="${ORIGIN}/elsewhere/"/>
+      <meta property="og:image" content="${ORIGIN}/og.png"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+    </head></html>`;
+    const problems = audit(html);
+    expect(problems).toHaveLength(2);
+    for (const p of problems) expect(p).toMatch(/^contact\/index\.html:/);
+    expect(problems.join(" ")).toMatch(/og:title/);
+    expect(problems.join(" ")).toMatch(/og:url/);
+  });
 });

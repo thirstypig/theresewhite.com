@@ -77,6 +77,41 @@ export function metaContent(tags, key) {
   return found ? found.content : undefined;
 }
 
+/** The keys auditPage reads. Only these are guarded against conflicts. */
+const AUDITED_KEYS = ["og:title", "og:url", "og:image", "twitter:card"];
+
+/**
+ * Audited keys that appear more than once with more than one distinct value.
+ *
+ * metaContent returns the FIRST match, which is only safe while a key appears
+ * once. A key rendered twice with different values means this checker inspects
+ * one value and a scraper may read another — the audit would pass while the
+ * card was wrong. That is the original failure's exact shape: correct from
+ * where we stand, wrong from where it matters.
+ *
+ * Repeats carrying the same value are not reported. Every reader gets the same
+ * answer, so there is nothing to get wrong, and flagging it would be noise.
+ *
+ * Only audited keys are guarded, on purpose. out/404.html legitimately renders
+ * two `robots` tags — one from the root layout, one from the page — and nothing
+ * here reads robots. Widening this to every key would fail a correct build.
+ *
+ * @param {Record<string, string>[]} tags
+ * @returns {{ key: string, values: string[] }[]}
+ */
+export function conflictingTags(tags) {
+  return AUDITED_KEYS.map((key) => ({
+    key,
+    values: [
+      ...new Set(
+        tags
+          .filter((t) => t.property === key || t.name === key)
+          .map((t) => t.content),
+      ),
+    ],
+  })).filter((c) => c.values.length > 1);
+}
+
 /**
  * The site origin, read from the homepage's own og:url.
  *
@@ -156,6 +191,17 @@ export function auditPage({ relPath, html, origin, homepageTitle }) {
   if (twitterCard !== "summary_large_image") {
     problems.push(
       `${relPath}: twitter:card is "${twitterCard ?? "<none>"}", want "summary_large_image"`,
+    );
+  }
+
+  // 5. Everything above read the first matching tag. If a key carries two
+  //    different values, the checks above are answering a question a scraper
+  //    might answer differently — so the audit could pass on a broken card.
+  for (const { key, values } of conflictingTags(tags)) {
+    problems.push(
+      `${relPath}: ${key} appears ${values.length} times with different values ` +
+        `(${values.map((v) => `"${v}"`).join(", ")}). This audit reads the first; ` +
+        `a scraper may read another. Emit it once.`,
     );
   }
 
