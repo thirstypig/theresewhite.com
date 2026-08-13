@@ -17,10 +17,11 @@ emotionally-charged conflict to book a confidential assessment.
 
 ```bash
 npm install
-npm run dev      # http://localhost:3160
-npm test         # vitest, unit tests only
-npm run build    # static export to ./out
-npm run serve    # preview the built output on :3160
+npm run dev           # http://localhost:3160
+npm test              # vitest, unit tests only
+npm run build         # static export to ./out
+npm run verify:build  # audit the built pages' link-preview cards (needs a build first)
+npm run serve         # preview the built output on :3160
 ```
 
 There is no `npm start`: `output: "export"` produces static files with no Node
@@ -40,6 +41,9 @@ src/components/         Shared UI.
 src/app/                One folder per route, inside two route groups:
                         (site) carries the header and footer, (landing)
                         renders bare. Parentheses never appear in a URL.
+scripts/                Build-time checks that are not part of the app.
+                        verify-built-output.mjs reads ./out and fails the
+                        deploy if any page's link-preview card is wrong.
 public/logos/           Panel and affiliation logos, normalized to uniform tiles.
 ```
 
@@ -72,6 +76,7 @@ name the failure a test prevents, don't add it.
 | File | Role |
 |---|---|
 | `README.md` | This file — update when top-level architecture changes |
+| `CLAUDE.md` | How to write for James: plain English, consequences before mechanisms. Applies to commit messages, code comments, specs and post-mortems as well as conversation. `AGENTS.md` is rewritten by `next dev`, so put conventions here instead |
 | `DEPLOY.md` | Deploy steps, DNS, the Wix redirect map, cutover checklist |
 | `src/content/todos.ts` | **Admin data.** Backs `/admin/todo`. Mark shipped items `done` rather than deleting them, add anything new, and bump `TODOS_UPDATED` |
 | `src/app/(site)/admin/page.tsx` | Page inventory, palette, type and test reference — refresh when routes, tokens or test counts change |

@@ -52,7 +52,7 @@ const links = [
     items: [
       {
         name: "Web3Forms",
-        note: "Delivers the contact form and the calculator email gate. Free tier is 250 submissions/month, shared between the two.",
+        note: "Delivers all four forms: contact, collaborate, the calculator email gate, and the landing pages. Free tier is 250 submissions/month, shared across all four.",
         href: "https://web3forms.com/",
       },
     ],
