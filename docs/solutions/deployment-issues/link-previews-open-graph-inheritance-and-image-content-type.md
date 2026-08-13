@@ -34,6 +34,7 @@ tags:
   - silent-failure
 related:
   - './nextjs-static-export-github-pages-source-and-subpath.md'
+  - './github-actions-default-shell-errexit-and-pipefail.md'
 ---
 
 # Link previews on a Next.js static export
@@ -261,18 +262,50 @@ curl -sI https://theresewhite.bahtzang.com/og.png | grep -i content-type
 # want: content-type: image/png
 ```
 
-**There is no CI gate for this yet.** The three existing gates in
-`.github/workflows/deploy.yml` — Pages source, `npm test`, asset paths — are
-all orthogonal to metadata, and none of them fetch a deployed URL. A fourth,
-post-deploy, would close the Content-Type half:
+**Both halves now have a CI gate.** *(Added 2026-08-12; when this document was
+first written there were none, and the section below described what was still
+needed.)*
+
+The inheritance half is caught before anything is published.
+`npm run verify:build` runs `scripts/verify-built-output.mjs`, which reads the
+built HTML in `out/` and fails if any page points at the wrong image, advertises
+someone else's address, carries the homepage's title instead of its own, or uses
+the small preview card. It also fails if a page names any of those four things
+twice with two different values — because everything above reads the first one,
+and a scraper might read the other. It runs after `npm run build` and before the
+files are uploaded, so a bad card stops the deploy rather than shipping.
+
+The Content-Type half is caught after publishing, because that is the only place
+it can be seen:
 
 ```yaml
 - name: Assert the link-preview image is served as an image
   run: |
-    ct=$(curl -sI "${{ steps.deployment.outputs.page_url }}og.png" \
-         | tr -d '\r' | awk -F': ' 'tolower($1)=="content-type"{print $2}')
-    [ "$ct" = "image/png" ] || { echo "og.png served as $ct"; exit 1; }
+    url="${{ steps.deployment.outputs.page_url }}og.png?ci=${{ github.run_id }}"
+    for attempt in 1 2 3 4 5; do
+      ct=$(curl -sI --max-time 10 "$url" | tr -d '\r' \
+           | awk -F': ' 'tolower($1)=="content-type"{print tolower($2)}')
+      case "$ct" in image/png*) echo "og.png served as $ct"; exit 0 ;; esac
+      ...
+    done
+    exit 1
 ```
+
+Three details in it are load-bearing. It retries, because the image takes a
+moment to reach every server after a deploy and a check that fails at random
+gets deleted. It adds `?ci=<run_id>` so the request cannot be answered from a
+cache holding the *previous* deploy's response. And it uses the deploy's own
+published address rather than a hardcoded domain, so it keeps working through
+the move to `theresewhite.com`.
+
+This one cannot prevent a bad deploy — the files are already live when it runs.
+That is accepted, because it covers the one thing this codebase does not
+control: how GitHub decides to label a file it is serving.
+
+Writing that step produced two confident and incorrect claims about how bash
+behaves inside GitHub Actions, both of which would have made the check worse.
+Recorded separately in
+`./github-actions-default-shell-errexit-and-pipefail.md`.
 
 **Unit-test the shape, since the shape is what regresses.**
 `src/lib/page-metadata.test.ts` covers the two failure modes that actually
