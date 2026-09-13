@@ -9,7 +9,7 @@ emotionally-charged conflict to book a confidential assessment.
 
 | | |
 |---|---|
-| **Dev port** | **3160** (block 3160–3169 — see [PORTS.md](./PORTS.md)) |
+| **Dev port** | **3160** (block 3160–3169 — see `~/Projects/MASTER-PORTS.md`) |
 | **Stack** | Next.js 16 (App Router), Tailwind v4, TypeScript, static export |
 | **Staging** | https://theresewhite.bahtzang.com (GitHub Pages, `noindex`) |
 | **Production** | https://www.theresewhite.com — still on Wix, not yet cut over |
