@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-08-12";
+export const TODOS_UPDATED = "2026-10-16";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -175,8 +175,8 @@ export const todos: Todo[] = [
     id: "typecheck-gate",
     title: "Run the TypeScript check somewhere on the way to production",
     detail:
-      "Nothing between a commit and the live site checks TypeScript. `npx tsc --noEmit` is not in any npm script and not in the deploy workflow, so the only thing that ever runs it is a person choosing to. This is not theoretical: while writing the built-output tests on 2026-08-12 it caught a real type error that all 66 tests passed straight through, and without that manual run the error would have shipped. The fix is small — a `typecheck` script in package.json and one more step in .github/workflows/deploy.yml, placed before `npm test` so it fails fast. It takes about three seconds.",
-    status: "open",
+      "Done 2026-10-16. `npm run typecheck` (which runs `npx tsc --noEmit`) is now a step in .github/workflows/deploy.yml, placed before `npm test` so a type error stops the deploy before anything slower starts. It takes about three seconds. Before this, nothing between a commit and the live site checked types: on 2026-08-12 a manual run caught a real type error that all 66 tests had passed straight through.",
+    status: "done",
     owner: "Dev",
     priority: "normal",
     area: "Deploy",
@@ -186,8 +186,8 @@ export const todos: Todo[] = [
     id: "actions-node20-deprecation",
     title: "Update the GitHub Actions that still target Node 20",
     detail:
-      "Every deploy now logs a warning that actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4 and actions/deploy-pages@v4 target Node 20, which GitHub has deprecated, and are being forced onto Node 24. Nothing is broken and no run has failed. The reason to act early is that the failure date is GitHub's to choose, not ours — the deploy keeps working until the day it doesn't, and that day will not be a convenient one. Bumping each action to its current major version is the whole job. Worth doing before the Wix cutover, so a broken pipeline is never in the way of that.",
-    status: "open",
+      "Done 2026-10-16. The deploy now uses actions/checkout@v7, actions/setup-node@v7, actions/upload-pages-artifact@v5 and actions/deploy-pages@v5, all of which run on Node 24. GitHub had already been forcing the old versions onto Node 24 and warning on every run, so nothing was broken yet; the risk was that the date it stopped working was GitHub's to choose. One side effect: upload-pages-artifact v4 and later leave out files whose names start with a dot, so out/.nojekyll no longer ships. That is harmless, because the deploy already refuses to run unless Pages publishes the artifact as-is, which never involves Jekyll.",
+    status: "done",
     owner: "Dev",
     priority: "normal",
     area: "Deploy",
