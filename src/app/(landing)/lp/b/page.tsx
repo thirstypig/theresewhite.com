@@ -51,7 +51,7 @@ export default function LandingB() {
           <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
             <div>
               <p className="label text-slate">{landing.hero.eyebrow}</p>
-              <h1 className="display-wix mt-4 text-4xl text-charcoal sm:text-5xl">
+              <h1 className="display-wix mt-4 text-4xl text-heading sm:text-5xl">
                 {landing.hero.headline}
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-charcoal">

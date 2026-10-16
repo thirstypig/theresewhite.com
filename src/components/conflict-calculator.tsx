@@ -292,6 +292,7 @@ export function ConflictCalculator({
   ctaExternal = false,
   className = "border-b border-rule bg-paper",
   fontClass = "display",
+  stickyTop = "lg:top-6",
 }: {
   /**
    * Where "Schedule Your Free Confidential Assessment" goes. The main site
@@ -309,6 +310,12 @@ export function ConflictCalculator({
    * matches the page around it.
    */
   fontClass?: string;
+  /**
+   * How far below the top of the window the results stop while scrolling.
+   * A page with a header that stays pinned must clear it, or the headline
+   * figure slides under the header.
+   */
+  stickyTop?: string;
 }) {
   const [texts, setTexts] = useState<Texts>(initialTexts);
   const [loaded, setLoaded] = useState(false);
@@ -486,7 +493,9 @@ export function ConflictCalculator({
               the column is taller than the window there, and a sticky column
               taller than the window hides its own bottom half.
             */}
-          <aside className="space-y-6 lg:sticky lg:top-6 [@media(max-height:900px)]:static">
+          <aside
+            className={`space-y-6 lg:sticky ${stickyTop} [@media(max-height:900px)]:static`}
+          >
             <div
               ref={resultsRef}
               className="overflow-hidden rounded-[0.25rem] border border-rule bg-paper"
@@ -581,7 +590,7 @@ export function ConflictCalculator({
               <a
                 href={ctaHref}
                 {...externalProps}
-                className="mt-6 block rounded-sm bg-btn px-6 py-3.5 text-center text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover"
+                className="cta-button mt-6 block rounded-sm bg-btn px-6 py-3.5 text-center text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover"
               >
                 {close.button}
               </a>
