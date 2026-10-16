@@ -329,6 +329,12 @@ body {
   letter-spacing: 0.08em;
 }
 
+/* Same reason for the calculator's figures. Arial's digits are already
+   equal-width, so the numbers still hold still as they change. */
+.lp-wix .font-mono {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /*
  * The lock sits on a wrapper inside <body>, but body paints its own
  * background from --paper. Without this a dark-mode visitor gets a correctly

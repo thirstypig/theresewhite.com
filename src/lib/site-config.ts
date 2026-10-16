@@ -48,3 +48,26 @@ export const SITE_URL = firstValidUrl(
 export const IS_PRODUCTION_SITE = (
   PRODUCTION_HOSTS as readonly string[]
 ).includes(new URL(SITE_URL).host.toLowerCase());
+
+/**
+ * The calculator's own address while theresewhite.com is still on Wix.
+ *
+ * The CI workflow runs a second build with NEXT_PUBLIC_SITE_URL set to this,
+ * and publishes only the calculator from it (scripts/build-calculator-site.mjs).
+ * That build is not a production host by the rule above, so it ships noindex;
+ * the main site's /conflict-calculator is the page meant for search.
+ */
+export const CALCULATOR_SITE_URL = "https://calculator.theresewhite.com";
+
+export const IS_CALCULATOR_SITE =
+  new URL(SITE_URL).host.toLowerCase() === new URL(CALCULATOR_SITE_URL).host;
+
+/**
+ * Where the cookie banner's privacy link goes. The calculator site is a
+ * single page with no /privacy of its own, so it points at the policy on the
+ * live Wix site instead. Revisit at cutover, when /privacy on the main site
+ * becomes the real one.
+ */
+export const PRIVACY_HREF = IS_CALCULATOR_SITE
+  ? "https://www.theresewhite.com/privacy-policy"
+  : "/privacy";

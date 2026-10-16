@@ -4,7 +4,6 @@ import { ConflictCalculator } from "@/components/conflict-calculator";
 import { LandingContactForm } from "@/components/landing-contact-form";
 import { pageMetadata } from "@/lib/page-metadata";
 import {
-  calculator,
   contact,
   endorsements,
   landing,
@@ -106,7 +105,6 @@ export default function LandingB() {
           className="border-b border-rule bg-paper"
           fontClass="display-wix"
           ctaHref="#talk"
-          ctaLabel="Talk to Therese"
         />
       </div>
 
@@ -121,51 +119,6 @@ export default function LandingB() {
             {endorsements.items[1].name} &mdash; nearly 50 years in conflict
             resolution
           </p>
-        </div>
-      </section>
-
-      {/* ---------------- What the number means ---------------- */}
-      <section className="border-b border-rule bg-cream">
-        <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2 className="display-wix text-3xl text-heading">
-            {calculator.understanding.title}
-          </h2>
-          <div className="mt-5 space-y-4">
-            {calculator.understanding.body.map((para) => (
-              <p key={para} className="text-base leading-relaxed text-charcoal">
-                {para}
-              </p>
-            ))}
-          </div>
-          <ul className="mt-8 space-y-2.5">
-            {calculator.understanding.considerations.map((point) => (
-              <li
-                key={point}
-                className="border-l-2 border-rule-strong pl-4 text-base leading-relaxed text-charcoal"
-              >
-                {point}
-              </li>
-            ))}
-          </ul>
-
-          <h2 className="display-wix mt-16 text-3xl text-heading">
-            {calculator.nextSteps.title}
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-charcoal">
-            {calculator.nextSteps.intro}
-          </p>
-          <dl className="mt-8 grid gap-x-10 gap-y-7 sm:grid-cols-2">
-            {calculator.nextSteps.items.map((item) => (
-              <div key={item.name} className="border-t border-rule pt-4">
-                <dt className="display-wix text-lg text-heading">
-                  {item.name}
-                </dt>
-                <dd className="mt-2 text-base leading-relaxed text-charcoal">
-                  {item.body}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
@@ -202,10 +155,7 @@ export default function LandingB() {
               </a>
             </li>
           </ul>
-          <p className="mt-8 border-t border-band-rule pt-6 text-xs leading-relaxed text-band-muted">
-            {calculator.disclaimer.body}
-          </p>
-          <p className="mt-4 text-xs text-band-muted">
+          <p className="mt-8 border-t border-band-rule pt-6 text-xs text-band-muted">
             Copyright {contact.name} {new Date().getFullYear()}.{" "}
             {landing.foot.note}
           </p>

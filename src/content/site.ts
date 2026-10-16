@@ -444,110 +444,145 @@ export const footerNav = [
 ] as const;
 
 /**
- * Supporting copy for /conflict-calculator.
+ * Every word of the Workplace Conflict Cost Calculator.
  *
- * MIGRATED, not drafted — unlike `about` and `collaborate`, this is carried
- * over verbatim from `workplace-conflict-calculator-COMPLETE.html` in the repo
- * root, which is Therese's own standalone version of the tool. The rebuild
- * brought across the calculator itself and left this explanatory copy behind.
+ * MIGRATED, not drafted. Carried over verbatim from Therese's second version
+ * of the tool, saved as `workplace-conflict-calculator-v2.html` in the repo
+ * root. James asked for the exact copy, so wording, capitalization and
+ * punctuation are unchanged — including the phone number written as
+ * "323-291-4813" rather than the site's usual "(323) 291-4813", and the
+ * heading letters A to D, which the results column refers back to.
  *
- * Wording is unchanged. Two presentational departures from the source: the
- * decorative emoji in its headings are dropped, because no other heading on
- * this site carries one, and the "Name: body" items are split at the colon to
- * suit the dt/dd pattern used everywhere else.
+ * Where the source styles part of a sentence (bold, underline), the sentence
+ * is split into the pieces the component styles separately. Read them in
+ * order and they are the original sentence.
  *
- * The source's title-case tagline ("Quantify The Financial Impact Of...") is
- * deliberately not carried over — the page header already says the same thing
- * in her voice.
+ * The first version's copy (key benefits, how to use, understanding these
+ * costs, recommended next steps, and its legal disclaimer) was retired with
+ * that calculator. It is in workplace-conflict-calculator-COMPLETE.html.
  */
 export const calculator = {
-  whatItDoes: {
-    title: "What this calculator does",
-    body: [
-      "This tool calculates the financial impact of unresolved conflict between two important team members. It provides two critical figures: what the conflict has already cost your organization, and what you can expect to lose over the next 12 months if the situation continues.",
-      "Anticipated Future Conflict Costs: Use this calculator proactively to forecast the potential financial impact of emerging conflicts before they escalate. By modeling different scenarios and productivity loss percentages, you can make informed decisions about when and how to intervene, helping you prevent costly outcomes rather than just measuring damage after the fact.",
-    ],
+  eyebrow: "L. Therese White, Workplace Conflict Mediator & Coach",
+  title: "The Workplace Conflict Cost Calculator",
+  sub: "Quantify the hidden operational tax of unresolved conflict between hard-to-replace contributors",
+
+  intro: [
+    {
+      title: "The Problem",
+      body: "When two key team members reach an impasse, the financial drain rarely shows up as a line item. It quietly accumulates through delayed decisions, stalled initiatives, team hesitation, and senior leadership diverted from strategic priorities.",
+    },
+    {
+      title: "What This Tool Does",
+      body: "It delivers a clear, order-of-magnitude estimate of your costs to date and projects your exposure over the next 12 months if the situation remains unresolved.",
+    },
+    {
+      title: "Fast and Intuitive to Use",
+      body: "In under two minutes, a few straightforward observations about time and compensation become a clear financial snapshot of the situation. Rough numbers are fine. The point isn’t accounting precision; it’s order of magnitude—and that’s usually where the surprise lies.",
+    },
+  ],
+
+  howTo: {
+    lead: "How to use it.",
+    body: "Work through sections A to C. Type exact figures for salaries and costs, and use the sliders for hours, which are estimates anyway. The results on the right update as you go. The starting values are examples; replace them with your own.",
   },
 
-  benefits: {
-    title: "Key benefits",
-    items: [
-      {
-        name: "Quantify hidden costs",
-        body: "See the real dollar impact of productivity losses and time wasted managing the conflict.",
-      },
-      {
-        name: "Make data-driven decisions",
-        body: "Use concrete numbers to justify intervention and allocate resources appropriately.",
-      },
-      {
-        name: "Account for future impact",
-        body: "Projections show the compounding cost of inaction over 3, 6, and 12 months.",
-      },
-    ],
+  loaded: {
+    label: "Add benefits, taxes, and overhead burden to base salary",
+    help: "Adds about 30% to salary-based costs to approximate fully loaded cost. Off by default. So figures based on base salary only will lean lower than the true cost.",
   },
 
-  howToUse: {
-    title: "How to use this calculator",
-    steps: [
-      {
-        name: "Enter basic information",
-        body: "Input the conflict duration, salaries of both individuals, and details about affected team members.",
-      },
-      {
-        name: "Adjust impact sliders",
-        body: "Use the sliding scales to estimate productivity losses and time spent managing the conflict.",
-      },
-      {
-        name: "Review results",
-        body: "The calculator will show past losses (already incurred) and projected costs at 3, 6, and 12-month intervals.",
-      },
-    ],
+  /** Shared by every salary field. */
+  baseSalaryOnly: "Base salary only.",
+  /** Shared by every hours slider. */
+  hoursHelp:
+    "Count time spent on the conflict, plus the equivalent hours of reduced effectiveness. A 10% dip on a 40-hour week equals 4 hours. And a 20% dip equals 8 hours. Etc.",
+
+  pair: {
+    title: "A · The Two People in Conflict",
+    person1Salary: "Person 1 base salary",
+    person2Salary: "Person 2 base salary",
+    timeLost: {
+      title: "What counts as productive time lost",
+      body: "Includes not sharing ideas or flagging problems, approvals held up, meetings avoided, work redone, handoffs stalled, and attention spent on the conflict, like building a case and recruiting/rallying allies.",
+    },
+    person1Hours: "Person 1: Weekly hours of productive time lost",
+    person2Hours: "Person 2: Weekly hours of productive time lost",
+    months: "Months the conflict has persisted",
   },
 
-  understanding: {
-    title: "Understanding these costs",
-    body: [
-      "The figures above represent real financial impact to your organization. Past losses reflect money already spent on reduced productivity and management intervention.",
-      "Future projections show the compounding effect of unresolved conflict over time. These costs will continue to accumulate until the underlying issues are addressed.",
-    ],
-    considerationsTitle: "Key considerations",
-    considerations: [
-      "Lost productivity compounds as conflict duration increases",
-      "Management time diverted from strategic priorities has significant opportunity costs",
-      "Team morale and engagement are negatively affected, impacting broader organizational performance",
-    ],
+  ripple: {
+    title: "B · The Ripple Effect",
+    hint: "Colleagues and bosses pulled into the conflict.",
+    count: "Number of colleagues and bosses involved",
+    salary: "Average base salary of affected colleagues and bosses",
+    hours: "Average weekly hours of productive time lost by each",
   },
 
-  nextSteps: {
-    title: "Recommended next steps",
-    intro:
-      "Organizations that successfully resolve conflicts between valuable team members typically employ structured intervention approaches that include:",
-    items: [
-      {
-        name: "Professional mediation",
-        body: "Engaging experienced conflict resolution specialists who can facilitate constructive dialogue and relationship repair.",
-      },
-      {
-        name: "Skills development",
-        body: "Providing both parties with communication and emotional intelligence training to prevent future escalation.",
-      },
-      {
-        name: "Structural changes",
-        body: "Adjusting workflows, reporting structures, or collaboration processes to reduce friction points.",
-      },
-      {
-        name: "Ongoing support",
-        body: "Implementing follow-up mechanisms to ensure sustainable resolution and prevent recurrence.",
-      },
-    ],
-    outro:
-      "The goal is not simply conflict cessation, but restoration of collaborative working relationships that enable both individuals to contribute their full value to the organization.",
+  outOfPocket: {
+    title: "C · Out-of-Pocket Costs So Far",
+    /** Read as one sentence: before + underlined + after. */
+    hintBefore: "Money already spent because of this conflict, ",
+    hintUnderlined: "beyond the salary time counted above.",
+    hintAfter:
+      " Include outside legal or investigative help, consultants/coaches, severance/settlements, temporary staffing, overtime work, etc. Leave at $0 if there weren’t any.",
+    label: "Total spent so far",
   },
+
+  lostBusiness: {
+    title: "D · Lost Business (Optional)",
+    hint: "Your own estimate of business lost or delayed so far because of this conflict, such as customers lost, deals stalled, or projects delayed. Use profit rather than revenue. Leave at $0 if you don’t know or can’t estimate it.",
+    label: "Estimated lost or delayed profit to date",
+  },
+
+  units: { hours: "hrs/wk", months: "months", people: "people" },
+
+  results: {
+    total: "Total estimated bleed to date",
+    exampleBadge: "Example values",
+    loadedBadge: "Loaded +30%",
+    lines: {
+      pair: "A · Primary pair bandwidth lost",
+      ripple: "B · Ripple colleagues and bosses drag",
+      outOfPocket: "C · Out-of-pocket costs so far",
+      lostBusiness: "D · Lost business",
+    },
+    projectionTitle: "If nothing changes, total cost will be:",
+    /** Read as one sentence: before + the monthly figure + after. */
+    rateBefore:
+      "Total to date plus operational drag continuing at the current rate of ",
+    rateAfter: " a month. Assumes no escalation and no turnover.",
+    horizon: (months: number) => `In ${months} months`,
+    more: " more",
+    planningOnly: "For planning purposes only. Not legal or financial advice.",
+    /** The pinned bar on phones, shown while the results are off screen. */
+    barToDate: "To date",
+    barTwelve: "In 12 months",
+  },
+
+  close: {
+    noteLead: "NOTE:",
+    note: " These numbers address the measurable costs of conflict. But they can’t capture the erosion of trust, morale, and culture around it. And that unquantifiable damage is often the larger loss.",
+    caseload:
+      "I keep my active caseload small on purpose. That way, when we work together, you get my full attention, not a piece of it.",
+    ask: "Feel free to get in touch if you’d like to talk through a situation. Just click the link below.",
+    button: "Schedule Your Free Confidential Assessment",
+    urgentTitle: "For Urgent Matters Only.",
+    /** Read as one sentence: before + phone + middle + email + after. */
+    urgentBefore: "If your situation is pressing, call me at ",
+    urgentPhone: "323-291-4813",
+    urgentMiddle: " or email ",
+    urgentEmail: "Therese@ThereseWhite.com",
+    urgentAfter: ".",
+    urgentPromise:
+      "I answer my own phone and read my own email. Say it’s urgent and I’ll treat it that way.",
+  },
+
+  method:
+    "Every diverted hour is valued at base salary, assuming 2,080 working hours per person per year and 4.333 weeks per month. Unless the benefits toggle is on, benefits and overhead (typically about 30% of salary) are excluded, as are downstream costs such as turnover (lost business is included only if you enter an estimate in D), and people in conflict still do some useful work, so treat the result as an order of magnitude, not an accounting figure. Nothing you enter is stored or sent anywhere.",
 
   disclaimer: {
-    title: "Legal disclaimer",
-    body: "This calculator is provided for illustrative and educational purposes only. The calculations and projections are estimates based on user-provided inputs and generalized assumptions. Results should not be considered as financial advice, legal counsel, or guaranteed outcomes. Actual costs and impacts may vary significantly based on specific circumstances, organizational factors, and other variables not captured by this tool. Kennedy White, Inc. and L. Therese White make no representations or warranties regarding the accuracy, completeness, or reliability of the information provided. Users are encouraged to consult with qualified professionals for specific guidance related to their unique situations.",
+    title: "Disclaimer.",
+    body: " This tool gives rough, order-of-magnitude estimates based only on the figures you enter and the assumptions described here. It is for general planning purposes only. It is not legal, financial, tax, or accounting advice, and it does not predict or guarantee any outcome. Using it does not create a mediator-client or other professional relationship.",
   },
 } as const;
 

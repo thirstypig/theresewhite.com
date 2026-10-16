@@ -254,7 +254,9 @@ export function auditOgImageFile(outDir) {
 }
 
 function main() {
-  const outDir = "out";
+  // A folder can be named, so the deploy can audit the calculator site too:
+  // node scripts/verify-built-output.mjs calculator-site
+  const outDir = process.argv[2] ?? "out";
 
   if (!existsSync(join(outDir, "index.html"))) {
     console.error(`::error::${outDir}/index.html not found. Run \`npm run build\` first.`);
@@ -265,7 +267,7 @@ function main() {
   const origin = originFromHomepage(homepageHtml);
   if (!origin) {
     console.error(
-      "::error::Could not read an absolute og:url from out/index.html. " +
+      `::error::Could not read an absolute og:url from ${outDir}/index.html. ` +
         "metadataBase in src/app/layout.tsx is what makes these absolute.",
     );
     process.exit(1);

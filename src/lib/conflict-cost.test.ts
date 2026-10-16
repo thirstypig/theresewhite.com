@@ -1,118 +1,218 @@
 import { describe, it, expect } from "vitest";
-import { calculateConflictCost, usd, type ConflictInputs } from "./conflict-cost";
+import {
+  calculateConflictCost,
+  clampField,
+  usd,
+  DEFAULTS,
+  type ConflictInputs,
+} from "./conflict-cost";
 
 /**
- * These tests exist because the figures this module produces may already
- * appear in Therese's proposals. The arithmetic was ported verbatim from
- * workplace-conflict-calculator-COMPLETE.html; if someone "improves" it, the
- * site starts quoting different numbers than she has quoted in writing.
+ * The figures this module produces must match Therese's own calculator
+ * exactly, because she may quote them. Every expected value in the golden
+ * tests below was read off the original page's script, run unmodified
+ * against these inputs on 2026-10-16. The script is in
+ * workplace-conflict-calculator-v2.html in the repo root.
  *
- * The golden vector below was verified against the original HTML calculator
- * on 2026-08-05 with these exact inputs.
+ * If one of these fails after a change to conflict-cost.ts, the change is
+ * wrong, not the test — unless Therese has changed her calculator.
  */
 
-const GOLDEN: ConflictInputs = {
-  durationWeeks: 12,
-  sunkLosses: 0,
-  person1Salary: 95000,
-  person2Salary: 85000,
-  affectedTeam: 6,
-  avgTeamSalary: 75000,
-  mainProductivityLossPct: 30,
-  teamProductivityLossPct: 15,
-  managementHours: 3,
-  userSalary: 150000,
-};
+function shown(inputs: ConflictInputs) {
+  const r = calculateConflictCost(inputs);
+  return {
+    pair: usd(r.lines.pair),
+    ripple: usd(r.lines.ripple),
+    outOfPocket: usd(r.lines.outOfPocket),
+    lostBusiness: usd(r.lines.lostBusiness),
+    total: usd(r.total),
+    rate: usd(r.monthlyRate),
+    p3: usd(r.projections[3].total),
+    a3: usd(r.projections[3].more),
+    p6: usd(r.projections[6].total),
+    a6: usd(r.projections[6].more),
+    p12: usd(r.projections[12].total),
+    a12: usd(r.projections[12].more),
+  };
+}
 
-describe("calculateConflictCost", () => {
-  it("reproduces the original calculator's figures exactly", () => {
-    const r = calculateConflictCost(GOLDEN);
-
-    expect(usd(r.past.mainProductivity)).toBe("$12,462");
-    expect(usd(r.past.teamProductivity)).toBe("$15,577");
-    expect(usd(r.past.managementTime)).toBe("$2,700");
-    expect(usd(r.past.total)).toBe("$30,738");
-    expect(usd(r.future[12].grandTotal)).toBe("$163,938");
+describe("calculateConflictCost — matches the original page", () => {
+  it("reproduces the example values a visitor sees on arrival", () => {
+    expect(shown(DEFAULTS)).toEqual({
+      pair: "$12,708",
+      ripple: "$9,749",
+      outOfPocket: "$0",
+      lostBusiness: "$0",
+      total: "$22,457",
+      rate: "$5,614",
+      p3: "$39,299",
+      a3: "$16,842",
+      p6: "$56,142",
+      a6: "$33,685",
+      p12: "$89,826",
+      a12: "$67,369",
+    });
   });
 
-  it("treats a zero salary as opting out of pricing your time, not as free labour", () => {
-    // Guarding this explicitly matters: dropping the `userSalary > 0` check
-    // and dividing anyway yields NaN, which formats as "$NaN" on the page.
-    const r = calculateConflictCost({ ...GOLDEN, userSalary: 0 });
-
-    expect(r.past.managementTime).toBe(0);
-    expect(r.future[12].managementTime).toBe(0);
-    expect(Number.isFinite(r.past.total)).toBe(true);
-    expect(usd(r.past.total)).toBe("$28,038"); // golden total minus the $2,700
+  it("reproduces the figures with the benefits toggle on", () => {
+    expect(shown({ ...DEFAULTS, loaded: true })).toEqual({
+      pair: "$16,520",
+      ripple: "$12,674",
+      outOfPocket: "$0",
+      lostBusiness: "$0",
+      total: "$29,194",
+      rate: "$7,298",
+      p3: "$51,089",
+      a3: "$21,895",
+      p6: "$72,984",
+      a6: "$43,790",
+      p12: "$116,774",
+      a12: "$87,580",
+    });
   });
 
-  it("projects in whole weeks — 13, 26 and 52 — not calendar months", () => {
-    // Regression guarded: switching to months * 4.33 changes every projection
-    // by a few percent, which is invisible in review and wrong in a proposal.
-    const r = calculateConflictCost(GOLDEN);
-
-    expect(r.future[6].total).toBeCloseTo(r.future[3].total * 2, 6);
-    expect(r.future[12].total).toBeCloseTo(r.future[3].total * 4, 6);
+  it("reproduces the figures with money spent, lost business, and no ripple", () => {
+    expect(
+      shown({
+        ...DEFAULTS,
+        outOfPocket: 12_500,
+        lostBusiness: 40_000,
+        months: 7,
+        rippleCount: 0,
+      }),
+    ).toEqual({
+      pair: "$22,238",
+      ripple: "$0",
+      outOfPocket: "$12,500",
+      lostBusiness: "$40,000",
+      total: "$74,738",
+      rate: "$3,177",
+      p3: "$84,268",
+      a3: "$9,530",
+      p6: "$93,799",
+      a6: "$19,061",
+      p12: "$112,860",
+      a12: "$38,122",
+    });
   });
 
-  it("adds past losses to each horizon exactly once", () => {
-    // Regression guarded: double-counting past losses inflates the headline
-    // twelve-month figure, which is the number used to justify the engagement.
-    const r = calculateConflictCost(GOLDEN);
+  it("reproduces the figures when entries are out of range", () => {
+    // 40 hours counts as 25, $9,999,999 as $2,000,000, 3.6 people as 4,
+    // and -2 months as 0 — so nothing has accrued yet, but the monthly
+    // rate and the projections still reflect the clamped values.
+    expect(
+      shown({
+        ...DEFAULTS,
+        person1Hours: 40,
+        rippleCount: 3.6,
+        months: -2,
+        person1Salary: 9_999_999,
+      }),
+    ).toEqual({
+      pair: "$0",
+      ripple: "$0",
+      outOfPocket: "$0",
+      lostBusiness: "$0",
+      total: "$0",
+      rate: "$108,919",
+      p3: "$326,756",
+      a3: "$326,756",
+      p6: "$653,512",
+      a6: "$653,512",
+      p12: "$1,307,024",
+      a12: "$1,307,024",
+    });
+  });
+});
 
-    for (const months of [3, 6, 12] as const) {
-      expect(r.future[months].grandTotal).toBeCloseTo(
-        r.past.total + r.future[months].total,
-        6,
-      );
+describe("calculateConflictCost — properties", () => {
+  it("makes the four lines add up to the total exactly", () => {
+    // Regression guarded: rounding each line on its own leaves the column a
+    // dollar or two off the headline, which a careful reader will notice.
+    for (let months = 0; months <= 24; months++) {
+      for (const loaded of [false, true]) {
+        const r = calculateConflictCost({
+          ...DEFAULTS,
+          months,
+          loaded,
+          outOfPocket: 1_234,
+          lostBusiness: 5_678,
+        });
+        const sum =
+          r.lines.pair +
+          r.lines.ripple +
+          r.lines.outOfPocket +
+          r.lines.lostBusiness;
+        expect(sum).toBe(r.total);
+      }
     }
   });
 
-  it("counts money already spent once, in the past, and never in a projection", () => {
-    // Regression guarded: leaking sunk costs into the forward projection makes
-    // the 12-month number grow every time someone reports a bigger legal bill,
-    // which reads as the model rewarding sunk cost.
-    const withSunk = calculateConflictCost({ ...GOLDEN, sunkLosses: 40_000 });
-    const withoutSunk = calculateConflictCost(GOLDEN);
-
-    // toBeCloseTo, not toBe: these are floating-point sums, and exact equality
-    // here asserts IEEE-754 behavior rather than the property we care about.
-    expect(withSunk.past.total - withoutSunk.past.total).toBeCloseTo(40_000, 6);
-    expect(withSunk.future[12].total).toBe(withoutSunk.future[12].total);
-    expect(
-      withSunk.future[12].grandTotal - withoutSunk.future[12].grandTotal,
-    ).toBeCloseTo(40_000, 6);
-  });
-
-  it("scales past losses linearly with how long the conflict has run", () => {
-    const twelve = calculateConflictCost(GOLDEN);
-    const twentyFour = calculateConflictCost({
-      ...GOLDEN,
-      durationWeeks: 24,
+  it("applies the benefits toggle to salary time only, never to money spent or lost", () => {
+    const off = calculateConflictCost({
+      ...DEFAULTS,
+      months: 0,
+      outOfPocket: 10_000,
+      lostBusiness: 20_000,
+    });
+    const on = calculateConflictCost({
+      ...DEFAULTS,
+      months: 0,
+      outOfPocket: 10_000,
+      lostBusiness: 20_000,
+      loaded: true,
     });
 
-    expect(twentyFour.past.total).toBeCloseTo(twelve.past.total * 2, 6);
-    // Duration is history; it must not move the forward projection.
-    expect(twentyFour.future[12].total).toBe(twelve.future[12].total);
+    expect(on.total).toBe(off.total);
+    expect(on.lines.outOfPocket).toBe(10_000);
+    expect(on.lines.lostBusiness).toBe(20_000);
   });
 
-  it("returns zero across the board when every input is zero", () => {
-    const empty = calculateConflictCost({
-      durationWeeks: 0,
-      sunkLosses: 0,
+  it("does not carry money already spent or lost into the monthly rate", () => {
+    // Regression guarded: if C or D leaked into the rate, a bigger legal bill
+    // would make every future month look more expensive.
+    const plain = calculateConflictCost(DEFAULTS);
+    const withCosts = calculateConflictCost({
+      ...DEFAULTS,
+      outOfPocket: 50_000,
+      lostBusiness: 80_000,
+    });
+
+    expect(withCosts.monthlyRate).toBe(plain.monthlyRate);
+    expect(withCosts.projections[12].more).toBe(plain.projections[12].more);
+  });
+
+  it("returns zero salary time when every salary is zero", () => {
+    const r = calculateConflictCost({
+      ...DEFAULTS,
       person1Salary: 0,
       person2Salary: 0,
-      affectedTeam: 0,
-      avgTeamSalary: 0,
-      mainProductivityLossPct: 0,
-      teamProductivityLossPct: 0,
-      managementHours: 0,
-      userSalary: 0,
+      rippleSalary: 0,
     });
 
-    expect(empty.past.total).toBe(0);
-    expect(empty.future[12].grandTotal).toBe(0);
-    expect(usd(empty.past.total)).toBe("$0");
+    expect(r.total).toBe(0);
+    expect(r.monthlyRate).toBe(0);
+    expect(r.projections[12].total).toBe(0);
+  });
+});
+
+describe("clampField", () => {
+  it("counts a blank or unreadable entry as the field's minimum", () => {
+    expect(clampField("person1Salary", Number.NaN)).toBe(0);
+    expect(clampField("person1Hours", Number.NaN)).toBe(1);
+  });
+
+  it("keeps each field inside the range the original allows", () => {
+    expect(clampField("person2Hours", 0)).toBe(1);
+    expect(clampField("person2Hours", 30)).toBe(25);
+    expect(clampField("rippleHours", 16)).toBe(15);
+    expect(clampField("months", 121)).toBe(120);
+    expect(clampField("lostBusiness", 2e8)).toBe(100_000_000);
+  });
+
+  it("rounds headcount to whole people, and nothing else", () => {
+    expect(clampField("rippleCount", 2.5)).toBe(3);
+    expect(clampField("months", 2.5)).toBe(2.5);
   });
 });
 

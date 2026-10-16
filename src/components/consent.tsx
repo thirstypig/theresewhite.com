@@ -4,6 +4,7 @@ import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { PRIVACY_HREF } from "@/lib/site-config";
 
 const STORAGE_KEY = "tw-analytics-consent";
 
@@ -118,7 +119,7 @@ export function Consent() {
               used. Nothing loads unless you accept, and the contact form is
               never recorded.{" "}
               <Link
-                href="/privacy"
+                href={PRIVACY_HREF}
                 className="text-heading underline decoration-accent-line underline-offset-4 transition-colors hover:decoration-heading"
               >
                 Privacy policy

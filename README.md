@@ -37,7 +37,7 @@ src/content/site.ts     All page copy. Edit here, never in components.
 src/content/legal.ts    Privacy and terms text.
 src/content/todos.ts    Outstanding work. Backs /admin/todo.
 src/lib/site-config.ts  Deployment URL + the staging noindex switch.
-src/lib/conflict-cost.ts  Calculator maths, ported verbatim from the original.
+src/lib/conflict-cost.ts  Calculator maths, ported verbatim from Therese's v2.
 src/components/         Shared UI.
 src/app/                One folder per route, inside two route groups:
                         (site) carries the header and footer, (landing)
@@ -45,12 +45,14 @@ src/app/                One folder per route, inside two route groups:
 scripts/                Build-time checks that are not part of the app.
                         verify-built-output.mjs reads ./out and fails the
                         deploy if any page's link-preview card is wrong.
+                        build-calculator-site.mjs assembles
+                        calculator.theresewhite.com from a second build.
 public/logos/           Panel and affiliation logos, normalized to uniform tiles.
 ```
 
 ## Tests
 
-`npm test` — Vitest, node environment, 66 tests across six files. They run in
+`npm test` — Vitest, node environment, 76 tests across seven files. They run in
 CI before the build, so a failure blocks the deploy.
 
 Every one of them guards a failure that returns 200 and looks correct in a
@@ -59,7 +61,8 @@ catches it.
 
 | File | What it protects |
 |---|---|
-| `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to a golden vector verified against the original HTML. These figures may already be in Therese's proposals — a "cleanup" that changes them is the regression this exists to catch. |
+| `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to four sets of figures read off Therese's own calculator script (`workplace-conflict-calculator-v2.html`), including the benefits toggle and out-of-range entries. She may quote these figures — a "cleanup" that changes them is the regression this exists to catch. |
+| `scripts/build-calculator-site.test.ts` | The step that publishes calculator.theresewhite.com. Guards the two ways it can publish a broken site while looking fine: leaving out `.nojekyll` (GitHub would then drop every script and stylesheet), and publishing a page built for the main site's address. |
 | `src/lib/site-config.test.ts` | The staging `noindex` switch. Fails in two directions: a crawlable duplicate competing with her live site, or the launched site shipping `noindex` and vanishing from search. |
 | `src/app/sitemap.test.ts` | That every page reaches the sitemap or is on the documented exclusion list. A new page can ship, return 200, look fine, and never be submitted to a search engine — a failure with no symptom. The exclusion list is the durable part: it records *why* each absent route is absent. |
 | `src/lib/page-metadata.test.ts` | What `pageMetadata()` produces: a page's own `og:title` rather than the site's, a canonical and `og:url` carrying the trailing slash, an `og:image` path with a real image extension, and `robots` omitted unless a page opts out. |
@@ -92,8 +95,8 @@ drafted, marked `DRAFT COPY` or `TODO(therese)` in `site.ts`, and await
 Therese's own words. Nothing biographical was invented for any of them.
 
 The conflict calculator is the opposite case — its copy is migrated, but from
-`workplace-conflict-calculator-COMPLETE.html` in the repo root rather than
-from Wix.
+Therese's own calculator, `workplace-conflict-calculator-v2.html` in the repo
+root, rather than from Wix. Every word is hers, exactly as written.
 
 ## Content that still needs a human
 
@@ -103,8 +106,8 @@ from Wix.
 - **About page** — assembled from claims evidenced elsewhere on the site. Needs
   rewriting in her voice.
 - **Landing pages** (`/lp/a`, `/lp/b`) — the hero and contact copy in the
-  `landing` export is drafted. The bulk of both pages is her own calculator
-  copy and needs nothing.
+  `landing` export is drafted. The calculator in the middle of both pages is
+  her own and needs nothing.
 - **Privacy and terms** — generic templates, not reviewed by a lawyer.
 - **EEOC and Kenneth Cloke** entries in `credentials` — read off cropped logo
   images, so worth confirming.
@@ -133,26 +136,26 @@ conflicts there, and session replay must never capture it.
 
 ## Forms
 
-Static hosting means no server to receive a POST, so all four forms submit to
-Web3Forms. They split into two kinds:
+Static hosting means no server to receive a POST, so all three forms submit to
+Web3Forms. (The calculator used to be a fourth, with an email gate in front of
+its projections. The version that replaced it on 2026-10-16 collects nothing.) They split into two kinds:
 
 - **`/contact` and `/collaborate`** post as plain HTML with no JavaScript, so
   they work before hydration and with JS disabled, then redirect to a
   thank-you page.
-- **The calculator's email gate and the landing-page form** submit with
-  `fetch` and confirm in place. Both live on pages where navigating away ends
-  the visit, and the gate has to reveal a result rather than leave.
+- **The landing-page form** submits with `fetch` and confirms in place. It
+  lives on pages with no navigation, where leaving ends the visit.
 
 They share one repo variable, `NEXT_PUBLIC_WEB3FORMS_KEY`. Leave it unset and
 each renders contact details instead of a form that silently goes nowhere. The
 key is public by design: it ships in the page HTML and only identifies which
 verified inbox to deliver to.
 
-Each stamps a distinct subject line, so the four are filterable in one inbox —
+Each stamps a distinct subject line, so the three are filterable in one inbox —
 and the landing form also stamps which variant it came from, which is the only
 way to tell which design converted.
 
-Free tier is 250 submissions/month shared across all four. Mechanics and
+Free tier is 250 submissions/month shared across all three. Mechanics and
 gotchas — the absolute `redirect` URL, the `botcheck` honeypot name — are in
 `DEPLOY.md` Step 5.
 
@@ -161,12 +164,21 @@ gotchas — the absolute `redirect` URL, the `botcheck` honeypot name — are in
 Blog, newsletter, pricing plans, and booking were all dropped from the Wix site
 by agreement.
 
-`workplace-conflict-calculator-COMPLETE.html` in the repo root is Therese's
-standalone version of the tool. It is not part of the build — it is the source
-the `/conflict-calculator` page was rebuilt from. The calculator itself and its
-supporting copy have both been carried across, so the file is now reference
-only. Treat it as the provenance record for the `calculator` export in
-`src/content/site.ts`, not as something still awaiting a home.
+Two HTML files in the repo root are Therese's own standalone versions of the
+calculator. Neither is part of the build; both are provenance records.
+
+- `workplace-conflict-calculator-v2.html` is the current one, copied on
+  2026-10-16 from the page she published at
+  https://claude.ai/artifact/HVvFAnWMkWUqCfqhfaJ3Q3. The calculator's copy
+  (the `calculator` export in `src/content/site.ts`), its arithmetic, and the
+  figures in its tests all come from this file.
+- `workplace-conflict-calculator-COMPLETE.html` is the first version, which the
+  site used until that date. It gave different numbers for the same situation,
+  so it is kept in case anything she sent earlier quoted its figures.
+
+The calculator is also published on its own at
+**calculator.theresewhite.com**, because theresewhite.com is still on Wix.
+DEPLOY.md, "The calculator's own address", explains how.
 
 The 15 Wix redirects can't run on GitHub Pages (no server to issue a 301).
 They're preserved as a table in [DEPLOY.md](./DEPLOY.md) and must be restored
