@@ -70,3 +70,27 @@ describe("IS_PRODUCTION_SITE", () => {
     expect(IS_PRODUCTION_SITE).toBe(false);
   });
 });
+
+describe("the calculator site", () => {
+  beforeEach(() => vi.resetModules());
+  afterEach(() => vi.unstubAllEnvs());
+
+  it("is recognized, and is not treated as production", async () => {
+    // Not production means noindex, which is intended: the main site's
+    // /conflict-calculator is the page meant for search.
+    const config = await loadWith("https://calculator.theresewhite.com");
+    expect(config.IS_CALCULATOR_SITE).toBe(true);
+    expect(config.IS_PRODUCTION_SITE).toBe(false);
+  });
+
+  it("sends the privacy link to the live site, since it has no /privacy page", async () => {
+    // Regression guarded: a relative /privacy on a one-page site is a 404
+    // linked from the cookie banner on every visit.
+    const calc = await loadWith("https://calculator.theresewhite.com");
+    expect(calc.PRIVACY_HREF).toBe("https://www.theresewhite.com/privacy-policy");
+
+    const main = await loadWith("https://theresewhite.bahtzang.com");
+    expect(main.IS_CALCULATOR_SITE).toBe(false);
+    expect(main.PRIVACY_HREF).toBe("/privacy");
+  });
+});

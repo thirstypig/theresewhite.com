@@ -32,7 +32,7 @@ export const todos: Todo[] = [
     id: "web3forms-key",
     title: "Set the Web3Forms access key",
     detail:
-      "Done 2026-08-05. NEXT_PUBLIC_WEB3FORMS_KEY is set as a repo variable and verified live: the contact form renders with the key, the redirect points at /contact/thank-you/, and the fallback is gone. The same key powers the calculator's email gate. The key is public by design — it ships in the page HTML and only routes mail to the verified address, so rotate it if it ever attracts spam.",
+      "Done 2026-08-05. NEXT_PUBLIC_WEB3FORMS_KEY is set as a repo variable and verified live: the contact form renders with the key, the redirect points at /contact/thank-you/, and the fallback is gone. The same key powered the calculator's email gate until that calculator was replaced on 2026-10-16. The key is public by design — it ships in the page HTML and only routes mail to the verified address, so rotate it if it ever attracts spam.",
     status: "done",
     owner: "James",
     priority: "blocker",
@@ -98,12 +98,23 @@ export const todos: Todo[] = [
     id: "calculator-launch",
     title: "Launch the conflict calculator with the ad campaign",
     detail:
-      "Built and styled at /conflict-calculator, now linked from the footer but still noindex. To launch: remove the robots block in the page metadata, add it to src/app/sitemap.ts, remove its entry from NOT_IN_SITEMAP in src/app/sitemap.test.ts, and point the ads at it. Watch the Web3Forms cap — ad traffic, the contact form and the partner form all share the same 250 submissions a month.",
+      "Replaced on 2026-10-16 with Therese's second version, which is also live on its own at calculator.theresewhite.com once the DNS record in calculator-subdomain-dns exists. Either address can go in the ads now. Both are noindex. To let /conflict-calculator appear in search: remove the noindex line in its page metadata, add it to src/app/sitemap.ts, and remove its entry from NOT_IN_SITEMAP in src/app/sitemap.test.ts. The new calculator collects no email, so ad traffic no longer uses up the Web3Forms allowance; leads arrive only through the contact and landing-page forms.",
     status: "open",
     owner: "James",
     priority: "normal",
     area: "Marketing",
     added: "2026-08-04",
+  },
+  {
+    id: "calculator-subdomain-dns",
+    title: "Point calculator.theresewhite.com at GitHub Pages",
+    detail:
+      "The calculator has its own address while the main site is still on Wix, but it does not work until one DNS record exists. In Therese's Wix account, go to Domains → theresewhite.com → DNS records and add a CNAME record with host `calculator` and value `thirstypig.github.io`. It does not touch the Wix site or email. After it is added, GitHub needs up to an hour to issue the security certificate. DEPLOY.md, \"The calculator's own address\", has the full picture.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Deploy",
+    added: "2026-10-16",
   },
   {
     id: "wix-cutover",

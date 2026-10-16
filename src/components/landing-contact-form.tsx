@@ -10,7 +10,6 @@ import { contact } from "@/content/site";
  * Submits with fetch and confirms in place, unlike the site's contact form
  * which POSTs and redirects to a thank-you page. A landing page has no nav —
  * navigating away from it ends the visit, and there is nowhere to go back to.
- * The calculator's email gate already works this way; this matches it.
  *
  * `source` is stamped into the subject line. Two landing pages are running
  * against each other, and without it there is no way to tell which design

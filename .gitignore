@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# calculator.theresewhite.com, assembled by scripts/build-calculator-site.mjs
+/calculator-site/
+
 # production
 /build
 

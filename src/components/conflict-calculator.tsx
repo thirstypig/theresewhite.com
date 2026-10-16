@@ -1,138 +1,286 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   calculateConflictCost,
+  clampField,
   usd,
+  DEFAULTS,
+  LIMITS,
   type ConflictInputs,
+  type NumericField,
 } from "@/lib/conflict-cost";
-import { contact, cta } from "@/content/site";
+import { calculator as copy, contact } from "@/content/site";
 
-const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+/**
+ * The Workplace Conflict Cost Calculator, rebuilt from Therese's second
+ * version (workplace-conflict-calculator-v2.html) in the site's own design.
+ *
+ * Behaves like the original:
+ *  - Results update on every keystroke. There is no Calculate button and no
+ *    email gate; the copy promises "Nothing you enter is stored or sent
+ *    anywhere", and this component keeps that promise — it makes no requests.
+ *  - Money fields put commas in as you type, without moving the cursor.
+ *  - An entry outside a field's range is counted as the nearest allowed
+ *    value, and the field says so. Leaving the field rewrites it to that value.
+ *  - "Example values" shows until the visitor changes anything.
+ *  - On a phone, a bar pinned to the bottom shows the two headline figures
+ *    whenever the results themselves are scrolled out of view.
+ *  - Screen readers hear a short summary 0.8 seconds after typing stops,
+ *    rather than every intermediate figure.
+ */
 
-const DEFAULTS: ConflictInputs = {
-  durationWeeks: 12,
-  sunkLosses: 0,
-  person1Salary: 95000,
-  person2Salary: 85000,
-  affectedTeam: 6,
-  avgTeamSalary: 75000,
-  mainProductivityLossPct: 30,
-  teamProductivityLossPct: 15,
-  managementHours: 3,
-  userSalary: 150000,
-};
+type Texts = Record<NumericField, string>;
 
-const fieldClass =
-  "mt-2 w-full rounded-sm border border-rule bg-paper px-3.5 py-2.5 text-base text-charcoal outline-none transition-colors focus:border-btn";
+function commas(n: number): string {
+  return n.toLocaleString("en-US");
+}
 
-function NumberField({
-  label,
-  hint,
-  value,
-  onChange,
-  prefix,
-}: {
-  label: string;
-  hint?: string;
-  value: number;
-  onChange: (n: number) => void;
-  prefix?: string;
-}) {
+function initialTexts(): Texts {
+  const texts = {} as Texts;
+  for (const field of Object.keys(LIMITS) as NumericField[]) {
+    const value = DEFAULTS[field];
+    texts[field] = LIMITS[field].money ? commas(value) : String(value);
+  }
+  return texts;
+}
+
+/** What the visitor typed, read as a number. Blank or unreadable is NaN. */
+function readNumber(field: NumericField, text: string): number {
+  if (LIMITS[field].money) {
+    const digits = text.replace(/\D/g, "");
+    return digits === "" ? Number.NaN : parseInt(digits, 10);
+  }
+  return parseFloat(text);
+}
+
+function formatted(field: NumericField, n: number): string {
+  return LIMITS[field].money ? usd(n) : String(n);
+}
+
+/** "Counted as $2,000,000. Allowed range is $0 to $2,000,000." or nothing. */
+function rangeMessage(field: NumericField, text: string): string {
+  const raw = readNumber(field, text);
+  const counted = clampField(field, raw);
+  if (text === "" || !Number.isFinite(raw) || raw === counted) return "";
+  const { min, max, whole } = LIMITS[field];
+  return `Counted as ${formatted(field, counted)}. Allowed range is ${formatted(field, min)} to ${formatted(field, max)}${whole ? ", whole numbers" : ""}.`;
+}
+
+// Panels use rounded-[0.25rem], the same size as rounded-sm, on purpose:
+// landing page B's theme turns every rounded-sm into a pill, which is right
+// for its buttons and wrong for a tall card of form fields.
+const inputClass =
+  "w-full rounded-sm border border-rule bg-paper px-3.5 py-2.5 text-base text-charcoal tabular-nums outline-none transition-colors focus:border-btn";
+
+function Help({ children }: { children: React.ReactNode }) {
   return (
-    <p className="m-0">
-      <label className="label text-muted">{label}</label>
-      <span className="relative block">
-        {prefix ? (
-          <span className="pointer-events-none absolute top-1/2 left-3.5 -translate-y-1/2 pt-1 text-base text-muted">
-            {prefix}
-          </span>
-        ) : null}
+    <span className="mt-1.5 block text-sm leading-relaxed text-muted">
+      {children}
+    </span>
+  );
+}
+
+function RangeNote({ message }: { message: string }) {
+  return (
+    <span role="status" className="mt-1.5 block text-sm text-heading">
+      {message}
+    </span>
+  );
+}
+
+function MoneyField({
+  id,
+  label,
+  help,
+  text,
+  onText,
+  onCommit,
+}: {
+  id: NumericField;
+  label: string;
+  help?: string;
+  text: string;
+  onText: (t: string) => void;
+  onCommit: () => void;
+}) {
+  const ref = useRef<HTMLInputElement>(null);
+  const caret = useRef<number | null>(null);
+
+  // Reformatting adds or removes commas, which would throw the cursor to the
+  // end of the field. Put it back after the same number of digits it was
+  // after before, which is where the visitor expects it.
+  useLayoutEffect(() => {
+    if (caret.current === null || !ref.current) return;
+    try {
+      ref.current.setSelectionRange(caret.current, caret.current);
+    } catch {
+      // Some input types refuse selection; this one is text, but be safe.
+    }
+    caret.current = null;
+  }, [text]);
+
+  function onChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const el = e.target;
+    const pos = el.selectionStart ?? 0;
+    const digitsBefore = el.value.slice(0, pos).replace(/\D/g, "").length;
+    const digits = el.value
+      .replace(/\D/g, "")
+      .replace(/^0+(?=\d)/, "")
+      .slice(0, 12);
+    const out = digits === "" ? "" : commas(parseInt(digits, 10));
+    let next = 0;
+    let seen = 0;
+    while (next < out.length && seen < digitsBefore) {
+      if (/\d/.test(out.charAt(next))) seen++;
+      next++;
+    }
+    caret.current = next;
+    onText(out);
+  }
+
+  const message = rangeMessage(id, text);
+  return (
+    <div>
+      <label htmlFor={id} className="block text-base font-medium text-heading">
+        {label}
+      </label>
+      <span className="relative mt-2 block">
+        <span className="pointer-events-none absolute top-1/2 left-3.5 -translate-y-1/2 text-base text-muted">
+          $
+        </span>
         <input
-          type="number"
-          min={0}
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value) || 0)}
-          className={`${fieldClass} ${prefix ? "pl-7" : ""}`}
+          ref={ref}
+          id={id}
+          type="text"
+          inputMode="numeric"
+          autoComplete="off"
+          value={text}
+          onChange={onChange}
+          onBlur={onCommit}
+          className={`${inputClass} pl-7`}
         />
       </span>
-      {hint ? (
-        <span className="mt-1.5 block text-xs text-muted">{hint}</span>
-      ) : null}
-    </p>
+      {help ? <Help>{help}</Help> : null}
+      {message ? <RangeNote message={message} /> : null}
+    </div>
   );
 }
 
-function SliderField({
+function CountField({
+  id,
   label,
-  hint,
-  value,
-  onChange,
-  max,
-  suffix,
+  unit,
+  text,
+  onText,
+  onCommit,
 }: {
+  id: NumericField;
   label: string;
-  hint?: string;
-  value: number;
-  onChange: (n: number) => void;
-  max: number;
-  suffix: string;
+  unit: string;
+  text: string;
+  onText: (t: string) => void;
+  onCommit: () => void;
 }) {
+  const { min, max, whole } = LIMITS[id];
+  const message = rangeMessage(id, text);
   return (
-    <p className="m-0">
-      <span className="flex items-baseline justify-between gap-4">
-        <label className="label text-muted">{label}</label>
-        {/* Mono, not the display serif: globals.css assigns figures to the
-            mono face, and a value that updates while you drag a slider needs
-            fixed-width digits or it visibly jitters. */}
-        <span className="font-mono text-lg tabular-nums text-heading">
-          {value}
-          {suffix}
-        </span>
-      </span>
-      <input
-        type="range"
-        min={0}
-        max={max}
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-3 w-full accent-[var(--btn)]"
-      />
-      {hint ? (
-        <span className="mt-1.5 block text-xs text-muted">{hint}</span>
-      ) : null}
-    </p>
-  );
-}
-
-function Row({
-  label,
-  value,
-  strong,
-}: {
-  label: string;
-  value: string;
-  strong?: boolean;
-}) {
-  return (
-    <div
-      className={`flex items-baseline justify-between gap-6 border-b border-rule py-2.5 ${
-        strong ? "border-rule-strong" : ""
-      }`}
-    >
-      <span
-        className={strong ? "text-base text-heading" : "text-sm text-charcoal"}
-      >
+    <div>
+      <label htmlFor={id} className="block text-base font-medium text-heading">
         {label}
+      </label>
+      <span className="mt-2 flex items-center gap-3">
+        <input
+          id={id}
+          type="number"
+          min={min}
+          max={max}
+          step={whole || id === "months" ? 1 : undefined}
+          value={text}
+          onChange={(e) => onText(e.target.value)}
+          onBlur={onCommit}
+          className={`${inputClass} max-w-28`}
+        />
+        <span className="text-sm text-muted">{unit}</span>
       </span>
-      <span
-        className={`tabular-nums ${
-          strong
-            ? "display text-xl text-heading"
-            : "text-sm text-charcoal"
-        }`}
-      >
+      {message ? <RangeNote message={message} /> : null}
+    </div>
+  );
+}
+
+function HoursField({
+  id,
+  label,
+  sliderLabel,
+  numberLabel,
+  text,
+  onText,
+  onCommit,
+}: {
+  id: NumericField;
+  label: string;
+  sliderLabel: string;
+  numberLabel: string;
+  text: string;
+  onText: (t: string) => void;
+  onCommit: () => void;
+}) {
+  const { min, max } = LIMITS[id];
+  const message = rangeMessage(id, text);
+  return (
+    <div>
+      <span className="block text-base font-medium text-heading">{label}</span>
+      <Help>{copy.hoursHelp}</Help>
+      <span className="mt-3 flex items-center gap-4">
+        <input
+          type="range"
+          min={min}
+          max={max}
+          value={clampField(id, readNumber(id, text))}
+          onChange={(e) => onText(e.target.value)}
+          aria-label={sliderLabel}
+          className="min-w-0 flex-1 accent-[var(--btn)]"
+        />
+        <input
+          id={id}
+          type="number"
+          min={min}
+          max={max}
+          value={text}
+          onChange={(e) => onText(e.target.value)}
+          onBlur={onCommit}
+          aria-label={numberLabel}
+          className={`${inputClass} max-w-20`}
+        />
+        <span className="shrink-0 text-sm text-muted">{copy.units.hours}</span>
+      </span>
+      {message ? <RangeNote message={message} /> : null}
+    </div>
+  );
+}
+
+function Card({
+  title,
+  fontClass,
+  children,
+}: {
+  title: string;
+  fontClass: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="rounded-[0.25rem] border border-rule bg-cream p-6 sm:p-8">
+      <h2 className={`${fontClass} text-2xl text-heading`}>{title}</h2>
+      <div className="mt-6 space-y-7">{children}</div>
+    </section>
+  );
+}
+
+function Line({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex items-baseline justify-between gap-6 border-b border-rule py-2.5 last:border-b-0">
+      <span className="text-sm text-charcoal">{label}</span>
+      <span className="font-mono text-sm tabular-nums text-heading">
         {value}
       </span>
     </div>
@@ -140,410 +288,364 @@ function Row({
 }
 
 export function ConflictCalculator({
-  ctaHref = cta.href,
-  ctaLabel = cta.short,
+  ctaHref,
+  ctaExternal = false,
   className = "border-b border-rule bg-paper",
   fontClass = "display",
 }: {
   /**
-   * Where the post-unlock button goes. The landing pages override this to an
-   * on-page anchor — they have no nav, so sending someone to /contact would
-   * drop them out of the page they arrived on and end the funnel.
+   * Where "Schedule Your Free Confidential Assessment" goes. The main site
+   * sends it to /contact; the landing pages to their own on-page form; the
+   * standalone calculator site, which has no other pages, to the live site.
    */
-  ctaHref?: string;
-  ctaLabel?: string;
+  ctaHref: string;
+  /** Open the button in a new tab, as the original does for its link out. */
+  ctaExternal?: boolean;
   /** Outer section classes, so a host page can own its own surface. */
   className?: string;
   /**
    * Face for the headings inside the tool. Defaults to the site's display
-   * serif. Landing page A sets the mono face instead — it builds its whole
-   * argument in a ledger voice, and a serif appearing only once the reader
-   * reaches the calculator reads as an inconsistency rather than a choice.
+   * serif. Landing page B passes the live site's face instead, so the tool
+   * matches the page around it.
    */
   fontClass?: string;
-} = {}) {
-  const [inputs, setInputs] = useState<ConflictInputs>(DEFAULTS);
-  const [calculated, setCalculated] = useState(false);
-  const [unlocked, setUnlocked] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+}) {
+  const [texts, setTexts] = useState<Texts>(initialTexts);
+  const [loaded, setLoaded] = useState(false);
+  const [edited, setEdited] = useState(false);
 
-  const set = <K extends keyof ConflictInputs>(k: K, v: ConflictInputs[K]) =>
-    setInputs((p) => ({ ...p, [k]: v }));
+  const setText = (field: NumericField) => (t: string) => {
+    setEdited(true);
+    setTexts((prev) => ({ ...prev, [field]: t }));
+  };
 
+  // Leaving a field rewrites it to the value actually being counted.
+  const commit = (field: NumericField) => () => {
+    setTexts((prev) => {
+      const counted = clampField(field, readNumber(field, prev[field]));
+      const text = LIMITS[field].money ? commas(counted) : String(counted);
+      return text === prev[field] ? prev : { ...prev, [field]: text };
+    });
+  };
+
+  const inputs = { loaded } as ConflictInputs;
+  for (const field of Object.keys(LIMITS) as NumericField[]) {
+    inputs[field] = readNumber(field, texts[field]);
+  }
   const result = calculateConflictCost(inputs);
 
-  async function unlock(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setError(null);
+  const field = (id: NumericField) => ({
+    id,
+    text: texts[id],
+    onText: setText(id),
+    onCommit: commit(id),
+  });
 
-    const form = new FormData(e.currentTarget);
+  // Screen-reader summary, announced once typing pauses.
+  const [announcement, setAnnouncement] = useState("");
+  const summary = `Total to date ${usd(result.total)}. In 12 months ${usd(result.projections[12].total)}.`;
+  useEffect(() => {
+    const t = setTimeout(() => setAnnouncement(summary), 800);
+    return () => clearTimeout(t);
+  }, [summary]);
 
-    // No key configured (local dev): don't pretend to capture the lead.
-    if (!ACCESS_KEY) {
-      setUnlocked(true);
-      return;
-    }
+  // The phone bar is pointless while the results themselves are on screen.
+  const resultsRef = useRef<HTMLDivElement>(null);
+  const [resultsVisible, setResultsVisible] = useState(false);
+  useEffect(() => {
+    const el = resultsRef.current;
+    if (!el || !("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver(([entry]) =>
+      setResultsVisible(entry.isIntersecting),
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
-    setSending(true);
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: ACCESS_KEY,
-          subject: "Conflict Calculator — new result request",
-          from_name: "theresewhite.com calculator",
-          name: form.get("name"),
-          email: form.get("email"),
-          organization: form.get("organization"),
-          phone: form.get("phone"),
-          botcheck: form.get("botcheck"),
-          // The numbers matter more than the lead: they say how bad it is.
-          conflict_duration_weeks: inputs.durationWeeks,
-          already_lost: usd(result.past.total),
-          projected_12_month: usd(result.future[12].grandTotal),
-        }),
-      });
-      const json = await res.json();
-      if (!json.success) throw new Error(json.message ?? "Submission failed");
-      setUnlocked(true);
-    } catch {
-      setError(
-        "That didn't send. Try again, or call (323) 291-4813 and we'll walk through it together.",
-      );
-    } finally {
-      setSending(false);
-    }
-  }
+  const r = copy.results;
+  const close = copy.close;
+  const externalProps = ctaExternal
+    ? { target: "_blank", rel: "noopener" }
+    : {};
 
   return (
-    <>
-      <section className={className}>
-        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-          {/*
-              Narrower container and a tighter gap than the page around it, so
-              the two halves read as one instrument rather than two tables
-              sharing a row. The result column is the narrower of the two: it
-              holds figures, the input side holds fields.
-            */}
-          <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-10">
-            {/* ---------------- Inputs ---------------- */}
-            <div>
-              <h2 className={`${fontClass} text-2xl text-heading`}>
-                Your situation
-              </h2>
-              <p className="mt-3 max-w-md text-base leading-relaxed text-charcoal">
-                Rough numbers are fine. The point isn&rsquo;t precision, it&rsquo;s
-                order of magnitude — and the order of magnitude is usually the
-                surprise.
+    <section className={className}>
+      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-start">
+          {/* ---------------- Inputs ---------------- */}
+          <div className="space-y-6">
+            <label
+              htmlFor="loaded"
+              className="flex cursor-pointer gap-4 rounded-[0.25rem] border border-rule-strong bg-paper p-5 sm:p-6"
+            >
+              <input
+                id="loaded"
+                type="checkbox"
+                checked={loaded}
+                onChange={(e) => {
+                  setEdited(true);
+                  setLoaded(e.target.checked);
+                }}
+                className="mt-1 size-4 shrink-0 accent-[var(--btn)]"
+              />
+              <span>
+                <span className="block text-base font-medium text-heading">
+                  {copy.loaded.label}
+                </span>
+                <Help>{copy.loaded.help}</Help>
+              </span>
+            </label>
+
+            <Card title={copy.pair.title} fontClass={fontClass}>
+              <MoneyField
+                {...field("person1Salary")}
+                label={copy.pair.person1Salary}
+                help={copy.baseSalaryOnly}
+              />
+              <MoneyField
+                {...field("person2Salary")}
+                label={copy.pair.person2Salary}
+                help={copy.baseSalaryOnly}
+              />
+              <p className="border-l-2 border-rule-strong pl-4 text-sm leading-relaxed text-charcoal">
+                <strong className="block font-medium text-heading">
+                  {copy.pair.timeLost.title}
+                </strong>
+                {copy.pair.timeLost.body}
               </p>
+              <HoursField
+                {...field("person1Hours")}
+                label={copy.pair.person1Hours}
+                sliderLabel="Person 1 weekly hours of productive time lost, slider"
+                numberLabel="Person 1 weekly hours"
+              />
+              <HoursField
+                {...field("person2Hours")}
+                label={copy.pair.person2Hours}
+                sliderLabel="Person 2 weekly hours of productive time lost, slider"
+                numberLabel="Person 2 weekly hours"
+              />
+              <CountField
+                {...field("months")}
+                label={copy.pair.months}
+                unit={copy.units.months}
+              />
+            </Card>
 
-              <div className="mt-10 space-y-10">
-                <fieldset className="border-0 p-0">
-                  <legend className="label mb-4 p-0 text-slate">
-                    The two people in conflict
-                  </legend>
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <NumberField
-                      label="First person's salary"
-                      value={inputs.person1Salary}
-                      onChange={(v) => set("person1Salary", v)}
-                      prefix="$"
-                    />
-                    <NumberField
-                      label="Second person's salary"
-                      value={inputs.person2Salary}
-                      onChange={(v) => set("person2Salary", v)}
-                      prefix="$"
-                    />
-                    <NumberField
-                      label="Weeks it's been running"
-                      value={inputs.durationWeeks}
-                      onChange={(v) => set("durationWeeks", v)}
-                    />
-                    {/* The standalone calculator defines this field as direct
-                        business losses, not internal spend. Keeping its
-                        definition — the arithmetic is the same either way, but
-                        the two readings produce very different numbers. */}
-                    <NumberField
-                      label="Already spent"
-                      hint="Direct losses already incurred — lost client contracts, missed sales opportunities, failed deadlines, project delays, damaged business relationships."
-                      value={inputs.sunkLosses}
-                      onChange={(v) => set("sunkLosses", v)}
-                      prefix="$"
-                    />
-                  </div>
-                </fieldset>
+            <Card title={copy.ripple.title} fontClass={fontClass}>
+              <p className="text-base leading-relaxed text-charcoal">
+                {copy.ripple.hint}
+              </p>
+              <CountField
+                {...field("rippleCount")}
+                label={copy.ripple.count}
+                unit={copy.units.people}
+              />
+              <MoneyField
+                {...field("rippleSalary")}
+                label={copy.ripple.salary}
+                help={copy.baseSalaryOnly}
+              />
+              <HoursField
+                {...field("rippleHours")}
+                label={copy.ripple.hours}
+                sliderLabel="Ripple weekly hours slider"
+                numberLabel="Ripple weekly hours"
+              />
+            </Card>
 
-                <fieldset className="border-0 p-0">
-                  <legend className="label mb-4 p-0 text-slate">
-                    The ripple effect
-                  </legend>
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <NumberField
-                      label="Others affected"
-                      hint="Teams, direct reports, and colleagues who work with both individuals."
-                      value={inputs.affectedTeam}
-                      onChange={(v) => set("affectedTeam", v)}
-                    />
-                    <NumberField
-                      label="Their average salary"
-                      value={inputs.avgTeamSalary}
-                      onChange={(v) => set("avgTeamSalary", v)}
-                      prefix="$"
-                    />
-                  </div>
-                </fieldset>
+            <Card title={copy.outOfPocket.title} fontClass={fontClass}>
+              <p className="text-base leading-relaxed text-charcoal">
+                {copy.outOfPocket.hintBefore}
+                <u className="decoration-rule-strong underline-offset-4">
+                  {copy.outOfPocket.hintUnderlined}
+                </u>
+                {copy.outOfPocket.hintAfter}
+              </p>
+              <MoneyField
+                {...field("outOfPocket")}
+                label={copy.outOfPocket.label}
+              />
+            </Card>
 
-                <fieldset className="border-0 p-0">
-                  <legend className="label mb-4 p-0 text-slate">
-                    The impact
-                  </legend>
-                  <div className="space-y-7">
-                    <SliderField
-                      label="Productivity lost by the two"
-                      hint="Time spent in unproductive meetings, communication delays, and avoidance behaviors."
-                      value={inputs.mainProductivityLossPct}
-                      onChange={(v) => set("mainProductivityLossPct", v)}
-                      max={100}
-                      suffix="%"
-                    />
-                    <SliderField
-                      label="Productivity lost by the team"
-                      hint="Non-work distractions, workaround strategies, inefficiencies, and reduced performance of duties."
-                      value={inputs.teamProductivityLossPct}
-                      onChange={(v) => set("teamProductivityLossPct", v)}
-                      max={100}
-                      suffix="%"
-                    />
-                    <SliderField
-                      label="Your hours on this per week"
-                      value={inputs.managementHours}
-                      onChange={(v) => set("managementHours", v)}
-                      max={40}
-                      suffix="h"
-                    />
-                    <NumberField
-                      label="Your salary"
-                      hint="Used only to price your time. Leave at zero to skip."
-                      value={inputs.userSalary}
-                      onChange={(v) => set("userSalary", v)}
-                      prefix="$"
-                    />
-                  </div>
-                </fieldset>
+            <Card title={copy.lostBusiness.title} fontClass={fontClass}>
+              <p className="text-base leading-relaxed text-charcoal">
+                {copy.lostBusiness.hint}
+              </p>
+              <MoneyField
+                {...field("lostBusiness")}
+                label={copy.lostBusiness.label}
+              />
+            </Card>
+          </div>
+
+          {/* ---------------- Results ---------------- */}
+          {/*
+              Sticky on wide screens, so the figures stay in view while the
+              visitor drags a slider far below them. Not on short screens:
+              the column is taller than the window there, and a sticky column
+              taller than the window hides its own bottom half.
+            */}
+          <aside className="space-y-6 lg:sticky lg:top-6 [@media(max-height:900px)]:static">
+            <div
+              ref={resultsRef}
+              className="overflow-hidden rounded-[0.25rem] border border-rule bg-paper"
+            >
+              <div className="on-dark bg-band p-6 text-band-fg sm:p-8">
+                <p className="label flex flex-wrap items-center gap-2 text-band-muted">
+                  {r.total}
+                  {!edited ? (
+                    <span className="rounded-full border border-band-rule px-2 py-0.5 text-band-fg">
+                      {r.exampleBadge}
+                    </span>
+                  ) : null}
+                  {loaded ? (
+                    <span className="rounded-full border border-band-rule px-2 py-0.5 text-band-fg">
+                      {r.loadedBadge}
+                    </span>
+                  ) : null}
+                </p>
+                <p className="mt-3 font-mono text-4xl tabular-nums text-band-fg sm:text-5xl">
+                  {usd(result.total)}
+                </p>
               </div>
 
-              {!calculated ? (
-                <button
-                  type="button"
-                  onClick={() => setCalculated(true)}
-                  className="mt-10 rounded-sm bg-btn px-6 py-3.5 text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover"
-                >
-                  Calculate the cost
-                </button>
-              ) : null}
-            </div>
+              <div className="px-6 py-3 sm:px-8">
+                <Line label={r.lines.pair} value={usd(result.lines.pair)} />
+                <Line label={r.lines.ripple} value={usd(result.lines.ripple)} />
+                <Line
+                  label={r.lines.outOfPocket}
+                  value={usd(result.lines.outOfPocket)}
+                />
+                <Line
+                  label={r.lines.lostBusiness}
+                  value={usd(result.lines.lostBusiness)}
+                />
+              </div>
 
-            {/* ---------------- Results ---------------- */}
-            {/*
-              Sticky on desktop. The inputs are taller than the result, so
-              without this the card sits alone at the top of a long empty
-              column, and the number scrolls out of sight at exactly the
-              moment someone is dragging a slider to change it.
-            */}
-            <div className="lg:sticky lg:top-8">
-              {!calculated ? (
-                <div className="rounded-sm border border-rule bg-cream p-8">
-                  <p className="label text-muted">Your result</p>
-                  <p className={`${fontClass} mt-4 text-2xl text-heading`}>
-                    Fill in what you know, then calculate.
-                  </p>
-                  <p className="mt-4 text-base leading-relaxed text-charcoal">
-                    You&rsquo;ll get what the conflict has already cost, and what
-                    it costs over the next three, six and twelve months if
-                    nothing changes.
-                  </p>
-                </div>
-              ) : (
-                <div className="rounded-sm border border-rule bg-cream p-8">
-                  <p className="label text-muted">
-                    {inputs.durationWeeks} week
-                    {inputs.durationWeeks === 1 ? "" : "s"} of unresolved
-                    conflict
-                  </p>
-
-                  <h2 className={`${fontClass} mt-4 text-2xl text-heading`}>
-                    What you&rsquo;ve already lost
-                  </h2>
-                  <div className="mt-5">
-                    <Row
-                      label="Lost productivity, the two people"
-                      value={usd(result.past.mainProductivity)}
-                    />
-                    <Row
-                      label="Lost productivity, the wider team"
-                      value={usd(result.past.teamProductivity)}
-                    />
-                    <Row
-                      label="Your time managing it"
-                      value={usd(result.past.managementTime)}
-                    />
-                    {result.past.sunkLosses > 0 ? (
-                      <Row
-                        label="Already spent"
-                        value={usd(result.past.sunkLosses)}
-                      />
-                    ) : null}
-                    <Row
-                      label="Total to date"
-                      value={usd(result.past.total)}
-                      strong
-                    />
-                  </div>
-
-                  {/* The projections are the persuasive part, so they sit
-                      behind the email gate; the sunk cost above is given
-                      freely so the page proves its worth first. */}
-                  <h2 className={`${fontClass} mt-10 text-2xl text-heading`}>
-                    If nothing changes
-                  </h2>
-
-                  {unlocked ? (
-                    <div className="mt-5">
-                      {([3, 6, 12] as const).map((m) => (
-                        <Row
-                          key={m}
-                          label={`Total cost at ${m} months`}
-                          value={usd(result.future[m].grandTotal)}
-                          strong={m === 12}
-                        />
-                      ))}
-                      <p className="mt-6 text-sm leading-relaxed text-muted">
-                        Mediation typically starts at $5,000. Compare that with
-                        the twelve-month figure — that comparison is the whole
-                        argument.
-                      </p>
-                      <Link
-                        href={ctaHref}
-                        className="mt-6 inline-block rounded-sm bg-btn px-6 py-3.5 text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover"
+              <div className="border-t border-rule bg-cream px-6 py-6 sm:px-8">
+                <h3 className={`${fontClass} text-xl text-heading`}>
+                  {r.projectionTitle}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal">
+                  {r.rateBefore}
+                  <span className="font-mono tabular-nums text-heading">
+                    {usd(result.monthlyRate)}
+                  </span>
+                  {r.rateAfter}
+                </p>
+                <div className="mt-5 grid gap-2.5 sm:grid-cols-3">
+                  {([3, 6, 12] as const).map((n) => (
+                    <div
+                      key={n}
+                      className={`rounded-[0.25rem] border p-3.5 ${
+                        n === 12
+                          ? "on-dark border-band bg-band text-band-fg"
+                          : "border-rule bg-paper"
+                      }`}
+                    >
+                      <small
+                        className={`label block ${n === 12 ? "text-band-muted" : "text-muted"}`}
                       >
-                        {ctaLabel}
-                      </Link>
+                        {r.horizon(n)}
+                      </small>
+                      <b
+                        className={`mt-1.5 block font-mono text-lg font-normal tabular-nums ${n === 12 ? "text-band-fg" : "text-heading"}`}
+                      >
+                        {usd(result.projections[n].total)}
+                      </b>
+                      <em
+                        className={`mt-0.5 block text-xs not-italic tabular-nums ${n === 12 ? "text-band-muted" : "text-muted"}`}
+                      >
+                        {usd(result.projections[n].more)}
+                        {r.more}
+                      </em>
                     </div>
-                  ) : (
-                    <form onSubmit={unlock} className="mt-5">
-                      <p className="text-base leading-relaxed text-charcoal">
-                        Tell us where to send the full projection and it appears
-                        right here. No list, no drip campaign — Therese reads
-                        these herself.
-                      </p>
-
-                      <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                        <p className="m-0">
-                          <label htmlFor="calc-name" className="label text-muted">
-                            Your name
-                          </label>
-                          <input
-                            id="calc-name"
-                            name="name"
-                            required
-                            autoComplete="name"
-                            className={fieldClass}
-                          />
-                        </p>
-                        <p className="m-0">
-                          <label
-                            htmlFor="calc-email"
-                            className="label text-muted"
-                          >
-                            Email
-                          </label>
-                          <input
-                            id="calc-email"
-                            name="email"
-                            type="email"
-                            required
-                            autoComplete="email"
-                            className={fieldClass}
-                          />
-                        </p>
-                        <p className="m-0">
-                          <label htmlFor="calc-org" className="label text-muted">
-                            Organization
-                          </label>
-                          <input
-                            id="calc-org"
-                            name="organization"
-                            required
-                            autoComplete="organization"
-                            className={fieldClass}
-                          />
-                        </p>
-                        <p className="m-0">
-                          <label
-                            htmlFor="calc-phone"
-                            className="label text-muted"
-                          >
-                            Phone (optional)
-                          </label>
-                          <input
-                            id="calc-phone"
-                            name="phone"
-                            type="tel"
-                            autoComplete="tel"
-                            className={fieldClass}
-                          />
-                        </p>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        name="botcheck"
-                        tabIndex={-1}
-                        aria-hidden="true"
-                        className="hidden"
-                      />
-
-                      {error ? (
-                        <p
-                          role="alert"
-                          className="mt-4 border-l-2 border-btn pl-4 text-sm text-charcoal"
-                        >
-                          {error}
-                        </p>
-                      ) : null}
-
-                      <button
-                        type="submit"
-                        disabled={sending}
-                        className="mt-5 rounded-sm bg-btn px-6 py-3.5 text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover disabled:opacity-60"
-                      >
-                        {sending ? "Sending…" : "Show me the full projection"}
-                      </button>
-
-                      <p className="mt-4 text-xs leading-relaxed text-muted">
-                        We&rsquo;ll only use this to reply. See the{" "}
-                        <Link
-                          href="/privacy"
-                          className="text-heading underline decoration-accent-line underline-offset-4"
-                        >
-                          privacy policy
-                        </Link>
-                        . Prefer not to? Call {contact.phone}.
-                      </p>
-                    </form>
-                  )}
+                  ))}
                 </div>
-              )}
+                <p className="mt-4 text-xs text-muted">{r.planningOnly}</p>
+              </div>
             </div>
-          </div>
+
+            <div className="rounded-[0.25rem] border border-rule bg-cream p-6 sm:p-8">
+              <p className="text-base leading-relaxed text-charcoal">
+                <b className="font-semibold text-heading">{close.noteLead}</b>
+                {close.note}
+              </p>
+              <p className="mt-4 text-base leading-relaxed font-semibold text-heading">
+                {close.caseload}
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-charcoal">
+                {close.ask}
+              </p>
+              <a
+                href={ctaHref}
+                {...externalProps}
+                className="mt-6 block rounded-sm bg-btn px-6 py-3.5 text-center text-base font-medium text-btn-fg transition-colors hover:bg-btn-hover"
+              >
+                {close.button}
+              </a>
+              <div className="mt-6 border-t border-rule pt-5">
+                <h3 className="label text-slate">{close.urgentTitle}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal">
+                  {close.urgentBefore}
+                  <a
+                    href={contact.phoneHref}
+                    className="text-heading underline decoration-accent-line underline-offset-4 hover:decoration-heading"
+                  >
+                    {close.urgentPhone}
+                  </a>
+                  {close.urgentMiddle}
+                  <a
+                    href={contact.emailHref}
+                    className="text-heading underline decoration-accent-line underline-offset-4 hover:decoration-heading"
+                  >
+                    {close.urgentEmail}
+                  </a>
+                  {close.urgentAfter}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal">
+                  {close.urgentPromise}
+                </p>
+              </div>
+            </div>
+          </aside>
         </div>
-      </section>
-    </>
+
+        <div className="mt-14 max-w-3xl space-y-3 border-t border-rule pt-8 text-xs leading-relaxed text-muted">
+          <p>{copy.method}</p>
+          <p>
+            <b className="font-semibold text-charcoal">{copy.disclaimer.title}</b>
+            {copy.disclaimer.body}
+          </p>
+        </div>
+      </div>
+
+      {/* Phones only, and only while the results are out of view. Hidden
+          from screen readers: the live summary below says the same thing. */}
+      <div
+        aria-hidden="true"
+        className={`on-dark fixed inset-x-0 bottom-0 z-40 justify-between gap-4 bg-band px-5 pt-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom,0px))] text-band-fg lg:hidden ${
+          resultsVisible ? "hidden" : "flex"
+        }`}
+      >
+        <div>
+          <small className="label block text-band-muted">{r.barToDate}</small>
+          <b className="font-mono text-lg font-normal tabular-nums">
+            {usd(result.total)}
+          </b>
+        </div>
+        <div className="text-right">
+          <small className="label block text-band-muted">{r.barTwelve}</small>
+          <b className="font-mono text-lg font-normal tabular-nums">
+            {usd(result.projections[12].total)}
+          </b>
+        </div>
+      </div>
+
+      <p className="sr-only" aria-live="polite">
+        {announcement}
+      </p>
+    </section>
   );
 }

@@ -52,7 +52,7 @@ const links = [
     items: [
       {
         name: "Web3Forms",
-        note: "Delivers all four forms: contact, collaborate, the calculator email gate, and the landing pages. Free tier is 250 submissions/month, shared across all four.",
+        note: "Delivers all three forms: contact, collaborate, and the landing pages. Free tier is 250 submissions/month, shared across all three. The calculator collects nothing.",
         href: "https://web3forms.com/",
       },
     ],
@@ -100,7 +100,8 @@ const pages = [
   { path: "/contact/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav. DRAFT COPY — needs rewriting in Therese's voice" },
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
-  { path: "/conflict-calculator", note: "Ad landing page. Footer-linked, but noindex until the campaign runs. Supporting copy is migrated verbatim from workplace-conflict-calculator-COMPLETE.html." },
+  { path: "/conflict-calculator", note: "Therese's Workplace Conflict Cost Calculator, every word verbatim from workplace-conflict-calculator-v2.html. Footer-linked, but noindex until the campaign runs." },
+  { path: "/calculator", note: "The same calculator with no header or footer. The source of calculator.theresewhite.com, published from a second build. noindex." },
   { path: "/lp/a", note: "Campaign landing page for a LinkedIn post — best-practice layout in the site palette. No header or footer. noindex. One of two designs under test; the loser gets deleted." },
   { path: "/lp/b", note: "The same page in the live theresewhite.com identity — its blues, Arial Bold, pill buttons. No header or footer. noindex." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
@@ -113,13 +114,13 @@ const pages = [
 const tests = [
   {
     file: "src/lib/conflict-cost.test.ts",
-    count: 8,
-    note: "Calculator arithmetic, pinned to a golden vector from the original HTML",
+    count: 12,
+    note: "Calculator arithmetic, pinned to four sets of figures read off Therese's own calculator script, including the benefits toggle and out-of-range entries",
   },
   {
     file: "src/lib/site-config.test.ts",
-    count: 7,
-    note: "The staging noindex switch — guards against both a crawlable duplicate and deindexing the live site",
+    count: 9,
+    note: "The staging noindex switch — guards against both a crawlable duplicate and deindexing the live site. Also that the calculator subdomain is recognized and its cookie banner links to a privacy page that exists",
   },
   {
     file: "src/app/sitemap.test.ts",
@@ -140,6 +141,11 @@ const tests = [
     file: "scripts/verify-built-output.test.ts",
     count: 38,
     note: "The checker that reads the built site before it goes live. Its tests are written backwards — the examples fed to it are the broken pages that actually shipped, so if it ever stops catching them it fails its own suite. Also covers the two ways a checker can lie: finding no pages at all and calling that a pass, and trusting a file named .png instead of reading its first bytes",
+  },
+  {
+    file: "scripts/build-calculator-site.test.ts",
+    count: 4,
+    note: "The step that publishes calculator.theresewhite.com. Guards the two ways it can publish a broken site that looks fine: leaving out .nojekyll, which makes GitHub drop every script and stylesheet, and publishing a page built for the main site's address",
   },
 ];
 

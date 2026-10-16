@@ -88,6 +88,63 @@ jobs:
         with:
           path: out
 
+  # calculator.theresewhite.com. theresewhite.com is still on Wix, so the
+  # calculator is published on its own subdomain from a second repository,
+  # thirstypig/theresewhite-calculator, which GitHub Pages serves from its
+  # gh-pages branch. This builds the site again with that address, keeps only
+  # the calculator page, and replaces the branch with it.
+  #
+  # Runs after `build` so a failing type check or test stops this too.
+  # Retire it at cutover, when /conflict-calculator on the main site takes
+  # over; the subdomain should then redirect there rather than go dark.
+  calculator-site:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SITE_URL: https://calculator.theresewhite.com
+      NEXT_PUBLIC_CLARITY_ID: xxajqpw2g7
+      NEXT_PUBLIC_GA_ID: G-4QVRMZJVWS
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/build-calculator-site.mjs out calculator-site
+
+      # The same link-preview audit as the main site, on the one page this
+      # site has, so a shared link to the calculator shows a proper card.
+      - name: Assert the calculator ships its own link-preview card
+        run: node scripts/verify-built-output.mjs calculator-site
+
+      # A deploy key that can write to that one repository and nothing else.
+      # The private half is this repository's CALCULATOR_DEPLOY_KEY secret.
+      - name: Publish to thirstypig/theresewhite-calculator
+        env:
+          DEPLOY_KEY: ${{ secrets.CALCULATOR_DEPLOY_KEY }}
+        run: |
+          if [ -z "$DEPLOY_KEY" ]; then
+            echo "::error::The CALCULATOR_DEPLOY_KEY secret is not set, so calculator.theresewhite.com was not updated. DEPLOY.md explains how to set it."
+            exit 1
+          fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/calculator_key
+          chmod 600 ~/.ssh/calculator_key
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/calculator_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+          cd calculator-site
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Publish ${{ github.sha }} from ${{ github.repository }}"
+          # Replaces the branch outright: it holds build output only, and
+          # its history would be nothing but old copies of the same page.
+          git push -q --force git@github.com:thirstypig/theresewhite-calculator.git gh-pages
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

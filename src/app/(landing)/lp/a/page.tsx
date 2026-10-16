@@ -4,7 +4,6 @@ import { ConflictCalculator } from "@/components/conflict-calculator";
 import { LandingContactForm } from "@/components/landing-contact-form";
 import { pageMetadata } from "@/lib/page-metadata";
 import {
-  calculator,
   contact,
   endorsements,
   landing,
@@ -29,9 +28,11 @@ import {
  *    left-aligned. Centered paragraphs give the eye no consistent left edge
  *    to return to on each line, which is fine for a headline and costly for
  *    a paragraph.
- *  - One primary action. The calculator already captures an email to unlock
- *    the projection, so it IS the conversion. The plain form sits lower and
- *    quieter for people who won't use a tool.
+ *  - One primary action. The calculator is the reason to be here; its
+ *    closing panel sends people to the form below. The calculator itself
+ *    collects nothing (since 2026-10-16 it promises "Nothing you enter is
+ *    stored or sent anywhere"), so that form is the only place a lead
+ *    arrives. It sits lower and quieter, for people who won't use a tool.
  *  - The call to action appears three times: above the fold, immediately
  *    after the result, and at the end.
  *
@@ -110,7 +111,6 @@ export default function LandingA() {
         <ConflictCalculator
           className="border-b border-rule bg-paper"
           ctaHref="#talk"
-          ctaLabel="Talk to Therese"
         />
       </div>
 
@@ -125,49 +125,6 @@ export default function LandingA() {
             {endorsements.items[1].name} &mdash; nearly 50 years in conflict
             resolution
           </p>
-        </div>
-      </section>
-
-      {/* ---------------- What the number means ---------------- */}
-      <section className="border-b border-rule bg-cream">
-        <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2 className="display text-center text-3xl text-heading">
-            {calculator.understanding.title}
-          </h2>
-          <div className="mt-5 space-y-4">
-            {calculator.understanding.body.map((para) => (
-              <p key={para} className="text-base leading-relaxed text-charcoal">
-                {para}
-              </p>
-            ))}
-          </div>
-          <ul className="mt-8 space-y-2.5">
-            {calculator.understanding.considerations.map((point) => (
-              <li
-                key={point}
-                className="border-l-2 border-rule-strong pl-4 text-base leading-relaxed text-charcoal"
-              >
-                {point}
-              </li>
-            ))}
-          </ul>
-
-          <h2 className="display mt-16 text-center text-3xl text-heading">
-            {calculator.nextSteps.title}
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-charcoal">
-            {calculator.nextSteps.intro}
-          </p>
-          <dl className="mt-8 grid gap-x-10 gap-y-7 sm:grid-cols-2">
-            {calculator.nextSteps.items.map((item) => (
-              <div key={item.name} className="border-t border-rule pt-4">
-                <dt className="display text-lg text-heading">{item.name}</dt>
-                <dd className="mt-2 text-base leading-relaxed text-charcoal">
-                  {item.body}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
@@ -204,10 +161,7 @@ export default function LandingA() {
               </a>
             </li>
           </ul>
-          <p className="mt-8 border-t border-band-rule pt-6 text-xs leading-relaxed text-band-muted">
-            {calculator.disclaimer.body}
-          </p>
-          <p className="mt-4 text-xs text-band-muted">
+          <p className="mt-8 border-t border-band-rule pt-6 text-xs text-band-muted">
             Copyright {contact.name} {new Date().getFullYear()}.{" "}
             {landing.foot.note}
           </p>

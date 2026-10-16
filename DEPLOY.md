@@ -177,31 +177,31 @@ and the legal pages.
 
 Already done — this section is reference, not a task.
 
-A static site has no server to receive a POST, so all four forms submit
-directly to **Web3Forms** (<https://web3forms.com>).
+A static site has no server to receive a POST, so all three forms submit
+directly to **Web3Forms** (<https://web3forms.com>). The calculator used to
+have a fourth, an email gate in front of its projections; the version that
+replaced it on 2026-10-16 collects nothing.
 
 | Form | Submits as | Subject line it sends |
 |---|---|---|
 | `/contact` | plain HTML POST | Assessment request from theresewhite.com |
 | `/collaborate` | plain HTML POST | Partner inquiry from theresewhite.com |
-| `/conflict-calculator` email gate | `fetch` | Conflict Calculator — new result request |
 | `/lp/a` and `/lp/b` | `fetch` | Landing page inquiry (lp-a / lp-b) |
 
 The two plain-HTML forms need no JavaScript at all: they work before hydration
 and with JS disabled, then redirect to a thank-you page.
 
-The two `fetch` forms confirm in place instead. Both sit on pages where
-navigating away ends the visit — and the calculator gate has to reveal a
-result rather than leave for one.
+The `fetch` form confirms in place instead. It sits on pages with no
+navigation, where leaving ends the visit.
 
-The subjects differ on purpose: all four land in the same inbox, and a peer
+The subjects differ on purpose: all three land in the same inbox, and a peer
 making an introduction should be distinguishable from an organization in
 crisis without opening the mail. The landing form also stamps which variant
 produced the lead, which is the only reason to run two.
 
 ### The access key
 
-One repository variable, `NEXT_PUBLIC_WEB3FORMS_KEY`, read by all four forms.
+One repository variable, `NEXT_PUBLIC_WEB3FORMS_KEY`, read by all three forms.
 
 Repo → Settings → Secrets and variables → **Actions** → **Variables** tab.
 Changing it needs a re-run (Actions → Deploy → Run workflow) because it is
@@ -225,9 +225,71 @@ and email where a form should be, the key is missing.
   navigate.
 - The honeypot field must be named exactly `botcheck`. A differently named
   decoy is submitted as ordinary form data and ignored.
-- The free tier is **250 submissions/month, shared across all four forms**.
+- The free tier is **250 submissions/month, shared across all three forms**.
 - Web3Forms is already listed as a processor in `src/content/legal.ts`.
   Changing providers means updating that disclosure too.
+
+---
+
+## The calculator's own address: calculator.theresewhite.com
+
+theresewhite.com is still on Wix, and its DNS is run by Wix (its name servers
+are `ns2.wixdns.net` and `ns3.wixdns.net`). So until the cutover, the conflict
+calculator has its own address on a subdomain, served free by GitHub Pages
+from a second repository, **thirstypig/theresewhite-calculator**.
+
+Nothing is maintained in that repository by hand. Every deploy of this one
+also runs the `calculator-site` job in `.github/workflows/deploy.yml`, which:
+
+1. builds the site a second time with
+   `NEXT_PUBLIC_SITE_URL=https://calculator.theresewhite.com`;
+2. keeps only the calculator page (`src/app/(landing)/calculator/page.tsx`),
+   its scripts and styles, the link-preview image and the tab icon, using
+   `scripts/build-calculator-site.mjs`;
+3. runs the same link-preview audit as the main site on that one page; and
+4. replaces that repository's `gh-pages` branch with the result.
+
+It runs after the main build's checks, so a type error or failing test stops
+both. If it fails, the main site still deploys; only the subdomain stays on its
+previous version.
+
+Two differences from the main site, both deliberate:
+
+- **That repository publishes from a branch**, not from GitHub Actions — the
+  opposite of what gate 1 enforces here. A branch is simpler to push to from
+  another repository. The cost is that GitHub runs Jekyll over it, which drops
+  the `_next` folder holding every script and stylesheet unless a `.nojekyll`
+  file is present. The assembly script always writes one, and
+  `scripts/build-calculator-site.test.ts` fails if it ever stops.
+- **The page is `noindex`.** The subdomain is for links in ads and messages,
+  not search; after the cutover, `/conflict-calculator` on the main site is the
+  page meant to be found.
+
+### One-time setup
+
+| Step | Where | Who |
+|---|---|---|
+| Create the public repository `thirstypig/theresewhite-calculator` | GitHub | Done 2026-10-16 |
+| Add a deploy key that can write to that repository only, and store its private half as the `CALCULATOR_DEPLOY_KEY` secret here | GitHub | Done 2026-10-16 |
+| After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `calculator.theresewhite.com`; Enforce HTTPS | That repository | After the first deploy |
+| Add a DNS record: type **CNAME**, host **`calculator`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | James or Therese |
+
+Until the DNS record exists the page has no working address. It is not usable
+at `thirstypig.github.io/theresewhite-calculator/` either, because the page
+loads its files from the root of whatever domain serves it.
+
+If the deploy key is ever lost or rotated: create a new key pair, add the public
+half under that repository's Settings → Deploy keys with **write access**, and
+replace the `CALCULATOR_DEPLOY_KEY` secret here with the private half.
+
+### At cutover
+
+The subdomain must keep working, because ads and messages will have linked to
+it. Replace its contents with a page that redirects to
+`https://www.theresewhite.com/conflict-calculator/`, then delete the
+`calculator-site` job, the `(landing)/calculator` route and the assembly
+script. Change the calculator's "Schedule Your Free Confidential Assessment"
+button, which now goes to the Wix home page, only once the main site is live.
 
 ---
 
