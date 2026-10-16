@@ -14,7 +14,13 @@
  *  - out/_next is every script, stylesheet and font the page loads. The page
  *    addresses them from the site root, which is why the subdomain has to
  *    serve this folder at its root.
- *  - out/og.png is the link-preview image; favicon.ico the tab icon.
+ *  - out/og.png is the link-preview image.
+ *  - Every other file the page refers to from the site root, such as the
+ *    logo and the tab icon, found by reading the page rather than listed
+ *    here. A fixed list is how the logo would go missing: it shows in every
+ *    local preview, which serves all of out/, and 404s only on the subdomain.
+ *    A reference to something that is not a file in out/ (a link to /about,
+ *    say) fails the build instead, because the subdomain has no other pages.
  *  - CNAME tells GitHub Pages which domain this repository answers for.
  *  - .nojekyll is essential. That repository publishes from a branch, and a
  *    branch publish runs Jekyll, which silently drops any folder whose name
@@ -31,12 +37,32 @@ import {
   mkdirSync,
   readFileSync,
   rmSync,
+  statSync,
   writeFileSync,
 } from "node:fs";
-import { join, resolve } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const CALCULATOR_HOST = "calculator.theresewhite.com";
+
+/**
+ * Root-relative paths the page loads or links to, other than its own scripts
+ * and styles under /_next/ and the home page itself. Query strings dropped.
+ *
+ * @param {string} html
+ * @returns {string[]}
+ */
+export function localReferences(html) {
+  const found = new Set();
+  const pattern = /\b(?:src|href)="(\/(?!\/)[^"#?]*)/g;
+  let match;
+  while ((match = pattern.exec(html)) !== null) {
+    const path = match[1];
+    if (path === "/" || path.startsWith("/_next/")) continue;
+    found.add(path);
+  }
+  return [...found].sort();
+}
 
 /**
  * Copies the calculator out of a finished build into siteDir.
@@ -69,9 +95,24 @@ export function assembleCalculatorSite(outDir, siteDir) {
   writeFileSync(join(siteDir, "index.html"), html);
   cpSync(join(outDir, "_next"), join(siteDir, "_next"), { recursive: true });
   cpSync(join(outDir, "og.png"), join(siteDir, "og.png"));
-  if (existsSync(join(outDir, "favicon.ico"))) {
-    cpSync(join(outDir, "favicon.ico"), join(siteDir, "favicon.ico"));
+
+  const problems = [];
+  for (const path of localReferences(html)) {
+    const source = join(outDir, path);
+    if (!existsSync(source) || !statSync(source).isFile()) {
+      problems.push(
+        `The calculator page refers to ${path}, which calculator.theresewhite.com does not have. Link to the main site with a full address instead.`,
+      );
+      continue;
+    }
+    mkdirSync(dirname(join(siteDir, path)), { recursive: true });
+    cpSync(source, join(siteDir, path));
   }
+  if (problems.length > 0) {
+    rmSync(siteDir, { recursive: true, force: true });
+    return problems;
+  }
+
   writeFileSync(join(siteDir, "CNAME"), `${CALCULATOR_HOST}\n`);
   writeFileSync(join(siteDir, ".nojekyll"), "");
   return [];

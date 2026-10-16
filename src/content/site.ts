@@ -119,6 +119,22 @@ export const portrait = {
   alt: "L. Therese White",
 } as const;
 
+/**
+ * Her logo from the live Wix site: the script name over a blue brush stroke,
+ * with "Employment Mediator / Workplace Conflict Coach" beneath.
+ *
+ * Downloaded from Wix at full size (2854 x 1242, 1.1 MB) and saved at 560
+ * pixels wide, twice the largest size it is shown at, as WebP (22 KB). The
+ * full-size file is no sharper: the script name was enlarged from a small
+ * original and is soft at any size above this.
+ */
+export const logo = {
+  src: "/brand/therese-white-logo.webp",
+  width: 560,
+  height: 243,
+  alt: "L. Therese White, Employment Mediator, Workplace Conflict Coach",
+} as const;
+
 export const pullQuote = {
   quote: "It's never about what they say it's about.",
   subhead: "Your biggest expense is the conversation nobody knows how to have.",

@@ -52,7 +52,7 @@ public/logos/           Panel and affiliation logos, normalized to uniform tiles
 
 ## Tests
 
-`npm test` — Vitest, node environment, 76 tests across seven files. They run in
+`npm test` — Vitest, node environment, 79 tests across seven files. They run in
 CI before the build, so a failure blocks the deploy.
 
 Every one of them guards a failure that returns 200 and looks correct in a
@@ -62,7 +62,7 @@ catches it.
 | File | What it protects |
 |---|---|
 | `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to four sets of figures read off Therese's own calculator script (`workplace-conflict-calculator-v2.html`), including the benefits toggle and out-of-range entries. She may quote these figures — a "cleanup" that changes them is the regression this exists to catch. |
-| `scripts/build-calculator-site.test.ts` | The step that publishes calculator.theresewhite.com. Guards the two ways it can publish a broken site while looking fine: leaving out `.nojekyll` (GitHub would then drop every script and stylesheet), and publishing a page built for the main site's address. |
+| `scripts/build-calculator-site.test.ts` | The step that publishes calculator.theresewhite.com. Guards the ways it can publish a broken site while looking fine: leaving out `.nojekyll` (GitHub would then drop every script and stylesheet), publishing a page built for the main site's address, leaving out a file the page needs (such as the logo), and publishing a link to a page the subdomain does not have. |
 | `src/lib/site-config.test.ts` | The staging `noindex` switch. Fails in two directions: a crawlable duplicate competing with her live site, or the launched site shipping `noindex` and vanishing from search. |
 | `src/app/sitemap.test.ts` | That every page reaches the sitemap or is on the documented exclusion list. A new page can ship, return 200, look fine, and never be submitted to a search engine — a failure with no symptom. The exclusion list is the durable part: it records *why* each absent route is absent. |
 | `src/lib/page-metadata.test.ts` | What `pageMetadata()` produces: a page's own `og:title` rather than the site's, a canonical and `og:url` carrying the trailing slash, an `og:image` path with a real image extension, and `robots` omitted unless a page opts out. |

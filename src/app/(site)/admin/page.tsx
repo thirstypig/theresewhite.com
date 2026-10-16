@@ -101,7 +101,7 @@ const pages = [
   { path: "/collaborate", note: "Referral page for allied professionals. Footer-linked, not in the header nav. DRAFT COPY — needs rewriting in Therese's voice" },
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Therese's Workplace Conflict Cost Calculator, every word verbatim from workplace-conflict-calculator-v2.html. Footer-linked, but noindex until the campaign runs." },
-  { path: "/calculator", note: "The same calculator with no header or footer. The source of calculator.theresewhite.com, published from a second build. noindex." },
+  { path: "/calculator", note: "The same calculator in the live Wix site's look — Arial, its blues, her logo top left — with no site header or footer. The source of calculator.theresewhite.com, published from a second build. noindex." },
   { path: "/lp/a", note: "Campaign landing page for a LinkedIn post — best-practice layout in the site palette. No header or footer. noindex. One of two designs under test; the loser gets deleted." },
   { path: "/lp/b", note: "The same page in the live theresewhite.com identity — its blues, Arial Bold, pill buttons. No header or footer. noindex." },
   { path: "/privacy", note: "Generic template — not lawyer-reviewed" },
@@ -144,8 +144,8 @@ const tests = [
   },
   {
     file: "scripts/build-calculator-site.test.ts",
-    count: 4,
-    note: "The step that publishes calculator.theresewhite.com. Guards the two ways it can publish a broken site that looks fine: leaving out .nojekyll, which makes GitHub drop every script and stylesheet, and publishing a page built for the main site's address",
+    count: 7,
+    note: "The step that publishes calculator.theresewhite.com. Guards the ways it can publish a broken site that looks fine: leaving out .nojekyll, which makes GitHub drop every script and stylesheet; publishing a page built for the main site's address; leaving out a file the page needs, such as the logo; and linking to a page the subdomain does not have",
   },
 ];
 

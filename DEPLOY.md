@@ -261,6 +261,11 @@ Two differences from the main site, both deliberate:
   the `_next` folder holding every script and stylesheet unless a `.nojekyll`
   file is present. The assembly script always writes one, and
   `scripts/build-calculator-site.test.ts` fails if it ever stops.
+- **It wears the live Wix site's look, not the rebuild's**: Arial and Arial
+  Bold, the Wix blues, pill buttons, and her logo top left
+  (`public/brand/therese-white-logo.webp`, linking to the Wix site). It sits
+  beside the Wix site until the cutover, so it should look like that site.
+  The look is the `.lp-wix` theme in `globals.css`, shared with `/lp/b`.
 - **The page is `noindex`.** The subdomain is for links in ads and messages,
   not search; after the cutover, `/conflict-calculator` on the main site is the
   page meant to be found.
