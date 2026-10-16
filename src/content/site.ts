@@ -135,6 +135,46 @@ export const logo = {
   alt: "L. Therese White, Employment Mediator, Workplace Conflict Coach",
 } as const;
 
+/**
+ * The live Wix site's menu and footer, for calculator.theresewhite.com, which
+ * sits beside that site until the cutover and should look like part of it.
+ *
+ * Read off https://www.theresewhite.com on 2026-10-16, and kept exactly as
+ * the live site writes them — including "323-291-4813" and "Blvd," without
+ * the period — rather than in this site's own formatting. Every link goes to
+ * the live page of that name, so it stays right as long as Wix is serving;
+ * replace this with the main site's own nav and footer at cutover.
+ */
+export const liveSite = {
+  home: "https://www.theresewhite.com",
+  nav: [
+    { label: "About Therese", href: "https://www.theresewhite.com/about-therese" },
+    { label: "Endorsements", href: "https://www.theresewhite.com/team-1-1" },
+    { label: "Case Studies", href: "https://www.theresewhite.com/case-studies" },
+    { label: "FAQ", href: "https://www.theresewhite.com/services-3" },
+    { label: "Blog", href: "https://www.theresewhite.com/blog" },
+    { label: "Contact", href: "https://www.theresewhite.com/contact" },
+  ],
+  footer: {
+    lines: [
+      "L. Therese White",
+      "Employment Mediator · Workplace Conflict Coach",
+      "10736 Jefferson Blvd, #363",
+      "Culver City, CA 90230",
+    ],
+    email: "Therese@ThereseWhite.com",
+    phone: "323-291-4813",
+    copyright: "© 2026 L. Therese White",
+    legalTitle: "Legal",
+    legal: [
+      { label: "Privacy Policy", href: "https://www.theresewhite.com/privacy-policy" },
+      { label: "Terms of Use", href: "https://www.theresewhite.com/terms-of-use" },
+      { label: "Cookie Preferences", href: "https://www.theresewhite.com/cookie-preferences" },
+      { label: "Accessibility", href: "https://www.theresewhite.com/accessibility" },
+    ],
+  },
+} as const;
+
 export const pullQuote = {
   quote: "It's never about what they say it's about.",
   subhead: "Your biggest expense is the conversation nobody knows how to have.",

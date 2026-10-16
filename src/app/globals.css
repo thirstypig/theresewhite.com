@@ -259,21 +259,27 @@ body {
 }
 
 /*
- * Variant B wears the live theresewhite.com identity: its blues, Arial Bold
- * headlines, Arial body, and fully rounded buttons. Values read off the live
- * site rather than guessed — #0D63D1 is its nav blue, #2E92E5 its button
- * blue, #3D9BE9 its section bands.
+ * The live theresewhite.com identity, worn by landing page B and by
+ * calculator.theresewhite.com: its blues, Arial Bold headlines, Arial body,
+ * and fully rounded buttons. Values read off the live site rather than
+ * guessed — #0D63D1 is its nav blue, #2E92E5 its button blue, #3D9BE9 its
+ * section bands.
+ *
+ * Measured again on 2026-10-16, which corrected three values: its headlines
+ * are black (#000000), not blue; its light surface is a warm gray (#E8E6E6,
+ * the hero and the footer), not a pale blue; and its dividers are near-black
+ * (#282626) bars, not blue lines.
  */
 .lp-wix.lp-wix {
   --paper: #ffffff;
-  --cream: #eef4fb;
+  --cream: #e8e6e6;
   --band: #0d63d1;
-  --heading: #0d63d1;
+  --heading: #000000;
   --charcoal: #414141;
-  --muted: #667085;
+  --muted: #5f5f5f;
   --slate: #2e92e5;
-  --rule: #dbe6f5;
-  --rule-strong: #2e92e5;
+  --rule: #d6d3d3;
+  --rule-strong: #282626;
   --btn: #2e92e5;
   --btn-fg: #ffffff;
   --btn-hover: #0d63d1;
@@ -303,6 +309,13 @@ body {
   line-height: 1.15;
 }
 
+/* Its main headline is 40px on a desktop, smaller than the main site's. */
+@media (min-width: 40rem) {
+  .lp-wix h1.display-wix {
+    font-size: 2.5rem;
+  }
+}
+
 /* Its section headings are centered and black; only the hero is left-aligned. */
 .lp-wix .section-head {
   text-align: center;
@@ -311,6 +324,18 @@ body {
 /* Its buttons are pills, not the square corners the main site uses. */
 .lp-wix .rounded-sm {
   border-radius: 100px;
+}
+
+/*
+ * Its button labels are set in Lulo Clean, a wide all-capitals face that Wix
+ * licenses for its own sites and that cannot be loaded here. Bold Arial in
+ * capitals with wide spacing is the closest free match.
+ */
+.lp-wix .cta-button {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 /* Inputs stay legible rectangles — pill-shaped text fields are a usability

@@ -109,7 +109,7 @@ export const todos: Todo[] = [
     id: "calculator-subdomain-dns",
     title: "Point calculator.theresewhite.com at GitHub Pages",
     detail:
-      "The calculator has its own address while the main site is still on Wix, but it does not work until one DNS record exists. In Therese's Wix account, go to Domains → theresewhite.com → DNS records and add a CNAME record with host `calculator` and value `thirstypig.github.io`. It does not touch the Wix site or email. After it is added, GitHub needs up to an hour to issue the security certificate. DEPLOY.md, \"The calculator's own address\", has the full picture.",
+      "The calculator has its own address while the main site is still on Wix, but it does not work until one DNS record exists. In Therese's Wix account, go to Domains → theresewhite.com → DNS records and add a CNAME record with host `calculator` and value `thirstypig.github.io`. It does not touch the Wix site or email. After it is added, GitHub needs up to an hour to issue the security certificate. Then, in the Wix editor, point the home page's \"Click To See Your Numbers\" button at https://calculator.theresewhite.com — today it opens the claude.ai artifact. DEPLOY.md, \"The calculator's own address\", has the full picture.",
     status: "open",
     owner: "James",
     priority: "high",

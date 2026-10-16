@@ -261,11 +261,16 @@ Two differences from the main site, both deliberate:
   the `_next` folder holding every script and stylesheet unless a `.nojekyll`
   file is present. The assembly script always writes one, and
   `scripts/build-calculator-site.test.ts` fails if it ever stops.
-- **It wears the live Wix site's look, not the rebuild's**: Arial and Arial
-  Bold, the Wix blues, pill buttons, and her logo top left
-  (`public/brand/therese-white-logo.webp`, linking to the Wix site). It sits
-  beside the Wix site until the cutover, so it should look like that site.
-  The look is the `.lp-wix` theme in `globals.css`, shared with `/lp/b`.
+- **It wears the live Wix site's look, not the rebuild's**: Arial with
+  black Arial Bold headlines, the Wix gray and blues, pill buttons, and the
+  live site's own header (her logo, `public/brand/therese-white-logo.webp`,
+  and its menu) and footer, every link going to the live page of that name.
+  It sits beside the Wix site until the cutover, so it should look like part
+  of it. The colors are the `.lp-wix` theme in `globals.css`, shared with
+  `/lp/b`; the header and footer are `src/components/live-site-chrome.tsx`.
+  The one thing not matched exactly is the button lettering: the live site
+  uses Lulo Clean, a font Wix licenses only for its own sites, so the buttons
+  use bold capitals in Arial with wide spacing instead.
 - **The page is `noindex`.** The subdomain is for links in ads and messages,
   not search; after the cutover, `/conflict-calculator` on the main site is the
   page meant to be found.
@@ -278,6 +283,7 @@ Two differences from the main site, both deliberate:
 | Add a deploy key that can write to that repository only, and store its private half as the `CALCULATOR_DEPLOY_KEY` secret here | GitHub | Done 2026-10-16 |
 | After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `calculator.theresewhite.com`; Enforce HTTPS | That repository | After the first deploy |
 | Add a DNS record: type **CNAME**, host **`calculator`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | James or Therese |
+| Point the Wix home page's "Click To See Your Numbers" button at `https://calculator.theresewhite.com` (it opens the claude.ai artifact today) | Wix editor | James or Therese, once the address works |
 
 Until the DNS record exists the page has no working address. It is not usable
 at `thirstypig.github.io/theresewhite-calculator/` either, because the page
