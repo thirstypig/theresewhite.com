@@ -18,6 +18,7 @@ emotionally-charged conflict to book a confidential assessment.
 ```bash
 npm install
 npm run dev           # http://localhost:3160
+npm run typecheck     # TypeScript check; the deploy runs it too
 npm test              # vitest, unit tests only
 npm run build         # static export to ./out
 npm run verify:build  # audit the built pages' link-preview cards (needs a build first)
