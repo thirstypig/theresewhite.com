@@ -281,11 +281,19 @@ Two differences from the main site, both deliberate:
 |---|---|---|
 | Create the public repository `thirstypig/theresewhite-calculator` | GitHub | Done 2026-10-16 |
 | Add a deploy key that can write to that repository only, and store its private half as the `CALCULATOR_DEPLOY_KEY` secret here | GitHub | Done 2026-10-16 |
-| After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `calculator.theresewhite.com`; Enforce HTTPS | That repository | After the first deploy |
-| Add a DNS record: type **CNAME**, host **`calculator`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | James or Therese |
+| After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `calculator.theresewhite.com`; Enforce HTTPS | That repository | Done 2026-10-16 |
+| Add a DNS record: type **CNAME**, host **`calculator`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | Done 2026-10-16 |
 | Point the Wix home page's "Click To See Your Numbers" button at `https://calculator.theresewhite.com` (it opens the claude.ai artifact today) | Wix editor | James or Therese, once the address works |
 
-Until the DNS record exists the page has no working address. It is not usable
+**If the security certificate stalls.** On 2026-10-16 GitHub went 40 minutes
+without requesting one, even though its own domain check (the API's
+`/pages/health`) reported the domain valid and eligible. Removing the custom
+domain and adding it back got a certificate issued within a minute. In that
+repository: Settings → Pages → Remove the custom domain, then enter
+`calculator.theresewhite.com` again and Save. It adds two commits to
+`gh-pages` (Delete CNAME, Create CNAME), which the next deploy replaces.
+
+Without the DNS record the page has no working address. It is not usable
 at `thirstypig.github.io/theresewhite-calculator/` either, because the page
 loads its files from the root of whatever domain serves it.
 
