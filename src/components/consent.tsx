@@ -4,7 +4,7 @@ import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { PRIVACY_HREF } from "@/lib/site-config";
+import { IS_CALCULATOR_SITE, PRIVACY_HREF } from "@/lib/site-config";
 
 const STORAGE_KEY = "tw-analytics-consent";
 
@@ -108,16 +108,25 @@ export function Consent() {
       ) : null}
 
       {decision === null ? (
+        // On calculator.theresewhite.com the banner wears the live Wix
+        // site's look like the rest of that page: the `.lp-wix` theme gives
+        // it Arial, the Wix blues and pill buttons, and `cta-button` the
+        // live site's capital lettering. The banner sits outside the page's
+        // own wrapper, so it has to opt in itself.
         <div
           role="dialog"
           aria-label="Cookie preferences"
-          className="fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-paper shadow-[0_-8px_24px_rgba(0,0,0,0.08)]"
+          className={`fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-paper shadow-[0_-8px_24px_rgba(0,0,0,0.08)] ${
+            IS_CALCULATOR_SITE ? "lp-wix lp-lock" : ""
+          }`}
         >
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="m-0 max-w-2xl text-sm leading-relaxed text-charcoal">
-              We&rsquo;d like to use analytics cookies to see how this site gets
-              used. Nothing loads unless you accept, and the contact form is
-              never recorded.{" "}
+              {/* The calculator site has no contact form, so it does not
+                  promise anything about one. */}
+              {IS_CALCULATOR_SITE
+                ? "We\u2019d like to use analytics cookies to see how this site gets used. Nothing loads unless you accept."
+                : "We\u2019d like to use analytics cookies to see how this site gets used. Nothing loads unless you accept, and the contact form is never recorded."}{" "}
               <Link
                 href={PRIVACY_HREF}
                 className="text-heading underline decoration-accent-line underline-offset-4 transition-colors hover:decoration-heading"
@@ -129,14 +138,14 @@ export function Consent() {
               <button
                 type="button"
                 onClick={() => decide("denied")}
-                className="rounded-sm border border-rule px-4 py-2.5 text-sm font-medium text-charcoal transition-colors hover:border-btn hover:text-heading"
+                className="cta-button rounded-sm border border-rule px-4 py-2.5 text-sm font-medium text-charcoal transition-colors hover:border-btn hover:text-heading"
               >
                 Decline
               </button>
               <button
                 type="button"
                 onClick={() => decide("granted")}
-                className="rounded-sm bg-btn px-4 py-2.5 text-sm font-medium text-btn-fg transition-colors hover:bg-btn-hover"
+                className="cta-button rounded-sm bg-btn px-4 py-2.5 text-sm font-medium text-btn-fg transition-colors hover:bg-btn-hover"
               >
                 Accept
               </button>
