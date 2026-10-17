@@ -283,7 +283,7 @@ Two differences from the main site, both deliberate:
 | Add a deploy key that can write to that repository only, and store its private half as the `CALCULATOR_DEPLOY_KEY` secret here | GitHub | Done 2026-10-16 |
 | After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `calculator.theresewhite.com`; Enforce HTTPS | That repository | Done 2026-10-16 |
 | Add a DNS record: type **CNAME**, host **`calculator`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | Done 2026-10-16 |
-| Point the Wix home page's "Click To See Your Numbers" button at `https://calculator.theresewhite.com` (it opens the claude.ai artifact today) | Wix editor | James or Therese, once the address works |
+| Point the Wix home page's "Click To See Your Numbers" button at `https://calculator.theresewhite.com` (it opens the claude.ai artifact today) | Wix editor | Done 2026-10-16 |
 
 **If the security certificate stalls.** On 2026-10-16 GitHub went 40 minutes
 without requesting one, even though its own domain check (the API's

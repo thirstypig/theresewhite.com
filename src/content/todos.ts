@@ -109,8 +109,8 @@ export const todos: Todo[] = [
     id: "calculator-subdomain-dns",
     title: "Point the Wix home page's calculator button at calculator.theresewhite.com",
     detail:
-      "calculator.theresewhite.com is live over https as of 2026-10-16: the DNS record is in Therese's Wix account and GitHub has issued the security certificate. One step left, in the Wix editor: the home page's \"Click To See Your Numbers\" button still opens the claude.ai artifact. Change its link to https://calculator.theresewhite.com and publish.",
-    status: "open",
+      "Done 2026-10-16. calculator.theresewhite.com is live over https, and the live home page's \"Click To See Your Numbers\" button now opens it in a new tab instead of the claude.ai artifact (checked on www.theresewhite.com). At cutover, the subdomain should redirect to /conflict-calculator on the main site rather than go dark; DEPLOY.md, \"At cutover\", has the steps.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Deploy",
