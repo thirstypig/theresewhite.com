@@ -32,6 +32,7 @@ tags:
   - silent-misconfiguration
   - stale-artifact
 related:
+  - './second-pages-site-from-one-static-export.md'
   - '../../../shengchangmd/docs/runbooks/domain-migration-to-shengchangmd-com.md'
   - '../../../jameschang.co/docs/solutions/integration-issues/cross-repo-admin-via-github-contents-api.md'
   - '../../../Vouch/docs/solutions/integration-issues/resend-sending-domain-not-verifying.md'

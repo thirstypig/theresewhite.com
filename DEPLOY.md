@@ -292,6 +292,8 @@ domain and adding it back got a certificate issued within a minute. In that
 repository: Settings → Pages → Remove the custom domain, then enter
 `calculator.theresewhite.com` again and Save. It adds two commits to
 `gh-pages` (Delete CNAME, Create CNAME), which the next deploy replaces.
+The full story, with three other ways this setup can look finished and not
+be, is in `docs/solutions/deployment-issues/second-pages-site-from-one-static-export.md`.
 
 Without the DNS record the page has no working address. It is not usable
 at `thirstypig.github.io/theresewhite-calculator/` either, because the page

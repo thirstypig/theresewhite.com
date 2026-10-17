@@ -45,6 +45,7 @@ const links = [
       { name: "Deploy runs", note: "Every push to main builds and publishes.", href: `${REPO}/actions` },
       { name: "Pages settings", note: "Source must stay on GitHub Actions.", href: `${REPO}/settings/pages` },
       { name: "Repo variables", note: "Where the Web3Forms key and analytics IDs live.", href: `${REPO}/settings/variables/actions` },
+      { name: "Calculator site", note: "calculator.theresewhite.com, published to its own repository on every deploy. If its https certificate ever stalls, remove the custom domain in Pages settings and add it back.", href: "https://github.com/thirstypig/theresewhite-calculator/settings/pages" },
     ],
   },
   {
