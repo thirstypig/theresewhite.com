@@ -156,3 +156,94 @@ export const wixHome = {
     ],
   },
 } as const;
+
+/**
+ * The homepage's pictures, in the order they appear, for the Wix copy of the
+ * homepage at `/`.
+ *
+ * Each file is the full-size original downloaded from static.wixstatic.com on
+ * 2026-10-18 and converted to WebP, saved in public/wix/home/. The comment
+ * on each entry names the Wix original, so it can be fetched again.
+ * `width` and `height` are the saved file's own size in pixels.
+ *
+ * The alt text is ours, not Wix's. On Wix nearly every picture's alt text is
+ * its upload filename, such as "Screenshot 2025-09-19 at 9.35.28 PM.png",
+ * which tells a screen-reader user nothing. The panel logos reuse the
+ * descriptions already written in `wixHome.panels.logos` above. The icons,
+ * the frame and the background are decoration, so they have no alt text and
+ * screen readers skip them.
+ */
+export const wixHomeImages = {
+  /** 1d1667_190762470e274a2eabea3f712c1b4546~mv2.png, "Therese Blouse High.png" */
+  portrait: {
+    src: "/wix/home/therese-portrait-red-jacket.webp",
+    width: 960,
+    height: 1088,
+    alt: "L. Therese White, smiling, in a red jacket",
+  },
+
+  /** 807fad_c2b06430b28e4d7c97942b0f5f8b2ccaf000.jpg, the video's opening frame */
+  videoPoster: { src: "/wix/home/video-poster-bookshelf.webp", width: 960, height: 540 },
+
+  /** 11062b_8480e50c5d1841b3b1829214389b1253~mv2_d_4500_2530_s_4_2.png, "Blue Gradient", shrunk to 1,920 wide */
+  panelBackground: { src: "/wix/home/panel-band-blue-gradient.webp", width: 1920, height: 1080 },
+
+  /**
+   * Wix draws each panel logo inside its "iron" picture frame: a textured
+   * white border with a screw in each corner. The texture and the screw are
+   * Wix's own files: ironpatern.bb7ea6a2.png from static.parastorage.com, and
+   * a 15-pixel screw picture written into the page itself.
+   */
+  tileFrame: {
+    texture: "/wix/home/tile-frame-iron-texture.webp",
+    screw: "/wix/home/tile-frame-screw.png",
+  },
+
+  /**
+   * The six panel logos in reading order on desktop: left then right, row by
+   * row. `drawnWidth` and `drawnHeight` are the size Wix draws each logo at
+   * on a 1,440-pixel screen, not counting its frame.
+   */
+  panelLogos: [
+    // 1d1667_3f4435d4d74f4c63b6dd6d84d423806c~mv2.png
+    { src: "/wix/home/panel-usps-redress.webp", width: 357, height: 135, drawnWidth: 373, drawnHeight: 123, alt: wixHome.panels.logos[0].alt },
+    // 1d1667_5500f3dbf8d84e7cb5f39a1d278cea23~mv2.png
+    { src: "/wix/home/panel-la-county-hr.webp", width: 356, height: 149, drawnWidth: 350, drawnHeight: 131, alt: wixHome.panels.logos[1].alt },
+    // 1d1667_3e73bd01155a453f9966cef312aa354e~mv2.png
+    { src: "/wix/home/panel-eeoc-seal.webp", width: 254, height: 255, drawnWidth: 192, drawnHeight: 194, alt: wixHome.panels.logos[2].alt },
+    // 1d1667_520c1e540cbe478bb107c658e3b1a31e~mv2.png
+    { src: "/wix/home/panel-aaa-icdr-2025.webp", width: 304, height: 271, drawnWidth: 254, drawnHeight: 223, alt: wixHome.panels.logos[3].alt },
+    // 1d1667_b70be322f4c94b358a73f17931458349~mv2.png
+    { src: "/wix/home/panel-dynamic-team-solutions.webp", width: 241, height: 92, drawnWidth: 366, drawnHeight: 117, alt: wixHome.panels.logos[4].alt },
+    // 1d1667_39804ef35b6e4e7cba8f8927aa64aaa2~mv2.png
+    { src: "/wix/home/panel-ken-cloke.webp", width: 417, height: 124, drawnWidth: 373, drawnHeight: 98, alt: wixHome.panels.logos[5].alt },
+  ],
+
+  /**
+   * On Wix the Ken Cloke logo's second line is live text laid over the
+   * bottom of the picture, not part of the picture. Caudex, bold, 16 pixels.
+   */
+  clokeCaption: "The Center For Dispute Resolution",
+
+  /** The round blue icons on the three reasons cards, in card order. */
+  reasonIcons: [
+    // 1d1667_d30d28f0ec88425ab0d44c208c0ded78~mv2.png
+    { src: "/wix/home/icon-briefcase.webp", width: 119, height: 107 },
+    // 1d1667_c06a2648dbbd4cef95d5d860d1f189b4~mv2.png
+    { src: "/wix/home/icon-thumbs-up.webp", width: 115, height: 98 },
+    // 1d1667_ea0b852bff894ed49e513483e3b8f2d2~mv2.png
+    { src: "/wix/home/icon-pencil-ruler.webp", width: 120, height: 100 },
+  ],
+
+  /** The round blue icons over the four blueprint steps, in desktop order. */
+  stepIcons: [
+    // 1d1667_a78617fb1a54487e89506e5f10713e6e~mv2.png
+    { src: "/wix/home/step-1-interviews-people.webp", width: 113, height: 105 },
+    // 1d1667_dabcce72c622447e97967db92d781126~mv2.png
+    { src: "/wix/home/step-2-mediation-heart.webp", width: 125, height: 103 },
+    // 1d1667_c78c38ffa34d405b896dfa46f555e528~mv2.png
+    { src: "/wix/home/step-3-agreement-pencil.webp", width: 120, height: 100 },
+    // 1d1667_03d4d22c47b54f4f863457805b94e58c~mv2.png
+    { src: "/wix/home/step-4-follow-up-phone.webp", width: 142, height: 123 },
+  ],
+} as const;
