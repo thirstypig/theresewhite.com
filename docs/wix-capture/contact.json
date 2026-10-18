@@ -1,0 +1,211 @@
+{
+ "url": "https://www.theresewhite.com/contact",
+ "title": "Contact | Theresewhite",
+ "text": "Contact\n\nSchedule Your Confidential Conflict Assessment\n\n \n\nWe’ll discuss your situation in depth. Don't worry.\nIt's real work . . . No sales pitch or pressure . . . No charge.\n\n\n\nIn 30 to 45 minutes, I’ll help you answer:\n\nWhat's the least disruptive, lowest-risk path?\n\nIs mediation appropriate or is coaching enough?\n\nWho else needs to be involved, and who shouldn't?\n\nWhat’s the best way to get the parties to mediation?\n\nWhat will be included in my proposal?\n\n \n\n\n\n\n\nAt the end, we'll brainstorm next steps . . . that may or may not include me. \n\n \n\nAnd that’s perfectly fine with me. I'll be happy to refer you to someone who’s a better fit.\n\n\n\n \n\nSchedule Your Assessment\n\n\n\nNOTE: If your situation is urgent, call me at 323-291-4813 or email Therese@ThereseWhite.com.\n\nI answer my own phone and read my own email. Say it's urgent and I'll treat it that way.\n\n",
+ "imgs": [
+  {
+   "alt": "Unknown.png",
+   "src": "https://static.wixstatic.com/media/1d1667_4132d7cd5ad94a26aabeccc7872c2636~mv2.png",
+   "w": 347,
+   "h": 253,
+   "x": 829,
+   "y": 360
+  }
+ ],
+ "links": [
+  {
+   "text": "Schedule Your Assessment",
+   "href": "https://calendly.com/therese-theresewhite/30min"
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com"
+  }
+ ],
+ "iframes": [],
+ "blocks": [
+  {
+   "tag": "H1",
+   "y": 91,
+   "x": 232,
+   "w": 978,
+   "text": "Contact",
+   "font": "caudex",
+   "size": "60px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "center"
+  },
+  {
+   "tag": "P",
+   "y": 194,
+   "x": 236,
+   "w": 968,
+   "text": "Schedule Your Confidential Conflict Assessment",
+   "font": "forum",
+   "size": "36px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "center"
+  },
+  {
+   "tag": "P",
+   "y": 267,
+   "x": 236,
+   "w": 968,
+   "text": "We’ll discuss your situation in depth. Don't worry.\nIt's real work . . . No sales pitch or pressure . . . No charge.",
+   "font": "forum",
+   "size": "36px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "center"
+  },
+  {
+   "tag": "P",
+   "y": 377,
+   "x": 236,
+   "w": 968,
+   "text": "In 30 to 45 minutes, I’ll help you answer:",
+   "font": "forum",
+   "size": "26px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "LI",
+   "y": 414,
+   "x": 276,
+   "w": 928,
+   "text": "What's the least disruptive, lowest-risk path?",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "LI",
+   "y": 445,
+   "x": 276,
+   "w": 928,
+   "text": "Is mediation appropriate or is coaching enough?",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "LI",
+   "y": 476,
+   "x": 276,
+   "w": 928,
+   "text": "Who else needs to be involved, and who shouldn't?",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "LI",
+   "y": 507,
+   "x": 276,
+   "w": 928,
+   "text": "What’s the best way to get the parties to mediation?",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "LI",
+   "y": 538,
+   "x": 276,
+   "w": 928,
+   "text": "What will be included in my proposal?",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "P",
+   "y": 644,
+   "x": 236,
+   "w": 968,
+   "text": "At the end, we'll brainstorm next steps . . . that may or may not include me.",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "P",
+   "y": 706,
+   "x": 236,
+   "w": 968,
+   "text": "And that’s perfectly fine with me. I'll be happy to refer you to someone who’s a better fit.",
+   "font": "forum",
+   "size": "22px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "400",
+   "style": "normal",
+   "align": "start"
+  },
+  {
+   "tag": "P",
+   "y": 787,
+   "x": 236,
+   "w": 968,
+   "text": "Schedule Your Assessment",
+   "font": "forum",
+   "size": "30px",
+   "color": "rgb(29, 44, 243)",
+   "weight": "400",
+   "style": "normal",
+   "align": "center"
+  },
+  {
+   "tag": "P",
+   "y": 848,
+   "x": 236,
+   "w": 968,
+   "text": "NOTE: If your situation is urgent, call me at 323-291-4813 or email Therese@ThereseWhite.com.",
+   "font": "forum",
+   "size": "18px",
+   "color": "rgb(65, 65, 65)",
+   "weight": "700",
+   "style": "normal",
+   "align": "center"
+  },
+  {
+   "tag": "P",
+   "y": 874,
+   "x": 236,
+   "w": 968,
+   "text": "I answer my own phone and read my own email. Say it's urgent and I'll treat it that way.",
+   "font": "forum",
+   "size": "18px",
+   "color": "rgb(0, 0, 0)",
+   "weight": "400",
+   "style": "normal",
+   "align": "center"
+  }
+ ],
+ "h": 1150
+}
