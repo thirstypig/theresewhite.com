@@ -1,0 +1,70 @@
+/**
+ * The live Wix FAQ page's words (www.theresewhite.com/services-3), exactly as
+ * the page shows them, top to bottom.
+ *
+ * Captured from the rendered page on 2026-10-18. The answers are collapsed on
+ * Wix and were read by opening each question one at a time
+ * (docs/wix-capture/faq.json). Do not edit the words: James decided on
+ * 2026-10-18 that the first build matches the Wix site word for word, and the
+ * copy gets its own review later. That includes the spaced ellipses, the
+ * mixed straight and curly apostrophes, and "screw up royally".
+ *
+ * "12 Strategic Questions You Should Ask . . ." is the page's heading, at the
+ * top of the page. On Wix it is plain text: it does not link anywhere or open
+ * anything (checked on the live page, 2026-10-18).
+ */
+export const wixFaq = {
+  title: "12 Strategic Questions You Should Ask . . .",
+  intro:
+    "Choosing the right strategic partner is a big decision — and the right questions make all the difference. Before you commit to any project or collaboration, these twelve questions will help you think clearly, plan wisely, and move forward with confidence.",
+  items: [
+    {
+      q: "Why should we invest in outside assistance instead of just handling difficult conflicts internally?",
+      a: "Every hour you and other leaders wrestle with entrenched workplace drama is an hour you aren't spending on strategy, innovation, or client relations. Your jobs are to grow the business, not run a part-time mediation practice. Delegating messy problems to outside assistance is all about the proper allocation of resources . . . plain and simple.",
+    },
+    {
+      q: "How do I talk to my bottom-line bosses about investing in conflict resolution services?",
+      a: "Show them the numbers. The cost of professional mediation is always less than the cost of unresolved conflicts. Say that mediation will cost around “$X,” and replacing people costs “Y” times their annual salary. And litigation typically begins around “$Z,” even before a negotiated settlement or verdict is reached. Lastly, don't forget the missed targets and deadlines, as well as the damage to workplace culture.",
+    },
+    {
+      q: "What's one of the biggest mistakes HR professionals and team leaders make when dealing with workplace conflicts?",
+      a: 'Trying to be the hero. Most are very competent in handling their job\'s basic requirements. But when conflicts involve deep emotional wounds or firmly held values and beliefs, "Do-It-Yourself" interventions often make matters worse. It\'s like trying to perform surgery with a butter knife. It will cause more harm than good . . . because the tool itself is a problem.',
+    },
+    {
+      q: "What conflict resolution services do you provide beyond mediation?",
+      a: "Don’t think of me like an emergency room doctor who only shows up after the damage is done, patches you up, and sends you home, hoping it won't happen again. Instead, I offer interrelated services covering all stages of treatment . . . conflict prevention/resolution workshops, individual coaching, facilitated team discussions, as well as mediation.",
+    },
+    {
+      q: "My managers keep dumping their team conflicts on me. How do I stop this?",
+      a: "Give them tools and training, then hold them accountable. Make conflict prevention and resolution part of their performance reviews.",
+    },
+    {
+      q: "How do I prove to my bosses that I'm dealing with conflicts strategically?",
+      a: "Begin by identifying and managing conflicts before they become crises. Develop early warning and de-escalation systems to free you from firefighting. In other words, show them that you’re looking ahead.",
+    },
+    {
+      q: "What if the conflict involves one of our top performers, whom everyone's afraid to confront?",
+      a: 'This is where most organizations screw up royally. They think talent excuses toxicity. So toxic high performers kill morale and drive away other high performers. My one-on-one coaching understands that "prima donnas" require a different approach. It\'s not about changing them. It\'s about helping them want to change themselves. And trust me, it took me many years to get good at just that.',
+    },
+    {
+      q: "How quickly can you help us resolve an urgent conflict situation?",
+      a: "To get the ball rolling, I offer same-day strategy calls for urgent situations. Simple conflicts often resolve within one to two weeks. Complex cases involving deep relationship damage and bystander casualties usually take longer. However, in either case, you should see immediate de-escalation once my process begins.",
+    },
+    {
+      q: "How quickly can you resolve a conflict that's been festering for months or even years?",
+      a: "Speed depends on how willing people are to do the emotional work. I've resolved decade-long conflicts in single sessions when both parties were ready to move forward; however, that’s not the norm. But remember, moving too quickly is like picking fruit before it's ripe. It will be hard, sour, and indigestible.",
+    },
+    {
+      q: "What's your success rate, and how do you measure it?",
+      a: "I don't track my success rate, but I consider these three metrics: 1. Resolution -- Written agreement signed, 2. Repair -- Professional working relationship restored, and 3. Durability -- No repeat conflicts within 12 months. While those metrics are important, here's what matters most: My clients consistently tell me they wish they'd called me sooner. Early intervention saves time, money, and emotional exhaustion.",
+    },
+    {
+      q: "Can you handle conflicts that involve potential legal issues?",
+      a: "Absolutely, but let's be clear about roles. I'm not an attorney, so I don’t give legal advice. However, my 30-plus years in employment mediation mean I understand when legal boundaries are being crossed. And my approach usually prevents litigation by addressing root causes early. I also work collaboratively with in-house legal counsel when needed.",
+    },
+    {
+      q: "Can you effectively do your work remotely?",
+      a: "Absolutely. I conduct almost all my work via Zoom conference meetings.",
+    },
+  ],
+} as const;
