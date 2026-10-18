@@ -9,6 +9,10 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Mediation, one-on-one coaching, facilitated team discussions, fact-finding interviews, and prevention workshops — matched to the conflict rather than sold as a package.",
   path: "/services",
+  // Off the menu since 2026-10-18 (kept for later, not deleted), so kept
+  // out of search too: an orphan page would compete with the Wix-copy pages.
+  noindex: true,
+  follow: true,
 });
 
 export default function ServicesPage() {

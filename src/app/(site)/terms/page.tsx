@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/page-metadata";
-import { LegalPage } from "@/components/legal-page";
-import { terms } from "@/content/legal";
+import { MovedPage } from "@/components/moved-page";
 
+/** Moved to the Wix address /terms-of-use/ on 2026-10-18. See MovedPage. */
 export const metadata: Metadata = pageMetadata({
-  title: "Terms of use",
-  description:
-    "This site is information about a mediation practice. Nothing here is legal advice, and an engagement begins only under a signed written agreement.",
+  title: "Terms of Use (moved)",
+  description: "This page has moved to /terms-of-use/",
   path: "/terms",
+  noindex: true,
+  follow: true,
 });
 
-export default function TermsPage() {
-  return <LegalPage doc={terms} />;
+export default function TermsMovedPage() {
+  return <MovedPage to="/terms-of-use/" label="Terms of Use" />;
 }

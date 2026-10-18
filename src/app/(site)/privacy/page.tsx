@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/page-metadata";
-import { LegalPage } from "@/components/legal-page";
-import { privacy } from "@/content/legal";
+import { MovedPage } from "@/components/moved-page";
 
+/** Moved to the Wix address /privacy-policy/ on 2026-10-18. See MovedPage. */
 export const metadata: Metadata = pageMetadata({
-  title: "Privacy policy",
-  description:
-    "What this site collects, how analytics consent works, how long information is kept, and your rights under the GDPR and CCPA.",
+  title: "Privacy Policy (moved)",
+  description: "This page has moved to /privacy-policy/",
   path: "/privacy",
+  noindex: true,
+  follow: true,
 });
 
-export default function PrivacyPage() {
-  return <LegalPage doc={privacy} />;
+export default function PrivacyMovedPage() {
+  return <MovedPage to="/privacy-policy/" label="Privacy Policy" />;
 }
