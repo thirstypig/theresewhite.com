@@ -9,6 +9,10 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Interviews, mediation, a signed written agreement, and follow-up coaching in the weeks after. How a workplace conflict actually gets finished rather than quieted.",
   path: "/process",
+  // Off the menu since 2026-10-18 (kept for later, not deleted), so kept
+  // out of search too: an orphan page would compete with the Wix-copy pages.
+  noindex: true,
+  follow: true,
 });
 
 export default function ProcessPage() {
