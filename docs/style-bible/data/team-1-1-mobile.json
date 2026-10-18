@@ -1,0 +1,2320 @@
+{
+ "url": "https://www.theresewhite.com/team-1-1",
+ "title": "Endorsements | Theresewhite",
+ "vw": 320,
+ "docH": 5010,
+ "rootVars": {
+  "--wst-color-custom-17": "rgb(114,189,163)",
+  "--wst-font-style-body-large": "normal normal normal 21px/1.4em caudex,serif",
+  "--font_9": "normal normal normal 16px/1.4em forum,serif",
+  "--color_55": "199,199,199",
+  "--wst-color-fill-background-primary": "rgb(255,255,255)",
+  "--wst-color-custom-20": "rgb(29,47,41)",
+  "--wst-color-custom-11": "rgb(244,193,174)",
+  "--color_43": "244,239,235",
+  "--color_37": "65,65,65",
+  "--wst-color-fill-base-shade-2": "rgb(199,199,199)",
+  "--wst-color-custom-19": "rgb(57,95,82)",
+  "--color_12": "232,230,230",
+  "--color_60": "216,199,189",
+  "--wst-button-color-border-secondary-hover": "rgb(216,199,189)",
+  "--color_25": "24,34,38",
+  "--color_48": "216,199,189",
+  "--wst-font-style-body-small": "normal normal normal 16px/1.4em forum,serif",
+  "--wst-button-color-text-primary": "rgb(255,255,255)",
+  "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-color-line": "rgb(153,153,151)",
+  "--color_21": "182,200,208",
+  "--color_51": "255,255,255",
+  "--color_50": "255,255,255",
+  "--color_13": "199,199,199",
+  "--color_10": "176,176,176",
+  "--wst-color-custom-12": "rgb(233,161,132)",
+  "--wst-font-style-h6": "normal normal normal 30px/1.4em forum,serif",
+  "--color_54": "199,199,199",
+  "--wst-color-custom-7": "rgb(131,152,162)",
+  "--color_20": "87,79,75",
+  "--color_58": "216,199,189",
+  "--color_65": "199,199,199",
+  "--color_46": "65,65,65",
+  "--color_2": "0,0,0",
+  "--wst-color-custom-8": "rgb(72,101,115)",
+  "--color_3": "237,28,36",
+  "--wst-button-color-border-primary-hover": "rgb(216,199,189)",
+  "--wst-color-action": "rgb(216,199,189)",
+  "--wst-color-fill-accent-2": "rgb(34,73,90)",
+  "--color_41": "216,199,189",
+  "--color_22": "131,152,162",
+  "--color_23": "72,101,115",
+  "--color_31": "178,222,207",
+  "--wst-color-custom-13": "rgb(222,84,30)",
+  "--color_30": "74,28,10",
+  "--wst-color-custom-14": "rgb(148,56,20)",
+  "--color_42": "34,73,90",
+  "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+  "--wst-font-style-h2": "italic normal normal 50px/1.4em caudex,serif",
+  "--font_7": "normal normal normal 21px/1.4em caudex,serif",
+  "--wst-button-color-fill-secondary-hover": "rgb(216,199,189)",
+  "--font_6": "normal normal normal 30px/1.4em forum,serif",
+  "--wst-button-color-fill-primary-disabled": "rgb(199,199,199)",
+  "--font_4": "normal normal normal 30px/1.4em caudex,serif",
+  "--font_3": "normal normal normal 40px/1.4em caudex,serif",
+  "--wst-color-custom-16": "rgb(178,222,207)",
+  "--color_44": "72,101,115",
+  "--wst-color-custom-15": "rgb(74,28,10)",
+  "--wst-button-color-text-secondary": "rgb(216,199,189)",
+  "--wst-button-color-border-primary-disabled": "rgb(199,199,199)",
+  "--wst-color-custom-4": "rgb(158,146,139)",
+  "--wst-color-fill-base-shade-3": "rgb(153,153,151)",
+  "--color_56": "255,255,255",
+  "--wst-color-fill-accent-3": "rgb(244,239,235)",
+  "--theme-spx-ratio": "1px",
+  "--color_9": "114,114,114",
+  "--color_27": "233,161,132",
+  "--wst-color-custom-3": "rgb(232,220,213)",
+  "--wst-color-fill-base-shade-1": "rgb(232,230,230)",
+  "--color_33": "86,142,122",
+  "--color_61": "216,199,189",
+  "--color_0": "255,255,255",
+  "--wst-color-custom-18": "rgb(86,142,122)",
+  "--color_62": "255,255,255",
+  "--font_5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_39": "199,199,199",
+  "--font_8": "normal normal normal 18px/1.4em forum,serif",
+  "--font_2": "italic normal normal 50px/1.4em caudex,serif",
+  "--color_63": "255,255,255",
+  "--wst-color-custom-6": "rgb(182,200,208)",
+  "--color_4": "0,136,203",
+  "--color_7": "176,176,176",
+  "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+  "--color_52": "216,199,189",
+  "--wst-font-style-h3": "normal normal normal 40px/1.4em caudex,serif",
+  "--font_0": "normal normal normal 60px/1.4em caudex,serif",
+  "--wst-color-fill-accent-1": "rgb(216,199,189)",
+  "--color_34": "57,95,82",
+  "--color_47": "153,153,151",
+  "--wst-button-color-border-secondary": "rgb(216,199,189)",
+  "--wst-button-color-text-secondary-disabled": "rgb(199,199,199)",
+  "--color_45": "65,65,65",
+  "--wst-button-color-border-secondary-disabled": "rgb(199,199,199)",
+  "--color_59": "216,199,189",
+  "--wst-color-fill-background-secondary": "rgb(232,230,230)",
+  "--wst-color-fill-accent-4": "rgb(72,101,115)",
+  "--wst-color-custom-1": "rgb(199,199,199)",
+  "--color_5": "255,203,5",
+  "--color_1": "255,255,255",
+  "--color_14": "153,153,151",
+  "--wst-font-style-body-medium": "normal normal normal 18px/1.4em forum,serif",
+  "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h4": "normal normal normal 30px/1.4em caudex,serif",
+  "--wst-color-text-secondary": "rgb(153,153,151)",
+  "--color_17": "232,220,213",
+  "--color_40": "153,153,151",
+  "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+  "--wst-color-disabled": "rgb(199,199,199)",
+  "--color_16": "244,239,235",
+  "--color_24": "34,73,90",
+  "--color_19": "158,146,139",
+  "--wst-button-color-border-primary": "rgb(216,199,189)",
+  "--wst-button-color-fill-primary": "rgb(216,199,189)",
+  "--wst-color-fill-base-1": "rgb(255,255,255)",
+  "--wst-color-custom-5": "rgb(87,79,75)",
+  "--color_15": "65,65,65",
+  "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_49": "216,199,189",
+  "--color_6": "114,114,114",
+  "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-10": "rgb(24,34,38)",
+  "--color_26": "244,193,174",
+  "--wst-color-text-primary": "rgb(65,65,65)",
+  "--color_38": "232,230,230",
+  "--color_57": "255,255,255",
+  "--color_8": "255,255,255",
+  "--wst-color-subtitle": "rgb(65,65,65)",
+  "--color_36": "255,255,255",
+  "--color_18": "216,199,189",
+  "--wst-color-custom-9": "rgb(34,73,90)",
+  "--wst-color-fill-base-2": "rgb(65,65,65)",
+  "--color_64": "199,199,199",
+  "--color_53": "216,199,189",
+  "--color_28": "222,84,30",
+  "--wst-color-title": "rgb(65,65,65)",
+  "--color_35": "29,47,41",
+  "--color_32": "114,189,163",
+  "--color_11": "255,255,255",
+  "--color_29": "148,56,20",
+  "--wst-button-color-text-primary-hover": "rgb(216,199,189)",
+  "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-2": "rgb(244,239,235)"
+ },
+ "sheetVars": {
+  "--color_0": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_1": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_2": {
+   "v": "0,0,0",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_3": {
+   "v": "237,28,36",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_4": {
+   "v": "0,136,203",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_5": {
+   "v": "255,203,5",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_6": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_7": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_8": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_9": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_10": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_11": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_12": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_13": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_14": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_15": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_16": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_17": {
+   "v": "232,220,213",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_18": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_19": {
+   "v": "158,146,139",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_20": {
+   "v": "87,79,75",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_21": {
+   "v": "182,200,208",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_22": {
+   "v": "131,152,162",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_23": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_24": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_25": {
+   "v": "24,34,38",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_26": {
+   "v": "244,193,174",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_27": {
+   "v": "233,161,132",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_28": {
+   "v": "222,84,30",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_29": {
+   "v": "148,56,20",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_30": {
+   "v": "74,28,10",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_31": {
+   "v": "178,222,207",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_32": {
+   "v": "114,189,163",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_33": {
+   "v": "86,142,122",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_34": {
+   "v": "57,95,82",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_35": {
+   "v": "29,47,41",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_36": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_37": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_38": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_39": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_40": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_41": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_42": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_43": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_44": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_45": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_46": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_47": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_48": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_49": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_50": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_51": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_52": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_53": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_54": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_55": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_56": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_57": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_58": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_59": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_60": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_61": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_62": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_63": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_64": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_65": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_0": {
+   "v": "normal normal normal 60px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_1": {
+   "v": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_2": {
+   "v": "italic normal normal 50px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_3": {
+   "v": "normal normal normal 40px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_4": {
+   "v": "normal normal normal 30px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_5": {
+   "v": "italic normal normal 26px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_6": {
+   "v": "normal normal normal 30px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_7": {
+   "v": "normal normal normal 21px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_8": {
+   "v": "normal normal normal 18px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_9": {
+   "v": "normal normal normal 16px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_10": {
+   "v": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  }
+ },
+ "fontFaces": [
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "loaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "loaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  }
+ ],
+ "textStyles": [
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 7,
+    "a": 6
+   },
+   "regions": {
+    "footer": 13
+   },
+   "count": 13,
+   "samples": [
+    "L. Therese White",
+    "Employment Mediator · Workplace Conflict Coach",
+    "10736 Jefferson Blvd, #363",
+    "Culver City, CA 90230"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "16px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 3,
+    "a": 2
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 5
+   },
+   "count": 5,
+   "samples": [
+    "Candice is a renowned business advisor, coach, conflict management specialist and the foun",
+    "Joan has been an organizational consultant, coach and educator for the past thirty-five ye",
+    "Ken is a world-recognized mediator, dialogue facilitator, conflict resolution systems desi",
+    "numerous books"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "17px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "23.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 4
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 4
+   },
+   "count": 4,
+   "samples": [
+    "After more than thirty years of working with Therese White, both as a co-mediator and co-t",
+    "\"Beyond mediation, she has been an invaluable co-teacher and assistant in several of my co",
+    "\"For genuine, deep, and lasting resolutions in any employment setting, Therese should be y",
+    "\"Therese handled an incredibly complex conflict involving numerous employees of various le"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "17px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 3
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 3
+   },
+   "count": 3,
+   "samples": [
+    "\"Therese has provided mediation services for my clients over the past seven or eight years",
+    "\"I chose Therese to support these clients because of her skill in helping people repair da",
+    "“. . . The most exceptional thing about Therese is her quiet way of lighting the path to c"
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "25px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "35px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(86, 111, 184)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 3
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 3
+   },
+   "count": 3,
+   "samples": [
+    "Joan Goldsmith",
+    "Kenneth Cloke",
+    "Recent Client"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "17px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "23.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 3
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 3
+   },
+   "count": 3,
+   "samples": [
+    "“",
+    "Question:",
+    "Answer:"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "16px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 2
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 2
+   },
+   "count": 2,
+   "samples": [
+    "Learning to Lead,",
+    "Women Leaders at the Grassroots: 9 Stories and 9 Strategies"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "30px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(86, 111, 184)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h1": 1
+   },
+   "regions": {
+    "section#comp-mr2hi2sn": 1
+   },
+   "count": 1,
+   "samples": [
+    "Endorsements"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "25.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mr2hi2sn": 1
+   },
+   "count": 1,
+   "samples": [
+    "Below are"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "25.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mr2hi2sn": 1
+   },
+   "count": 1,
+   "samples": [
+    "\"top-of-the-field\""
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "25px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(86, 111, 184)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 1
+   },
+   "count": 1,
+   "samples": [
+    "Candice Gottlieb-Clark"
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "13px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "18.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(86, 111, 184)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 1
+   },
+   "count": 1,
+   "samples": [
+    "Identity withheld for confidentiality"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "17px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "23.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 1
+   },
+   "count": 1,
+   "samples": [
+    "A senior deputy compliance officer in an organization with over 110,000 employees."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-msp7d15d": 1
+   },
+   "count": 1,
+   "samples": [
+    "Schedule Your"
+   ]
+  },
+  {
+   "fontFamily": "poppins-semibold, poppins, sans-serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "a": 1
+   },
+   "regions": {
+    "section#comp-msp7d15d": 1
+   },
+   "count": 1,
+   "samples": [
+    "CLICK HERE"
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "role": "h1",
+   "region": "section#comp-mr2hi2sn",
+   "y": 149,
+   "text": "Endorsements",
+   "size": "30px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2hi2sn",
+   "y": 198,
+   "text": "Below are",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2hi2sn",
+   "y": 198,
+   "text": "\"top-of-the-field\"",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 611,
+   "text": "Candice Gottlieb-Clark",
+   "size": "25px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 665,
+   "text": "Candice is a renowned business advisor, coach, conflict management specialist and the founder of Dynamic Team Solutions. She and her team of experts help organizations and leaders across all industries raise the level of their businesses functionality, teamwork, and productivity.",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 880,
+   "text": "\"Therese has provided mediation services for my clients over the past seven or eight years. My clients’ reason for using mediation is to address unresolved and rising conflict among individuals who work together (in person and remotely).",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 1072,
+   "text": "\"I chose Therese to support these clients because of her skill in helping people repair damage to their relationships. Her approach to mediation is transformative (that is, both the mediation style and the outcome). Therese believes in educating people, which is an added gift. She carries that ideology into her sessions, allowing her to change not only the situation at hand but also to create new ",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 1671,
+   "text": "Joan Goldsmith",
+   "size": "25px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 1727,
+   "text": "Joan has been an organizational consultant, coach and educator for the past thirty-five years, specializing in leadership development, organizational change, conflict resolution, and team building. Joan has authored several books on leadership including (with Warren Bennis)",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 1895,
+   "text": "Learning to Lead,",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 1919,
+   "text": "Women Leaders at the Grassroots: 9 Stories and 9 Strategies",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2014,
+   "text": "“. . . The most exceptional thing about Therese is her quiet way of lighting the path to common ground. Her understanding of how emotional intelligence impacts individuals and teams sets her apart from other mediators, especially when developing grassroots community leaders . . . Over the years, we’ve trained countless professionals in our conflict resolution methods, and I can confidently say she",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2589,
+   "text": "Kenneth Cloke",
+   "size": "25px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2645,
+   "text": "Ken is a world-recognized mediator, dialogue facilitator, conflict resolution systems designer, teacher, public speaker, author of",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2717,
+   "text": "numerous books",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2741,
+   "text": "articles",
+   "size": "16px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2836,
+   "text": "“",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 2836,
+   "text": "After more than thirty years of working with Therese White, both as a co-mediator and co-trainer, I can honestly say she is an extraordinary talent. We have tackled some very difficult and challenging cases together; many filled with raw emotion or revolving around deep-seated life experience issues. Therese is especially skilled in the transformational mediation model.",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3122,
+   "text": "\"Beyond mediation, she has been an invaluable co-teacher and assistant in several of my conflict resolution classes at Pepperdine University Law School and in my mediator certification trainings at the Center for Conflict Resolution.",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3312,
+   "text": "\"For genuine, deep, and lasting resolutions in any employment setting, Therese should be your first choice.”",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3670,
+   "text": "Recent Client",
+   "size": "25px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3704,
+   "text": "Identity withheld for confidentiality",
+   "size": "13px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3743,
+   "text": "A senior deputy compliance officer in an organization with over 110,000 employees.",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3839,
+   "text": "Question:",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3958,
+   "text": "Answer:",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mr2i4rqt",
+   "y": 3981,
+   "text": "\"Therese handled an incredibly complex conflict involving numerous employees of various levels of employment positions (i.e., managers, supervisors, line staff). These situations involve a higher level of complexity due to the personal and professional relationships of the parties.",
+   "size": "17px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-msp7d15d",
+   "y": 4597,
+   "text": "Schedule Your",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-msp7d15d",
+   "y": 4656,
+   "text": "CLICK HERE",
+   "size": "14px",
+   "family": "poppins-semibold",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4753,
+   "text": "L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4771,
+   "text": "Employment Mediator · Workplace Conflict Coach",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4807,
+   "text": "10736 Jefferson Blvd, #363",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4825,
+   "text": "Culver City, CA 90230",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 4843,
+   "text": "Therese@ThereseWhite.com",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 4861,
+   "text": "323-291-4813",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4861,
+   "text": "​​​​",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4896,
+   "text": "© 2026 L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 4920,
+   "text": "​Legal​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 4938,
+   "text": "Privacy Policy",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 4956,
+   "text": "Terms of Use",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 4974,
+   "text": "Cookie Preferences",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 4992,
+   "text": "Accessibility​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  }
+ ],
+ "sections": [
+  {
+   "tag": "HEADER",
+   "id": "SITE_HEADER",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 320,
+    "h": 124
+   },
+   "position": "sticky",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 31,
+    "right": 210,
+    "width": 179,
+    "padTop": 24,
+    "padBottom": 24
+   },
+   "headings": [],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mr2hi2sn",
+   "rect": {
+    "x": 0,
+    "y": 124,
+    "w": 320,
+    "h": 242
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(78, 192, 241)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 10,
+    "right": 310,
+    "width": 300,
+    "padTop": 22,
+    "padBottom": 40
+   },
+   "headings": [
+    "H1: Endorsements"
+   ],
+   "imgCount": 0
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mr2i4rqt",
+   "rect": {
+    "x": 0,
+    "y": 366,
+    "w": 320,
+    "h": 4189
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(244, 239, 235)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 20,
+    "right": 300,
+    "width": 280,
+    "padTop": 9,
+    "padBottom": 28
+   },
+   "headings": [],
+   "imgCount": 4
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-msp7d15d",
+   "rect": {
+    "x": 0,
+    "y": 4555,
+    "w": 320,
+    "h": 181
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    },
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "container-bg",
+     "bg": "rgb(255, 255, 255)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 9,
+    "right": 301,
+    "width": 292,
+    "padTop": 42,
+    "padBottom": 50
+   },
+   "headings": [],
+   "imgCount": 0
+  },
+  {
+   "tag": "FOOTER",
+   "id": "SITE_FOOTER",
+   "rect": {
+    "x": 0,
+    "y": 4736,
+    "w": 320,
+    "h": 274
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 3,
+    "right": 298,
+    "width": 295,
+    "padTop": 17,
+    "padBottom": 0
+   },
+   "headings": [],
+   "imgCount": 0
+  }
+ ],
+ "buttons": [
+  {
+   "label": "CLICK HERE",
+   "tag": "A",
+   "cls": "StylableButton2545352419__root style-msp88i613__root wixui-button StylableButton",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "section#comp-msp7d15d",
+   "rect": {
+    "x": 59,
+    "y": 4647,
+    "w": 198,
+    "h": 39
+   },
+   "bg": "rgb(61, 155, 233)",
+   "color": "rgb(0, 0, 0)",
+   "border": "0px solid rgb(255, 248, 107)",
+   "radius": "7px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "Arial, Helvetica, sans-serif 10px/normal w400 lsnormal none",
+   "transition": "0.2s, visibility"
+  }
+ ],
+ "links": [
+  {
+   "text": "",
+   "href": "https://www.theresewhite.com",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(0, 0, 238)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 31,
+    "y": 24,
+    "w": 179,
+    "h": 76
+   }
+  },
+  {
+   "text": "numerous books",
+   "href": "https://www.kencloke.com/books",
+   "region": "section#comp-mr2i4rqt",
+   "target": "_blank",
+   "color": "rgb(0, 0, 0)",
+   "deco": "none",
+   "font": "arial 16px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 20,
+    "y": 2717,
+    "w": 208,
+    "h": 41
+   }
+  },
+  {
+   "text": "articles",
+   "href": "https://www.kencloke.com/articles",
+   "region": "section#comp-mr2i4rqt",
+   "target": "_blank",
+   "color": "rgb(0, 0, 0)",
+   "deco": "none",
+   "font": "arial 16px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 98,
+    "y": 2741,
+    "w": 51,
+    "h": 17
+   }
+  },
+  {
+   "text": "CLICK HERE",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "section#comp-msp7d15d",
+   "target": "_self",
+   "color": "rgb(0, 0, 0)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 59,
+    "y": 4647,
+    "w": 198,
+    "h": 39
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 4843,
+    "w": 196,
+    "h": 17
+   }
+  },
+  {
+   "text": "323-291-4813",
+   "href": "tel:323-291-4813",
+   "region": "footer",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 4861,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://www.theresewhite.com/privacy-policy",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 190,
+    "y": 4939,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Terms of Use",
+   "href": "https://www.theresewhite.com/terms-of-use",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 195,
+    "y": 4957,
+    "w": 88,
+    "h": 17
+   }
+  },
+  {
+   "text": "Cookie Preferences",
+   "href": "https://www.theresewhite.com/cookie-preferences",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 151,
+    "y": 4975,
+    "w": 132,
+    "h": 17
+   }
+  },
+  {
+   "text": "Accessibility​",
+   "href": "https://www.theresewhite.com/accessibility",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 201,
+    "y": 4993,
+    "w": 82,
+    "h": 17
+   }
+  }
+ ],
+ "images": [
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_173,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+   "alt": "Therese High Res Logo.png",
+   "region": "header",
+   "rect": {
+    "x": 34,
+    "y": 27,
+    "w": 173,
+    "h": 70
+   },
+   "natural": "173x70",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "6px (ancestor)",
+   "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px (ancestor)",
+   "border": "3px solid rgb(29, 44, 243) (ancestor)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_8ccb946cfa004d3ab222412815071a70~mv2.webp/v1/fill/w_271,h_219,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Candace.webp",
+   "alt": "Candace.webp",
+   "region": "section#comp-mr2i4rqt",
+   "rect": {
+    "x": 20,
+    "y": 375,
+    "w": 271,
+    "h": 219
+   },
+   "natural": "271x219",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_877c6375db7a4f5393ed879b88ee8062~mv2.png/v1/crop/x_47,y_332,w_1132,h_1214/fill/w_271,h_219,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Joan%20final_edited.png",
+   "alt": "Joan final_edited.png",
+   "region": "section#comp-mr2i4rqt",
+   "rect": {
+    "x": 20,
+    "y": 1434,
+    "w": 271,
+    "h": 219
+   },
+   "natural": "271x219",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": "url(\"data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200'",
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_9443ad5a28ca4b16b43c760dc2015270~mv2.webp/v1/fill/w_271,h_219,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Ken%2BSpeaking%2B-%2BScotland.webp",
+   "alt": "Ken+Speaking+-+Scotland.webp",
+   "region": "section#comp-mr2i4rqt",
+   "rect": {
+    "x": 20,
+    "y": 2352,
+    "w": 271,
+    "h": 219
+   },
+   "natural": "271x219",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_7d4862d20c2b4e6b803846e521551480~mv2.png/v1/fill/w_271,h_219,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%206_28_19%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 6.28.19 PM.png",
+   "region": "section#comp-mr2i4rqt",
+   "rect": {
+    "x": 20,
+    "y": 3433,
+    "w": 271,
+    "h": 219
+   },
+   "natural": "271x219",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "other",
+   "rect": {
+    "x": 256,
+    "y": 475,
+    "w": 44,
+    "h": 44
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  }
+ ],
+ "forms": [],
+ "colors": {
+  "rgb(255, 255, 255)": {
+   "count": 5,
+   "props": {
+    "bg": 3,
+    "text": 1,
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 2,
+    "section#comp-mr2hi2sn": 1,
+    "section#comp-msp7d15d": 2
+   }
+  },
+  "rgb(232, 230, 230)": {
+   "count": 3,
+   "props": {
+    "bg": 3
+   },
+   "regions": {
+    "header": 1,
+    "section#comp-msp7d15d": 1,
+    "footer": 1
+   }
+  },
+  "rgb(29, 44, 243)": {
+   "count": 3,
+   "props": {
+    "bg": 1,
+    "border": 2
+   },
+   "regions": {
+    "header": 3
+   }
+  },
+  "rgba(255, 255, 255, 0)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "header": 1
+   }
+  },
+  "rgb(65, 65, 65)": {
+   "count": 21,
+   "props": {
+    "bg": 3,
+    "text": 17,
+    "svg-fill": 1
+   },
+   "regions": {
+    "header": 3,
+    "section#comp-mr2hi2sn": 2,
+    "section#comp-mr2i4rqt": 1,
+    "section#comp-msp7d15d": 1,
+    "footer": 13,
+    "other": 1
+   }
+  },
+  "rgb(78, 192, 241)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "section#comp-mr2hi2sn": 1
+   }
+  },
+  "rgb(86, 111, 184)": {
+   "count": 6,
+   "props": {
+    "text": 6
+   },
+   "regions": {
+    "section#comp-mr2hi2sn": 1,
+    "section#comp-mr2i4rqt": 5
+   }
+  },
+  "rgb(244, 239, 235)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 1
+   }
+  },
+  "rgba(232, 230, 230, 0.8)": {
+   "count": 4,
+   "props": {
+    "bg": 4
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 4
+   }
+  },
+  "rgb(0, 0, 0)": {
+   "count": 18,
+   "props": {
+    "text": 17,
+    "svg-fill": 1
+   },
+   "regions": {
+    "section#comp-mr2i4rqt": 17,
+    "other": 1
+   }
+  },
+  "rgb(61, 155, 233)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "section#comp-msp7d15d": 1
+   }
+  },
+  "rgb(199, 199, 199)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  }
+ },
+ "header": {
+  "rect": {
+   "x": 0,
+   "y": 0,
+   "w": 320,
+   "h": 124
+  },
+  "position": "sticky",
+  "top": "0px",
+  "z": "50",
+  "bg": "rgba(0, 0, 0, 0)",
+  "bgLayers": [
+   {
+    "id": "",
+    "testid": "colorUnderlay",
+    "bg": "rgb(232, 230, 230)",
+    "rect": {
+     "x": 0,
+     "y": -13,
+     "w": 320,
+     "h": 137
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(29, 44, 243)",
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    },
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px",
+    "borderBottom": "3px solid rgb(29, 44, 243)"
+   },
+   {
+    "id": "",
+    "bg": "rgba(255, 255, 255, 0)",
+    "rect": {
+     "x": 219,
+     "y": 11,
+     "w": 73,
+     "h": 70
+    },
+    "shadow": "none",
+    "borderBottom": "0px solid rgb(65, 65, 65)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 36,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 45,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 54,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   }
+  ],
+  "wrapperPos": "static",
+  "navItems": [
+   {
+    "text": "",
+    "href": "https://www.theresewhite.com",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    }
+   }
+  ]
+ },
+ "navs": [
+  {
+   "ariaLabel": "Site",
+   "region": "header",
+   "visible": false,
+   "items": [
+    {
+     "text": "Home",
+     "href": "https://www.theresewhite.com",
+     "current": null
+    },
+    {
+     "text": "About Therese",
+     "href": "https://www.theresewhite.com/about-therese",
+     "current": null
+    },
+    {
+     "text": "Endorsements",
+     "href": "https://www.theresewhite.com/team-1-1",
+     "current": null
+    },
+    {
+     "text": "Case Studies",
+     "href": "https://www.theresewhite.com/case-studies",
+     "current": null
+    },
+    {
+     "text": "FAQ",
+     "href": "https://www.theresewhite.com/services-3",
+     "current": null
+    },
+    {
+     "text": "Blog",
+     "href": "https://www.theresewhite.com/blog",
+     "current": null
+    },
+    {
+     "text": "Contact",
+     "href": "https://www.theresewhite.com/contact",
+     "current": null
+    }
+   ]
+  }
+ ],
+ "headings": [
+  {
+   "tag": "H1",
+   "region": "section#comp-mr2hi2sn",
+   "text": "Endorsements"
+  }
+ ],
+ "hamburger": [
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER_TOGGLE",
+   "aria": "Open navigation menu",
+   "visible": true
+  },
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "overlay-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "container-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgLayers_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgMedia_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "inlineContentParent-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "NAV",
+   "id": "MENU_AS_CONTAINER_EXPANDABLE_MENU",
+   "aria": "Site",
+   "visible": false
+  }
+ ],
+ "iframes": [],
+ "cookieDismissed": false,
+ "bannerText": null
+}

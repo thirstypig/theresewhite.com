@@ -1,0 +1,3877 @@
+{
+ "url": "https://www.theresewhite.com/",
+ "title": "Home | Theresewhite",
+ "vw": 320,
+ "docH": 5377,
+ "rootVars": {
+  "--wst-color-custom-17": "rgb(114,189,163)",
+  "--wst-font-style-body-large": "normal normal normal 21px/1.4em caudex,serif",
+  "--font_9": "normal normal normal 16px/1.4em forum,serif",
+  "--color_55": "199,199,199",
+  "--wst-color-fill-background-primary": "rgb(255,255,255)",
+  "--wst-color-custom-20": "rgb(29,47,41)",
+  "--wst-color-custom-11": "rgb(244,193,174)",
+  "--color_43": "244,239,235",
+  "--color_37": "65,65,65",
+  "--wst-color-fill-base-shade-2": "rgb(199,199,199)",
+  "--wst-color-custom-19": "rgb(57,95,82)",
+  "--color_12": "232,230,230",
+  "--color_60": "216,199,189",
+  "--wst-button-color-border-secondary-hover": "rgb(216,199,189)",
+  "--color_25": "24,34,38",
+  "--color_48": "216,199,189",
+  "--wst-font-style-body-small": "normal normal normal 16px/1.4em forum,serif",
+  "--wst-button-color-text-primary": "rgb(255,255,255)",
+  "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-color-line": "rgb(153,153,151)",
+  "--color_21": "182,200,208",
+  "--color_51": "255,255,255",
+  "--color_50": "255,255,255",
+  "--color_13": "199,199,199",
+  "--color_10": "176,176,176",
+  "--wst-color-custom-12": "rgb(233,161,132)",
+  "--wst-font-style-h6": "normal normal normal 30px/1.4em forum,serif",
+  "--color_54": "199,199,199",
+  "--wst-color-custom-7": "rgb(131,152,162)",
+  "--color_20": "87,79,75",
+  "--color_58": "216,199,189",
+  "--color_65": "199,199,199",
+  "--color_46": "65,65,65",
+  "--color_2": "0,0,0",
+  "--wst-color-custom-8": "rgb(72,101,115)",
+  "--color_3": "237,28,36",
+  "--wst-button-color-border-primary-hover": "rgb(216,199,189)",
+  "--wst-color-action": "rgb(216,199,189)",
+  "--wst-color-fill-accent-2": "rgb(34,73,90)",
+  "--color_41": "216,199,189",
+  "--color_22": "131,152,162",
+  "--color_23": "72,101,115",
+  "--color_31": "178,222,207",
+  "--wst-color-custom-13": "rgb(222,84,30)",
+  "--color_30": "74,28,10",
+  "--wst-color-custom-14": "rgb(148,56,20)",
+  "--color_42": "34,73,90",
+  "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+  "--wst-font-style-h2": "italic normal normal 50px/1.4em caudex,serif",
+  "--font_7": "normal normal normal 21px/1.4em caudex,serif",
+  "--wst-button-color-fill-secondary-hover": "rgb(216,199,189)",
+  "--font_6": "normal normal normal 30px/1.4em forum,serif",
+  "--wst-button-color-fill-primary-disabled": "rgb(199,199,199)",
+  "--font_4": "normal normal normal 30px/1.4em caudex,serif",
+  "--font_3": "normal normal normal 40px/1.4em caudex,serif",
+  "--wst-color-custom-16": "rgb(178,222,207)",
+  "--color_44": "72,101,115",
+  "--wst-color-custom-15": "rgb(74,28,10)",
+  "--wst-button-color-text-secondary": "rgb(216,199,189)",
+  "--wst-button-color-border-primary-disabled": "rgb(199,199,199)",
+  "--wst-color-custom-4": "rgb(158,146,139)",
+  "--wst-color-fill-base-shade-3": "rgb(153,153,151)",
+  "--color_56": "255,255,255",
+  "--wst-color-fill-accent-3": "rgb(244,239,235)",
+  "--theme-spx-ratio": "1px",
+  "--color_9": "114,114,114",
+  "--color_27": "233,161,132",
+  "--wst-color-custom-3": "rgb(232,220,213)",
+  "--wst-color-fill-base-shade-1": "rgb(232,230,230)",
+  "--color_33": "86,142,122",
+  "--color_61": "216,199,189",
+  "--color_0": "255,255,255",
+  "--wst-color-custom-18": "rgb(86,142,122)",
+  "--color_62": "255,255,255",
+  "--font_5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_39": "199,199,199",
+  "--font_8": "normal normal normal 18px/1.4em forum,serif",
+  "--font_2": "italic normal normal 50px/1.4em caudex,serif",
+  "--color_63": "255,255,255",
+  "--wst-color-custom-6": "rgb(182,200,208)",
+  "--color_4": "0,136,203",
+  "--color_7": "176,176,176",
+  "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+  "--color_52": "216,199,189",
+  "--wst-font-style-h3": "normal normal normal 40px/1.4em caudex,serif",
+  "--font_0": "normal normal normal 60px/1.4em caudex,serif",
+  "--wst-color-fill-accent-1": "rgb(216,199,189)",
+  "--color_34": "57,95,82",
+  "--color_47": "153,153,151",
+  "--wst-button-color-border-secondary": "rgb(216,199,189)",
+  "--wst-button-color-text-secondary-disabled": "rgb(199,199,199)",
+  "--color_45": "65,65,65",
+  "--wst-button-color-border-secondary-disabled": "rgb(199,199,199)",
+  "--color_59": "216,199,189",
+  "--wst-color-fill-background-secondary": "rgb(232,230,230)",
+  "--wst-color-fill-accent-4": "rgb(72,101,115)",
+  "--wst-color-custom-1": "rgb(199,199,199)",
+  "--color_5": "255,203,5",
+  "--color_1": "255,255,255",
+  "--color_14": "153,153,151",
+  "--wst-font-style-body-medium": "normal normal normal 18px/1.4em forum,serif",
+  "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h4": "normal normal normal 30px/1.4em caudex,serif",
+  "--wst-color-text-secondary": "rgb(153,153,151)",
+  "--color_17": "232,220,213",
+  "--color_40": "153,153,151",
+  "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+  "--wst-color-disabled": "rgb(199,199,199)",
+  "--color_16": "244,239,235",
+  "--color_24": "34,73,90",
+  "--color_19": "158,146,139",
+  "--wst-button-color-border-primary": "rgb(216,199,189)",
+  "--wst-button-color-fill-primary": "rgb(216,199,189)",
+  "--wst-color-fill-base-1": "rgb(255,255,255)",
+  "--wst-color-custom-5": "rgb(87,79,75)",
+  "--color_15": "65,65,65",
+  "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_49": "216,199,189",
+  "--color_6": "114,114,114",
+  "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-10": "rgb(24,34,38)",
+  "--color_26": "244,193,174",
+  "--wst-color-text-primary": "rgb(65,65,65)",
+  "--color_38": "232,230,230",
+  "--color_57": "255,255,255",
+  "--color_8": "255,255,255",
+  "--wst-color-subtitle": "rgb(65,65,65)",
+  "--color_36": "255,255,255",
+  "--color_18": "216,199,189",
+  "--wst-color-custom-9": "rgb(34,73,90)",
+  "--wst-color-fill-base-2": "rgb(65,65,65)",
+  "--color_64": "199,199,199",
+  "--color_53": "216,199,189",
+  "--color_28": "222,84,30",
+  "--wst-color-title": "rgb(65,65,65)",
+  "--color_35": "29,47,41",
+  "--color_32": "114,189,163",
+  "--color_11": "255,255,255",
+  "--color_29": "148,56,20",
+  "--wst-button-color-text-primary-hover": "rgb(216,199,189)",
+  "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-2": "rgb(244,239,235)"
+ },
+ "sheetVars": {
+  "--color_0": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_1": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_2": {
+   "v": "0,0,0",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_3": {
+   "v": "237,28,36",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_4": {
+   "v": "0,136,203",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_5": {
+   "v": "255,203,5",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_6": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_7": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_8": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_9": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_10": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_11": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_12": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_13": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_14": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_15": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_16": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_17": {
+   "v": "232,220,213",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_18": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_19": {
+   "v": "158,146,139",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_20": {
+   "v": "87,79,75",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_21": {
+   "v": "182,200,208",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_22": {
+   "v": "131,152,162",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_23": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_24": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_25": {
+   "v": "24,34,38",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_26": {
+   "v": "244,193,174",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_27": {
+   "v": "233,161,132",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_28": {
+   "v": "222,84,30",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_29": {
+   "v": "148,56,20",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_30": {
+   "v": "74,28,10",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_31": {
+   "v": "178,222,207",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_32": {
+   "v": "114,189,163",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_33": {
+   "v": "86,142,122",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_34": {
+   "v": "57,95,82",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_35": {
+   "v": "29,47,41",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_36": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_37": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_38": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_39": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_40": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_41": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_42": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_43": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_44": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_45": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_46": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_47": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_48": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_49": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_50": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_51": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_52": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_53": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_54": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_55": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_56": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_57": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_58": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_59": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_60": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_61": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_62": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_63": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_64": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_65": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_0": {
+   "v": "normal normal normal 60px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_1": {
+   "v": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_2": {
+   "v": "italic normal normal 50px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_3": {
+   "v": "normal normal normal 40px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_4": {
+   "v": "normal normal normal 30px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_5": {
+   "v": "italic normal normal 26px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_6": {
+   "v": "normal normal normal 30px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_7": {
+   "v": "normal normal normal 21px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_8": {
+   "v": "normal normal normal 18px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_9": {
+   "v": "normal normal normal 16px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_10": {
+   "v": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  }
+ },
+ "fontFaces": [
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "loaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "loaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "bree-w01-thin-oblique",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "bree-w01-thin-oblique",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "lulo-clean-w01-one-bold",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "lulo-clean-w01-one-bold",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "playfair display",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  }
+ ],
+ "textStyles": [
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 7,
+    "a": 6
+   },
+   "regions": {
+    "footer": 13
+   },
+   "count": 13,
+   "samples": [
+    "L. Therese White",
+    "Employment Mediator · Workplace Conflict Coach",
+    "10736 Jefferson Blvd, #363",
+    "Culver City, CA 90230"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "19.6px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 9
+   },
+   "regions": {
+    "section#comp-mf9692nv": 9
+   },
+   "count": 9,
+   "samples": [
+    "With 30+ years of experience, I've become expert at uncovering and helping unpack the hidd",
+    "This allows everyone to focus on a mutually beneficial resolution with minimal trauma and ",
+    "With me, you'll get a conflict that's finished — not one that's been quieted, filed, and l",
+    "Your conflict has a legal dimension — that's why counsel is involved. But the reason two v"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "13px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "16.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 6
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 6
+   },
+   "count": 6,
+   "samples": [
+    "As you just saw, I’m not the right mediator for every conflict . . . by design.",
+    "I take on a very small number of engagements at a time. That way you’ll get all of me . . ",
+    "Our first conversation . . .",
+    ". . . is \"real work\" . . . no pitch, no pressure."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "25.2px",
+   "letterSpacing": "0.9px",
+   "textTransform": "none",
+   "color": "rgb(40, 38, 38)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 6
+   },
+   "regions": {
+    "section#comp-mfubs6az": 6
+   },
+   "count": 6,
+   "samples": [
+    "#2",
+    "Mediation",
+    "#3",
+    "Written Agreement"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "21px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "29.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 4
+   },
+   "regions": {
+    "section#comp-mv45576y": 4
+   },
+   "count": 4,
+   "samples": [
+    "- - - - - - -",
+    "Quantify the hidden costs so far and",
+    "what they'll be if nothing changes.",
+    "It's free and takes about 2 minutes."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "13px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "18.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 4
+   },
+   "regions": {
+    "section#comp-mfubs6az": 4
+   },
+   "count": 4,
+   "samples": [
+    "Confidential one-on-one conversations and coaching with the two people involved . . . and ",
+    "This is the conversation they have been avoiding . . . sometimes for months, even years. I",
+    "Every successful resolution gets documented in a signed agreement. Who does what. By when.",
+    "Agreements are made on paper. They survive . . . or don't . . . back at work. So I stay cl"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "10px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "14px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "left",
+   "roles": {
+    "p": 3
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 3
+   },
+   "count": 3,
+   "samples": [
+    "Two",
+    "Other team members taking sides . . . or checking out.",
+    "A conflict your internal processes can't fix."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "13px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "18.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 3
+   },
+   "regions": {
+    "section#comp-mf9692nv": 3
+   },
+   "count": 3,
+   "samples": [
+    "I'm Not An Attorney.",
+    "(And That's A Good Thing)",
+    "Much More Than A"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "21px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 2
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 2
+   },
+   "count": 2,
+   "samples": [
+    "The investigation ended. And nothing changed.",
+    "Your biggest expense is the conversation nobody knows how to have."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "13px",
+   "fontWeight": "700",
+   "fontStyle": "italic",
+   "lineHeight": "16.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 2
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 2
+   },
+   "count": 2,
+   "samples": [
+    "a confidential conflict assessment",
+    "Basic pricing starts at $5,000."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.9px",
+   "textTransform": "none",
+   "color": "rgb(40, 38, 38)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 2
+   },
+   "regions": {
+    "section#comp-mfubs6az": 2
+   },
+   "count": 2,
+   "samples": [
+    "#1",
+    "Interviews"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h1": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "Is an unresolved, emotion-driven conflict putting valuable people, productivity, and your "
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "10px",
+   "fontWeight": "700",
+   "fontStyle": "italic",
+   "lineHeight": "14px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "left",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "\"Core Contributors\""
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "10px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.3px",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "30+ Years"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "11px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.33px",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "1,100+ Mediations"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "Schedule Your"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "700",
+   "fontStyle": "italic",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "I enable the conversations that resolve those conflicts. Then I stay until they hold."
+   ]
+  },
+  {
+   "fontFamily": "lulo-clean-w01-one-bold, sans-serif",
+   "fontSize": "9.13736px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "12.7923px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "a": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "Click Here"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "19px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "24.7px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "Where I Work . . ."
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "16px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "20.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   },
+   "count": 1,
+   "samples": [
+    "Two people who are exceptionally good at what they do . . . but exceptionally bad at worki"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "22px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(237, 69, 69)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mv45576y": 1
+   },
+   "count": 1,
+   "samples": [
+    "What Is That"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "23px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "22.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mv45576y": 1
+   },
+   "count": 1,
+   "samples": [
+    "Try My \""
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "23px",
+   "fontWeight": "700",
+   "fontStyle": "italic",
+   "lineHeight": "22.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mv45576y": 1
+   },
+   "count": 1,
+   "samples": [
+    "Workplace Conflict Cost Calculator\""
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "11px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "15.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mv45576y": 1
+   },
+   "count": 1,
+   "samples": [
+    "For planning purposes only, not legal or financial advice."
+   ]
+  },
+  {
+   "fontFamily": "lulo-clean-w01-one-bold, sans-serif",
+   "fontSize": "10.7857px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "15.1px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "a": 1
+   },
+   "regions": {
+    "section#comp-mv45576y": 1
+   },
+   "count": 1,
+   "samples": [
+    "Click To See Your Numbers"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "700",
+   "fontStyle": "italic",
+   "lineHeight": "25.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 1
+   },
+   "count": 1,
+   "samples": [
+    "\"It's never about what they say it's about.\""
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "11px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "15.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 1
+   },
+   "count": 1,
+   "samples": [
+    "FULL DISCLOSURE: Yes, it's my AI avatar. But the words and the 30+ years of experience beh"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "19px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "26.6px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 1
+   },
+   "count": 1,
+   "samples": [
+    "What To Know Before We Talk"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "25px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.25px",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mfrrxxmv": 1
+   },
+   "count": 1,
+   "samples": [
+    "Mediation Panel Memberships"
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "7px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "9.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mfrrxxmv": 1
+   },
+   "count": 1,
+   "samples": [
+    "The Center For Dispute Resolution"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "16px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.16px",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   },
+   "count": 1,
+   "samples": [
+    "3 Very Good Reasons I Belong On Your"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "16px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   },
+   "count": 1,
+   "samples": [
+    "\"Go-To\" Employment Mediator Shortlist"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "13px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.39px",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   },
+   "count": 1,
+   "samples": [
+    "Over 1,100 Mediations."
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "16px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "22.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   },
+   "count": 1,
+   "samples": [
+    "I"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "22.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   },
+   "count": 1,
+   "samples": [
+    "'m not an attorney, and I don't give legal advice. That's precisely why organizations like"
+   ]
+  },
+  {
+   "fontFamily": "bree-w01-thin-oblique, sans-serif",
+   "fontSize": "13px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "18.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(0, 0, 0)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   },
+   "count": 1,
+   "samples": [
+    "\"One-Trick Pony\""
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "27px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "29.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h4": 1
+   },
+   "regions": {
+    "section#comp-mfubs6az": 1
+   },
+   "count": 1,
+   "samples": [
+    "My Working Peace Blueprint"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "21px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "29.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "h4": 1
+   },
+   "regions": {
+    "section#comp-mfubs6az": 1
+   },
+   "count": 1,
+   "samples": [
+    "This process helps teammates in conflict write their"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mfubs6az": 1
+   },
+   "count": 1,
+   "samples": [
+    "Schedule Your"
+   ]
+  },
+  {
+   "fontFamily": "poppins-semibold, poppins, sans-serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "a": 1
+   },
+   "regions": {
+    "section#comp-mfubs6az": 1
+   },
+   "count": 1,
+   "samples": [
+    "CLICK HERE"
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "role": "h1",
+   "region": "section#comp-mf8vmqx2",
+   "y": 141,
+   "text": "Is an unresolved, emotion-driven conflict putting valuable people, productivity, and your peace of mind at risk?",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 239,
+   "text": "Two",
+   "size": "10px",
+   "family": "arial",
+   "align": "left"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 239,
+   "text": "\"Core Contributors\"",
+   "size": "10px",
+   "family": "arial",
+   "align": "left"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 267,
+   "text": "Other team members taking sides . . . or checking out.",
+   "size": "10px",
+   "family": "arial",
+   "align": "left"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 295,
+   "text": "A conflict your internal processes can't fix.",
+   "size": "10px",
+   "family": "arial",
+   "align": "left"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mf8vmqx2",
+   "y": 393,
+   "text": "30+ Years",
+   "size": "10px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mf8vmqx2",
+   "y": 426,
+   "text": "1,100+ Mediations",
+   "size": "11px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 469,
+   "text": "Schedule Your",
+   "size": "12px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 330,
+   "text": "I enable the conversations that resolve those conflicts. Then I stay until they hold.",
+   "size": "12px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mf8vmqx2",
+   "y": 522,
+   "text": "Click Here",
+   "size": "9.13736px",
+   "family": "lulo-clean-w01-one-bold",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 569,
+   "text": "Where I Work . . .",
+   "size": "19px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf8vmqx2",
+   "y": 594,
+   "text": "Two people who are exceptionally good at what they do . . . but exceptionally bad at working together.",
+   "size": "16px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mv45576y",
+   "y": 708,
+   "text": "What Is That",
+   "size": "22px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 804,
+   "text": "Try My \"",
+   "size": "23px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 804,
+   "text": "Workplace Conflict Cost Calculator\"",
+   "size": "23px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 860,
+   "text": "- - - - - - -",
+   "size": "21px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 889,
+   "text": "Quantify the hidden costs so far and",
+   "size": "21px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 948,
+   "text": "what they'll be if nothing changes.",
+   "size": "21px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 1007,
+   "text": "It's free and takes about 2 minutes.",
+   "size": "21px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mv45576y",
+   "y": 1124,
+   "text": "For planning purposes only, not legal or financial advice.",
+   "size": "11px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mv45576y",
+   "y": 1076,
+   "text": "Click To See Your Numbers",
+   "size": "10.7857px",
+   "family": "lulo-clean-w01-one-bold",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1186,
+   "text": "The investigation ended. And nothing changed.",
+   "size": "15px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1230,
+   "text": "\"It's never about what they say it's about.\"",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1281,
+   "text": "Your biggest expense is the conversation nobody knows how to have.",
+   "size": "15px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1334,
+   "text": "FULL DISCLOSURE: Yes, it's my AI avatar. But the words and the 30+ years of experience behind them are all me.",
+   "size": "11px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1590,
+   "text": "What To Know Before We Talk",
+   "size": "19px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1615,
+   "text": "As you just saw, I’m not the right mediator for every conflict . . . by design.",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1651,
+   "text": "I take on a very small number of engagements at a time. That way you’ll get all of me . . . fully at your service, not juggling a caseload.",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1704,
+   "text": "Our first conversation . . .",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1704,
+   "text": "a confidential conflict assessment",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1722,
+   "text": ". . . is \"real work\" . . . no pitch, no pressure.",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1758,
+   "text": "We'll also decide if we're a fit. If not, I'll gladly refer you to someone who is.",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1793,
+   "text": "My proposal will be customized to your specific situation.",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfu7h7se",
+   "y": 1811,
+   "text": "Basic pricing starts at $5,000.",
+   "size": "13px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mfrrxxmv",
+   "y": 1967,
+   "text": "Mediation Panel Memberships",
+   "size": "25px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfrrxxmv",
+   "y": 2271,
+   "text": "The Center For Dispute Resolution",
+   "size": "7px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mf9692nv",
+   "y": 2322,
+   "text": "3 Very Good Reasons I Belong On Your",
+   "size": "16px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mf9692nv",
+   "y": 2322,
+   "text": "\"Go-To\" Employment Mediator Shortlist",
+   "size": "16px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mf9692nv",
+   "y": 2457,
+   "text": "Over 1,100 Mediations.",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2505,
+   "text": "With 30+ years of experience, I've become expert at uncovering and helping unpack the hidden emotional issues that force irrational, difficult, and sometimes explosive behavior.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2603,
+   "text": "This allows everyone to focus on a mutually beneficial resolution with minimal trauma and regret. Less insightful mediators tend to overlook emotional concerns or are at a loss when forced to deal with them.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2721,
+   "text": "With me, you'll get a conflict that's finished — not one that's been quieted, filed, and left to resurface in two weeks.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2870,
+   "text": "I'm Not An Attorney.",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2889,
+   "text": "(And That's A Good Thing)",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2919,
+   "text": "I",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 2922,
+   "text": "'m not an attorney, and I don't give legal advice. That's precisely why organizations like yours call me.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3010,
+   "text": "Your conflict has a legal dimension — that's why counsel is involved. But the reason two valued employees can't be in the same room isn't legal. It's ego, fear, humiliation, and something that happened eighteen months ago that nobody will name out loud.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3147,
+   "text": "No amount of legal maneuvering resolves that. It just documents it.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3206,
+   "text": "I work where the actual problem lives.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3322,
+   "text": "Much More Than A",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3340,
+   "text": "\"One-Trick Pony\"",
+   "size": "13px",
+   "family": "bree-w01-thin-oblique",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3359,
+   "text": "Many mediators only have mediation in their toolbelt. So, don't be surprised if I recommend a multi-dimensional approach to the conflict you're managing.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3457,
+   "text": "You see, many two-party disputes are symptoms of much larger, systemic problems. So, my recommendation might entail a customized combination of mediation, confidential interviews with others who are affected, 1-on-1 coaching, and/or facilitated team discussions . . . instead of a one-size-fits-all mediation.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mf9692nv",
+   "y": 3633,
+   "text": "Which means the fix fits the conflict, and you don't end up with the same dispute wearing a different name.",
+   "size": "14px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h4",
+   "region": "section#comp-mfubs6az",
+   "y": 3755,
+   "text": "My Working Peace Blueprint",
+   "size": "27px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "h4",
+   "region": "section#comp-mfubs6az",
+   "y": 3760,
+   "text": "This process helps teammates in conflict write their",
+   "size": "21px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4057,
+   "text": "#1",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4080,
+   "text": "Interviews",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4114,
+   "text": "Confidential one-on-one conversations and coaching with the two people involved . . . and maybe others who are also impacted. Not to build a case . . . but to understand what everyone is really carrying. The stated problems are rarely the real ones.",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4297,
+   "text": "#2",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4323,
+   "text": "Mediation",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4360,
+   "text": "This is the conversation they have been avoiding . . . sometimes for months, even years. I don't referee it. And I don't smooth it over. I guide it. It's the hardest part of the process, and it's where everything changes . . . or not.",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4525,
+   "text": "#3",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4551,
+   "text": "Written Agreement",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4587,
+   "text": "Every successful resolution gets documented in a signed agreement. Who does what. By when. What happens if it slips. Not a legal document, and not vague intentions. A mutual commitment. The act of signing moves an agreement out of mere talk and into the working relationship.",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4788,
+   "text": "#4",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4815,
+   "text": "Follow-Up",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4851,
+   "text": "Agreements are made on paper. They survive . . . or don't . . . back at work. So I stay close: Follow-up coaching and crisis management in the weeks after. I can't guarantee 100% success; no honest mediator can. I can guarantee I won't disappear once the dust settles.",
+   "size": "13px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mfubs6az",
+   "y": 4988,
+   "text": "Schedule Your",
+   "size": "18px",
+   "family": "arial",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mfubs6az",
+   "y": 5051,
+   "text": "CLICK HERE",
+   "size": "14px",
+   "family": "poppins-semibold",
+   "align": "center"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5120,
+   "text": "L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5138,
+   "text": "Employment Mediator · Workplace Conflict Coach",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5174,
+   "text": "10736 Jefferson Blvd, #363",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5192,
+   "text": "Culver City, CA 90230",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 5210,
+   "text": "Therese@ThereseWhite.com",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 5228,
+   "text": "323-291-4813",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5228,
+   "text": "​​​​",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5263,
+   "text": "© 2026 L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 5287,
+   "text": "​Legal​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 5305,
+   "text": "Privacy Policy",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 5323,
+   "text": "Terms of Use",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 5341,
+   "text": "Cookie Preferences",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 5359,
+   "text": "Accessibility​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  }
+ ],
+ "sections": [
+  {
+   "tag": "HEADER",
+   "id": "SITE_HEADER",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 320,
+    "h": 124
+   },
+   "position": "sticky",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 31,
+    "right": 210,
+    "width": 179,
+    "padTop": 24,
+    "padBottom": 24
+   },
+   "headings": [],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mf8vmqx2",
+   "rect": {
+    "x": 0,
+    "y": 124,
+    "w": 320,
+    "h": 563
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 7,
+    "right": 303,
+    "width": 296,
+    "padTop": 16,
+    "padBottom": 32
+   },
+   "headings": [
+    "H1: Is an unresolved, emotion-driven conflict putting valuable people, productivity, and your peace of mind at risk?",
+    "H2: 30+ Years Experience",
+    "H2: 1,100+ Mediations"
+   ],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mv455730",
+   "rect": {
+    "x": 0,
+    "y": 687,
+    "w": 320,
+    "h": 487
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(0, 0, 0)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 15,
+    "right": 295,
+    "width": 280,
+    "padTop": 19,
+    "padBottom": 36
+   },
+   "headings": [
+    "H2: What Is That Unresolved Workplace Conflict Really Costing?"
+   ],
+   "imgCount": 0
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mfu7h7se",
+   "rect": {
+    "x": 0,
+    "y": 1174,
+    "w": 320,
+    "h": 784
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(61, 155, 233)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 4,
+    "right": 308,
+    "width": 304,
+    "padTop": 159,
+    "padBottom": 112
+   },
+   "headings": [],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mfrrxxmv",
+   "rect": {
+    "x": 0,
+    "y": 1958,
+    "w": 320,
+    "h": 353
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(255, 255, 254)",
+     "img": "none"
+    },
+    {
+     "tag": "IMG",
+     "src": "https://static.wixstatic.com/media/11062b_8480e50c5d1841b3b1829214389b1253~mv2_d_4500_2530_s_4_2.png/v1/fill/w_320,h_353,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8480e50c5d1841b3b1829214389b1253~mv2_d_4500_2530_s_4_2.png"
+    }
+   ],
+   "content": {
+    "left": 20,
+    "right": 300,
+    "width": 280,
+    "padTop": 7,
+    "padBottom": 30
+   },
+   "headings": [
+    "H2: Mediation Panel Memberships"
+   ],
+   "imgCount": 7
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mf9692nv",
+   "rect": {
+    "x": 0,
+    "y": 2311,
+    "w": 320,
+    "h": 1445
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(0, 0, 0)",
+     "img": "none"
+    },
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "container-bg",
+     "bg": "rgba(61, 155, 233, 0)",
+     "img": "none"
+    },
+    {
+     "tag": "BUTTON",
+     "id": "",
+     "testid": "buttonContent",
+     "bg": "rgb(61, 155, 233)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 13,
+    "right": 298,
+    "width": 285,
+    "padTop": 68,
+    "padBottom": 65
+   },
+   "headings": [
+    "H2: 3 Very Good Reasons I Belong On Your \"Go-To\" Employment Mediator Shortlist",
+    "H2: Over 1,100 Mediations. Mostly Hard Ones."
+   ],
+   "imgCount": 3
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mfubs6az",
+   "rect": {
+    "x": 0,
+    "y": 3756,
+    "w": 320,
+    "h": 1348
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(255, 255, 255)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 10,
+    "right": 310,
+    "width": 300,
+    "padTop": 0,
+    "padBottom": 23
+   },
+   "headings": [
+    "H4: My Working Peace Blueprint This process helps teammates in conflict write their own agreement for how they'll talk, disagree, and get the wo"
+   ],
+   "imgCount": 4
+  },
+  {
+   "tag": "FOOTER",
+   "id": "SITE_FOOTER",
+   "rect": {
+    "x": 0,
+    "y": 5103,
+    "w": 320,
+    "h": 274
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 3,
+    "right": 298,
+    "width": 295,
+    "padTop": 17,
+    "padBottom": 0
+   },
+   "headings": [],
+   "imgCount": 0
+  }
+ ],
+ "buttons": [
+  {
+   "label": "Click Here",
+   "tag": "A",
+   "cls": "twJknM wixui-button ZhVEJq",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "section#comp-mf8vmqx2",
+   "rect": {
+    "x": 66,
+    "y": 517,
+    "w": 105,
+    "h": 22
+   },
+   "bg": "rgb(46, 146, 229)",
+   "color": "rgb(255, 255, 255)",
+   "border": "0px solid rgb(254, 97, 97)",
+   "radius": "100px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "lulo-clean-w01-one-bold, sans-serif 9.13736px/12.7923px w700 lsnormal none",
+   "transition": "border-color 0.4s, background-color 0.4s"
+  },
+  {
+   "label": "Click To See Your Numbers",
+   "tag": "A",
+   "cls": "twJknM wixui-button ZhVEJq",
+   "href": "https://calculator.theresewhite.com",
+   "region": "section#comp-mv45576y",
+   "rect": {
+    "x": 38,
+    "y": 1072,
+    "w": 243,
+    "h": 23
+   },
+   "bg": "rgb(46, 146, 229)",
+   "color": "rgb(255, 255, 255)",
+   "border": "0px solid rgb(254, 97, 97)",
+   "radius": "100px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "lulo-clean-w01-one-bold, sans-serif 10.7857px/15.1px w700 lsnormal none",
+   "transition": "border-color 0.4s, background-color 0.4s"
+  },
+  {
+   "label": "",
+   "tag": "BUTTON",
+   "cls": "StylableButton2545352419__root style-mshwl2o4__root wixui-button",
+   "href": null,
+   "region": "section#comp-mf9692nv",
+   "rect": {
+    "x": 0,
+    "y": 2372,
+    "w": 320,
+    "h": 1362
+   },
+   "bg": "rgb(61, 155, 233)",
+   "color": "rgb(0, 0, 0)",
+   "border": "1px solid rgb(12, 68, 38)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+   "font": "Arial 13.3333px/normal w400 lsnormal none",
+   "transition": "0.2s, visibility"
+  },
+  {
+   "label": "CLICK HERE",
+   "tag": "A",
+   "cls": "StylableButton2545352419__root style-msp82bxm__root wixui-button StylableButton2",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "section#comp-mfubs6az",
+   "rect": {
+    "x": 65,
+    "y": 5042,
+    "w": 198,
+    "h": 39
+   },
+   "bg": "rgb(61, 155, 233)",
+   "color": "rgb(0, 0, 0)",
+   "border": "0px solid rgb(255, 248, 107)",
+   "radius": "7px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "Arial, Helvetica, sans-serif 10px/normal w400 lsnormal none",
+   "transition": "0.2s, visibility"
+  }
+ ],
+ "links": [
+  {
+   "text": "",
+   "href": "https://www.theresewhite.com",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(0, 0, 238)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 31,
+    "y": 24,
+    "w": 179,
+    "h": 76
+   }
+  },
+  {
+   "text": "Click Here",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "section#comp-mf8vmqx2",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "lulo-clean-w01-one-bold 9.13736px w700",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 66,
+    "y": 517,
+    "w": 105,
+    "h": 22
+   }
+  },
+  {
+   "text": "Click To See Your Numbers",
+   "href": "https://calculator.theresewhite.com",
+   "region": "section#comp-mv45576y",
+   "target": "_blank",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "lulo-clean-w01-one-bold 10.7857px w700",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 38,
+    "y": 1072,
+    "w": 243,
+    "h": 23
+   }
+  },
+  {
+   "text": "CLICK HERE",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "section#comp-mfubs6az",
+   "target": "_self",
+   "color": "rgb(0, 0, 0)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 65,
+    "y": 5042,
+    "w": 198,
+    "h": 39
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 5210,
+    "w": 196,
+    "h": 17
+   }
+  },
+  {
+   "text": "323-291-4813",
+   "href": "tel:323-291-4813",
+   "region": "footer",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 5228,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://www.theresewhite.com/privacy-policy",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 190,
+    "y": 5306,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Terms of Use",
+   "href": "https://www.theresewhite.com/terms-of-use",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 195,
+    "y": 5324,
+    "w": 88,
+    "h": 17
+   }
+  },
+  {
+   "text": "Cookie Preferences",
+   "href": "https://www.theresewhite.com/cookie-preferences",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 151,
+    "y": 5342,
+    "w": 132,
+    "h": 17
+   }
+  },
+  {
+   "text": "Accessibility​",
+   "href": "https://www.theresewhite.com/accessibility",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 201,
+    "y": 5360,
+    "w": 82,
+    "h": 17
+   }
+  }
+ ],
+ "images": [
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_173,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+   "alt": "Therese High Res Logo.png",
+   "region": "header",
+   "rect": {
+    "x": 34,
+    "y": 27,
+    "w": 173,
+    "h": 70
+   },
+   "natural": "173x70",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "6px (ancestor)",
+   "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px (ancestor)",
+   "border": "3px solid rgb(29, 44, 243) (ancestor)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_190762470e274a2eabea3f712c1b4546~mv2.png/v1/crop/x_24,y_0,w_674,h_1088/fill/w_197,h_333,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20Blouse%20High.png",
+   "alt": "Therese Blouse High.png",
+   "region": "section#comp-mf8vmqx2",
+   "rect": {
+    "x": 103,
+    "y": 149,
+    "w": 197,
+    "h": 333
+   },
+   "natural": "197x333",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": "url(\"data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200'",
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/807fad_c2b06430b28e4d7c97942b0f5f8b2ccaf000.jpg/v1/fill/w_280,h_157,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/807fad_c2b06430b28e4d7c97942b0f5f8b2ccaf000.jpg",
+   "alt": "",
+   "region": "section#comp-mfu7h7se",
+   "rect": {
+    "x": 20,
+    "y": 1392,
+    "w": 280,
+    "h": 157
+   },
+   "natural": "280x157",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "section#comp-mfu7h7se",
+   "rect": {
+    "x": 135,
+    "y": 1445,
+    "w": 50,
+    "h": 50
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "section#comp-mfu7h7se",
+   "rect": {
+    "x": 257,
+    "y": 1510,
+    "w": 33,
+    "h": 32
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "section#comp-mfu7h7se",
+   "rect": {
+    "x": 257,
+    "y": 1510,
+    "w": 33,
+    "h": 32
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/11062b_8480e50c5d1841b3b1829214389b1253~mv2_d_4500_2530_s_4_2.png/v1/fill/w_320,h_353,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8480e50c5d1841b3b1829214389b1253~mv2_d_4500_2530_s_4_2.png",
+   "alt": "Blue Gradient",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 0,
+    "y": 1958,
+    "w": 320,
+    "h": 353
+   },
+   "natural": "320x353",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_5500f3dbf8d84e7cb5f39a1d278cea23~mv2.png/v1/fill/w_105,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_35_35%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.35.35 PM.png",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 27,
+    "y": 2051,
+    "w": 105,
+    "h": 32
+   },
+   "natural": "105x32",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "2px",
+   "shadow": "rgba(0, 0, 0, 0.53) 0px 2px 5px 0px (ancestor)",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_3f4435d4d74f4c63b6dd6d84d423806c~mv2.png/v1/fill/w_110,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_35_28%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.35.28 PM.png",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 175,
+    "y": 2051,
+    "w": 110,
+    "h": 32
+   },
+   "natural": "110x32",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "2px",
+   "shadow": "rgba(0, 0, 0, 0.53) 0px 2px 5px 0px (ancestor)",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_3e73bd01155a453f9966cef312aa354e~mv2.png/v1/fill/w_105,h_83,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_35_19%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.35.19 PM.png",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 27,
+    "y": 2126,
+    "w": 105,
+    "h": 83
+   },
+   "natural": "105x83",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "2px",
+   "shadow": "rgba(0, 0, 0, 0.53) 0px 2px 5px 0px (ancestor)",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_520c1e540cbe478bb107c658e3b1a31e~mv2.png/v1/fill/w_110,h_83,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_35_24%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.35.24 PM.png",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 175,
+    "y": 2126,
+    "w": 110,
+    "h": 83
+   },
+   "natural": "110x83",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "2px",
+   "shadow": "rgba(0, 0, 0, 0.53) 0px 2px 5px 0px (ancestor)",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_39804ef35b6e4e7cba8f8927aa64aaa2~mv2.png/v1/crop/x_0,y_0,w_404,h_124/fill/w_105,h_16,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_35_45%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.35.45 PM.png",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 27,
+    "y": 2253,
+    "w": 105,
+    "h": 16
+   },
+   "natural": "105x16",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "2px",
+   "shadow": "rgba(0, 0, 0, 0.53) 0px 2px 5px 0px (ancestor)",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": "url(\"data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200'",
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_b70be322f4c94b358a73f17931458349~mv2.png/v1/fill/w_110,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_38_43%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.38.43 PM.png",
+   "region": "section#comp-mfrrxxmv",
+   "rect": {
+    "x": 175,
+    "y": 2253,
+    "w": 110,
+    "h": 22
+   },
+   "natural": "110x22",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "2px",
+   "shadow": "rgba(0, 0, 0, 0.53) 0px 2px 5px 0px (ancestor)",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_d30d28f0ec88425ab0d44c208c0ded78~mv2.png/v1/fill/w_80,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_07_06%E2%80%AFPM.png",
+   "alt": "Screenshot 2025-09-19 at 9.07.06 PM.png",
+   "region": "section#comp-mf9692nv",
+   "rect": {
+    "x": 116,
+    "y": 2379,
+    "w": 80,
+    "h": 72
+   },
+   "natural": "80x72",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_ea0b852bff894ed49e513483e3b8f2d2~mv2.png/v1/fill/w_80,h_67,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1d1667_ea0b852bff894ed49e513483e3b8f2d2~mv2.png",
+   "alt": "",
+   "region": "section#comp-mf9692nv",
+   "rect": {
+    "x": 113,
+    "y": 3246,
+    "w": 80,
+    "h": 67
+   },
+   "natural": "80x67",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_c06a2648dbbd4cef95d5d860d1f189b4~mv2.png/v1/fill/w_80,h_67,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1d1667_c06a2648dbbd4cef95d5d860d1f189b4~mv2.png",
+   "alt": "",
+   "region": "section#comp-mf9692nv",
+   "rect": {
+    "x": 113,
+    "y": 2793,
+    "w": 80,
+    "h": 67
+   },
+   "natural": "80x67",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_03d4d22c47b54f4f863457805b94e58c~mv2.png/v1/fill/w_100,h_87,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_49_edited.png",
+   "alt": "Screenshot 2025-09-19 at 9.49_edited.png",
+   "region": "section#comp-mfubs6az",
+   "rect": {
+    "x": 103,
+    "y": 3986,
+    "w": 100,
+    "h": 87
+   },
+   "natural": "100x87",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_a78617fb1a54487e89506e5f10713e6e~mv2.png/v1/fill/w_80,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_49_edited.png",
+   "alt": "Screenshot 2025-09-19 at 9.49_edited.png",
+   "region": "section#comp-mfubs6az",
+   "rect": {
+    "x": 113,
+    "y": 4229,
+    "w": 80,
+    "h": 74
+   },
+   "natural": "80x74",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_dabcce72c622447e97967db92d781126~mv2.png/v1/fill/w_86,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_50_edited.png",
+   "alt": "Screenshot 2025-09-19 at 9.50_edited.png",
+   "region": "section#comp-mfubs6az",
+   "rect": {
+    "x": 107,
+    "y": 4718,
+    "w": 86,
+    "h": 72
+   },
+   "natural": "86x72",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_c78c38ffa34d405b896dfa46f555e528~mv2.png/v1/fill/w_80,h_67,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-09-19%20at%209_07_edited.png",
+   "alt": "Screenshot 2025-09-19 at 9.07_edited.png",
+   "region": "section#comp-mfubs6az",
+   "rect": {
+    "x": 110,
+    "y": 4463,
+    "w": 80,
+    "h": 67
+   },
+   "natural": "80x67",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "other",
+   "rect": {
+    "x": 256,
+    "y": 475,
+    "w": 44,
+    "h": 44
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  }
+ ],
+ "forms": [],
+ "colors": {
+  "rgb(232, 230, 230)": {
+   "count": 4,
+   "props": {
+    "bg": 4
+   },
+   "regions": {
+    "other": 1,
+    "header": 1,
+    "section#comp-mf8vmqx2": 1,
+    "footer": 1
+   }
+  },
+  "rgb(29, 44, 243)": {
+   "count": 3,
+   "props": {
+    "bg": 1,
+    "border": 2
+   },
+   "regions": {
+    "header": 3
+   }
+  },
+  "rgba(255, 255, 255, 0)": {
+   "count": 3,
+   "props": {
+    "bg": 1,
+    "border": 2
+   },
+   "regions": {
+    "header": 1,
+    "section#comp-mf9692nv": 2
+   }
+  },
+  "rgb(65, 65, 65)": {
+   "count": 48,
+   "props": {
+    "bg": 3,
+    "text": 44,
+    "svg-fill": 1
+   },
+   "regions": {
+    "header": 3,
+    "section#comp-mf8vmqx2": 5,
+    "section#comp-mv45576y": 7,
+    "section#comp-mfrrxxmv": 1,
+    "section#comp-mf9692nv": 11,
+    "section#comp-mfubs6az": 7,
+    "footer": 13,
+    "other": 1
+   }
+  },
+  "rgb(216, 199, 189)": {
+   "count": 1,
+   "props": {
+    "border": 1
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1
+   }
+  },
+  "rgb(0, 0, 0)": {
+   "count": 18,
+   "props": {
+    "text": 10,
+    "bg": 2,
+    "svg-fill": 6
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 2,
+    "section#comp-mv455730": 1,
+    "section#comp-mfu7h7se": 7,
+    "section#comp-mfrrxxmv": 1,
+    "section#comp-mf9692nv": 6,
+    "other": 1
+   }
+  },
+  "rgb(61, 155, 233)": {
+   "count": 7,
+   "props": {
+    "svg-fill": 4,
+    "bg": 3
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 4,
+    "section#comp-mfu7h7se": 1,
+    "section#comp-mf9692nv": 1,
+    "section#comp-mfubs6az": 1
+   }
+  },
+  "rgb(255, 255, 255)": {
+   "count": 34,
+   "props": {
+    "text": 20,
+    "bg": 9,
+    "svg-fill": 5
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 5,
+    "section#comp-mv45576y": 3,
+    "section#comp-mfu7h7se": 15,
+    "section#comp-mfrrxxmv": 6,
+    "section#comp-mf9692nv": 2,
+    "section#comp-mfubs6az": 2,
+    "other": 1
+   }
+  },
+  "rgb(46, 146, 229)": {
+   "count": 2,
+   "props": {
+    "bg": 2
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1,
+    "section#comp-mv45576y": 1
+   }
+  },
+  "rgb(40, 38, 38)": {
+   "count": 9,
+   "props": {
+    "bg": 1,
+    "text": 8
+   },
+   "regions": {
+    "section#comp-mf8vmqx2": 1,
+    "section#comp-mfubs6az": 8
+   }
+  },
+  "rgb(237, 69, 69)": {
+   "count": 1,
+   "props": {
+    "text": 1
+   },
+   "regions": {
+    "section#comp-mv45576y": 1
+   }
+  },
+  "rgb(34, 73, 90)": {
+   "count": 2,
+   "props": {
+    "border": 2
+   },
+   "regions": {
+    "section#comp-mfu7h7se": 1,
+    "section#comp-mfrrxxmv": 1
+   }
+  },
+  "rgb(255, 255, 254)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "section#comp-mfrrxxmv": 1
+   }
+  },
+  "rgba(61, 155, 233, 0)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "section#comp-mf9692nv": 1
+   }
+  },
+  "rgb(12, 68, 38)": {
+   "count": 2,
+   "props": {
+    "border": 2
+   },
+   "regions": {
+    "section#comp-mf9692nv": 2
+   }
+  },
+  "rgb(199, 199, 199)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  }
+ },
+ "header": {
+  "rect": {
+   "x": 0,
+   "y": 0,
+   "w": 320,
+   "h": 124
+  },
+  "position": "sticky",
+  "top": "0px",
+  "z": "50",
+  "bg": "rgba(0, 0, 0, 0)",
+  "bgLayers": [
+   {
+    "id": "",
+    "testid": "colorUnderlay",
+    "bg": "rgb(232, 230, 230)",
+    "rect": {
+     "x": 0,
+     "y": -13,
+     "w": 320,
+     "h": 137
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(29, 44, 243)",
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    },
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px",
+    "borderBottom": "3px solid rgb(29, 44, 243)"
+   },
+   {
+    "id": "",
+    "bg": "rgba(255, 255, 255, 0)",
+    "rect": {
+     "x": 219,
+     "y": 11,
+     "w": 73,
+     "h": 70
+    },
+    "shadow": "none",
+    "borderBottom": "0px solid rgb(65, 65, 65)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 36,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 45,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 54,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   }
+  ],
+  "wrapperPos": "static",
+  "navItems": [
+   {
+    "text": "",
+    "href": "https://www.theresewhite.com",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    }
+   }
+  ]
+ },
+ "navs": [
+  {
+   "ariaLabel": "Site",
+   "region": "header",
+   "visible": false,
+   "items": [
+    {
+     "text": "Home",
+     "href": "https://www.theresewhite.com",
+     "current": null
+    },
+    {
+     "text": "About Therese",
+     "href": "https://www.theresewhite.com/about-therese",
+     "current": null
+    },
+    {
+     "text": "Endorsements",
+     "href": "https://www.theresewhite.com/team-1-1",
+     "current": null
+    },
+    {
+     "text": "Case Studies",
+     "href": "https://www.theresewhite.com/case-studies",
+     "current": null
+    },
+    {
+     "text": "FAQ",
+     "href": "https://www.theresewhite.com/services-3",
+     "current": null
+    },
+    {
+     "text": "Blog",
+     "href": "https://www.theresewhite.com/blog",
+     "current": null
+    },
+    {
+     "text": "Contact",
+     "href": "https://www.theresewhite.com/contact",
+     "current": null
+    }
+   ]
+  }
+ ],
+ "headings": [
+  {
+   "tag": "H1",
+   "region": "section#comp-mf8vmqx2",
+   "text": "Is an unresolved, emotion-driven conflict putting valuable people, productivity, and your peace of mind at risk?"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mf8vmqx2",
+   "text": "30+ Years Experience"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mf8vmqx2",
+   "text": "1,100+ Mediations"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mv45576y",
+   "text": "What Is That Unresolved Workplace Conflict Really Costing?"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mfrrxxmv",
+   "text": "Mediation Panel Memberships"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mf9692nv",
+   "text": "3 Very Good Reasons I Belong On Your \"Go-To\" Employment Mediator Shortlist"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mf9692nv",
+   "text": "Over 1,100 Mediations. Mostly Hard Ones."
+  },
+  {
+   "tag": "H4",
+   "region": "section#comp-mfubs6az",
+   "text": "My Working Peace Blueprint This process helps teammates in conflict write their own agreement for how they'll talk, disagree, and get the work done."
+  }
+ ],
+ "hamburger": [
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER_TOGGLE",
+   "aria": "Open navigation menu",
+   "visible": true
+  },
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "overlay-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "container-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgLayers_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgMedia_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "inlineContentParent-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "NAV",
+   "id": "MENU_AS_CONTAINER_EXPANDABLE_MENU",
+   "aria": "Site",
+   "visible": false
+  }
+ ],
+ "iframes": [],
+ "cookieDismissed": false,
+ "bannerText": null
+}
