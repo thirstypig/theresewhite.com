@@ -34,7 +34,9 @@ const NOT_IN_SITEMAP: Record<string, string> = {
   "/stylebible/home":
     "Design sample for the style bible: the Wix homepage's words in the recommended design. Unlinked and noindex.",
   "/stylebible/compare":
-    "The Wix homepage next to the design sample, for the style bible. Unlinked and noindex.",
+    "The Wix homepage next to the design samples, for the style bible. Unlinked and noindex.",
+  "/stylebible/home-new":
+    "Design sample for the style bible: the homepage with proposed new copy and a modern layout, the third column of /stylebible/compare. Unlinked and noindex.",
 };
 
 /**
