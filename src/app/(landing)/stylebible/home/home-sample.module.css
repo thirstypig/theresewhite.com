@@ -1,0 +1,445 @@
+/*
+ * The style bible's Recommended system, applied to the Wix homepage.
+ * Six colors, six text sizes, one button style. Every value below comes
+ * from the "Recommended system" chapter of docs/style-bible/index.html.
+ */
+.page {
+  --text: #2b2b2b;
+  --blue: #1a78c9;
+  --blue-deep: #145e9e;
+  --navy: #12355b;
+  --cream: #f4efeb;
+  --white: #ffffff;
+  --red: #c62828;
+  --line: #e3dad3;
+
+  /* Six sizes: display, page title, section title, small heading, body, small */
+  --size-display: 48px;
+  --size-title: 36px;
+  --size-section: 28px;
+  --size-small-heading: 22px;
+  --size-body: 18px;
+  --size-small: 15px;
+
+  background: var(--white);
+  color: var(--text);
+  font-family: var(--sample-sans), Arial, sans-serif;
+  font-size: var(--size-body);
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .page {
+    --size-display: 34px;
+    --size-title: 28px;
+    --size-section: 24px;
+    --size-small-heading: 20px;
+    --size-body: 17px;
+  }
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+
+.section {
+  padding-block: 96px;
+}
+@media (max-width: 720px) {
+  .section {
+    padding-block: 64px;
+  }
+}
+.cream {
+  background: var(--cream);
+}
+.navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.serif {
+  font-family: var(--sample-serif), Georgia, serif;
+  font-weight: 600;
+}
+.display {
+  font-size: var(--size-display);
+  line-height: 1.15;
+  text-wrap: balance;
+  margin: 0;
+}
+.title {
+  font-size: var(--size-title);
+  line-height: 1.2;
+  text-wrap: balance;
+  margin: 0;
+}
+.sectionTitle {
+  font-size: var(--size-section);
+  line-height: 1.25;
+  text-wrap: balance;
+  margin: 0;
+}
+.smallHeading {
+  font-size: var(--size-small-heading);
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0;
+}
+.small {
+  font-size: var(--size-small);
+  line-height: 1.5;
+}
+.center {
+  text-align: center;
+}
+.reading {
+  max-width: 720px;
+}
+.centerBlock {
+  margin-inline: auto;
+}
+.stack {
+  display: grid;
+  gap: 24px;
+}
+.stackTight {
+  display: grid;
+  gap: 12px;
+}
+.stack p,
+.stackTight p {
+  margin: 0;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-block: 12px;
+  flex-wrap: wrap;
+}
+.logo {
+  display: block;
+  width: 160px;
+  height: auto;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+  font-size: 16px;
+}
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding-block: 4px;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover {
+  border-bottom-color: var(--blue);
+}
+
+/* The one button style */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 32px;
+  border-radius: 100px;
+  border: 2px solid var(--blue);
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.button:hover {
+  background: var(--blue-deep);
+  border-color: var(--blue-deep);
+}
+.buttonSmall {
+  min-height: 44px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+.buttonOutline {
+  background: transparent;
+  color: var(--blue);
+}
+.buttonOutline:hover {
+  background: #eaf3fb;
+  color: var(--blue-deep);
+}
+.button:focus-visible,
+.nav a:focus-visible,
+.videoLink:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: end;
+  padding-top: 64px;
+}
+.heroCopy {
+  display: grid;
+  gap: 24px;
+  padding-bottom: 64px;
+}
+.bullets {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 6px;
+  list-style: disc;
+}
+.tagline {
+  font-weight: 600;
+  margin: 0;
+}
+.proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-weight: 700;
+  font-size: var(--size-small);
+  letter-spacing: 0.02em;
+}
+.ctaBlock {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+.portrait {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  justify-self: center;
+  display: block;
+}
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .heroCopy {
+    padding-bottom: 32px;
+  }
+  .portrait {
+    max-width: 300px;
+  }
+}
+
+/* Calculator */
+.calcCard {
+  background: var(--white);
+  color: var(--text);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  padding: 48px;
+  align-items: center;
+}
+.costTitle {
+  color: var(--red);
+}
+.calcSide {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+.calcSide p {
+  margin: 0;
+}
+@media (max-width: 860px) {
+  .calcCard {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 32px 24px;
+    text-align: center;
+  }
+}
+
+/* Quote and video */
+.quote {
+  font-style: italic;
+}
+.videoLink {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.videoLink img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(18, 53, 91, 0.25);
+}
+.play span {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--white);
+  display: grid;
+  place-items: center;
+}
+.checklist {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+  list-style: disc;
+}
+
+/* Panels */
+.logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 48px;
+  align-items: center;
+  justify-items: center;
+}
+.logos img {
+  max-width: 100%;
+  max-height: 96px;
+  width: auto;
+  height: auto;
+}
+@media (max-width: 720px) {
+  .logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Reasons */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.card {
+  background: var(--white);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 32px;
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eaf3fb;
+  color: var(--blue);
+  display: grid;
+  place-items: center;
+}
+@media (max-width: 860px) {
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Blueprint */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  border-top: 2px solid var(--blue);
+  padding-top: 16px;
+}
+.stepNumber {
+  font-size: var(--size-small);
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+.step p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+@media (max-width: 860px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Footer */
+.footer {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  padding-block: 48px;
+  font-size: var(--size-small);
+  line-height: 1.5;
+}
+.footerInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+.footer p {
+  margin: 0;
+}
+.footer a {
+  color: var(--text);
+}
+.footerLegal {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}

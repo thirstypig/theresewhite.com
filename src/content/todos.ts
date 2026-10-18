@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-10-16";
+export const TODOS_UPDATED = "2026-10-18";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -203,5 +203,49 @@ export const todos: Todo[] = [
     priority: "normal",
     area: "Deploy",
     added: "2026-08-12",
+  },
+  {
+    id: "first-build-direction",
+    title: "Decide whether the first build is the exact Wix copy or the simplified design",
+    detail:
+      "The style bible at /stylebible describes two designs: the Wix site as measured (22 colors, about 90 text styles) and a simplified Recommended system (6 colors, 6 text sizes, one button style). Building the exact copy first and simplifying later means building the site twice. Building the simplified design first means Therese sees design changes before she has agreed to leave Wix. The homepage sample at /stylebible/compare shows the two side by side, with identical words, to help make the call.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Design",
+    added: "2026-10-18",
+  },
+  {
+    id: "copy-review",
+    title: "Review the site's words with Therese, as a separate step from the design",
+    detail:
+      "The design sample at /stylebible/home keeps every word of the Wix homepage unchanged, on purpose, so the design can be judged alone. Copy gets its own page and its own conversation later. Items already raised by the style bible's red team: replacing \"Click Here\" with labels that name the outcome, such as \"Book a confidential assessment\"; moving the panel logos and the 30+ years and 1,100+ mediations figures up to just under the headline; and whether to keep leading with the AI avatar video.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Content",
+    added: "2026-10-18",
+  },
+  {
+    id: "referral-partner-page",
+    title: "Turn /collaborate into a clear referral-partner page",
+    detail:
+      "A partner page already exists at /collaborate (built 2026-08-11, linked in the footer as \"Collaborate\"). It covers six partner types, four ways to work together, reciprocal referrals and an email form. Compared with best practice for professional referral pages, it is missing: a label that says \"referrals\" (the footer link and heading say only \"Collaborate\"); a plain statement of how money works, since partners will ask and silence looks evasive (see the paid-referrals item: mediator ethics rules restrict referral fees, so the safe default is \"no referral fees in either direction\"); what happens after someone writes in, with a reply time and a first step such as a short intro call; a fast lane for a partner with a live matter now; what Therese reports back to the person who referred a client, given confidentiality, which is a referring lawyer's or HR leader's first worry; proof aimed at peers, such as panel memberships and endorsements from Kenneth Cloke and Joan Goldsmith; a short partner FAQ (remote work, neutrality and conflicts of interest, who pays); and a one-page partner sheet they can forward.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Business",
+    added: "2026-10-18",
+  },
+  {
+    id: "stylebible-before-cutover",
+    title: "Take /stylebible down, or put it behind /admin, before the move to theresewhite.com",
+    detail:
+      "The style bible and its samples (/stylebible, /stylebible/home, /stylebible/compare) are unlinked and noindex on the test site, but anyone with the address can open them, and the bible criticizes the current design in plain terms. They should not go live on Therese's real domain. The source is docs/style-bible/index.html and src/app/(landing)/stylebible/.",
+    status: "open",
+    owner: "Dev",
+    priority: "normal",
+    area: "Deploy",
+    added: "2026-10-18",
   },
 ];
