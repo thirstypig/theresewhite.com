@@ -37,6 +37,17 @@ const NOT_IN_SITEMAP: Record<string, string> = {
     "The Wix homepage next to the design samples, for the style bible. Unlinked and noindex.",
   "/stylebible/home-new":
     "Design sample for the style bible: the homepage with proposed new copy and a modern layout, the third column of /stylebible/compare. Unlinked and noindex.",
+  "/about": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
+  "/endorsements": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
+  "/faq": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
+  "/privacy": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
+  "/terms": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
+  "/services":
+    "Off the menu since 2026-10-18, kept for later. noindex, so an orphan page does not compete with the Wix-copy pages.",
+  "/process":
+    "Off the menu since 2026-10-18, kept for later. noindex, for the same reason as /services.",
+  "/post/[slug]":
+    "The template for blog posts, not a page. Each post is listed by its own address; the test below checks every one.",
 };
 
 /**
@@ -103,6 +114,15 @@ describe("sitemap coverage", () => {
     const routes = new Set(routesInAppDir());
     const stale = Object.keys(NOT_IN_SITEMAP).filter((route) => !routes.has(route));
     expect(stale).toEqual([]);
+  });
+
+  it("lists every blog post", async () => {
+    const listed = new Set(await sitemapPaths());
+    const { getAllPosts } = await import("@/lib/blog");
+    const missing = getAllPosts()
+      .map((post) => `/post/${post.slug}`)
+      .filter((path) => !listed.has(path));
+    expect(missing).toEqual([]);
   });
 
   it("excludes nothing that the sitemap also lists", async () => {
