@@ -56,12 +56,12 @@ export function WixHeader() {
             height={logo.height}
             alt={logo.alt}
             priority
-            className="h-auto w-[173px] md:w-[200px] lg:w-[242px]"
+            className="h-auto w-[173px] md:w-[150px] lg:w-[200px] xl:w-[242px]"
           />
         </Link>
 
         <nav aria-label="Main" className="hidden md:block">
-          <ul className="flex flex-wrap gap-[8px] font-[family-name:var(--wix-forum)]">
+          <ul className="flex gap-[6px] lg:gap-[8px] font-[family-name:var(--wix-forum)]">
             {wixNav.map((item) => {
               const current = isCurrent(item.href);
               return (
@@ -69,7 +69,7 @@ export function WixHeader() {
                   <Link
                     href={item.href}
                     aria-current={current ? "page" : undefined}
-                    className={`flex h-[43px] items-center border px-[14px] text-[16px] tracking-[0.05em] whitespace-nowrap transition-colors duration-[80ms] xl:px-[24px] lg:px-[18px] lg:text-[19px] ${
+                    className={`flex h-[43px] items-center border px-[9px] text-[14px] tracking-[0.05em] whitespace-nowrap transition-colors duration-[80ms] lg:px-[14px] lg:text-[17px] xl:px-[24px] xl:text-[19px] ${
                       current
                         ? "border-[#0d63d1] bg-white text-[#0d63d1]"
                         : "border-white bg-[#0d63d1] text-white hover:border-[#0d63d1] hover:bg-white hover:text-[#0d63d1]"
