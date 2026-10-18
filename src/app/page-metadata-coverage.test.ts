@@ -66,11 +66,22 @@ function code(relativePath: string): string {
     .replace(/^\s*\/\/.*$/gm, "");
 }
 
+/**
+ * A page passes if it exports `metadata = pageMetadata(...)`, or, for a page
+ * with one address per item (the blog's /post/[slug]), exports a
+ * `generateMetadata` function that returns `pageMetadata(...)`.
+ */
+function usesPageMetadata(source: string): boolean {
+  if (/export const metadata[^=]*=\s*pageMetadata\(/.test(source)) return true;
+  const fn = /export (?:async )?function generateMetadata\b[\s\S]*?\n\}/.exec(source);
+  return fn !== null && /return pageMetadata\(/.test(fn[0]);
+}
+
 describe("page metadata coverage", () => {
   it("routes every page through pageMetadata()", () => {
     const offenders = routeFiles()
       .filter((f) => !(f in MAY_SKIP_PAGE_METADATA))
-      .filter((f) => !/export const metadata[^=]*=\s*pageMetadata\(/.test(code(f)));
+      .filter((f) => !usesPageMetadata(code(f)));
 
     // Asserting on the list rather than a count so a failure names the file.
     expect(offenders).toEqual([]);
