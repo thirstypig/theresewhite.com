@@ -30,8 +30,7 @@ export function WixHeader() {
   const [open, setOpen] = useState(false);
   const isCurrent = (href: string) => pathname === href || pathname === `${href}/` || pathname.startsWith(`${href}/`);
 
-  // Close the phone menu after navigating, and let Escape close it.
-  useEffect(() => setOpen(false), [pathname]);
+  // Escape closes the phone menu; choosing a page closes it via onClick.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
@@ -45,7 +44,7 @@ export function WixHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[#d8c7bd] bg-[#e8e6e6]">
-      <div className="mx-auto flex h-[96px] max-w-[1240px] items-center justify-between gap-4 px-4 md:h-[85px] md:justify-start md:gap-6 lg:px-[60px]">
+      <div className="mx-auto flex h-[96px] max-w-[1280px] items-center justify-between gap-4 px-4 md:h-[85px] md:justify-start md:gap-6 lg:px-[40px]">
         <Link
           href="/"
           aria-label="L. Therese White, home"
@@ -70,7 +69,7 @@ export function WixHeader() {
                   <Link
                     href={item.href}
                     aria-current={current ? "page" : undefined}
-                    className={`flex h-[43px] items-center border px-[14px] text-[16px] tracking-[0.05em] whitespace-nowrap transition-colors duration-[80ms] lg:px-[26px] lg:text-[19px] ${
+                    className={`flex h-[43px] items-center border px-[14px] text-[16px] tracking-[0.05em] whitespace-nowrap transition-colors duration-[80ms] xl:px-[24px] lg:px-[18px] lg:text-[19px] ${
                       current
                         ? "border-[#0d63d1] bg-white text-[#0d63d1]"
                         : "border-white bg-[#0d63d1] text-white hover:border-[#0d63d1] hover:bg-white hover:text-[#0d63d1]"
@@ -124,6 +123,7 @@ export function WixHeader() {
                   <Link
                     href={item.href}
                     aria-current={current ? "page" : undefined}
+                    onClick={() => setOpen(false)}
                     className={`flex h-[65px] items-center justify-center ${current ? "bg-white/50 text-[#d8c7bd]" : "text-[#22495a]"}`}
                   >
                     {item.label}
