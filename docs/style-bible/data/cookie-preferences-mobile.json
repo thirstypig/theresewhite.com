@@ -1,0 +1,1769 @@
+{
+ "url": "https://www.theresewhite.com/cookie-preferences",
+ "title": "cookie preferences | Theresewhite",
+ "vw": 320,
+ "docH": 3291,
+ "rootVars": {
+  "--wst-color-custom-17": "rgb(114,189,163)",
+  "--wst-font-style-body-large": "normal normal normal 21px/1.4em caudex,serif",
+  "--font_9": "normal normal normal 16px/1.4em forum,serif",
+  "--color_55": "199,199,199",
+  "--wst-color-fill-background-primary": "rgb(255,255,255)",
+  "--wst-color-custom-20": "rgb(29,47,41)",
+  "--wst-color-custom-11": "rgb(244,193,174)",
+  "--color_43": "244,239,235",
+  "--color_37": "65,65,65",
+  "--wst-color-fill-base-shade-2": "rgb(199,199,199)",
+  "--wst-color-custom-19": "rgb(57,95,82)",
+  "--color_12": "232,230,230",
+  "--color_60": "216,199,189",
+  "--wst-button-color-border-secondary-hover": "rgb(216,199,189)",
+  "--color_25": "24,34,38",
+  "--color_48": "216,199,189",
+  "--wst-font-style-body-small": "normal normal normal 16px/1.4em forum,serif",
+  "--wst-button-color-text-primary": "rgb(255,255,255)",
+  "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-color-line": "rgb(153,153,151)",
+  "--color_21": "182,200,208",
+  "--color_51": "255,255,255",
+  "--color_50": "255,255,255",
+  "--color_13": "199,199,199",
+  "--color_10": "176,176,176",
+  "--wst-color-custom-12": "rgb(233,161,132)",
+  "--wst-font-style-h6": "normal normal normal 30px/1.4em forum,serif",
+  "--color_54": "199,199,199",
+  "--wst-color-custom-7": "rgb(131,152,162)",
+  "--color_20": "87,79,75",
+  "--color_58": "216,199,189",
+  "--color_65": "199,199,199",
+  "--color_46": "65,65,65",
+  "--color_2": "0,0,0",
+  "--wst-color-custom-8": "rgb(72,101,115)",
+  "--color_3": "237,28,36",
+  "--wst-button-color-border-primary-hover": "rgb(216,199,189)",
+  "--wst-color-action": "rgb(216,199,189)",
+  "--wst-color-fill-accent-2": "rgb(34,73,90)",
+  "--color_41": "216,199,189",
+  "--color_22": "131,152,162",
+  "--color_23": "72,101,115",
+  "--color_31": "178,222,207",
+  "--wst-color-custom-13": "rgb(222,84,30)",
+  "--color_30": "74,28,10",
+  "--wst-color-custom-14": "rgb(148,56,20)",
+  "--color_42": "34,73,90",
+  "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+  "--wst-font-style-h2": "italic normal normal 50px/1.4em caudex,serif",
+  "--font_7": "normal normal normal 21px/1.4em caudex,serif",
+  "--wst-button-color-fill-secondary-hover": "rgb(216,199,189)",
+  "--font_6": "normal normal normal 30px/1.4em forum,serif",
+  "--wst-button-color-fill-primary-disabled": "rgb(199,199,199)",
+  "--font_4": "normal normal normal 30px/1.4em caudex,serif",
+  "--font_3": "normal normal normal 40px/1.4em caudex,serif",
+  "--wst-color-custom-16": "rgb(178,222,207)",
+  "--color_44": "72,101,115",
+  "--wst-color-custom-15": "rgb(74,28,10)",
+  "--wst-button-color-text-secondary": "rgb(216,199,189)",
+  "--wst-button-color-border-primary-disabled": "rgb(199,199,199)",
+  "--wst-color-custom-4": "rgb(158,146,139)",
+  "--wst-color-fill-base-shade-3": "rgb(153,153,151)",
+  "--color_56": "255,255,255",
+  "--wst-color-fill-accent-3": "rgb(244,239,235)",
+  "--theme-spx-ratio": "1px",
+  "--color_9": "114,114,114",
+  "--color_27": "233,161,132",
+  "--wst-color-custom-3": "rgb(232,220,213)",
+  "--wst-color-fill-base-shade-1": "rgb(232,230,230)",
+  "--color_33": "86,142,122",
+  "--color_61": "216,199,189",
+  "--color_0": "255,255,255",
+  "--wst-color-custom-18": "rgb(86,142,122)",
+  "--color_62": "255,255,255",
+  "--font_5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_39": "199,199,199",
+  "--font_8": "normal normal normal 18px/1.4em forum,serif",
+  "--font_2": "italic normal normal 50px/1.4em caudex,serif",
+  "--color_63": "255,255,255",
+  "--wst-color-custom-6": "rgb(182,200,208)",
+  "--color_4": "0,136,203",
+  "--color_7": "176,176,176",
+  "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+  "--color_52": "216,199,189",
+  "--wst-font-style-h3": "normal normal normal 40px/1.4em caudex,serif",
+  "--font_0": "normal normal normal 60px/1.4em caudex,serif",
+  "--wst-color-fill-accent-1": "rgb(216,199,189)",
+  "--color_34": "57,95,82",
+  "--color_47": "153,153,151",
+  "--wst-button-color-border-secondary": "rgb(216,199,189)",
+  "--wst-button-color-text-secondary-disabled": "rgb(199,199,199)",
+  "--color_45": "65,65,65",
+  "--wst-button-color-border-secondary-disabled": "rgb(199,199,199)",
+  "--color_59": "216,199,189",
+  "--wst-color-fill-background-secondary": "rgb(232,230,230)",
+  "--wst-color-fill-accent-4": "rgb(72,101,115)",
+  "--wst-color-custom-1": "rgb(199,199,199)",
+  "--color_5": "255,203,5",
+  "--color_1": "255,255,255",
+  "--color_14": "153,153,151",
+  "--wst-font-style-body-medium": "normal normal normal 18px/1.4em forum,serif",
+  "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h4": "normal normal normal 30px/1.4em caudex,serif",
+  "--wst-color-text-secondary": "rgb(153,153,151)",
+  "--color_17": "232,220,213",
+  "--color_40": "153,153,151",
+  "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+  "--wst-color-disabled": "rgb(199,199,199)",
+  "--color_16": "244,239,235",
+  "--color_24": "34,73,90",
+  "--color_19": "158,146,139",
+  "--wst-button-color-border-primary": "rgb(216,199,189)",
+  "--wst-button-color-fill-primary": "rgb(216,199,189)",
+  "--wst-color-fill-base-1": "rgb(255,255,255)",
+  "--wst-color-custom-5": "rgb(87,79,75)",
+  "--color_15": "65,65,65",
+  "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_49": "216,199,189",
+  "--color_6": "114,114,114",
+  "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-10": "rgb(24,34,38)",
+  "--color_26": "244,193,174",
+  "--wst-color-text-primary": "rgb(65,65,65)",
+  "--color_38": "232,230,230",
+  "--color_57": "255,255,255",
+  "--color_8": "255,255,255",
+  "--wst-color-subtitle": "rgb(65,65,65)",
+  "--color_36": "255,255,255",
+  "--color_18": "216,199,189",
+  "--wst-color-custom-9": "rgb(34,73,90)",
+  "--wst-color-fill-base-2": "rgb(65,65,65)",
+  "--color_64": "199,199,199",
+  "--color_53": "216,199,189",
+  "--color_28": "222,84,30",
+  "--wst-color-title": "rgb(65,65,65)",
+  "--color_35": "29,47,41",
+  "--color_32": "114,189,163",
+  "--color_11": "255,255,255",
+  "--color_29": "148,56,20",
+  "--wst-button-color-text-primary-hover": "rgb(216,199,189)",
+  "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-2": "rgb(244,239,235)"
+ },
+ "sheetVars": {
+  "--color_0": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_1": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_2": {
+   "v": "0,0,0",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_3": {
+   "v": "237,28,36",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_4": {
+   "v": "0,136,203",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_5": {
+   "v": "255,203,5",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_6": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_7": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_8": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_9": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_10": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_11": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_12": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_13": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_14": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_15": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_16": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_17": {
+   "v": "232,220,213",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_18": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_19": {
+   "v": "158,146,139",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_20": {
+   "v": "87,79,75",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_21": {
+   "v": "182,200,208",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_22": {
+   "v": "131,152,162",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_23": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_24": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_25": {
+   "v": "24,34,38",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_26": {
+   "v": "244,193,174",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_27": {
+   "v": "233,161,132",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_28": {
+   "v": "222,84,30",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_29": {
+   "v": "148,56,20",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_30": {
+   "v": "74,28,10",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_31": {
+   "v": "178,222,207",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_32": {
+   "v": "114,189,163",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_33": {
+   "v": "86,142,122",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_34": {
+   "v": "57,95,82",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_35": {
+   "v": "29,47,41",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_36": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_37": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_38": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_39": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_40": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_41": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_42": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_43": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_44": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_45": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_46": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_47": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_48": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_49": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_50": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_51": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_52": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_53": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_54": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_55": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_56": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_57": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_58": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_59": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_60": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_61": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_62": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_63": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_64": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_65": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_0": {
+   "v": "normal normal normal 60px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_1": {
+   "v": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_2": {
+   "v": "italic normal normal 50px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_3": {
+   "v": "normal normal normal 40px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_4": {
+   "v": "normal normal normal 30px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_5": {
+   "v": "italic normal normal 26px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_6": {
+   "v": "normal normal normal 30px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_7": {
+   "v": "normal normal normal 21px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_8": {
+   "v": "normal normal normal 18px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_9": {
+   "v": "normal normal normal 16px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_10": {
+   "v": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  }
+ },
+ "fontFaces": [
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  }
+ ],
+ "textStyles": [
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "21px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 32,
+    "a": 2
+   },
+   "regions": {
+    "section#comp-mtatetv7": 34
+   },
+   "count": 34,
+   "samples": [
+    "Effective date: August 1, 2026",
+    "Cookies are small text files that a website places on your browser. They let a site rememb",
+    "theresewhite.com uses cookies to:",
+    "Keep the site secure and functioning correctly"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 7,
+    "a": 6
+   },
+   "regions": {
+    "footer": 13
+   },
+   "count": 13,
+   "samples": [
+    "L. Therese White",
+    "Employment Mediator · Workplace Conflict Coach",
+    "10736 Jefferson Blvd, #363",
+    "Culver City, CA 90230"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "21px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "29.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 11
+   },
+   "regions": {
+    "section#comp-mtatetv7": 11
+   },
+   "count": 11,
+   "samples": [
+    "COOKIE POLICY",
+    "WHAT COOKIES ARE",
+    "WHY WE USE THEM",
+    "COOKIES USED ON THIS SITE"
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 147,
+   "text": "COOKIE POLICY",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 176,
+   "text": "Effective date: August 1, 2026",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 251,
+   "text": "WHAT COOKIES ARE",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 280,
+   "text": "Cookies are small text files that a website places on your browser. They let a site remember things between pages and visits, such as whether you are logged in, whether you dismissed a banner, or whether you have visited before. Similar technologies, including pixels, local storage, and tracking scripts, do comparable things. This policy covers all of them.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 531,
+   "text": "WHY WE USE THEM",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 560,
+   "text": "theresewhite.com uses cookies to:",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 582,
+   "text": "Keep the site secure and functioning correctly",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 626,
+   "text": "Remember your cookie preferences so we do not ask again on every page",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 670,
+   "text": "Understand how visitors use the site, including which pages are read and where visitors arrive from",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 736,
+   "text": "Measure whether the site is performing well technically",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 802,
+   "text": "We do not use cookies to build advertising profiles, and we do not permit third parties to use cookies on this site for their own advertising purposes.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 920,
+   "text": "COOKIES USED ON THIS SITE",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 980,
+   "text": "Strictly necessary cookies",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1024,
+   "text": "These are required for the site to work and cannot be switched off. They handle security, load balancing, and basic session management. This site is built on the Wix platform, and Wix sets the following:",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1178,
+   "text": "XSRF-TOKEN (session): Security. Prevents cross-site request forgery.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1222,
+   "text": "hs (session): Security.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1244,
+   "text": "TS* (session): Security and fraud prevention.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1288,
+   "text": "SSR-caching (1 minute): Indicates how the page was rendered.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1332,
+   "text": "smSession (session): Identifies logged-in site members.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1376,
+   "text": "consent-policy (12 months): Stores your cookie banner choices.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1443,
+   "text": "Functional cookies",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1473,
+   "text": "These remember choices you have made so the site behaves consistently for you.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1517,
+   "text": "svSession (up to 2 years): Identifies unique visitors and tracks sessions across the site.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1583,
+   "text": "wixLanguage (12 months): Remembers language preference on multilingual sites.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1672,
+   "text": "Analytics and performance cookies",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1731,
+   "text": "These help us understand how the site is used and whether it is working properly. They are optional.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1797,
+   "text": "bSession (30 minutes): Measures site effectiveness.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1841,
+   "text": "fedops.logger.* (12 months): Measures platform stability and performance.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1907,
+   "text": "_wixCIDX (3 months): System monitoring and debugging.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 1951,
+   "text": "_wix_browser_sess (session): System monitoring and debugging.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2018,
+   "text": "Advertising cookies",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2048,
+   "text": "We do not use advertising or targeting cookies on this site.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2122,
+   "text": "THIRD-PARTY CONTENT",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2152,
+   "text": "Some pages include content provided by third parties, such as video players, scheduling tools, or social media. Those providers may set their own cookies when their content loads. We do not control those cookies, and their practices are governed by their own policies. You can review the Wix privacy policy at",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mtatetv7",
+   "y": 2328,
+   "text": "www.wix.com/about/privacy.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2380,
+   "text": "MANAGING YOUR PREFERENCES",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2440,
+   "text": "On this site: Use the cookie banner that appears on your first visit to accept or decline optional cookies.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2506,
+   "text": ".",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2528,
+   "text": "In your browser: Every major browser lets you block or delete cookies, usually under Settings, Privacy, or Preferences. Note that blocking all cookies will break parts of this and most other websites.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2659,
+   "text": "Global Privacy Control: If your browser or a browser extension sends a Global Privacy Control signal, we treat it as a request to opt out of optional cookies.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2777,
+   "text": "CHANGES TO THIS POLICY",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2807,
+   "text": "We may update this policy as the site changes. The \"Last updated\" date above reflects the current version.",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2903,
+   "text": "QUESTIONS",
+   "size": "21px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtatetv7",
+   "y": 2933,
+   "text": "If you have questions about this policy, contact us at",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mtatetv7",
+   "y": 2977,
+   "text": "Therese@ThereseWhite.com",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3034,
+   "text": "L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3052,
+   "text": "Employment Mediator · Workplace Conflict Coach",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3088,
+   "text": "10736 Jefferson Blvd, #363",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3106,
+   "text": "Culver City, CA 90230",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 3124,
+   "text": "Therese@ThereseWhite.com",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 3142,
+   "text": "323-291-4813",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3142,
+   "text": "​​​​",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3177,
+   "text": "© 2026 L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 3201,
+   "text": "​Legal​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 3219,
+   "text": "Privacy Policy",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 3237,
+   "text": "Terms of Use",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 3255,
+   "text": "Cookie Preferences",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 3273,
+   "text": "Accessibility​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  }
+ ],
+ "sections": [
+  {
+   "tag": "HEADER",
+   "id": "SITE_HEADER",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 320,
+    "h": 124
+   },
+   "position": "sticky",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 31,
+    "right": 210,
+    "width": 179,
+    "padTop": 24,
+    "padBottom": 24
+   },
+   "headings": [],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mtatetv7",
+   "rect": {
+    "x": 0,
+    "y": 124,
+    "w": 320,
+    "h": 2893
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [],
+   "content": {
+    "left": 20,
+    "right": 300,
+    "width": 280,
+    "padTop": 20,
+    "padBottom": 20
+   },
+   "headings": [],
+   "imgCount": 0
+  },
+  {
+   "tag": "FOOTER",
+   "id": "SITE_FOOTER",
+   "rect": {
+    "x": 0,
+    "y": 3017,
+    "w": 320,
+    "h": 274
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 3,
+    "right": 298,
+    "width": 295,
+    "padTop": 17,
+    "padBottom": 0
+   },
+   "headings": [],
+   "imgCount": 0
+  }
+ ],
+ "buttons": [],
+ "links": [
+  {
+   "text": "",
+   "href": "https://www.theresewhite.com",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(0, 0, 238)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 31,
+    "y": 24,
+    "w": 179,
+    "h": 76
+   }
+  },
+  {
+   "text": "www.wix.com/about/privacy.",
+   "href": "http://www.wix.com/about/privacy.",
+   "region": "section#comp-mtatetv7",
+   "target": "_blank",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 20,
+    "y": 2328,
+    "w": 186,
+    "h": 17
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "section#comp-mtatetv7",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 20,
+    "y": 2977,
+    "w": 196,
+    "h": 17
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 3124,
+    "w": 196,
+    "h": 17
+   }
+  },
+  {
+   "text": "323-291-4813",
+   "href": "tel:323-291-4813",
+   "region": "footer",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 3142,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://www.theresewhite.com/privacy-policy",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 190,
+    "y": 3220,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Terms of Use",
+   "href": "https://www.theresewhite.com/terms-of-use",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 195,
+    "y": 3238,
+    "w": 88,
+    "h": 17
+   }
+  },
+  {
+   "text": "Cookie Preferences",
+   "href": "https://www.theresewhite.com/cookie-preferences",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 151,
+    "y": 3256,
+    "w": 132,
+    "h": 17
+   }
+  },
+  {
+   "text": "Accessibility​",
+   "href": "https://www.theresewhite.com/accessibility",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 201,
+    "y": 3274,
+    "w": 82,
+    "h": 17
+   }
+  }
+ ],
+ "images": [
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_173,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+   "alt": "Therese High Res Logo.png",
+   "region": "header",
+   "rect": {
+    "x": 34,
+    "y": 27,
+    "w": 173,
+    "h": 70
+   },
+   "natural": "173x70",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "6px (ancestor)",
+   "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px (ancestor)",
+   "border": "3px solid rgb(29, 44, 243) (ancestor)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "other",
+   "rect": {
+    "x": 256,
+    "y": 475,
+    "w": 44,
+    "h": 44
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  }
+ ],
+ "forms": [],
+ "colors": {
+  "rgb(232, 230, 230)": {
+   "count": 3,
+   "props": {
+    "bg": 3
+   },
+   "regions": {
+    "other": 1,
+    "header": 1,
+    "footer": 1
+   }
+  },
+  "rgb(29, 44, 243)": {
+   "count": 3,
+   "props": {
+    "bg": 1,
+    "border": 2
+   },
+   "regions": {
+    "header": 3
+   }
+  },
+  "rgba(255, 255, 255, 0)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "header": 1
+   }
+  },
+  "rgb(65, 65, 65)": {
+   "count": 62,
+   "props": {
+    "bg": 3,
+    "text": 58,
+    "svg-fill": 1
+   },
+   "regions": {
+    "header": 3,
+    "section#comp-mtatetv7": 45,
+    "footer": 13,
+    "other": 1
+   }
+  },
+  "rgb(0, 0, 0)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  },
+  "rgb(255, 255, 255)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  },
+  "rgb(199, 199, 199)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  }
+ },
+ "header": {
+  "rect": {
+   "x": 0,
+   "y": 0,
+   "w": 320,
+   "h": 124
+  },
+  "position": "sticky",
+  "top": "0px",
+  "z": "50",
+  "bg": "rgba(0, 0, 0, 0)",
+  "bgLayers": [
+   {
+    "id": "",
+    "testid": "colorUnderlay",
+    "bg": "rgb(232, 230, 230)",
+    "rect": {
+     "x": 0,
+     "y": -13,
+     "w": 320,
+     "h": 137
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(29, 44, 243)",
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    },
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px",
+    "borderBottom": "3px solid rgb(29, 44, 243)"
+   },
+   {
+    "id": "",
+    "bg": "rgba(255, 255, 255, 0)",
+    "rect": {
+     "x": 219,
+     "y": 11,
+     "w": 73,
+     "h": 70
+    },
+    "shadow": "none",
+    "borderBottom": "0px solid rgb(65, 65, 65)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 36,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 45,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 54,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   }
+  ],
+  "wrapperPos": "static",
+  "navItems": [
+   {
+    "text": "",
+    "href": "https://www.theresewhite.com",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    }
+   }
+  ]
+ },
+ "navs": [
+  {
+   "ariaLabel": "Site",
+   "region": "header",
+   "visible": false,
+   "items": [
+    {
+     "text": "Home",
+     "href": "https://www.theresewhite.com",
+     "current": null
+    },
+    {
+     "text": "About Therese",
+     "href": "https://www.theresewhite.com/about-therese",
+     "current": null
+    },
+    {
+     "text": "Endorsements",
+     "href": "https://www.theresewhite.com/team-1-1",
+     "current": null
+    },
+    {
+     "text": "Case Studies",
+     "href": "https://www.theresewhite.com/case-studies",
+     "current": null
+    },
+    {
+     "text": "FAQ",
+     "href": "https://www.theresewhite.com/services-3",
+     "current": null
+    },
+    {
+     "text": "Blog",
+     "href": "https://www.theresewhite.com/blog",
+     "current": null
+    },
+    {
+     "text": "Contact",
+     "href": "https://www.theresewhite.com/contact",
+     "current": null
+    }
+   ]
+  }
+ ],
+ "headings": [],
+ "hamburger": [
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER_TOGGLE",
+   "aria": "Open navigation menu",
+   "visible": true
+  },
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "overlay-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "container-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgLayers_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgMedia_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "inlineContentParent-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "NAV",
+   "id": "MENU_AS_CONTAINER_EXPANDABLE_MENU",
+   "aria": "Site",
+   "visible": false
+  }
+ ],
+ "iframes": [],
+ "cookieDismissed": false,
+ "bannerText": null
+}

@@ -1,0 +1,2454 @@
+{
+ "url": "https://www.theresewhite.com/terms-of-use",
+ "title": "terms of use | Theresewhite",
+ "vw": 1440,
+ "docH": 2201,
+ "rootVars": {
+  "--wst-color-custom-17": "rgb(114,189,163)",
+  "--wst-font-style-body-large": "normal normal normal 21px/1.4em caudex,serif",
+  "--font_9": "normal normal normal 16px/1.4em forum,serif",
+  "--color_55": "199,199,199",
+  "--wst-color-fill-background-primary": "rgb(255,255,255)",
+  "--wst-color-custom-20": "rgb(29,47,41)",
+  "--color_43": "244,239,235",
+  "--color_37": "65,65,65",
+  "--wst-color-custom-11": "rgb(244,193,174)",
+  "--wst-color-custom-19": "rgb(57,95,82)",
+  "--wst-color-fill-base-shade-2": "rgb(199,199,199)",
+  "--color_12": "232,230,230",
+  "--color_60": "216,199,189",
+  "--wst-button-color-border-secondary-hover": "rgb(216,199,189)",
+  "--color_25": "24,34,38",
+  "--color_48": "216,199,189",
+  "--wst-font-style-body-small": "normal normal normal 16px/1.4em forum,serif",
+  "--wst-button-color-text-primary": "rgb(255,255,255)",
+  "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-color-line": "rgb(153,153,151)",
+  "--color_21": "182,200,208",
+  "--color_51": "255,255,255",
+  "--color_50": "255,255,255",
+  "--color_13": "199,199,199",
+  "--color_10": "176,176,176",
+  "--wst-color-custom-12": "rgb(233,161,132)",
+  "--wst-font-style-h6": "normal normal normal 30px/1.4em forum,serif",
+  "--color_54": "199,199,199",
+  "--wst-color-custom-7": "rgb(131,152,162)",
+  "--color_20": "87,79,75",
+  "--color_58": "216,199,189",
+  "--color_65": "199,199,199",
+  "--color_46": "65,65,65",
+  "--wst-color-custom-8": "rgb(72,101,115)",
+  "--color_2": "0,0,0",
+  "--wst-button-color-border-primary-hover": "rgb(216,199,189)",
+  "--color_3": "237,28,36",
+  "--wst-color-action": "rgb(216,199,189)",
+  "--wst-color-fill-accent-2": "rgb(34,73,90)",
+  "--color_41": "216,199,189",
+  "--color_22": "131,152,162",
+  "--color_30": "74,28,10",
+  "--wst-color-custom-13": "rgb(222,84,30)",
+  "--color_23": "72,101,115",
+  "--color_31": "178,222,207",
+  "--wst-color-custom-14": "rgb(148,56,20)",
+  "--color_42": "34,73,90",
+  "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+  "--wst-font-style-h2": "italic normal normal 50px/1.4em caudex,serif",
+  "--font_7": "normal normal normal 21px/1.4em caudex,serif",
+  "--wst-button-color-fill-secondary-hover": "rgb(216,199,189)",
+  "--font_6": "normal normal normal 30px/1.4em forum,serif",
+  "--wst-button-color-fill-primary-disabled": "rgb(199,199,199)",
+  "--font_3": "normal normal normal 40px/1.4em caudex,serif",
+  "--font_4": "normal normal normal 30px/1.4em caudex,serif",
+  "--wst-color-custom-16": "rgb(178,222,207)",
+  "--color_44": "72,101,115",
+  "--wst-button-color-text-secondary": "rgb(216,199,189)",
+  "--wst-color-custom-15": "rgb(74,28,10)",
+  "--wst-button-color-border-primary-disabled": "rgb(199,199,199)",
+  "--wst-color-custom-4": "rgb(158,146,139)",
+  "--wst-color-fill-base-shade-3": "rgb(153,153,151)",
+  "--color_56": "255,255,255",
+  "--wst-color-fill-accent-3": "rgb(244,239,235)",
+  "--theme-spx-ratio": "1px",
+  "--color_9": "114,114,114",
+  "--color_27": "233,161,132",
+  "--wst-color-custom-3": "rgb(232,220,213)",
+  "--color_61": "216,199,189",
+  "--wst-color-fill-base-shade-1": "rgb(232,230,230)",
+  "--color_33": "86,142,122",
+  "--color_0": "255,255,255",
+  "--wst-color-custom-18": "rgb(86,142,122)",
+  "--color_62": "255,255,255",
+  "--font_5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_39": "199,199,199",
+  "--font_8": "normal normal normal 18px/1.4em forum,serif",
+  "--font_2": "italic normal normal 50px/1.4em caudex,serif",
+  "--color_63": "255,255,255",
+  "--wst-color-custom-6": "rgb(182,200,208)",
+  "--color_4": "0,136,203",
+  "--color_7": "176,176,176",
+  "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+  "--color_52": "216,199,189",
+  "--wst-font-style-h3": "normal normal normal 40px/1.4em caudex,serif",
+  "--wst-color-fill-accent-1": "rgb(216,199,189)",
+  "--font_0": "normal normal normal 60px/1.4em caudex,serif",
+  "--color_34": "57,95,82",
+  "--color_47": "153,153,151",
+  "--wst-button-color-border-secondary": "rgb(216,199,189)",
+  "--wst-button-color-text-secondary-disabled": "rgb(199,199,199)",
+  "--color_45": "65,65,65",
+  "--wst-button-color-border-secondary-disabled": "rgb(199,199,199)",
+  "--color_59": "216,199,189",
+  "--wst-color-fill-background-secondary": "rgb(232,230,230)",
+  "--wst-color-fill-accent-4": "rgb(72,101,115)",
+  "--wst-color-custom-1": "rgb(199,199,199)",
+  "--color_5": "255,203,5",
+  "--color_1": "255,255,255",
+  "--color_14": "153,153,151",
+  "--wst-font-style-body-medium": "normal normal normal 18px/1.4em forum,serif",
+  "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h4": "normal normal normal 30px/1.4em caudex,serif",
+  "--wst-color-text-secondary": "rgb(153,153,151)",
+  "--color_17": "232,220,213",
+  "--color_40": "153,153,151",
+  "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+  "--wst-color-disabled": "rgb(199,199,199)",
+  "--color_16": "244,239,235",
+  "--color_24": "34,73,90",
+  "--color_19": "158,146,139",
+  "--wst-button-color-border-primary": "rgb(216,199,189)",
+  "--wst-button-color-fill-primary": "rgb(216,199,189)",
+  "--wst-color-fill-base-1": "rgb(255,255,255)",
+  "--wst-color-custom-5": "rgb(87,79,75)",
+  "--color_15": "65,65,65",
+  "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h5": "italic normal normal 26px/1.4em caudex,serif",
+  "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+  "--color_6": "114,114,114",
+  "--color_49": "216,199,189",
+  "--wst-color-custom-10": "rgb(24,34,38)",
+  "--wst-color-text-primary": "rgb(65,65,65)",
+  "--color_26": "244,193,174",
+  "--color_38": "232,230,230",
+  "--color_57": "255,255,255",
+  "--color_8": "255,255,255",
+  "--wst-color-subtitle": "rgb(65,65,65)",
+  "--color_36": "255,255,255",
+  "--color_18": "216,199,189",
+  "--wst-color-custom-9": "rgb(34,73,90)",
+  "--wst-color-fill-base-2": "rgb(65,65,65)",
+  "--color_64": "199,199,199",
+  "--color_53": "216,199,189",
+  "--color_28": "222,84,30",
+  "--wst-color-title": "rgb(65,65,65)",
+  "--color_35": "29,47,41",
+  "--color_32": "114,189,163",
+  "--color_29": "148,56,20",
+  "--color_11": "255,255,255",
+  "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+  "--wst-button-color-text-primary-hover": "rgb(216,199,189)",
+  "--wst-color-custom-2": "rgb(244,239,235)"
+ },
+ "sheetVars": {
+  "--color_0": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_1": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_2": {
+   "v": "0,0,0",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_3": {
+   "v": "237,28,36",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_4": {
+   "v": "0,136,203",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_5": {
+   "v": "255,203,5",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_6": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_7": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_8": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_9": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_10": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_11": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_12": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_13": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_14": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_15": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_16": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_17": {
+   "v": "232,220,213",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_18": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_19": {
+   "v": "158,146,139",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_20": {
+   "v": "87,79,75",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_21": {
+   "v": "182,200,208",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_22": {
+   "v": "131,152,162",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_23": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_24": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_25": {
+   "v": "24,34,38",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_26": {
+   "v": "244,193,174",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_27": {
+   "v": "233,161,132",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_28": {
+   "v": "222,84,30",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_29": {
+   "v": "148,56,20",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_30": {
+   "v": "74,28,10",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_31": {
+   "v": "178,222,207",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_32": {
+   "v": "114,189,163",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_33": {
+   "v": "86,142,122",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_34": {
+   "v": "57,95,82",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_35": {
+   "v": "29,47,41",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_36": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_37": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_38": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_39": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_40": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_41": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_42": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_43": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_44": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_45": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_46": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_47": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_48": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_49": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_50": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_51": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_52": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_53": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_54": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_55": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_56": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_57": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_58": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_59": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_60": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_61": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_62": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_63": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_64": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_65": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_0": {
+   "v": "normal normal normal 60px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_1": {
+   "v": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_2": {
+   "v": "italic normal normal 50px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_3": {
+   "v": "normal normal normal 40px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_4": {
+   "v": "normal normal normal 30px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_5": {
+   "v": "italic normal normal 26px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_6": {
+   "v": "normal normal normal 30px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_7": {
+   "v": "normal normal normal 21px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_8": {
+   "v": "normal normal normal 18px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_9": {
+   "v": "normal normal normal 16px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_10": {
+   "v": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  }
+ },
+ "fontFaces": [
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "loaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "helvetica-w01-roman",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "helvetica-w01-roman",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "helvetica-w01-roman",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "poppins-semibold",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway-semibold",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway-semibold",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway-semibold",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "raleway-semibold",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  }
+ ],
+ "textStyles": [
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "16.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 38,
+    "a": 3,
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mtateclr": 42
+   },
+   "count": 42,
+   "samples": [
+    "Effective date: August 1, 2026 Last updated: August 1, 2026",
+    "These Terms of Use (\"Terms\") govern your access to and use of ThereseWhite.com (the \"Site\"",
+    "You must be at least 18 years old to use the Site.",
+    "The Site provides general information about workplace mediation, conflict resolution, and "
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "25.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h2": 15
+   },
+   "regions": {
+    "section#comp-mtateclr": 15
+   },
+   "count": 15,
+   "samples": [
+    "1. Acceptance of these terms",
+    "2. No professional advice and no professional relationship",
+    "3. The workplace conflict cost calculator",
+    "4. Intellectual property"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 7,
+    "a": 5
+   },
+   "regions": {
+    "footer": 12
+   },
+   "count": 12,
+   "samples": [
+    "L. Therese White",
+    "Employment Mediator · Workplace Conflict Coach",
+    "10736 Jefferson Blvd, #363",
+    "Culver City, CA 90230"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "19px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "0.95px",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "a": 6
+   },
+   "regions": {
+    "header": 6
+   },
+   "count": 6,
+   "samples": [
+    "About Therese",
+    "Endorsements",
+    "Case Studies",
+    "FAQ"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "18px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "25.2px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h1": 1
+   },
+   "regions": {
+    "section#comp-mtateclr": 1
+   },
+   "count": 1,
+   "samples": [
+    "TERMS OF USE"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "16.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "underline",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mtateclr": 1
+   },
+   "count": 1,
+   "samples": [
+    "Privacy Policy"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "12px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "16.8px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#comp-mtateclr": 1
+   },
+   "count": 1,
+   "samples": [
+    "1"
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "role": "a",
+   "region": "header",
+   "y": 40,
+   "text": "About Therese",
+   "size": "19px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 40,
+   "text": "Endorsements",
+   "size": "19px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 40,
+   "text": "Case Studies",
+   "size": "19px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 40,
+   "text": "FAQ",
+   "size": "19px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 40,
+   "text": "Blog",
+   "size": "19px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 40,
+   "text": "Contact",
+   "size": "19px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "h1",
+   "region": "section#comp-mtateclr",
+   "y": 144,
+   "text": "TERMS OF USE",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 168,
+   "text": "Effective date: August 1, 2026 Last updated: August 1, 2026",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 206,
+   "text": "1. Acceptance of these terms",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 230,
+   "text": "These Terms of Use (\"Terms\") govern your access to and use of ThereseWhite.com (the \"Site\"), operated by Kennedy White, Inc. (\"we,\" \"us,\" or \"our\"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, do not use the Site.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 283,
+   "text": "You must be at least 18 years old to use the Site.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 320,
+   "text": "2. No professional advice and no professional relationship",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 344,
+   "text": "The Site provides general information about workplace mediation, conflict resolution, and related topics. Nothing on the Site is legal advice, human resources advice, psychological or medical advice, or professional advice of any kind.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 397,
+   "text": "Using the Site, reading its content, using any tool on it, or contacting us through it does not create an attorney-client relationship, a mediator-participant relationship, a coaching relationship, or any other professional or confidential relationship. A professional relationship is formed only through a signed written engagement agreement.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 449,
+   "text": "Every workplace dispute involves specific facts. Do not act or refrain from acting based on anything you read here without consulting a qualified professional about your particular situation.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 504,
+   "text": "3. The workplace conflict cost calculator",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 529,
+   "text": "The Site includes a calculator that produces estimated figures for the cost of workplace conflict.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 546,
+   "text": "The calculator is an illustrative educational tool only. Its outputs are rough estimates generated from general assumptions and industry averages, and from the values you enter. They are not an appraisal, valuation, audit, accounting opinion, actuarial estimate, or professional assessment of your organization's actual costs or exposure.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 599,
+   "text": "Do not rely on calculator outputs for budgeting, financial reporting, litigation, negotiation, or any decision with financial or legal consequences. We make no representation that the outputs are accurate for your organization.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 654,
+   "text": "4. Intellectual property",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 678,
+   "text": "All content on the Site — including text, graphics, logos, images, video, audio, the calculator and its underlying logic, and the arrangement of all of it — is owned by L. Therese White or its licensors and is protected by copyright, trademark, and other laws.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 732,
+   "text": "You may view, download, and print content from the Site for your own personal, non-commercial reference. You may not:",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 750,
+   "text": "Reproduce, republish, or distribute Site content commercially",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 767,
+   "text": "Modify or create derivative works from Site content",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 785,
+   "text": "Remove copyright, trademark, or other proprietary notices",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 803,
+   "text": "Use Site content to train machine learning or artificial intelligence systems",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 821,
+   "text": "Frame or mirror any part of the Site without written permission",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 839,
+   "text": "Requests for permission:",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mtateclr",
+   "y": 839,
+   "text": "Therese@ThereseWhite.com",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 876,
+   "text": "5. Acceptable use",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 900,
+   "text": "You agree not to:",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 918,
+   "text": "Use the Site for any unlawful purpose or in violation of these Terms",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 936,
+   "text": "Attempt to gain unauthorized access to the Site, its servers, or any connected systems",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 954,
+   "text": "Interfere with or disrupt the Site's operation, including through malware, denial-of-service attacks, or excessive automated requests",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 972,
+   "text": "Use automated tools to scrape, crawl, or harvest content or contact information from the Site",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 989,
+   "text": "Submit false, misleading, or fraudulent information",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1007,
+   "text": "Impersonate any person or entity",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1025,
+   "text": "Send unsolicited commercial messages to any address obtained from the Site",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1062,
+   "text": "6. Submissions",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1087,
+   "text": "Anything you submit through the Site — including form entries, inquiries, and messages — is submitted on a non-confidential basis and is not privileged. See the confidentiality note in our",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1104,
+   "text": "Privacy Policy",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1140,
+   "text": "You are responsible for the accuracy and legality of anything you submit. Do not submit information you are not authorized to disclose, including your employer's confidential information or information about a third party who has not consented to its disclosure.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1195,
+   "text": "7. Third-party links and services",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1220,
+   "text": "The Site links to third-party websites and uses third-party services for scheduling, email, analytics, and other functions. We do not control those sites and services and are not responsible for their content, availability, security, or practices. Links are provided for convenience and are not an endorsement.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1273,
+   "text": "1",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1273,
+   "text": "We do not guarantee that the Site will be available without interruption, error-free, or free of harmful components. We may modify, suspend, or discontinue any part of the Site at any time without notice.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1326,
+   "text": "9. Disclaimer of warranties",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1351,
+   "text": "THE SITE AND ALL CONTENT AND TOOLS ON IT ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT, AND ANY WARRANTY THAT SITE CONTENT IS ACCURATE, COMPLETE, CURRENT, OR RELIABLE.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1424,
+   "text": "10. Limitation of liability",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1448,
+   "text": "TO THE FULLEST EXTENT PERMITTED BY LAW, KENNEDY WHITE, INC. AND ITS OWNERS, EMPLOYEES, AND CONTRACTORS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, GOODWILL, OR BUSINESS OPPORTUNITY, ARISING OUT OF OR RELATING TO YOUR USE OF THE SITE, WHETHER BASED IN CONTRACT, TORT, STATUTE, OR ANY OTHER THEORY,",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1537,
+   "text": "OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE SITE WILL NOT EXCEED ONE HUNDRED U.S. DOLLARS ($100).",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1555,
+   "text": "Some jurisdictions do not allow certain limitations of liability, so some of the above may not apply to you.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1592,
+   "text": "11. Indemnification",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1617,
+   "text": "You agree to indemnify and hold harmless Kennedy White, Inc. and its owners, employees, and contractors from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising out of your use of the Site, your violation of these Terms, or your violation of any law or third-party right.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1672,
+   "text": "12. Governing law and venue",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1696,
+   "text": "These Terms are governed by the laws of the State of California, without regard to its conflict of laws rules. Any dispute arising out of or relating to these Terms or the Site will be brought exclusively in the state or federal courts located in Los Angeles County, California, and you consent to the personal jurisdiction of those courts.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1752,
+   "text": "13. Informal resolution first",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1776,
+   "text": "Before filing any claim, you agree to contact us at",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mtateclr",
+   "y": 1776,
+   "text": "Therese@ThereseWhite.com",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1831,
+   "text": "14. Severability and waiver",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1855,
+   "text": "If any provision of these Terms is found unenforceable, the remaining provisions remain in full force. Our failure to enforce any provision is not a waiver of our right to do so later.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1893,
+   "text": "15. Changes to these terms",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1917,
+   "text": "We may update these Terms at any time. Changes take effect when posted, and we will update the \"Last updated\" date. Your continued use of the Site after changes are posted constitutes acceptance.",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "h2",
+   "region": "section#comp-mtateclr",
+   "y": 1973,
+   "text": "16. Contact",
+   "size": "18px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#comp-mtateclr",
+   "y": 1997,
+   "text": "Email:",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#comp-mtateclr",
+   "y": 1997,
+   "text": "Therese@ThereseWhite.com",
+   "size": "12px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2032,
+   "text": "L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2050,
+   "text": "Employment Mediator · Workplace Conflict Coach",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2068,
+   "text": "10736 Jefferson Blvd, #363",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2086,
+   "text": "Culver City, CA 90230",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2104,
+   "text": "Therese@ThereseWhite.com",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2122,
+   "text": "323-291-4813​​​​",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2157,
+   "text": "© 2026 L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2032,
+   "text": "​Legal​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2050,
+   "text": "Privacy Policy",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2068,
+   "text": "Terms of Use",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2086,
+   "text": "Cookie Preferences",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2104,
+   "text": "Accessibility​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  }
+ ],
+ "sections": [
+  {
+   "tag": "HEADER",
+   "id": "SITE_HEADER",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 85
+   },
+   "position": "sticky",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 100,
+    "right": 1206,
+    "width": 1106,
+    "padTop": 8,
+    "padBottom": -23
+   },
+   "headings": [],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mtateclr",
+   "rect": {
+    "x": 0,
+    "y": 85,
+    "w": 1440,
+    "h": 1943
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [],
+   "content": {
+    "left": 230,
+    "right": 1203,
+    "width": 973,
+    "padTop": 56,
+    "padBottom": -4
+   },
+   "headings": [
+    "H1: TERMS OF USE",
+    "H2: 1. Acceptance of these terms",
+    "H2: ",
+    "H2: 2. No professional advice and no professional relationship",
+    "H2: 3. The workplace conflict cost calculator",
+    "H2: 4. Intellectual property",
+    "H2: 5. Acceptable use",
+    "H2: 6. Submissions",
+    "H2: 7. Third-party links and services",
+    "H2: 1We do not guarantee that the Site will be available without interruption, error-free, or free of harmful components. We may modify, suspend",
+    "H2: 9. Disclaimer of warranties",
+    "H2: 10. Limitation of liability"
+   ],
+   "imgCount": 0
+  },
+  {
+   "tag": "FOOTER",
+   "id": "SITE_FOOTER",
+   "rect": {
+    "x": 0,
+    "y": 2028,
+    "w": 1440,
+    "h": 173
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 252,
+    "right": 1187,
+    "width": 935,
+    "padTop": 4,
+    "padBottom": 26
+   },
+   "headings": [],
+   "imgCount": 0
+  }
+ ],
+ "buttons": [],
+ "links": [
+  {
+   "text": "",
+   "href": "https://www.theresewhite.com",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(0, 0, 238)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 100,
+    "y": 8,
+    "w": 248,
+    "h": 100
+   }
+  },
+  {
+   "text": "About Therese",
+   "href": "https://www.theresewhite.com/about-therese",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "forum 19px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 355,
+    "y": 29,
+    "w": 176,
+    "h": 43
+   }
+  },
+  {
+   "text": "Endorsements",
+   "href": "https://www.theresewhite.com/team-1-1",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "forum 19px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 539,
+    "y": 29,
+    "w": 173,
+    "h": 43
+   }
+  },
+  {
+   "text": "Case Studies",
+   "href": "https://www.theresewhite.com/case-studies",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "forum 19px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 721,
+    "y": 29,
+    "w": 162,
+    "h": 43
+   }
+  },
+  {
+   "text": "FAQ",
+   "href": "https://www.theresewhite.com/services-3",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "forum 19px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 891,
+    "y": 29,
+    "w": 87,
+    "h": 43
+   }
+  },
+  {
+   "text": "Blog",
+   "href": "https://www.theresewhite.com/blog",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "forum 19px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 986,
+    "y": 29,
+    "w": 89,
+    "h": 43
+   }
+  },
+  {
+   "text": "Contact",
+   "href": "https://www.theresewhite.com/contact",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(255, 255, 255)",
+   "deco": "none",
+   "font": "forum 19px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 1083,
+    "y": 29,
+    "w": 119,
+    "h": 43
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "section#comp-mtateclr",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 12px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 366,
+    "y": 839,
+    "w": 157,
+    "h": 14
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "section#comp-mtateclr",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 12px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 495,
+    "y": 1776,
+    "w": 157,
+    "h": 14
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "section#comp-mtateclr",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 12px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 266,
+    "y": 1997,
+    "w": 157,
+    "h": 14
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 252,
+    "y": 2104,
+    "w": 196,
+    "h": 17
+   }
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://www.theresewhite.com/privacy-policy",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 1094,
+    "y": 2051,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Terms of Use",
+   "href": "https://www.theresewhite.com/terms-of-use",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 1099,
+    "y": 2069,
+    "w": 88,
+    "h": 17
+   }
+  },
+  {
+   "text": "Cookie Preferences",
+   "href": "https://www.theresewhite.com/cookie-preferences",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 1055,
+    "y": 2087,
+    "w": 132,
+    "h": 17
+   }
+  },
+  {
+   "text": "Accessibility​",
+   "href": "https://www.theresewhite.com/accessibility",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 1105,
+    "y": 2105,
+    "w": 82,
+    "h": 17
+   }
+  }
+ ],
+ "images": [
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_242,h_94,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+   "alt": "Therese High Res Logo.png",
+   "region": "header",
+   "rect": {
+    "x": 103,
+    "y": 11,
+    "w": 242,
+    "h": 94
+   },
+   "natural": "242x94",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "6px (ancestor)",
+   "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px (ancestor)",
+   "border": "3px solid rgb(29, 44, 243) (ancestor)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  }
+ ],
+ "forms": [],
+ "colors": {
+  "rgb(232, 230, 230)": {
+   "count": 3,
+   "props": {
+    "bg": 3
+   },
+   "regions": {
+    "other": 1,
+    "header": 1,
+    "footer": 1
+   }
+  },
+  "rgb(29, 44, 243)": {
+   "count": 3,
+   "props": {
+    "bg": 1,
+    "border": 2
+   },
+   "regions": {
+    "header": 3
+   }
+  },
+  "rgba(255, 222, 95, 0)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "header": 1
+   }
+  },
+  "rgb(216, 199, 189)": {
+   "count": 2,
+   "props": {
+    "border": 2
+   },
+   "regions": {
+    "header": 2
+   }
+  },
+  "rgb(13, 99, 209)": {
+   "count": 6,
+   "props": {
+    "bg": 6
+   },
+   "regions": {
+    "header": 6
+   }
+  },
+  "rgb(255, 255, 255)": {
+   "count": 18,
+   "props": {
+    "border": 12,
+    "text": 6
+   },
+   "regions": {
+    "header": 18
+   }
+  },
+  "rgb(65, 65, 65)": {
+   "count": 72,
+   "props": {
+    "text": 72
+   },
+   "regions": {
+    "section#comp-mtateclr": 60,
+    "footer": 12
+   }
+  }
+ },
+ "header": {
+  "rect": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 85
+  },
+  "position": "sticky",
+  "top": "0px",
+  "z": "53",
+  "bg": "rgba(0, 0, 0, 0)",
+  "bgLayers": [
+   {
+    "id": "",
+    "testid": "colorUnderlay",
+    "bg": "rgb(232, 230, 230)",
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 85
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(29, 44, 243)",
+    "rect": {
+     "x": 100,
+     "y": 8,
+     "w": 248,
+     "h": 100
+    },
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px",
+    "borderBottom": "3px solid rgb(29, 44, 243)"
+   },
+   {
+    "id": "",
+    "bg": "rgba(255, 222, 95, 0)",
+    "rect": {
+     "x": 354,
+     "y": 28,
+     "w": 849,
+     "h": 45
+    },
+    "shadow": "rgb(61, 155, 233) 4.81px -1.38px 2px -39px inset",
+    "borderBottom": "1px dashed rgb(216, 199, 189)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(13, 99, 209)",
+    "rect": {
+     "x": 355,
+     "y": 29,
+     "w": 176,
+     "h": 43
+    },
+    "shadow": "none",
+    "borderBottom": "1px solid rgb(255, 255, 255)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(13, 99, 209)",
+    "rect": {
+     "x": 539,
+     "y": 29,
+     "w": 173,
+     "h": 43
+    },
+    "shadow": "none",
+    "borderBottom": "1px solid rgb(255, 255, 255)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(13, 99, 209)",
+    "rect": {
+     "x": 721,
+     "y": 29,
+     "w": 162,
+     "h": 43
+    },
+    "shadow": "none",
+    "borderBottom": "1px solid rgb(255, 255, 255)"
+   }
+  ],
+  "wrapperPos": "static",
+  "navItems": [
+   {
+    "text": "",
+    "href": "https://www.theresewhite.com",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 100,
+     "y": 8,
+     "w": 248,
+     "h": 100
+    }
+   },
+   {
+    "text": "About Therese",
+    "href": "https://www.theresewhite.com/about-therese",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 355,
+     "y": 29,
+     "w": 176,
+     "h": 43
+    }
+   },
+   {
+    "text": "Endorsements",
+    "href": "https://www.theresewhite.com/team-1-1",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 539,
+     "y": 29,
+     "w": 173,
+     "h": 43
+    }
+   },
+   {
+    "text": "Case Studies",
+    "href": "https://www.theresewhite.com/case-studies",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 721,
+     "y": 29,
+     "w": 162,
+     "h": 43
+    }
+   },
+   {
+    "text": "FAQ",
+    "href": "https://www.theresewhite.com/services-3",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 891,
+     "y": 29,
+     "w": 87,
+     "h": 43
+    }
+   },
+   {
+    "text": "Blog",
+    "href": "https://www.theresewhite.com/blog",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 986,
+     "y": 29,
+     "w": 89,
+     "h": 43
+    }
+   },
+   {
+    "text": "Contact",
+    "href": "https://www.theresewhite.com/contact",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 1083,
+     "y": 29,
+     "w": 119,
+     "h": 43
+    }
+   }
+  ]
+ },
+ "navs": [
+  {
+   "ariaLabel": "Site",
+   "region": "header",
+   "visible": true,
+   "items": [
+    {
+     "text": "About Therese",
+     "href": "https://www.theresewhite.com/about-therese",
+     "current": null
+    },
+    {
+     "text": "Endorsements",
+     "href": "https://www.theresewhite.com/team-1-1",
+     "current": null
+    },
+    {
+     "text": "Case Studies",
+     "href": "https://www.theresewhite.com/case-studies",
+     "current": null
+    },
+    {
+     "text": "FAQ",
+     "href": "https://www.theresewhite.com/services-3",
+     "current": null
+    },
+    {
+     "text": "Blog",
+     "href": "https://www.theresewhite.com/blog",
+     "current": null
+    },
+    {
+     "text": "Contact",
+     "href": "https://www.theresewhite.com/contact",
+     "current": null
+    }
+   ]
+  }
+ ],
+ "headings": [
+  {
+   "tag": "H1",
+   "region": "section#comp-mtateclr",
+   "text": "TERMS OF USE"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "1. Acceptance of these terms"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": ""
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "2. No professional advice and no professional relationship"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "3. The workplace conflict cost calculator"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "4. Intellectual property"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "5. Acceptable use"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "6. Submissions"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "7. Third-party links and services"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "1We do not guarantee that the Site will be available without interruption, error-free, or free of harmful components. We may modify, suspend, or discontinue any part of the Site at any time without notice."
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "9. Disclaimer of warranties"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "10. Limitation of liability"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "11. Indemnification"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "12. Governing law and venue"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "13. Informal resolution first"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "14. Severability and waiver"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "15. Changes to these terms"
+  },
+  {
+   "tag": "H2",
+   "region": "section#comp-mtateclr",
+   "text": "16. Contact"
+  }
+ ],
+ "hamburger": [],
+ "iframes": [],
+ "cookieDismissed": false,
+ "bannerText": null
+}

@@ -1,0 +1,639 @@
+<meta charset="utf-8">
+<title>Therese White Style Bible</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Forum&family=Syncopate:wght@700&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* Layout: one 980px column like the Wix site itself, with full-width gray bands
+   between chapters. This page commits to one light look on purpose: it shows
+   the live site's colors, and a dark version would misrepresent them. */
+:root {
+  color-scheme: light;
+  /* The live site's own colors, used to build this page */
+  --charcoal: #414141;
+  --white: #ffffff;
+  --nav-blue: #0d63d1;
+  --button-blue: #2e92e5;
+  --band-blue: #3d9be9;
+  --electric: #1d2cf3;
+  --gray: #e8e6e6;
+  --cream: #f4efeb;
+  --sand: #d8c7bd;
+  --bar: #282626;
+  --red: #ed4545;
+  --dark-red: #8b0000;
+  --muted: #6b6866; /* page chrome only, not a site color */
+  --sug: #1a78c9;   /* marks our suggestions; also the suggested button blue */
+  --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-nav: "Forum", Georgia, serif;
+  --font-blog: "Caudex", Georgia, serif;
+  --font-button: "Syncopate", "Arial Black", Arial, sans-serif;
+  --rec-serif: "Source Serif 4", Georgia, serif;
+  --rec-sans: "Source Sans 3", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { background: var(--white); color: var(--charcoal); font-family: var(--font-body); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band { background: var(--gray); }
+.band.cream { background: var(--cream); }
+section { padding-block: 56px; border-bottom: 1px solid var(--sand); }
+h1, h2, h3 { color: #000; text-wrap: balance; margin: 0; font-weight: 700; }
+/* The site's reset strips list markers; put them back where the guide uses them. */
+ul:not(.rules) { list-style: disc; }
+ol:not(.rules) { list-style: decimal; }
+h2 { font-size: 34px; line-height: 1.15; }
+h3 { font-size: 20px; margin-top: 8px; }
+p { margin: 0; max-width: 68ch; }
+.stack { display: grid; gap: 16px; }
+.stack-lg { display: grid; gap: 32px; }
+.stack > *, .stack-lg > * { min-width: 0; }
+.eyebrow { font-family: var(--font-nav); font-size: 19px; letter-spacing: 0.05em; color: var(--nav-blue); }
+.lede { font-size: 18px; line-height: 1.4; }
+.note { font-size: 14px; color: var(--muted); }
+code, .code { font-family: var(--mono); font-size: 0.85em; background: var(--cream); padding: 1px 5px; border-radius: 3px; overflow-wrap: anywhere; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--electric); outline-offset: 2px; }
+img { max-width: 100%; height: auto; display: block; }
+.shot { border: 1px solid var(--sand); background: var(--white); }
+figure { margin: 0; display: grid; gap: 6px; }
+figcaption { font-size: 13px; color: var(--muted); }
+
+/* Masthead uses the live header as its own model */
+.mast { background: var(--gray); border-bottom: 1px solid var(--sand); }
+.mast .wrap { padding-block: 40px 48px; display: grid; gap: 20px; }
+.mast-logo { width: 242px; border: 3px solid var(--electric); border-radius: 6px; box-shadow: 0 6px 14px rgba(0,0,0,.35); background: var(--white); }
+.mast h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.05; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc a { font-family: var(--font-nav); font-size: 17px; letter-spacing: 0.05em; text-decoration: none; background: var(--nav-blue); color: var(--white); border: 1px solid var(--white); padding: 6px 14px; transition: background-color .08s, color .08s; }
+.toc a:hover { background: var(--white); color: var(--nav-blue); border-color: var(--nav-blue); }
+
+/* Rules of use */
+.rules { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; counter-reset: r; }
+.rules li { counter-increment: r; display: grid; grid-template-columns: 34px 1fr; gap: 8px; align-items: baseline; }
+.rules li::before { content: "#" counter(r); font-weight: 700; color: var(--bar); letter-spacing: 1px; }
+
+/* Decisions */
+.decisions { display: grid; gap: 12px; }
+.decision { background: var(--white); border: 1px solid var(--sand); padding: 16px 18px; display: grid; gap: 6px; }
+.decision strong { color: #000; }
+.rec { font-size: 14px; }
+.rec b { color: var(--nav-blue); }
+
+/* Swatches */
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.sw { border: 1px solid var(--sand); background: var(--white); display: grid; grid-template-rows: 84px auto; }
+.sw .chip { border-bottom: 1px solid var(--sand); }
+.sw .meta { padding: 10px 12px; display: grid; gap: 2px; font-size: 13px; min-width: 0; }
+.sw .hex { font-family: var(--mono); font-size: 14px; font-weight: 700; color: #000; }
+
+/* Type specimens */
+.specimens { display: grid; gap: 0; border-top: 1px solid var(--sand); }
+.spec { display: grid; grid-template-columns: 190px 1fr 210px; gap: 20px; padding-block: 18px; border-bottom: 1px solid var(--sand); align-items: baseline; }
+.spec.head { padding-block: 10px; font-size: 13px; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: .06em; }
+.spec .sug, .sugtxt { font-size: 13px; color: var(--sug); display: grid; gap: 2px; }
+.spec .sug b, .sugtxt b { font-size: 14px; }
+
+/* Color rows: live color, what it does, our suggestion */
+.crows { display: grid; border-top: 1px solid var(--sand); }
+.crow { display: grid; grid-template-columns: 170px 1fr 230px; gap: 20px; padding-block: 12px; border-bottom: 1px solid var(--sand); align-items: center; }
+.crow.head { padding-block: 8px; font-size: 13px; font-weight: 700; color: #000; text-transform: uppercase; letter-spacing: .06em; }
+.crow > * { min-width: 0; }
+.cchip { display: flex; gap: 10px; align-items: center; }
+.cchip .c { width: 44px; height: 44px; flex: none; border: 1px solid var(--sand); }
+.cchip .hex { font-family: var(--mono); font-size: 14px; font-weight: 700; color: #000; }
+.cchip .why { font-size: 13px; color: var(--sug); }
+.cchip.keep .hex { font-family: var(--font-body); color: var(--muted); font-weight: 400; }
+.cuse { font-size: 14px; display: grid; gap: 2px; }
+.cuse .ratio { font-size: 13px; color: var(--muted); }
+.cuse .ratio.fail { color: #b3261e; }
+
+/* Side by side */
+.cmp { display: grid; gap: 28px; }
+.cmp-row { display: grid; gap: 10px; }
+.cmp-pair { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
+.cmp-pair > * { min-width: 0; }
+.pane { border: 1px solid var(--sand); display: grid; grid-template-rows: auto 1fr; grid-template-columns: minmax(0,1fr); background: var(--white); }
+.pane .stage > * { max-width: 100%; }
+.pane .tag { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 6px 12px; background: var(--gray); color: #000; }
+.pane.sug .tag { background: var(--sug); color: var(--white); }
+.pane .stage { padding: 22px; display: grid; gap: 10px; align-content: center; justify-items: center; }
+.pill.sugg { background: #1a78c9; }
+.pill.sugg:hover { background: #d32f2f; }
+.spec .lbl { font-size: 13px; color: var(--muted); display: grid; gap: 2px; }
+.spec .lbl b { color: #000; font-size: 14px; }
+.spec .sample { min-width: 0; overflow-wrap: anywhere; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--sand); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 640px; background: var(--white); }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--gray); vertical-align: top; }
+th { background: var(--gray); color: #000; font-weight: 700; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Recreated components */
+.demo { background: var(--gray); padding: 28px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center; }
+.pill { font-family: var(--font-button); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; color: var(--white); background: var(--button-blue); border: 0; border-radius: 100px; width: 341px; max-width: 100%; height: 51px; cursor: pointer; transition: background-color .4s; }
+.pill:hover { background: var(--red); }
+.pill.mobile { width: 198px; height: 39px; border-radius: 7px; background: var(--band-blue); font-size: 10px; }
+.navdemo { display: flex; flex-wrap: wrap; gap: 8px; outline: 1px dashed var(--sand); outline-offset: 2px; border-radius: 4px; }
+.navdemo a { font-family: var(--font-nav); font-size: 19px; letter-spacing: 0.95px; text-decoration: none; height: 43px; display: inline-flex; align-items: center; padding: 0 22px; background: var(--nav-blue); color: var(--white); border: 1px solid var(--white); transition: background-color .08s, color .08s; }
+.navdemo a:hover, .navdemo a[aria-current="page"] { background: var(--white); color: var(--nav-blue); border-color: var(--nav-blue); }
+.divider { width: 250px; max-width: 100%; height: 3px; background: var(--bar); margin: 0 auto; }
+.two { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; }
+.two > * { min-width: 0; }
+.footdemo { background: var(--gray); padding: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 15px; line-height: 18px; }
+.footdemo div { display: grid; gap: 0; }
+.footdemo .right { text-align: right; }
+.card3 { background: var(--white); border: 1px solid #0c4426; box-shadow: -0.52px 9.99px 50px -26px #22495a; padding: 24px; max-width: 325px; display: grid; gap: 10px; }
+.card3 h4 { margin: 0; font-size: 20px; line-height: 28px; letter-spacing: .6px; color: #000; }
+.card3 p { font-size: 16px; line-height: 22.4px; }
+.framed { border: 4px solid var(--electric); box-shadow: 0 4px 12px rgba(0,0,0,.35); }
+
+/* Page gallery */
+.pages { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 20px; }
+.page-card { border: 1px solid var(--sand); background: var(--white); display: grid; grid-template-rows: auto 1fr; }
+.page-card .thumb { height: 300px; overflow: hidden; border-bottom: 1px solid var(--sand); background: var(--gray); }
+.page-card .thumb img { width: 100%; }
+.page-card .body { padding: 14px 16px; display: grid; gap: 8px; align-content: start; font-size: 14px; }
+.page-card h3 { margin: 0; font-size: 18px; }
+.page-card ol { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+
+/* Voice */
+.quotes { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.quotes blockquote { margin: 0; background: var(--white); border-left: 3px solid var(--bar); padding: 12px 16px; font-weight: 700; font-size: 17px; line-height: 1.35; color: #000; }
+
+.diff { display: grid; gap: 0; border-top: 1px solid var(--sand); }
+.diff > div { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-block: 12px; border-bottom: 1px solid var(--sand); font-size: 15px; }
+.diff > div > * { min-width: 0; }
+.diff .hd { font-weight: 700; color: #000; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+
+@media (max-width: 640px) {
+  .spec, .two, .diff > div, .crow, .cmp-pair { grid-template-columns: minmax(0,1fr); gap: 8px; }
+  .spec.head, .crow.head { display: none; }
+  .demo { padding: 20px 12px; }
+  .footdemo .right { text-align: left; }
+  section { padding-block: 40px; }
+  h2 { font-size: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Recommended system */
+.rec-btn { font-family: var(--rec-sans); font-weight: 600; font-size: 17px; color: #fff; background: #1a78c9; border: 2px solid #1a78c9; border-radius: 100px; height: 52px; padding: 0 28px; cursor: pointer; transition: background-color .2s, border-color .2s; }
+.rec-btn:hover { background: #145e9e; border-color: #145e9e; }
+.rec-btn.ghost { background: transparent; color: #1a78c9; }
+.rec-btn.ghost:hover { background: #eaf3fb; color: #145e9e; }
+.rec-btn.small { height: 44px; font-size: 15px; padding: 0 20px; }
+.rec-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; background: #f4efeb; padding: 14px 20px; border-bottom: 1px solid #e3dad3; font-family: var(--rec-sans); }
+.rec-header img { width: 161px; }
+.rec-header nav { display: flex; flex-wrap: wrap; gap: 22px; }
+.rec-header nav a { color: #1c1c1c; text-decoration: none; font-size: 16px; padding-block: 4px; border-bottom: 2px solid transparent; }
+.rec-header nav a:hover, .rec-header nav a[aria-current="page"] { border-bottom-color: #1a78c9; }
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <img class="mast-logo" src="img/logo.png" width="242" height="94" alt="L. Therese White, Employment Mediator, Workplace Conflict Coach">
+    <div class="eyebrow">theresewhite.com</div>
+    <h1>Therese White Style Bible</h1>
+    <p class="lede">This is how the live Wix site at www.theresewhite.com actually looks. Every value here was measured from the rendered pages on October 16, 2026, not copied from Wix's theme settings, because the theme settings turned out not to describe what visitors see. Values marked <em>estimated</em> were read off a screenshot.</p>
+    <nav class="toc" aria-label="Chapters">
+      <a href="#decisions">Decisions</a><a href="#red-team">Red team</a><a href="#recommended">Recommended</a><a href="#color">Color</a><a href="#backgrounds">Backgrounds</a><a href="#type">Type</a><a href="#buttons">Buttons</a><a href="#header">Header</a><a href="#footer">Footer</a><a href="#layout">Layout</a><a href="#images">Images</a><a href="#pages">Pages</a><a href="#voice">Voice</a><a href="#rebuild">Rebuild gaps</a><a href="#side-by-side">Side by side</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section><div class="wrap stack">
+  <h2>How to use this</h2>
+  <ol class="rules">
+    <li><span>The goal is a rebuild that a visitor cannot tell apart from the Wix site. When this guide and the rebuild disagree, the guide wins, unless a decision below says otherwise.</span></li>
+    <li><span>Keep the Wix web addresses, including the odd ones such as <code>/services-3</code> for the FAQ and <code>/team-1-1</code> for Endorsements. Old links and Google rankings then keep working with no redirects.</span></li>
+    <li><span>Copy the look, not the defects. A few things on the live site are broken, and they are listed under Decisions so nobody copies them by accident.</span></li>
+    <li><span>Mobile is the one place where "exact" is not possible. Wix shows phones a fixed 320-pixel-wide layout and magnifies it. The rebuild should reproduce the mobile look with a layout that genuinely fits the phone.</span></li>
+    <li><span>Blue text marked <b style="color:var(--sug)">Suggested</b> is optional. These are improvements to readability and consistency that we can offer Therese. The rebuild matches Wix unless a suggestion is adopted.</span></li>
+  </ol>
+</div></section>
+
+<div class="band cream"><section id="decisions"><div class="wrap stack">
+  <div class="eyebrow">Decided October 17, 2026</div>
+  <h2>Seven rulings on what "exact" means</h2>
+  <p>James ruled on each of these. They override the rest of this guide where the two disagree.</p>
+  <div class="decisions">
+    <div class="decision"><strong>1. Heading colors change from page to page. Copy them exactly.</strong><p>Black on Home, dark red on About and Case Studies, periwinkle on Endorsements, navy on FAQ. The goal is that each rebuilt page matches its Wix page.</p></div>
+    <div class="decision"><strong>2. Replace the button font with a free lookalike.</strong><p>Button labels on Wix use Lulo Clean, which Wix licenses for its own sites only. The rebuild uses Syncopate Bold, a free Google font with the same wide capitals. Every button in this guide is set in it.</p></div>
+    <div class="decision"><strong>3. Fix the About page overlap.</strong><p>On a wide screen, the dog photo covers half of the words "About Therese" and part of the award image. The rebuild keeps the same pieces but lays them out so nothing overlaps.</p></div>
+    <div class="decision"><strong>4. Contact leads with Calendly, as on Wix.</strong><p>The rebuild's emailed contact form comes off the Contact page unless Therese asks for a second way in. The calculator's email step still uses Web3Forms and is not affected.</p></div>
+    <div class="decision"><strong>5. Buttons turn red when you point at them.</strong><p>Every blue pill fades to red (<code>#ED4545</code>) over 0.4 seconds, as on Wix. The rebuild currently turns them darker blue and will be changed.</p></div>
+    <div class="decision"><strong>6. Remove the Privacy Policy drafting notes.</strong><p>The live Wix policy still reads "list whatever is actually running" and "(e.g. Kit, formerly ConvertKit)". The rebuild's privacy text has none of these. The live Wix page needs the same fix in the Wix editor.</p></div>
+    <div class="decision"><strong>7. Raise phone text to at least 15 pixels.</strong><p>The homepage bullets are 10px in Wix's 320-pixel phone layout, about 12px on a real phone. The rebuild keeps the phone layout but sets no reading text below 15px.</p></div>
+  </div>
+</div></section></div>
+
+<section id="build-answers"><div class="wrap stack">
+  <div class="eyebrow">Decided October 18, 2026</div>
+  <h2>How the first build proceeds</h2>
+  <ol class="rules">
+    <li><span><b>Look:</b> the first build is as close to the current Wix site as possible. It follows the "Wix today" chapters of this guide. The Recommended system below is the pitch for a second phase.</span></li>
+    <li><span><b>Web addresses:</b> switch to the Wix addresses (<code>/about-therese</code>, <code>/services-3</code> and the rest). This is low priority until Therese and Bill agree to the move.</span></li>
+    <li><span><b>Missing pages:</b> rebuild Case Studies and its three follow-on pages, Accessibility and Cookie Preferences.</span></li>
+    <li><span><b>Contact:</b> lead with Calendly, as on Wix.</span></li>
+    <li><span><b>Pages outside the menu</b> (newsletter archive, Triple Take Tuesday issues, /challenges, /book-online and the rest): rebuild them to match the current site.</span></li>
+    <li><span><b>Services and Process:</b> take them out of the menu but keep the pages for later use.</span></li>
+  </ol>
+</div></section>
+
+<div class="band"><section id="red-team"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Red team</div><h2>What a senior designer would challenge</h2>
+  <p>The visitor is an HR leader or general counsel with a live, painful conflict. The site has one job: make that person confident enough to book a confidential assessment. Each finding below is judged against that job. Findings tagged <b>[Measured]</b> come from this guide's own data. Findings tagged <b>[Judgment]</b> are design opinion based on common practice for professional-services sites, not tested on her visitors.</p></div>
+  <div class="decisions">
+    <div class="decision"><strong>1. "Click Here" tells the visitor nothing. [Judgment]</strong><p>Every main button says "Click Here," in wide all-capital letters. A button that names its outcome, such as "Book a confidential assessment," tells the visitor exactly what they are agreeing to. That lowers the hesitation right at the moment of decision. Screen readers also announce "Click Here" with no context, which is an accessibility failure.</p><p class="rec"><b>Recommend:</b> specific labels in sentence case: "Book a confidential assessment" and "See what this conflict costs."</p></div>
+    <div class="decision"><strong>2. Twenty-two colors and seven blues read as unplanned. [Measured]</strong><p>Heading colors change on every page: black, dark red, periwinkle, navy. A visitor does not count colors, but they do sense when a site is inconsistent. Consistency is a large part of what makes a professional look established.</p><p class="rec"><b>Recommend:</b> seven colors in total, one brand blue, and one heading color everywhere.</p></div>
+    <div class="decision"><strong>3. Red means alarm, and the site uses it for its main button. [Measured + Judgment]</strong><p>Every button turns red when pointed at, and red also sets headings on two pages. She sells calm resolution of conflict. Red is the right color for exactly one message on this site: what the conflict is costing.</p><p class="rec"><b>Recommend:</b> buttons darken to a deeper blue on hover. Reserve red for the cost-of-conflict message.</p></div>
+    <div class="decision"><strong>4. About ninety text styles in five typefaces. [Measured]</strong><p>Arial, Forum, Caudex, Lulo Clean and three one-off faces. Each page invents its own sizes. The result is busy, and the blog sets long posts in Forum, a display face that tires the eye over many paragraphs.</p><p class="rec"><b>Recommend:</b> two typefaces and seven sizes, used everywhere.</p></div>
+    <div class="decision"><strong>5. The phone version is a shrunken desktop. [Measured]</strong><p>Wix shows phones a fixed 320-pixel layout, magnified, with homepage text around 12px. Many first visits, especially from ads, happen on a phone. A visitor who has to pinch to read will usually leave rather than book.</p><p class="rec"><b>Recommend:</b> a layout designed for the phone first, with reading text never below 16px and a booking button always within reach.</p></div>
+    <div class="decision"><strong>6. Her strongest proof is halfway down the page. [Measured + Judgment]</strong><p>"30+ years," "1,100+ mediations," and the EEOC, AAA and Los Angeles County panel logos are what make a stranger trust her. On the homepage the logos sit below the fold, after the video band.</p><p class="rec"><b>Recommend:</b> put the numbers and a strip of panel logos directly under the opening headline.</p></div>
+    <div class="decision"><strong>7. The AI avatar video may undercut trust. [Judgment]</strong><p>She sells human judgment in emotional situations. Leading with an AI version of herself, even with the honest "FULL DISCLOSURE" line, asks the visitor to trust a stand-in. This is the single most subjective finding here, and it is Therese's call.</p><p class="rec"><b>Recommend:</b> a short, plain phone-camera video of the real Therese, or a strong photo and a quotation, if she is open to it.</p></div>
+    <div class="decision"><strong>8. Six filled blue tabs is an older menu pattern. [Judgment]</strong><p>Each menu item is a heavy blue box, so all six compete with the actual call to action. Current practice for service businesses is quiet text links plus one prominent booking button in the header.</p><p class="rec"><b>Recommend:</b> text links, with the current page underlined, and a "Book an assessment" button at the right end of the header.</p></div>
+    <div class="decision"><strong>9. Five color pairings fail the accessibility standard. [Measured]</strong><p>These include the main button label, the white headings on the blue band and the blog hashtags. Small-business websites are a common target of accessibility lawsuits in California, and hard-to-read text also quietly costs trust.</p><p class="rec"><b>Recommend:</b> every text color passes at least 4.5 to 1, or 3 to 1 for large headings.</p></div>
+    <div class="decision"><strong>10. What already works, and should stay. [Judgment]</strong><p>Her voice is distinctive and confident, and nothing in the redesign should sand it down. The public "basic pricing starts at $5,000" is unusual candor that filters out poor-fit leads. "No pitch, no pressure," a direct phone line, and the cost calculator are all strong. The pill-shaped button and the warm gray and cream backgrounds are recognizably hers and can carry forward.</p></div>
+  </div>
+</div></section></div>
+
+<section id="recommended"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Recommended system</div><h2>A simpler system for phase two</h2>
+  <p>The current trend for trusted professional-services sites is restraint: one accent color, generous white space, a serif for headlines that signals experience, a plain sans-serif for reading, real photographs of the person, proof near the top, and one call to action repeated throughout. [Judgment] The system below applies that to Therese's existing colors so the site still looks like hers.</p></div>
+
+  <h3>Seven colors</h3>
+  <div class="crows">
+    <div class="crow head"><span>Color</span><span>Job</span><span>Replaces on Wix</span></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#1c1c1c"></span><span class="hex">#1C1C1C</span></div><div class="cuse"><span><b>Ink.</b> Every heading, on every page.</span><span class="ratio">17 to 1 on white.</span></div><div class="cuse"><span>#000000, #8B0000, #566FB8 and #3E569E as heading colors</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#414141"></span><span class="hex">#414141</span></div><div class="cuse"><span><b>Body.</b> All reading text.</span><span class="ratio">10.2 to 1 on white.</span></div><div class="cuse"><span>Unchanged</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#1a78c9"></span><span class="hex">#1A78C9</span></div><div class="cuse"><span><b>Brand blue.</b> Buttons, links, the active menu underline. Darkens to #145E9E on hover.</span><span class="ratio">4.6 to 1 with white text.</span></div><div class="cuse"><span>#0D63D1, #2E92E5, #3D9BE9, #1D2CF3, #4BBFF0, #4EC0F1</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#12355b"></span><span class="hex">#12355B</span></div><div class="cuse"><span><b>Deep navy.</b> The one dark section color, for the proof and calculator bands.</span><span class="ratio">12 to 1 with white text.</span></div><div class="cuse"><span>The black bands and #282626</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#f4efeb"></span><span class="hex">#F4EFEB</span></div><div class="cuse"><span><b>Cream.</b> The one alternate section background, plus the header and footer.</span></div><div class="cuse"><span>#E8E6E6, #C7C7C7, #FAFAFA</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#ffffff"></span><span class="hex">#FFFFFF</span></div><div class="cuse"><span><b>White.</b> The main page background.</span></div><div class="cuse"><span>Unchanged</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#c62828"></span><span class="hex">#C62828</span></div><div class="cuse"><span><b>Cost red.</b> The cost-of-conflict message and urgent notes only. Never on buttons.</span><span class="ratio">5.6 to 1 on white.</span></div><div class="cuse"><span>#ED4545 and #8B0000</span></div></div>
+  </div>
+
+  <h3>Two typefaces, seven sizes</h3>
+  <p>Headlines use <b>Source Serif 4</b>, a sturdy, readable serif that signals experience without looking old-fashioned. Everything else uses <b>Source Sans 3</b>, its matching sans-serif. Both are free Google fonts designed as a pair. Forum, Caudex, Arial and Lulo Clean all retire.</p>
+  <div class="specimens">
+    <div class="spec head"><span>Role</span><span>Sample</span><span>Desktop / phone</span></div>
+    <div class="spec"><div class="lbl"><b>Display</b>Homepage headline only</div><div class="sample" style="font-family:var(--rec-serif);font-weight:600;font-size:48px;line-height:1.15;color:#1c1c1c">When both people are too important to lose.</div><div class="sug"><b>48px / 34px</b>Semibold, line height 1.15</div></div>
+    <div class="spec"><div class="lbl"><b>Heading 1</b>Page titles</div><div class="sample" style="font-family:var(--rec-serif);font-weight:600;font-size:36px;line-height:1.2;color:#1c1c1c">Case Studies</div><div class="sug"><b>36px / 28px</b>Semibold, line height 1.2</div></div>
+    <div class="spec"><div class="lbl"><b>Heading 2</b>Section titles</div><div class="sample" style="font-family:var(--rec-serif);font-weight:600;font-size:28px;line-height:1.25;color:#1c1c1c">My Working Peace Blueprint</div><div class="sug"><b>28px / 24px</b>Semibold, line height 1.25</div></div>
+    <div class="spec"><div class="lbl"><b>Heading 3</b>Cards, steps, questions</div><div class="sample" style="font-family:var(--rec-sans);font-weight:700;font-size:22px;line-height:1.3;color:#1c1c1c">I'm not an attorney. And that's a good thing.</div><div class="sug"><b>22px / 20px</b>Sans bold, line height 1.3</div></div>
+    <div class="spec"><div class="lbl"><b>Lead</b>The line under a headline</div><div class="sample" style="font-family:var(--rec-sans);font-size:20px;line-height:1.5">I enable the conversations that resolve those conflicts. Then I stay until they hold.</div><div class="sug"><b>20px / 18px</b>Regular, line height 1.5</div></div>
+    <div class="spec"><div class="lbl"><b>Body</b>All reading text, blog included</div><div class="sample" style="font-family:var(--rec-sans);font-size:18px;line-height:1.6">You did everything right . . . And the conflict is still sitting there, bigger and angrier than it was in March.</div><div class="sug"><b>18px / 17px</b>Regular, line height 1.6, at most about 70 characters per line</div></div>
+    <div class="spec"><div class="lbl"><b>Small</b>Captions, footer, fine print</div><div class="sample" style="font-family:var(--rec-sans);font-size:15px;line-height:1.5">Basic pricing starts at $5,000. For planning purposes only, not legal or financial advice.</div><div class="sug"><b>15px / 15px</b>Never smaller than 15px</div></div>
+  </div>
+
+  <h3>One button, one link style</h3>
+  <div class="demo" style="background:var(--white);border:1px solid var(--sand)">
+    <button class="rec-btn" type="button" id="rec-btn-1">Book a confidential assessment</button>
+    <button class="rec-btn ghost" type="button" id="rec-btn-2">See what this conflict costs</button>
+  </div>
+  <p>The main button keeps her pill shape: brand blue, white sentence-case label, Source Sans 3 semibold at 17px, 52px tall. It darkens on hover. The secondary button is an outline of the same shape, used only for the calculator. Links are brand blue and underlined. On cream backgrounds, links use the darker #145E9E so they stay readable.</p>
+
+  <h3>Header</h3>
+  <div class="rec-header">
+    <img src="img/logo.png" width="161" height="63" alt="L. Therese White logo">
+    <nav aria-label="Recommended menu"><a href="#recommended" aria-current="page">About</a><a href="#recommended">Case Studies</a><a href="#recommended">Endorsements</a><a href="#recommended">FAQ</a><a href="#recommended">Blog</a></nav>
+    <button class="rec-btn small" type="button" id="rec-btn-head">Book an assessment</button>
+  </div>
+  <p>The logo appears without the electric-blue frame and shadow, the menu is quiet text with the current page underlined, and one booking button sits at the right. "Contact" folds into that button. On phones, the menu collapses behind an icon but the booking button stays visible.</p>
+
+  <h3>Spacing and shape</h3>
+  <ul class="stack" style="padding-left:20px;margin:0">
+    <li>Every gap is a multiple of 8 pixels. Sections get 96px above and below on desktop and 64px on phones.</li>
+    <li>Content is up to 1,120px wide. Reading text is held to about 720px.</li>
+    <li>Cards have an 8px corner radius and a 1px cream border, with no heavy shadows. Buttons stay pill-shaped.</li>
+    <li>Photos are real and recent, cropped as rectangles with an 8px radius. No frames.</li>
+  </ul>
+
+  <h3>Homepage order, built around the decision to book</h3>
+  <ol class="stack" style="padding-left:20px;margin:0">
+    <li><b>Headline, one-line promise, booking button, portrait.</b> Who she is and what to do, in the first screen.</li>
+    <li><b>Proof strip.</b> 30+ years · 1,100+ mediations · the panel logos (EEOC, AAA, Los Angeles County and the rest).</li>
+    <li><b>"Sound familiar?"</b> The three conflict situations she already writes about.</li>
+    <li><b>How it works.</b> The four Blueprint steps, starting with the free assessment.</li>
+    <li><b>One endorsement</b>, with a name and photo.</li>
+    <li><b>The calculator</b> on the navy band: "What is this conflict costing you?"</li>
+    <li><b>Why her.</b> "Not an attorney," "1,100 mediations, mostly hard ones," "more than a one-trick pony."</li>
+    <li><b>Pricing candor and three short FAQs</b>, ending with the booking button.</li>
+  </ol>
+</div></section>
+
+<section id="color"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Color</div><h2>The colors visitors actually see</h2>
+  <p>Wix's theme settings still hold an older teal-and-sand palette. Almost every visible element overrides it with blues, black, gray and red. The theme only shows through in the phone menu and the blog.</p>
+  <p>Each row also shows how readable text is on that color. This is measured as contrast: the accessibility standard (WCAG AA) asks for at least 4.5 to 1 for ordinary text, and 3 to 1 for large text (24px, or about 19px bold). Rows that fall short are marked in red, and each has a suggested replacement that looks nearly the same.</p></div>
+
+  <div class="crows">
+    <div class="crow head"><span>Wix color</span><span>Used for</span><span>Suggested</span></div>
+    <!-- Core -->
+    <div class="crow"><div class="cchip"><span class="c" style="background:#414141"></span><span class="hex">#414141</span></div><div class="cuse"><span>Charcoal. Body text, footer, blog, legal pages.</span><span class="ratio">10.2 to 1 on white, 8.2 on warm gray. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#414141"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#000000"></span><span class="hex">#000000</span></div><div class="cuse"><span>Black. Homepage headlines, black bands, FAQ questions, quotes.</span></div><div class="cchip keep"><span class="c" style="background:#000000"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#ffffff"></span><span class="hex">#FFFFFF</span></div><div class="cuse"><span>White. Text on bands, cards, the current menu tab.</span></div><div class="cchip keep"><span class="c" style="background:#ffffff"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#e8e6e6"></span><span class="hex">#E8E6E6</span></div><div class="cuse"><span>Warm gray. Header, footer, homepage hero, call-to-action bands.</span></div><div class="cchip keep"><span class="c" style="background:#e8e6e6"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#f4efeb"></span><span class="hex">#F4EFEB</span></div><div class="cuse"><span>Cream. FAQ, Endorsements and blog backgrounds, phone menu.</span></div><div class="cchip keep"><span class="c" style="background:#f4efeb"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#d8c7bd"></span><span class="hex">#D8C7BD</span></div><div class="cuse"><span>Sand. 1px line under the header; blog hashtags.</span><span class="ratio fail">As hashtag text: 1.4 to 1 on cream. Very hard to read.</span></div><div class="cchip"><span class="c" style="background:#806b5c"></span><div><span class="hex">#806B5C</span><br><span class="why">For hashtag text only: 4.4 to 1 on cream. Keep sand for the line.</span></div></div></div>
+    <!-- Blues -->
+    <div class="crow"><div class="cchip"><span class="c" style="background:#0d63d1"></span><span class="hex">#0D63D1</span></div><div class="cuse"><span>Nav blue. Fill of the menu tabs.</span><span class="ratio">White label: 5.6 to 1. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#0d63d1"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#2e92e5"></span><span class="hex">#2E92E5</span></div><div class="cuse"><span>Button blue. Every pill button.</span><span class="ratio fail">White 14px label: 3.3 to 1. Too faint for text that size.</span></div><div class="cchip"><span class="c" style="background:#1a78c9"></span><div><span class="hex">#1A78C9</span><br><span class="why">4.6 to 1. Reads as the same blue, a shade deeper.</span></div></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#3d9be9"></span><span class="hex">#3D9BE9</span></div><div class="cuse"><span>Band blue. Homepage video band, stat pills, phone buttons.</span><span class="ratio fail">White 28px bold text: 3.0 to 1, just under the minimum. Black pull quote: 7.1, passes.</span></div><div class="cchip"><span class="c" style="background:#2c86d6"></span><div><span class="hex">#2C86D6</span><br><span class="why">3.8 to 1 with white headings. Phone buttons use #1A78C9.</span></div></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#1d2cf3"></span><span class="hex">#1D2CF3</span></div><div class="cuse"><span>Electric blue. Logo frame, Contact image frame, Calendly link.</span><span class="ratio">As link text on white: 7.8 to 1. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#1d2cf3"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#4bbff0"></span><span class="hex">#4BBFF0</span></div><div class="cuse"><span>Sky blue. Case Study #2 panel.</span><span class="ratio">Indistinguishable from #4EC0F1 below.</span></div><div class="cchip"><span class="c" style="background:#4ec0f1"></span><div><span class="hex">#4EC0F1</span><br><span class="why">Merge the two sky blues into one.</span></div></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#4ec0f1"></span><span class="hex">#4EC0F1</span></div><div class="cuse"><span>Sky blue. Endorsements top band.</span><span class="ratio">No text sits directly on it; the intro sits in a white box.</span></div><div class="cchip keep"><span class="c" style="background:#4ec0f1"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#566fb8"></span><span class="hex">#566FB8</span></div><div class="cuse"><span>Periwinkle. Endorsements title and names, FAQ header band.</span><span class="ratio">32px names on cream: 4.2 to 1. Passes for large text.</span></div><div class="cchip keep"><span class="c" style="background:#566fb8"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#3e569e"></span><span class="hex">#3E569E</span></div><div class="cuse"><span>Navy. FAQ title.</span><span class="ratio">6.1 to 1 on cream. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#3e569e"></span><span class="hex">Keep</span></div></div>
+    <!-- Accents -->
+    <div class="crow"><div class="cchip"><span class="c" style="background:#ed4545"></span><span class="hex">#ED4545</span></div><div class="cuse"><span>Alert red. Button hover, the calculator's cost heading, Contact urgent note.</span><span class="ratio fail">White button label on it: 3.8 to 1. As large red headings on white: passes.</span></div><div class="cchip"><span class="c" style="background:#d32f2f"></span><div><span class="hex">#D32F2F</span><br><span class="why">For the button hover only: 5.0 to 1. Keep #ED4545 for headings.</span></div></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#8b0000"></span><span class="hex">#8B0000</span></div><div class="cuse"><span>Dark red. About and Case Studies headings.</span><span class="ratio">10.0 to 1 on white. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#8b0000"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#282626"></span><span class="hex">#282626</span></div><div class="cuse"><span>Near-black. 3px divider bars, "Where I Work" box, step numbers.</span></div><div class="cchip keep"><span class="c" style="background:#282626"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#c7c7c7"></span><span class="hex">#C7C7C7</span></div><div class="cuse"><span>Light gray. Case Studies page background.</span><span class="ratio">Charcoal text on it: 6.0 to 1. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#c7c7c7"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#fafafa"></span><span class="hex">#FAFAFA</span></div><div class="cuse"><span>Off-white. Contact page background.</span><span class="ratio">Visually the same as white.</span></div><div class="cchip"><span class="c" style="background:#ffffff"></span><div><span class="hex">#FFFFFF</span><br><span class="why">Use plain white; one less color to maintain.</span></div></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#22495a"></span><span class="hex">#22495A</span></div><div class="cuse"><span>Deep teal. Phone menu text, card shadow tint.</span><span class="ratio">8.5 to 1 on cream. Passes.</span></div><div class="cchip keep"><span class="c" style="background:#22495a"></span><span class="hex">Keep</span></div></div>
+    <div class="crow"><div class="cchip"><span class="c" style="background:#0c4426"></span><span class="hex">#0C4426</span></div><div class="cuse"><span>Dark green. 1px border on the "3 Reasons" cards.</span></div><div class="cchip keep"><span class="c" style="background:#0c4426"></span><span class="hex">Keep</span></div></div>
+  </div>
+</div></section>
+
+<section id="backgrounds"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Backgrounds</div><h2>Every page has its own ground</h2>
+  <p>Backgrounds change by page and by band. Under ruling 1 the rebuild copies them exactly; the suggestions are optional.</p></div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Page or band</th><th>Wix background</th><th>Suggested</th></tr></thead>
+    <tbody>
+      <tr><td>Header and footer</td><td>Warm gray #E8E6E6. 1px sand line under the header.</td><td>Keep.</td></tr>
+      <tr><td>Home</td><td>Warm gray hero; black calculator and "3 Reasons" bands; band-blue video band; "Blue Gradient" image behind Panel Memberships; white Blueprint; cream closing band.</td><td><span class="sugtxt">Keep the sequence. Draw the gradient in code instead of loading an image: it is sharper and loads faster. Band blue becomes #2C86D6 where white text sits on it.</span></td></tr>
+      <tr><td>About</td><td>"Center Gradient Transparent" image over the hero, with the dune photo; gray gradient band behind the three columns.</td><td><span class="sugtxt">Keep the look, drawn in code. The overlap is fixed (ruling 3).</span></td></tr>
+      <tr><td>Endorsements</td><td>Sky-blue band #4EC0F1; cream body; gray cards at 80% opacity.</td><td>Keep.</td></tr>
+      <tr><td>Case Studies</td><td>Charcoal band #414141; light-gray body #C7C7C7; sky-blue and band-blue video panels.</td><td><span class="sugtxt">Keep. Merge the two sky blues into #4EC0F1.</span></td></tr>
+      <tr><td>FAQ</td><td>Cream page; periwinkle block holding a white title box; white question list over a fine vertical-line texture.</td><td><span class="sugtxt">Keep. Draw the line texture in code (its exact spacing is estimated).</span></td></tr>
+      <tr><td>Blog and posts</td><td>Cream page with a white 980px column.</td><td>Keep.</td></tr>
+      <tr><td>Contact</td><td>Off-white #FAFAFA with a white column.</td><td><span class="sugtxt">Plain white #FFFFFF.</span></td></tr>
+      <tr><td>Legal pages</td><td>Warm gray #E8E6E6 with 12px text.</td><td><span class="sugtxt">White page with 16px text. These are long reads, and gray plus small type is tiring.</span></td></tr>
+      <tr><td>Call-to-action band</td><td>Cream on Home; warm gray on About, Case Studies and Endorsements; white on FAQ.</td><td><span class="sugtxt">Keep per page. If Therese wants more consistency later, use cream everywhere.</span></td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<div class="band cream"><section id="type"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Type</div><h2>Arial does nearly everything</h2>
+  <p>Headlines and body text are plain Arial. Three other faces have specific jobs: Forum for the menu and blog text, Caudex for blog titles and endorser names, and Lulo Clean for button labels. Forum and Caudex are free Google fonts. Lulo Clean is not available to us, so this page shows Syncopate in its place.</p></div>
+  <div class="specimens">
+    <div class="spec head"><span>Role and Wix setting</span><span>Wix, as visitors see it</span><span>Suggested</span></div>
+    <div class="spec"><div class="lbl"><b>Home headline</b>Arial 40px bold, black</div><div class="sample" style="font-size:40px;font-weight:700;color:#000;line-height:1.1">Is an unresolved, emotion-driven conflict putting valuable people at risk?</div><div class="sug"><span>Suggested</span><b>Desktop 40px, phone 28px</b>Bold black. Line height 1.15.</div></div>
+    <div class="spec"><div class="lbl"><b>Big band heading</b>Arial 50px bold, 0.5px tracking. White on black.</div><div class="sample" style="font-size:50px;font-weight:700;letter-spacing:.5px;color:#fff;background:#000;padding:10px 14px;line-height:1.1">Over 1,100 Mediations. Mostly Hard Ones.</div><div class="sug"><span>Suggested</span><b>Desktop 50px, phone 32px</b>Keep the 0.5px tracking.</div></div>
+    <div class="spec"><div class="lbl"><b>Inner page heading</b>Arial 40px/56px bold, dark red (About, Case Studies)</div><div class="sample" style="font-size:40px;line-height:56px;font-weight:700;color:#8b0000">My Calling</div><div class="sug"><span>Suggested</span><b>Desktop 40px, phone 30px</b>Line height 1.3. Keep each page's color.</div></div>
+    <div class="spec"><div class="lbl"><b>Pull quote</b>Arial 45px/63px bold italic on band blue</div><div class="sample" style="font-size:45px;line-height:63px;font-weight:700;font-style:italic;color:#000;background:#3d9be9;padding:6px 14px">It's never about what they say it's about.</div><div class="sug"><span>Suggested</span><b>Desktop 45px, phone 28px</b>Line height 1.35.</div></div>
+    <div class="spec"><div class="lbl"><b>Hero bullet</b>Arial 25px/35px bold, charcoal</div><div class="sample" style="font-size:25px;line-height:35px;font-weight:700">Other team members taking sides . . . or checking out.</div><div class="sug"><span>Suggested</span><b>Desktop 25px, phone 18px</b>Wix phones show about 12px. Decided under ruling 7.</div></div>
+    <div class="spec"><div class="lbl"><b>Card title</b>Arial 20px/28px bold, 0.6px tracking</div><div class="sample" style="font-size:20px;line-height:28px;font-weight:700;letter-spacing:.6px;color:#000">I'm Not An Attorney. (And That's A Good Thing)</div><div class="sug"><span>Suggested</span><b>Keep 20px; phone 19px</b></div></div>
+    <div class="spec"><div class="lbl"><b>Body, inner pages</b>Arial 18px/25.2px, charcoal</div><div class="sample" style="font-size:18px;line-height:25.2px">You did everything right . . . And the conflict is still sitting there, bigger and angrier than it was in March.</div><div class="sug"><span>Suggested</span><b>Keep 18px; phone 17px</b>Line height 1.5 (27px) for easier reading.</div></div>
+    <div class="spec"><div class="lbl"><b>Body, cards</b>Arial 16px/22.4px</div><div class="sample" style="font-size:16px;line-height:22.4px">Two people who are exceptionally good at what they do . . . but exceptionally bad at working together.</div><div class="sug"><span>Suggested</span><b>Keep 16px</b>Line height 1.5. Raise the 14px step text to 16px as well.</div></div>
+    <div class="spec"><div class="lbl"><b>Menu label</b>Forum 19px, 0.95px tracking</div><div class="sample" style="font-family:var(--font-nav);font-size:19px;letter-spacing:.95px;color:#0d63d1">About Therese · Endorsements · Case Studies</div><div class="sug"><span>Suggested</span><b>Keep</b>Forum 19px, 0.95px tracking.</div></div>
+    <div class="spec"><div class="lbl"><b>Button label</b>Lulo Clean 14px (shown in Syncopate)</div><div class="sample" style="font-family:var(--font-button);font-weight:700;font-size:14px;letter-spacing:.08em">CLICK TO SEE YOUR NUMBERS</div><div class="sug"><span>Suggested</span><b>Syncopate Bold 13px</b>0.06em tracking. It runs wider than Lulo, so 1px smaller fits the same pill (estimated). Decided under ruling 2.</div></div>
+    <div class="spec"><div class="lbl"><b>Endorser name</b>Caudex 32px italic, periwinkle</div><div class="sample" style="font-family:var(--font-blog);font-style:italic;font-size:32px;color:#566fb8">Kenneth Cloke</div><div class="sug"><span>Suggested</span><b>Keep 32px; phone 26px</b></div></div>
+    <div class="spec"><div class="lbl"><b>Blog post title</b>Caudex 40px/56px</div><div class="sample" style="font-family:var(--font-blog);font-size:40px;line-height:56px">Why A $15,000 Team Retreat Failed Miserably</div><div class="sug"><span>Suggested</span><b>Desktop 40px, phone 30px</b>Line height 1.3.</div></div>
+    <div class="spec"><div class="lbl"><b>Blog body</b>Forum 18px/27px</div><div class="sample" style="font-family:var(--font-nav);font-size:18px;line-height:27px">KEEP IN MIND: A retreat is the icing, not the cake. Let's pick up the pieces together.</div><div class="sug"><span>Suggested</span><b>Keep 18px</b>Line height 1.6. Forum is a display face, so it needs the extra spacing for long posts.</div></div>
+    <div class="spec"><div class="lbl"><b>Footer and legal</b>Arial 15px, rows 18px apart. Legal body 12px/16.8px.</div><div class="sample" style="font-size:15px;line-height:18px">L. Therese White<br>Employment Mediator · Workplace Conflict Coach</div><div class="sug"><span>Suggested</span><b>Footer 15px, rows 22px apart</b>Legal text 16px at line height 1.6, with 22px headings. 12px is too small to read comfortably.</div></div>
+  </div>
+  <p class="note">The site uses about 90 distinct text styles across 12 pages. The specimens above cover the ones a rebuild needs. A few appear only once: Bree Thin Oblique for "One-Trick Pony," EB Garamond for the FAQ introduction, and Poppins Semibold on phone buttons.</p>
+</div></section></div>
+
+<section id="buttons"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Buttons and links</div><h2>One blue pill, everywhere</h2>
+  <p>Every call to action is the same pill. It is a fixed 341 by 51 pixels, button blue, fully rounded, with no border or shadow. When you point at it, it fades to alert red over 0.4 seconds. Point at the buttons below to see it.</p></div>
+  <div class="demo">
+    <button class="pill" type="button" id="demo-pill-1">CLICK HERE</button>
+    <button class="pill" type="button" id="demo-pill-2">CLICK TO SEE YOUR NUMBERS</button>
+  </div>
+  <div class="two">
+    <figure><img class="shot" src="img/button-hover-0.png" width="381" height="91" alt="Live site: Click Here button in its red hover state"><figcaption>Live site, hover state. This is the real Lulo Clean lettering.</figcaption></figure>
+    <figure><img class="shot" src="img/button-hover-1.png" width="381" height="91" alt="Live site: Click To See Your Numbers button in red hover state"><figcaption>The calculator button opens calculator.theresewhite.com in a new tab.</figcaption></figure>
+  </div>
+  <div class="stack">
+    <h3>On phones</h3>
+    <div class="demo"><button class="pill mobile" type="button" id="demo-pill-m">CLICK HERE</button></div>
+    <p>The phone version is smaller (198 by 39 pixels), band blue, and has only slightly rounded corners (7px).</p>
+  </div>
+  <div class="stack">
+    <h3>Links</h3>
+    <p>Text links are underlined and keep the color of the text around them. There is no separate link color. There are two exceptions: the Contact page's "Schedule Your Assessment" link is Forum 30px in electric blue and opens Calendly, and the urgent note below it is 20px bold alert red.</p>
+    <p><a href="https://calendly.com/therese-theresewhite/30min" style="font-family:var(--font-nav);font-size:30px;color:#1d2cf3">Schedule Your Assessment</a></p>
+  </div>
+</div></section>
+
+<div class="band"><section id="header"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Header and menu</div><h2>A framed logo and six blue tabs</h2>
+  <p>The header is 85 pixels tall, warm gray, with a 1px sand line under it. It stays pinned to the top while you scroll. The logo has a 3px electric-blue frame and a drop shadow, and it is taller than the header, so it hangs about 20 pixels below it. That overhang is the site's signature.</p></div>
+  <figure><img class="shot" src="img/nav-hover-0.png" width="1440" height="130" alt="Live site header with the logo and six menu tabs, About Therese shown as current"><figcaption>Live site, desktop. "About Therese" is the current page, so its colors are reversed.</figcaption></figure>
+  <div class="stack">
+    <h3>Menu tabs</h3>
+    <p>There are six separate rectangles with square corners, 43 pixels tall and about 8 pixels apart. Each is nav blue with a 1px white border and a white Forum label. The current page and the one under the pointer reverse to white with blue text and a blue border. There is no Home tab; the logo takes you home.</p>
+    <div class="demo" style="justify-content:flex-start">
+      <nav class="navdemo" aria-label="Menu recreation">
+        <a href="#header" aria-current="page">About Therese</a><a href="#header">Endorsements</a><a href="#header">Case Studies</a><a href="#header">FAQ</a><a href="#header">Blog</a><a href="#header">Contact</a>
+      </nav>
+    </div>
+  </div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Menu label</th><th>Web address (keep exactly)</th><th>Live tab width</th></tr></thead>
+    <tbody>
+      <tr><td>About Therese</td><td><code>/about-therese</code></td><td class="num">176px</td></tr>
+      <tr><td>Endorsements</td><td><code>/team-1-1</code></td><td class="num">173px</td></tr>
+      <tr><td>Case Studies</td><td><code>/case-studies</code></td><td class="num">162px</td></tr>
+      <tr><td>FAQ</td><td><code>/services-3</code></td><td class="num">87px</td></tr>
+      <tr><td>Blog</td><td><code>/blog</code></td><td class="num">89px</td></tr>
+      <tr><td>Contact</td><td><code>/contact</code></td><td class="num">119px</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two">
+    <figure><img class="shot" src="img/mobile-header-closed.png" width="390" height="300" alt="Live site phone header with logo and menu icon"><figcaption>Phone header: 124px tall, logo on the left, three-line menu icon on the right. It also stays pinned.</figcaption></figure>
+    <figure><img class="shot" src="img/mobile-menu-open.png" width="390" height="843" alt="Live site phone menu open, full screen cream with teal links"><figcaption>Phone menu: full-screen cream, Arial 21px deep-teal links in 65px rows, and an extra "Home" item. These are the old theme colors, not the blues.</figcaption></figure>
+  </div>
+</div></section></div>
+
+<section id="footer"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Footer</div><h2>Identical on every page</h2>
+  <p>The footer is warm gray, Arial 15px charcoal, with rows 18 pixels apart. Contact details sit on the left and legal links on the right. On phones the two columns stack.</p></div>
+  <div class="footdemo">
+    <div><span>L. Therese White</span><span>Employment Mediator · Workplace Conflict Coach</span><span>10736 Jefferson Blvd, #363</span><span>Culver City, CA 90230</span><span><u>Therese@ThereseWhite.com</u></span><span>323-291-4813</span><span>&nbsp;</span><span>© 2026 L. Therese White</span></div>
+    <div class="right"><span>Legal</span><span><u>Privacy Policy</u></span><span><u>Terms of Use</u></span><span><u>Cookie Preferences</u></span><span><u>Accessibility</u></span></div>
+  </div>
+  <div class="stack">
+    <h3>The band above the footer</h3>
+    <p>Most pages end with a band that reads "Schedule Your / Confidential Conflict Assessment" above a "Click Here" pill. Its background changes by page: cream on Home, warm gray on About, Case Studies and Endorsements, and white on FAQ. Contact, Blog, blog posts and the legal pages have no band.</p>
+    <div class="demo" style="flex-direction:column;background:var(--cream)">
+      <div style="font-size:24px;font-weight:700;text-align:center">Schedule Your<br>Confidential Conflict Assessment</div>
+      <button class="pill" type="button" id="demo-pill-band">CLICK HERE</button>
+    </div>
+  </div>
+</div></section>
+
+<div class="band cream"><section id="layout"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Layout</div><h2>A 980-pixel column with full-width bands</h2>
+  <p>Content sits in a centered 980-pixel column. Background colors run edge to edge. Wix places every element at a fixed position, so there is no spacing system to copy. The measured gaps work out to roughly 40 to 60 pixels above a band's content and 50 to 70 below, though the site is not consistent.</p></div>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Pattern</th><th>Where</th><th>Measurements</th></tr></thead>
+    <tbody>
+      <tr><td>Three text columns</td><td>About</td><td>About 290px each</td></tr>
+      <tr><td>Three cards</td><td>Home, "3 Very Good Reasons"</td><td>325 × 590px each</td></tr>
+      <tr><td>Four steps</td><td>Home, "My Working Peace Blueprint"</td><td>Numbers #1–#4 in Arial 20px bold</td></tr>
+      <tr><td>Six logo tiles, 2 columns</td><td>Home, "Panel Memberships"</td><td>Framed, 2px radius, drop shadow</td></tr>
+      <tr><td>2 × 2 cards</td><td>Endorsements</td><td>365px photos, gray cards at 80% opacity</td></tr>
+      <tr><td>Text left, image right</td><td>Contact</td><td>Image in a 4px electric-blue frame</td></tr>
+      <tr><td>Divider bar</td><td>Throughout</td><td>3px near-black, 222–284px wide, centered. Periwinkle on FAQ.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two">
+    <div class="stack"><h3>Divider</h3><div class="divider" aria-hidden="true"></div></div>
+    <div class="stack"><h3>"3 Reasons" card</h3>
+      <div class="card3"><h4>Much More Than A "One-Trick Pony"</h4><p>White, a 1px dark-green border, square corners, and a soft teal-tinted shadow beneath.</p></div>
+    </div>
+  </div>
+</div></section></div>
+
+<section id="images"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Images</div><h2>Real photographs in rectangles</h2>
+  <p>Photos are cropped as plain rectangles. The only circle on the site is the small author photo on blog posts. Two images get the electric-blue frame with a drop shadow: the logo and the Contact chalkboard. Logo tiles and case-study panels use Wix's framed look with a 2px radius and a shadow.</p></div>
+  <div class="two">
+    <figure><img class="shot" src="img/home-first-screen.jpg" width="1440" height="900" alt="Live homepage first screen: headline and bullets on the left, portrait in a red jacket on the right" loading="lazy"><figcaption>The homepage first screen. A cut-out portrait sits on warm gray.</figcaption></figure>
+    <figure><img class="shot" src="img/home-mobile.jpg" width="390" height="843" alt="Live homepage first screen on a phone" loading="lazy" style="max-height:420px;width:auto;margin:0 auto"><figcaption>The same screen on a phone. Note the very small bullet text.</figcaption></figure>
+  </div>
+  <ul class="stack" style="padding-left:20px;margin:0">
+    <li>Homepage: a cut-out portrait PNG (red jacket), an AI-avatar video introduced with "FULL DISCLOSURE: Yes, it's my AI avatar…", and six panel logos saved as screenshots.</li>
+    <li>About: a lifestyle photo with her dog, a sand-dune photo, and the SCMA award.</li>
+    <li>Endorsements: headshots, plus a silhouette for the anonymous "Recent Client."</li>
+    <li>Case Studies #2 and #4: embedded videos with a 25% black tint and a play button.</li>
+  </ul>
+  <p class="note">The original image files are on Wix's servers. Their full addresses are in the raw measurements, and the rebuild should download the originals rather than the resized copies.</p>
+</div></section>
+
+<div class="band"><section id="pages"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Page by page</div><h2>What each page contains, top to bottom</h2>
+  <p>Every page has the header first and the footer last; the lists below cover what comes between. Each preview shows the top of the live desktop page.</p></div>
+  <div class="pages">
+    <div class="page-card"><div class="thumb"><img src="img/page-home.jpg" alt="Live homepage" loading="lazy"></div><div class="body"><h3>Home <code>/</code></h3><ol><li>Gray hero: headline, bullets, stat pills, button, portrait</li><li>"Where I Work . . ." dark box</li><li>Black calculator band</li><li>Blue band: pull quote, AI video, "What To Know Before We Talk"</li><li>Panel Memberships, six logos</li><li>Black "3 Very Good Reasons" with three cards</li><li>"My Working Peace Blueprint," four steps</li><li>Cream call-to-action band</li></ol></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-about-therese.jpg" alt="Live About page" loading="lazy"></div><div class="body"><h3>About <code>/about-therese</code></h3><ol><li>Hero: dune photo, red title, award, dog photo (overlap defect)</li><li>My Calling · What I Believe · How I Work</li><li>"My Services," three columns</li><li>"My Record" with credentials lists</li><li>Gray call-to-action band</li></ol></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-team-1-1.jpg" alt="Live Endorsements page" loading="lazy"></div><div class="body"><h3>Endorsements <code>/team-1-1</code></h3><ol><li>Sky-blue band with white rounded intro box</li><li>Cream body, 2 × 2 cards: Gottlieb-Clark, Goldsmith, Cloke, Recent Client</li><li>Gray call-to-action band</li></ol></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-case-studies.jpg" alt="Live Case Studies page" loading="lazy"></div><div class="body"><h3>Case Studies <code>/case-studies</code></h3><ol><li>Charcoal band: title and disclaimer</li><li>Five studies on light gray. Text-only (#1, #3, #5) alternate with blue video panels (#2, #4)</li><li>Gray call-to-action band</li></ol><p class="note">"Click Here To Continue" links lead to three more pages: /case-study-extension, /finding-came-back and /the-medical-leave.</p></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-services-3.jpg" alt="Live FAQ page" loading="lazy"></div><div class="body"><h3>FAQ <code>/services-3</code></h3><ol><li>Periwinkle block with white title box</li><li>Twelve questions that open and close</li><li>White call-to-action band</li></ol></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-contact.jpg" alt="Live Contact page" loading="lazy"></div><div class="body"><h3>Contact <code>/contact</code></h3><ol><li>Title and reassurance lines</li><li>Five bullets beside the framed chalkboard</li><li>Calendly link and red urgent note</li></ol><p class="note">No form, and no call-to-action band.</p></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-blog.jpg" alt="Live blog list" loading="lazy"></div><div class="body"><h3>Blog <code>/blog</code></h3><ol><li>Cream page, white column, "Therese's Triple Newsletter Archive" link</li><li>Ten post cards: avatar, date, Caudex title, excerpt, view count</li></ol></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-post-triple-take.jpg" alt="Live blog post" loading="lazy"></div><div class="body"><h3>Blog post <code>/post/…</code></h3><ol><li>Caudex 40px title, "Updated" date</li><li>Forum body with "TAKE #1 / #2 / #3" lead-ins</li><li>Share icons, three recent posts, comments</li></ol></div></div>
+    <div class="page-card"><div class="thumb"><img src="img/page-privacy-policy.jpg" alt="Live Privacy Policy page" loading="lazy"></div><div class="body"><h3>Legal pages</h3><ol><li>Privacy Policy, Terms of Use, Accessibility and Cookie Preferences share one plain template: warm gray, 18px headings, 12px text</li></ol><p class="note">Cookie Preferences is a written policy, not a settings control.</p></div></div>
+  </div>
+  <p class="note">The Wix sitemap also lists pages outside the menu: the newsletter archive and "Triple Take Tuesdays" issue pages, /cost-of-concflict-calculator (misspelled on Wix), /challenges, /book-online, /frommeltdowntoresolution, /general-8 and /newsletterontheway. Each still needs a decision: rebuild it, or point its address at a related page.</p>
+</div></section></div>
+
+<section id="voice"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Voice</div><h2>First person, plain, and a little blunt</h2>
+  <p>Therese writes in the first person, in short sentences and fragments. Pauses are spaced dots (" . . . "). She uses quotation marks for emphasis and Title Case for headings. She repeatedly promises restraint: no pitch, no pressure.</p></div>
+  <div class="quotes">
+    <blockquote>I enable the conversations that resolve those conflicts. Then I stay until they hold.</blockquote>
+    <blockquote>The investigation ended. And nothing changed.</blockquote>
+    <blockquote>Your biggest expense is the conversation nobody knows how to have.</blockquote>
+    <blockquote>I don't referee it. And I don't smooth it over. I guide it.</blockquote>
+    <blockquote>Emotions aren't blocking the resolution. They're the roadmap to it.</blockquote>
+    <blockquote>Clear is kind. Unclear is unkind.</blockquote>
+    <blockquote>I answer my own phone and read my own email. Say it's urgent and I'll treat it that way.</blockquote>
+    <blockquote>Our first conversation . . . a confidential conflict assessment . . . is "real work" . . . no pitch, no pressure.</blockquote>
+  </div>
+  <p class="note">Facts she states on the site: practicing since 1992; over 1,100 mediations; based in Los Angeles; basic pricing starts at $5,000.</p>
+</div></section>
+
+<div class="band cream"><section id="rebuild"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Rebuild gaps</div><h2>Where the rebuild differs today</h2>
+  <p>This compares the guide with the Wix look already built for calculator.theresewhite.com, in <code>src/app/globals.css</code> (the <code>.lp-wix</code> section) and <code>src/content/site.ts</code>. The menu labels, menu addresses, footer text and core colors already match exactly.</p></div>
+  <div class="diff">
+    <div><span class="hd">Live site</span><span class="hd">Rebuild today</span></div>
+    <div><span>Buttons turn red on hover over 0.4 seconds.</span><span>Buttons turn darker blue.</span></div>
+    <div><span>The menu and blog use Forum; blog titles and names use Caudex.</span><span>A code comment says "no serif anywhere." That is wrong.</span></div>
+    <div><span>Button labels: Lulo 14px, normal spacing, fixed 341 × 51 pill.</span><span>Arial bold capitals with wide spacing, and a flexible size.</span></div>
+    <div><span>Big headlines have normal line spacing and slightly wide letter spacing.</span><span>Tighter letter spacing and line spacing.</span></div>
+    <div><span>Heading colors vary by page.</span><span>One black for all headings.</span></div>
+    <div><span>Menu: separate blue rectangles, reversed when current.</span><span>Needs checking against the recreation in the Header chapter.</span></div>
+    <div><span>Header: pinned, 85px, with the framed logo hanging below it.</span><span>Needs checking.</span></div>
+    <div><span>Phone menu: full-screen cream with teal links and a Home item.</span><span>Not built.</span></div>
+    <div><span>Page backgrounds vary: gray, white, cream, light gray, off-white.</span><span>The name <code>--cream</code> means #E8E6E6 in one place and #F4EFEB in another. One name for two colors invites mistakes.</span></div>
+    <div><span>No such colors.</span><span>Five colors in the rebuild (<code>--muted</code>, <code>--rule</code>, <code>--band-muted</code>, <code>--band-rule</code>, <code>--accent-line</code>) do not appear on the live site, even though the comment says they were read from it.</span></div>
+    <div><span>Logo alt text is a filename, "Therese High Res Logo.png."</span><span>Descriptive alt text. Keep the rebuild's version.</span></div>
+  </div>
+  <div class="stack">
+    <h3>What could not be measured</h3>
+    <ul class="stack" style="padding-left:20px;margin:0">
+      <li>No cookie banner appeared in any session, so there was nothing to measure. It may appear only in some regions.</li>
+      <li>How text links look under the pointer, and how an opened FAQ answer looks.</li>
+      <li>The videos were not played; only their still images were recorded.</li>
+      <li>The stat-pill sizes are estimated from a screenshot.</li>
+    </ul>
+  </div>
+</div></section></div>
+<section id="side-by-side"><div class="wrap stack-lg">
+  <div class="stack"><div class="eyebrow">Side by side</div><h2>Wix today, next to our suggestions</h2>
+  <p>The first two pairs compare Wix with the Recommended system for phase two. The rest compare Wix with the smaller fixes suggested inside the Wix look.</p></div>
+  <div class="cmp">
+    <div class="cmp-row"><h3>Header: Wix today, next to the Recommended system</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--gray);justify-items:start"><img src="img/nav-hover-0.png" width="1440" height="130" alt="Wix header with framed logo and six blue tabs"></div></div>
+        <div class="pane sug"><div class="tag">Recommended</div><div class="stage" style="padding:0;align-content:stretch"><div class="rec-header"><img src="img/logo.png" width="161" height="63" alt="L. Therese White logo"><nav aria-label="Recommended menu, comparison"><a href="#side-by-side" aria-current="page">About</a><a href="#side-by-side">Case Studies</a><a href="#side-by-side">FAQ</a><a href="#side-by-side">Blog</a></nav><button class="rec-btn small" type="button" id="cmp-rec-head">Book an assessment</button></div></div></div>
+      </div></div>
+
+    <div class="cmp-row"><h3>Homepage opening: Wix today, next to the Recommended system</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--gray);justify-items:start;align-content:start"><div style="font-size:26px;font-weight:700;color:#000;line-height:1.15">Is an unresolved, emotion-driven conflict putting valuable people, productivity, and your peace of mind at risk?</div><div style="font-size:16px;font-weight:700;line-height:1.4">Two "Core Contributors" who can't be in the same room.<br>Other team members taking sides . . . or checking out.<br>A conflict your internal processes can't fix.</div><div style="display:flex;gap:8px;flex-wrap:wrap"><span style="background:#3d9be9;color:#fff;font-weight:700;padding:8px 12px;border-radius:12px">30+ Years Experience</span><span style="background:#3d9be9;color:#fff;font-weight:700;padding:8px 12px;border-radius:12px">1,100+ Mediations</span></div><div style="font-weight:700">Schedule Your Confidential Conflict Assessment</div><button class="pill" type="button" id="cmp-hero-wix" style="width:240px">CLICK HERE</button></div></div>
+        <div class="pane sug"><div class="tag">Recommended</div><div class="stage" style="background:#fff;justify-items:start;align-content:start;font-family:var(--rec-sans)"><div style="font-family:var(--rec-serif);font-weight:600;font-size:32px;line-height:1.15;color:#1c1c1c">When two people you can't afford to lose can't work together.</div><div style="font-size:18px;line-height:1.5">I enable the conversations that resolve those conflicts. Then I stay until they hold.</div><button class="rec-btn" type="button" id="cmp-hero-rec">Book a confidential assessment</button><div style="font-size:15px;color:#414141">Free, confidential, no pitch. Basic pricing starts at $5,000.</div><div style="display:flex;gap:18px;flex-wrap:wrap;font-size:15px;font-weight:700;color:#1c1c1c;border-top:1px solid #e3dad3;padding-top:12px;width:100%"><span>30+ years</span><span>1,100+ mediations</span><span>EEOC · AAA · LA County panels</span></div></div></div>
+      </div>
+      <p class="note">The recommended headline is a draft for discussion, written from her own copy. Final wording is Therese's.</p></div>
+
+
+    <div class="cmp-row"><h3>The pill button</h3><p>Point at each one. The suggestion deepens both blues and the red just enough for the white label to pass the readability standard.</p>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--gray)"><button class="pill" type="button" id="cmp-pill-wix">CLICK HERE</button><span class="note">#2E92E5, hover #ED4545. Label contrast 3.3 and 3.8 to 1.</span></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="background:var(--gray)"><button class="pill sugg" type="button" id="cmp-pill-sug">CLICK HERE</button><span class="note">#1A78C9, hover #D32F2F. Label contrast 4.6 and 5.0 to 1.</span></div></div>
+      </div></div>
+
+    <div class="cmp-row"><h3>Homepage bullets on a phone</h3><p>Ruling 7 already raises these. The left pane shows the size a visitor sees on Wix today.</p>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--gray);justify-items:start"><div style="font-size:12px;line-height:1.4;font-weight:700;max-width:320px">Two "Core Contributors" who can't be in the same room.<br>Other team members taking sides . . . or checking out.<br>A conflict your internal processes can't fix.</div></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="background:var(--gray);justify-items:start"><div style="font-size:18px;line-height:1.4;font-weight:700;max-width:320px">Two "Core Contributors" who can't be in the same room.<br>Other team members taking sides . . . or checking out.<br>A conflict your internal processes can't fix.</div></div></div>
+      </div></div>
+
+    <div class="cmp-row"><h3>White headings on the blue band</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:#3d9be9"><div style="font-size:28px;line-height:1.4;font-weight:700;color:#fff;text-align:center">What To Know Before We Talk</div><span style="font-size:13px;color:#fff">#3D9BE9. 3.0 to 1.</span></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="background:#2c86d6"><div style="font-size:28px;line-height:1.4;font-weight:700;color:#fff;text-align:center">What To Know Before We Talk</div><span style="font-size:13px;color:#fff">#2C86D6. 3.8 to 1.</span></div></div>
+      </div></div>
+
+    <div class="cmp-row"><h3>Blog hashtags</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--cream)"><div style="font-family:var(--font-nav);font-size:18px;font-weight:700;color:#d8c7bd">#workplaceconflict #mediation #HR</div><span class="note">#D8C7BD. 1.4 to 1.</span></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="background:var(--cream)"><div style="font-family:var(--font-nav);font-size:18px;font-weight:700;color:#806b5c">#workplaceconflict #mediation #HR</div><span class="note">#806B5C. 4.4 to 1.</span></div></div>
+      </div></div>
+
+    <div class="cmp-row"><h3>Legal pages</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--gray);justify-items:start"><div style="font-size:18px;font-style:italic">Information We Collect</div><p style="font-size:12px;line-height:16.8px">When you request a conflict assessment, we collect your name, email address, organization and the details you choose to share, so that Therese can respond to your request.</p></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="background:var(--white);justify-items:start"><div style="font-size:22px;font-weight:700;color:#000">Information We Collect</div><p style="font-size:16px;line-height:1.6">When you request a conflict assessment, we collect your name, email address, organization and the details you choose to share, so that Therese can respond to your request.</p></div></div>
+      </div>
+      <p class="note">Sample wording for illustration only. The real policy text comes from the rebuild's <code>src/content/legal.ts</code>.</p></div>
+
+    <div class="cmp-row"><h3>Footer spacing</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="background:var(--gray);justify-items:start"><div style="font-size:15px;line-height:18px">L. Therese White<br>Employment Mediator · Workplace Conflict Coach<br>10736 Jefferson Blvd, #363<br>Culver City, CA 90230</div><span class="note">Rows 18px apart.</span></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="background:var(--gray);justify-items:start"><div style="font-size:15px;line-height:22px">L. Therese White<br>Employment Mediator · Workplace Conflict Coach<br>10736 Jefferson Blvd, #363<br>Culver City, CA 90230</div><span class="note">Rows 22px apart.</span></div></div>
+      </div></div>
+
+    <div class="cmp-row"><h3>Colors merged or simplified</h3>
+      <div class="cmp-pair">
+        <div class="pane"><div class="tag">Wix today</div><div class="stage" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px"><span class="cchip"><span class="c" style="background:#4bbff0"></span><span class="hex">#4BBFF0</span></span><span class="cchip"><span class="c" style="background:#4ec0f1"></span><span class="hex">#4EC0F1</span></span><span class="cchip"><span class="c" style="background:#fafafa"></span><span class="hex">#FAFAFA</span></span></div></div>
+        <div class="pane sug"><div class="tag">Suggested</div><div class="stage" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px"><span class="cchip"><span class="c" style="background:#4ec0f1"></span><span class="hex">#4EC0F1</span></span><span class="cchip"><span class="c" style="background:#ffffff"></span><span class="hex">#FFFFFF</span></span></div></div>
+      </div></div>
+
+  </div>
+</div></section>
+</main>
+
+<footer class="band"><div class="wrap" style="padding-block:32px;font-size:14px;color:var(--muted)">
+  Measured from www.theresewhite.com on October 16, 2026, in a desktop browser 1,440 pixels wide and a phone view 390 pixels wide. Source of this page: <code>docs/style-bible/index.html</code> in the theresewhite.com project.
+</div></footer>

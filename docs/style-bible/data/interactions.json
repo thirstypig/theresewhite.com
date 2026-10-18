@@ -1,0 +1,1849 @@
+{
+ "navCount": 6,
+ "nav": [
+  {
+   "text": "About Therese",
+   "href": "https://www.theresewhite.com/about-therese",
+   "current": null,
+   "before": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   }
+  },
+  {
+   "text": "Endorsements",
+   "href": "https://www.theresewhite.com/team-1-1",
+   "current": null,
+   "before": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root StylableHoriz",
+      "bg": "rgb(13, 99, 209)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   }
+  },
+  {
+   "text": "Case Studies",
+   "href": "https://www.theresewhite.com/case-studies",
+   "current": null,
+   "before": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root StylableHoriz",
+      "bg": "rgb(13, 99, 209)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   }
+  },
+  {
+   "text": "FAQ",
+   "href": "https://www.theresewhite.com/services-3",
+   "current": null,
+   "before": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root StylableHoriz",
+      "bg": "rgb(13, 99, 209)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   }
+  },
+  {
+   "text": "Blog",
+   "href": "https://www.theresewhite.com/blog",
+   "current": null,
+   "before": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root StylableHoriz",
+      "bg": "rgb(13, 99, 209)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   }
+  },
+  {
+   "text": "Contact",
+   "href": "https://www.theresewhite.com/contact",
+   "current": null,
+   "before": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root StylableHoriz",
+      "bg": "rgb(13, 99, 209)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "all"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(13, 99, 209)",
+     "border": "0px none rgb(13, 99, 209)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+    },
+    "kids": [
+     {
+      "tag": "DIV",
+      "cls": "itemShared2352141355__rootContainer",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "A",
+      "cls": "itemDepth02233374943__root itemDepth0223",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(0, 0, 238)",
+      "border": "1px solid rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     },
+     {
+      "tag": "DIV",
+      "cls": "itemDepth02233374943__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 238)",
+      "border": "0px none rgb(0, 0, 238)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "itemDepth02233374943__label wixui-horizo",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(13, 99, 209)",
+      "border": "0px none rgb(13, 99, 209)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.08s cubic-bezier(0, 0, 1, 1)"
+     }
+    ]
+   }
+  }
+ ],
+ "headerAt0": {
+  "top": 0,
+  "h": 85,
+  "pos": "sticky",
+  "parentPos": "static"
+ },
+ "headerAt1500": {
+  "top": 0,
+  "h": 85,
+  "pos": "sticky",
+  "parentPos": "static"
+ },
+ "buttons": [
+  {
+   "label": "Click Here",
+   "href": "https://www.theresewhite.com/contact",
+   "before": {
+    "outer": {
+     "bg": "rgb(46, 146, 229)",
+     "color": "rgb(0, 0, 238)",
+     "border": "0px solid rgb(254, 97, 97)",
+     "radius": "100px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "border-color 0.4s, background-color 0.4s"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "color 0.4s"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "OR4Nv8 wixui-button__label",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "color 0.4s"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgb(237, 69, 69)",
+     "color": "rgb(0, 0, 238)",
+     "border": "0px solid rgba(255, 255, 255, 0)",
+     "radius": "100px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "border-color 0.4s, background-color 0.4s"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "color 0.4s"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "OR4Nv8 wixui-button__label",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "color 0.4s"
+     }
+    ]
+   }
+  },
+  {
+   "label": "Click To See Your Numbers",
+   "href": "https://calculator.theresewhite.com",
+   "before": {
+    "outer": {
+     "bg": "rgb(46, 146, 229)",
+     "color": "rgb(0, 0, 238)",
+     "border": "0px solid rgb(254, 97, 97)",
+     "radius": "100px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "border-color 0.4s, background-color 0.4s"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "color 0.4s"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "OR4Nv8 wixui-button__label",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "color 0.4s"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgb(237, 69, 69)",
+     "color": "rgb(0, 0, 238)",
+     "border": "0px solid rgba(255, 255, 255, 0)",
+     "radius": "100px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "border-color 0.4s, background-color 0.4s"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "color 0.4s"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "OR4Nv8 wixui-button__label",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "color 0.4s"
+     }
+    ]
+   }
+  },
+  {
+   "label": "",
+   "href": null,
+   "before": {
+    "outer": {
+     "bg": "rgb(255, 255, 255)",
+     "color": "rgb(0, 0, 0)",
+     "border": "1px solid rgb(12, 68, 38)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+     "transition": "0.2s, visibility"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.2s, visibility"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__icon wixui-but",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "g",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgb(255, 255, 255)",
+     "color": "rgb(0, 0, 0)",
+     "border": "1px solid rgb(12, 68, 38)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+     "transition": "0.2s, visibility"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.2s, visibility"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__icon wixui-but",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "g",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   }
+  },
+  {
+   "label": "",
+   "href": null,
+   "before": {
+    "outer": {
+     "bg": "rgb(255, 255, 255)",
+     "color": "rgb(0, 0, 0)",
+     "border": "1px solid rgb(12, 68, 38)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+     "transition": "0.2s, visibility"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.2s, visibility"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__icon wixui-but",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "g",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgb(255, 255, 255)",
+     "color": "rgb(0, 0, 0)",
+     "border": "1px solid rgb(12, 68, 38)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+     "transition": "0.2s, visibility"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.2s, visibility"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__icon wixui-but",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "g",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   }
+  },
+  {
+   "label": "",
+   "href": null,
+   "before": {
+    "outer": {
+     "bg": "rgb(255, 255, 255)",
+     "color": "rgb(0, 0, 0)",
+     "border": "1px solid rgb(12, 68, 38)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+     "transition": "0.2s, visibility"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.2s, visibility"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__icon wixui-but",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "g",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgb(255, 255, 255)",
+     "color": "rgb(0, 0, 0)",
+     "border": "1px solid rgb(12, 68, 38)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "rgb(34, 73, 90) -0.52px 9.99px 50px -26px",
+     "transition": "0.2s, visibility"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(0, 0, 0)",
+     "border": "0px none rgb(0, 0, 0)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "0.2s, visibility"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__container",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "StylableButton2545352419__icon wixui-but",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "0.2s, visibility"
+     },
+     {
+      "tag": "SPAN",
+      "cls": "",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "svg",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "g",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     },
+     {
+      "tag": "path",
+      "cls": "[object SVGAnimatedString]",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(0, 0, 0)",
+      "border": "0px none rgb(0, 0, 0)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "all"
+     }
+    ]
+   }
+  },
+  {
+   "label": "Click Here",
+   "href": "https://www.theresewhite.com/contact",
+   "before": {
+    "outer": {
+     "bg": "rgb(46, 146, 229)",
+     "color": "rgb(0, 0, 238)",
+     "border": "0px solid rgb(254, 97, 97)",
+     "radius": "100px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "border-color 0.4s, background-color 0.4s"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "color 0.4s"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "OR4Nv8 wixui-button__label",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "color 0.4s"
+     }
+    ]
+   },
+   "after": {
+    "outer": {
+     "bg": "rgb(237, 69, 69)",
+     "color": "rgb(0, 0, 238)",
+     "border": "0px solid rgba(255, 255, 255, 0)",
+     "radius": "100px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "border-color 0.4s, background-color 0.4s"
+    },
+    "inner": {
+     "bg": "rgba(0, 0, 0, 0)",
+     "color": "rgb(255, 255, 255)",
+     "border": "0px none rgb(255, 255, 255)",
+     "radius": "0px",
+     "deco": "none",
+     "shadow": "none",
+     "transition": "color 0.4s"
+    },
+    "kids": [
+     {
+      "tag": "SPAN",
+      "cls": "OR4Nv8 wixui-button__label",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "radius": "0px",
+      "deco": "none",
+      "shadow": "none",
+      "transition": "color 0.4s"
+     }
+    ]
+   }
+  }
+ ],
+ "logo": [
+  {
+   "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_242,h_94,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+   "alt": "Therese High Res Logo.png",
+   "w": 242,
+   "h": 94,
+   "x": 103,
+   "natural": "242x94",
+   "link": "https://www.theresewhite.com",
+   "wrapperShadow": "none"
+  }
+ ],
+ "mobileHeader": {
+  "rect": [
+   0,
+   0,
+   320,
+   124
+  ],
+  "pos": "sticky",
+  "bg": "rgba(0, 0, 0, 0)",
+  "cands": [
+   {
+    "tag": "DIV",
+    "id": "SCROLL_TO_TOP",
+    "aria": "top of page",
+    "text": "",
+    "rect": [
+     0,
+     0,
+     320,
+     0
+    ]
+   },
+   {
+    "tag": "BUTTON",
+    "id": "SKIP_TO_CONTENT_BTN",
+    "aria": null,
+    "text": "Skip to Main Content",
+    "rect": [
+     66,
+     60,
+     48,
+     0
+    ]
+   },
+   {
+    "tag": "DIV",
+    "id": "MENU_AS_CONTAINER_TOGGLE",
+    "aria": "Open navigation menu",
+    "text": "",
+    "rect": [
+     219,
+     11,
+     73,
+     70
+    ]
+   }
+  ],
+  "imgs": [
+   {
+    "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_173,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+    "w": 173,
+    "h": 70,
+    "x": 34
+   }
+  ],
+  "visibleNavLinks": [
+   ""
+  ]
+ },
+ "mobileMenuOpen": [
+  {
+   "text": "",
+   "href": "https://www.theresewhite.com",
+   "font": "Arial 10px w400 lsnormal",
+   "color": "rgb(0, 0, 238)",
+   "current": null,
+   "rect": [
+    31,
+    24,
+    179,
+    76
+   ]
+  },
+  {
+   "text": "Home",
+   "href": "https://www.theresewhite.com",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(216, 199, 189)",
+   "current": null,
+   "rect": [
+    16,
+    85,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "About Therese",
+   "href": "https://www.theresewhite.com/about-therese",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(34, 73, 90)",
+   "current": null,
+   "rect": [
+    16,
+    150,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "Endorsements",
+   "href": "https://www.theresewhite.com/team-1-1",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(34, 73, 90)",
+   "current": null,
+   "rect": [
+    16,
+    215,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "Case Studies",
+   "href": "https://www.theresewhite.com/case-studies",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(34, 73, 90)",
+   "current": null,
+   "rect": [
+    16,
+    280,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "FAQ",
+   "href": "https://www.theresewhite.com/services-3",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(34, 73, 90)",
+   "current": null,
+   "rect": [
+    16,
+    345,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "Blog",
+   "href": "https://www.theresewhite.com/blog",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(34, 73, 90)",
+   "current": null,
+   "rect": [
+    16,
+    410,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "Contact",
+   "href": "https://www.theresewhite.com/contact",
+   "font": "arial 21px w400 lsnormal",
+   "color": "rgb(34, 73, 90)",
+   "current": null,
+   "rect": [
+    16,
+    475,
+    280,
+    65
+   ]
+  },
+  {
+   "text": "Click Here",
+   "href": "https://www.theresewhite.com/contact",
+   "font": "lulo-clean-w01-one-bold 9.13736px w700 lsnormal",
+   "color": "rgb(255, 255, 255)",
+   "current": null,
+   "rect": [
+    66,
+    517,
+    105,
+    22
+   ]
+  }
+ ],
+ "mobileMenuOverlay": [
+  {
+   "id": "MENU_AS_CONTAINER_TOGGLE",
+   "bg": "rgba(0, 0, 0, 0)",
+   "rect": [
+    219,
+    11,
+    73,
+    70
+   ],
+   "pos": "relative"
+  },
+  {
+   "id": "MENU_AS_CONTAINER",
+   "bg": "rgba(0, 0, 0, 0)",
+   "rect": [
+    0,
+    0,
+    320,
+    692
+   ],
+   "pos": "fixed"
+  },
+  {
+   "id": "container-MENU_AS_CONTAINER",
+   "bg": "rgba(0, 0, 0, 0)",
+   "rect": [
+    0,
+    0,
+    320,
+    692
+   ],
+   "pos": "static"
+  },
+  {
+   "id": "bgLayers_MENU_AS_CONTAINER",
+   "bg": "rgba(0, 0, 0, 0)",
+   "rect": [
+    0,
+    0,
+    320,
+    692
+   ],
+   "pos": "absolute"
+  },
+  {
+   "id": "bgMedia_MENU_AS_CONTAINER",
+   "bg": "rgba(0, 0, 0, 0)",
+   "rect": [
+    0,
+    0,
+    320,
+    692
+   ],
+   "pos": "static"
+  },
+  {
+   "id": "inlineContentParent-MENU_AS_CONTAINER",
+   "bg": "rgba(0, 0, 0, 0)",
+   "rect": [
+    0,
+    0,
+    320,
+    692
+   ],
+   "pos": "relative"
+  }
+ ]
+}

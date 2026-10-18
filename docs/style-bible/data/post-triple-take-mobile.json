@@ -1,0 +1,2881 @@
+{
+ "url": "https://www.theresewhite.com/post/triple-take-tuesdays-why-a-15-000-team-retreat-failed-miserably",
+ "title": "Why a $15,000 team retreat failed miserably",
+ "vw": 320,
+ "docH": 2702,
+ "rootVars": {
+  "--wst-color-custom-17": "rgb(114,189,163)",
+  "--wst-font-style-body-large": "normal normal normal 21px/1.4em caudex,serif",
+  "--font_9": "normal normal normal 16px/1.4em forum,serif",
+  "--color_55": "199,199,199",
+  "--wst-color-fill-background-primary": "rgb(255,255,255)",
+  "--wst-color-custom-20": "rgb(29,47,41)",
+  "--wst-color-custom-11": "rgb(244,193,174)",
+  "--color_43": "244,239,235",
+  "--color_37": "65,65,65",
+  "--wst-color-fill-base-shade-2": "rgb(199,199,199)",
+  "--wst-color-custom-19": "rgb(57,95,82)",
+  "--color_12": "232,230,230",
+  "--color_60": "216,199,189",
+  "--wst-button-color-border-secondary-hover": "rgb(216,199,189)",
+  "--color_25": "24,34,38",
+  "--color_48": "216,199,189",
+  "--wst-font-style-body-small": "normal normal normal 16px/1.4em forum,serif",
+  "--wst-button-color-text-primary": "rgb(255,255,255)",
+  "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-color-line": "rgb(153,153,151)",
+  "--color_21": "182,200,208",
+  "--color_51": "255,255,255",
+  "--color_50": "255,255,255",
+  "--color_13": "199,199,199",
+  "--color_10": "176,176,176",
+  "--wst-color-custom-12": "rgb(233,161,132)",
+  "--wst-font-style-h6": "normal normal normal 30px/1.4em forum,serif",
+  "--color_54": "199,199,199",
+  "--wst-color-custom-7": "rgb(131,152,162)",
+  "--color_20": "87,79,75",
+  "--color_58": "216,199,189",
+  "--color_65": "199,199,199",
+  "--color_46": "65,65,65",
+  "--color_2": "0,0,0",
+  "--wst-color-custom-8": "rgb(72,101,115)",
+  "--color_3": "237,28,36",
+  "--wst-button-color-border-primary-hover": "rgb(216,199,189)",
+  "--wst-color-action": "rgb(216,199,189)",
+  "--wst-color-fill-accent-2": "rgb(34,73,90)",
+  "--color_41": "216,199,189",
+  "--color_22": "131,152,162",
+  "--color_23": "72,101,115",
+  "--color_31": "178,222,207",
+  "--wst-color-custom-13": "rgb(222,84,30)",
+  "--color_30": "74,28,10",
+  "--wst-color-custom-14": "rgb(148,56,20)",
+  "--color_42": "34,73,90",
+  "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+  "--wst-font-style-h2": "italic normal normal 50px/1.4em caudex,serif",
+  "--font_7": "normal normal normal 21px/1.4em caudex,serif",
+  "--wst-button-color-fill-secondary-hover": "rgb(216,199,189)",
+  "--font_6": "normal normal normal 30px/1.4em forum,serif",
+  "--wst-button-color-fill-primary-disabled": "rgb(199,199,199)",
+  "--font_4": "normal normal normal 30px/1.4em caudex,serif",
+  "--font_3": "normal normal normal 40px/1.4em caudex,serif",
+  "--wst-color-custom-16": "rgb(178,222,207)",
+  "--color_44": "72,101,115",
+  "--wst-color-custom-15": "rgb(74,28,10)",
+  "--wst-button-color-text-secondary": "rgb(216,199,189)",
+  "--wst-button-color-border-primary-disabled": "rgb(199,199,199)",
+  "--wst-color-custom-4": "rgb(158,146,139)",
+  "--wst-color-fill-base-shade-3": "rgb(153,153,151)",
+  "--color_56": "255,255,255",
+  "--wst-color-fill-accent-3": "rgb(244,239,235)",
+  "--theme-spx-ratio": "1px",
+  "--color_9": "114,114,114",
+  "--color_27": "233,161,132",
+  "--wst-color-custom-3": "rgb(232,220,213)",
+  "--wst-color-fill-base-shade-1": "rgb(232,230,230)",
+  "--color_33": "86,142,122",
+  "--color_61": "216,199,189",
+  "--color_0": "255,255,255",
+  "--wst-color-custom-18": "rgb(86,142,122)",
+  "--color_62": "255,255,255",
+  "--font_5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_39": "199,199,199",
+  "--font_8": "normal normal normal 18px/1.4em forum,serif",
+  "--font_2": "italic normal normal 50px/1.4em caudex,serif",
+  "--color_63": "255,255,255",
+  "--wst-color-custom-6": "rgb(182,200,208)",
+  "--color_4": "0,136,203",
+  "--color_7": "176,176,176",
+  "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+  "--color_52": "216,199,189",
+  "--wst-font-style-h3": "normal normal normal 40px/1.4em caudex,serif",
+  "--font_0": "normal normal normal 60px/1.4em caudex,serif",
+  "--wst-color-fill-accent-1": "rgb(216,199,189)",
+  "--color_34": "57,95,82",
+  "--color_47": "153,153,151",
+  "--wst-button-color-border-secondary": "rgb(216,199,189)",
+  "--wst-button-color-text-secondary-disabled": "rgb(199,199,199)",
+  "--color_45": "65,65,65",
+  "--wst-button-color-border-secondary-disabled": "rgb(199,199,199)",
+  "--color_59": "216,199,189",
+  "--wst-color-fill-background-secondary": "rgb(232,230,230)",
+  "--wst-color-fill-accent-4": "rgb(72,101,115)",
+  "--wst-color-custom-1": "rgb(199,199,199)",
+  "--color_5": "255,203,5",
+  "--color_1": "255,255,255",
+  "--color_14": "153,153,151",
+  "--wst-font-style-body-medium": "normal normal normal 18px/1.4em forum,serif",
+  "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h4": "normal normal normal 30px/1.4em caudex,serif",
+  "--wst-color-text-secondary": "rgb(153,153,151)",
+  "--color_17": "232,220,213",
+  "--color_40": "153,153,151",
+  "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+  "--wst-color-disabled": "rgb(199,199,199)",
+  "--color_16": "244,239,235",
+  "--color_24": "34,73,90",
+  "--color_19": "158,146,139",
+  "--wst-button-color-border-primary": "rgb(216,199,189)",
+  "--wst-button-color-fill-primary": "rgb(216,199,189)",
+  "--wst-color-fill-base-1": "rgb(255,255,255)",
+  "--wst-color-custom-5": "rgb(87,79,75)",
+  "--color_15": "65,65,65",
+  "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+  "--wst-font-style-h5": "italic normal normal 26px/1.4em caudex,serif",
+  "--color_49": "216,199,189",
+  "--color_6": "114,114,114",
+  "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-10": "rgb(24,34,38)",
+  "--color_26": "244,193,174",
+  "--wst-color-text-primary": "rgb(65,65,65)",
+  "--color_38": "232,230,230",
+  "--color_57": "255,255,255",
+  "--color_8": "255,255,255",
+  "--wst-color-subtitle": "rgb(65,65,65)",
+  "--color_36": "255,255,255",
+  "--color_18": "216,199,189",
+  "--wst-color-custom-9": "rgb(34,73,90)",
+  "--wst-color-fill-base-2": "rgb(65,65,65)",
+  "--color_64": "199,199,199",
+  "--color_53": "216,199,189",
+  "--color_28": "222,84,30",
+  "--wst-color-title": "rgb(65,65,65)",
+  "--color_35": "29,47,41",
+  "--color_32": "114,189,163",
+  "--color_11": "255,255,255",
+  "--color_29": "148,56,20",
+  "--wst-button-color-text-primary-hover": "rgb(216,199,189)",
+  "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+  "--wst-color-custom-2": "rgb(244,239,235)"
+ },
+ "sheetVars": {
+  "--color_0": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_1": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_2": {
+   "v": "0,0,0",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_3": {
+   "v": "237,28,36",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_4": {
+   "v": "0,136,203",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_5": {
+   "v": "255,203,5",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_6": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_7": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_8": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_9": {
+   "v": "114,114,114",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_10": {
+   "v": "176,176,176",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_11": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_12": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_13": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_14": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_15": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_16": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_17": {
+   "v": "232,220,213",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_18": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_19": {
+   "v": "158,146,139",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_20": {
+   "v": "87,79,75",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_21": {
+   "v": "182,200,208",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_22": {
+   "v": "131,152,162",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_23": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_24": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_25": {
+   "v": "24,34,38",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_26": {
+   "v": "244,193,174",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_27": {
+   "v": "233,161,132",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_28": {
+   "v": "222,84,30",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_29": {
+   "v": "148,56,20",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_30": {
+   "v": "74,28,10",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_31": {
+   "v": "178,222,207",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_32": {
+   "v": "114,189,163",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_33": {
+   "v": "86,142,122",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_34": {
+   "v": "57,95,82",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_35": {
+   "v": "29,47,41",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_36": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_37": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_38": {
+   "v": "232,230,230",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_39": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_40": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_41": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_42": {
+   "v": "34,73,90",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_43": {
+   "v": "244,239,235",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_44": {
+   "v": "72,101,115",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_45": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_46": {
+   "v": "65,65,65",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_47": {
+   "v": "153,153,151",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_48": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_49": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_50": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_51": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_52": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_53": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_54": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_55": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_56": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_57": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_58": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_59": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_60": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_61": {
+   "v": "216,199,189",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_62": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_63": {
+   "v": "255,255,255",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_64": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--color_65": {
+   "v": "199,199,199",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_0": {
+   "v": "normal normal normal 60px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_1": {
+   "v": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_2": {
+   "v": "italic normal normal 50px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_3": {
+   "v": "normal normal normal 40px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_4": {
+   "v": "normal normal normal 30px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_5": {
+   "v": "italic normal normal 26px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_6": {
+   "v": "normal normal normal 30px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_7": {
+   "v": "normal normal normal 21px/1.4em caudex,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_8": {
+   "v": "normal normal normal 18px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_9": {
+   "v": "normal normal normal 16px/1.4em forum,serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  },
+  "--font_10": {
+   "v": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+   "sel": ":root, :host, .spxThemeOverride"
+  }
+ },
+ "fontFaces": [
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "700",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "italic",
+   "status": "unloaded"
+  },
+  {
+   "family": "caudex",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "din-next-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "forum",
+   "weight": "400",
+   "style": "normal",
+   "status": "loaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  },
+  {
+   "family": "helvetica-w01-light",
+   "weight": "400",
+   "style": "normal",
+   "status": "unloaded"
+  }
+ ],
+ "textStyles": [
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "16px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 20
+   },
+   "regions": {
+    "section#?": 20
+   },
+   "count": 20,
+   "samples": [
+    "No matter what, the team couldn’t collaborate. Deadlines missed. Tense, unproductive meeti",
+    "The retreat was mistakenly used as a shortcut to avoid doing the harder, fundamental work ",
+    "Unclear roles, conflicting priorities, poor communication channels, etc.",
+    "Feuds, lack of trust, personality clashes, gossiping, etc."
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "12px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "18px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "a": 1,
+    "span": 16
+   },
+   "regions": {
+    "header": 3,
+    "footer": 14
+   },
+   "count": 17,
+   "samples": [
+    "L. Therese White",
+    "Sep 7, 2025",
+    "1 min read",
+    "7"
+   ]
+  },
+  {
+   "fontFamily": "arial, \"ｍｓ ｐゴシック\", \"ms pgothic\", 돋움, dotum, helvetica, sans-serif",
+   "fontSize": "15px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 7,
+    "a": 6
+   },
+   "regions": {
+    "footer": 13
+   },
+   "count": 13,
+   "samples": [
+    "L. Therese White",
+    "Employment Mediator · Workplace Conflict Coach",
+    "10736 Jefferson Blvd, #363",
+    "Culver City, CA 90230"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "16px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 11
+   },
+   "regions": {
+    "section#?": 11
+   },
+   "count": 11,
+   "samples": [
+    "TAKE",
+    "-- THE CONFLICT:",
+    "TAKE",
+    "-- THE CAUSE:"
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "18px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "normal",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "a": 7
+   },
+   "regions": {
+    "header": 7
+   },
+   "count": 7,
+   "samples": [
+    "Your culture survey results are worthless (here's what works)",
+    "Stop asking why employees quit (do this instead)",
+    "Why conflict resolution training fails (and what actually works)",
+    "Your culture survey results are worthless (here's what works)"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "12px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "12px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "button": 7
+   },
+   "regions": {
+    "footer": 7
+   },
+   "count": 7,
+   "samples": [
+    "Post not marked as liked",
+    "Post not marked as liked",
+    "Post not marked as liked",
+    "Post not marked as liked"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "21px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 2,
+    "div": 2,
+    "a": 1,
+    "button": 1
+   },
+   "regions": {
+    "header": 3,
+    "footer": 2,
+    "section#?": 1
+   },
+   "count": 6,
+   "samples": [
+    "Updated:",
+    "Aug 26",
+    "4",
+    "0"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "16px",
+   "fontWeight": "700",
+   "fontStyle": "normal",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(216, 199, 189)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "a": 3
+   },
+   "regions": {
+    "section#?": 3
+   },
+   "count": 3,
+   "samples": [
+    "#1",
+    "#2",
+    "#3"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "16px",
+   "fontWeight": "400",
+   "fontStyle": "italic",
+   "lineHeight": "24px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 2
+   },
+   "regions": {
+    "section#?": 2
+   },
+   "count": 2,
+   "samples": [
+    "Triple Take Tuesdays",
+    "Let's pick up the pieces together."
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "19.6px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(255, 255, 255)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "p": 1
+   },
+   "regions": {
+    "section#comp-mtcaqeij": 1
+   },
+   "count": 1,
+   "samples": [
+    "Post"
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "26px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "36.4px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h1": 1
+   },
+   "regions": {
+    "header": 1
+   },
+   "count": 1,
+   "samples": [
+    "Why a $15,000 team retreat failed miserably"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "14px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "center",
+   "roles": {
+    "button": 1
+   },
+   "regions": {
+    "footer": 1
+   },
+   "count": 1,
+   "samples": [
+    "Post not marked as liked"
+   ]
+  },
+  {
+   "fontFamily": "forum, serif",
+   "fontSize": "18px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "27px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "header": 1
+   },
+   "count": 1,
+   "samples": [
+    "Recent Posts"
+   ]
+  },
+  {
+   "fontFamily": "caudex, serif",
+   "fontSize": "14px",
+   "fontWeight": "400",
+   "fontStyle": "normal",
+   "lineHeight": "14px",
+   "letterSpacing": "normal",
+   "textTransform": "none",
+   "color": "rgb(65, 65, 65)",
+   "decoration": "none",
+   "textAlign": "start",
+   "roles": {
+    "h2": 1
+   },
+   "regions": {
+    "section#?": 1
+   },
+   "count": 1,
+   "samples": [
+    "Comments"
+   ]
+  }
+ ],
+ "texts": [
+  {
+   "role": "p",
+   "region": "section#comp-mtcaqeij",
+   "y": 161,
+   "text": "Post",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "h1",
+   "region": "header",
+   "y": 270,
+   "text": "Why a $15,000 team retreat failed miserably",
+   "size": "26px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 228,
+   "text": "L. Therese White",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "header",
+   "y": 246,
+   "text": "Sep 7, 2025",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "header",
+   "y": 246,
+   "text": "1 min read",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "header",
+   "y": 351,
+   "text": "Updated:",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "header",
+   "y": 354,
+   "text": "Aug 26",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 395,
+   "text": "TAKE",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#?",
+   "y": 395,
+   "text": "#1",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 395,
+   "text": "-- THE CONFLICT:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 395,
+   "text": "No matter what, the team couldn’t collaborate. Deadlines missed. Tense, unproductive meetings. Personal friction and unaddressed grievances everywhere. Naturally, the retreat failed too.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 563,
+   "text": "TAKE",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#?",
+   "y": 563,
+   "text": "#2",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 563,
+   "text": "-- THE CAUSE:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 563,
+   "text": "The retreat was mistakenly used as a shortcut to avoid doing the harder, fundamental work beforehand, like fixing . . .",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 683,
+   "text": "Flawed organizational systems:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 707,
+   "text": "Unclear roles, conflicting priorities, poor communication channels, etc.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 779,
+   "text": "Broken interpersonal relationships:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 803,
+   "text": "Feuds, lack of trust, personality clashes, gossiping, etc.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 875,
+   "text": "TAKE",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "section#?",
+   "y": 875,
+   "text": "#3",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 875,
+   "text": ": -- THE CURE:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 875,
+   "text": "Always diagnose and treat the fundamentals before attempting any team-building activities.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 971,
+   "text": "Organizational systems:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 971,
+   "text": "Clarify roles, responsibilities, and goals to address systemic conflict.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1043,
+   "text": "Interpersonal relationships:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1043,
+   "text": "Facilitate honest conversations between combatants. Use professional mediation to resolve deeply rooted, personal conflicts and create positive working relationships.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1211,
+   "text": "KEEP IN MIND:",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1211,
+   "text": "A retreat is the icing, not the cake. The critical work of fixing systems and mending relationships comes first. Otherwise, it’s like hiring a DJ for a party where nobody’s dancing. Wasted time and money.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1379,
+   "text": "Want to share this issue of",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1379,
+   "text": "Triple Take Tuesdays",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1403,
+   "text": "? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1475,
+   "text": "Let's pick up the pieces together.",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1523,
+   "text": "L. Therese White",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1547,
+   "text": "Employment Mediator",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1571,
+   "text": "Workplace Conflict Resolution Coach",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "div",
+   "region": "footer",
+   "y": 1769,
+   "text": "4",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "div",
+   "region": "footer",
+   "y": 1769,
+   "text": "0",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 1770,
+   "text": "Post not marked as liked",
+   "size": "14px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "h2",
+   "region": "header",
+   "y": 1852,
+   "text": "Recent Posts",
+   "size": "18px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1852,
+   "text": "See All",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Your culture survey results are worthless (here's what works)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- TRIGGER: The annual culture survey results are in. Engagement is down 15%. Trust in leadership is at an all-time low. Your response? Form a committee to analyze the data and create an actio",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "7",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Stop asking why employees quit (do this instead)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- CONFLICT: Your best employee just quit. In their exit interview, they finally tell you everything that's been wrong for months. You promise to fix it for the next person. Meanwhile, you've",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "6",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Why conflict resolution training fails (and what actually works)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- MYTH: Send problem people to conflict resolution training and they'll magically become collaborative team players. TAKE #2 -- TRUTH: Generic conflict resolution training often fails because",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "24",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Your culture survey results are worthless (here's what works)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- TRIGGER: The annual culture survey results are in. Engagement is down 15%. Trust in leadership is at an all-time low. Your response? Form a committee to analyze the data and create an actio",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "7",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Stop asking why employees quit (do this instead)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- CONFLICT: Your best employee just quit. In their exit interview, they finally tell you everything that's been wrong for months. You promise to fix it for the next person. Meanwhile, you've",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "6",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Why conflict resolution training fails (and what actually works)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- MYTH: Send problem people to conflict resolution training and they'll magically become collaborative team players. TAKE #2 -- TRUTH: Generic conflict resolution training often fails because",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "24",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "a",
+   "region": "header",
+   "y": 1923,
+   "text": "Your culture survey results are worthless (here's what works)",
+   "size": "18px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "section#?",
+   "y": 1985,
+   "text": "TAKE #1 -- TRIGGER: The annual culture survey results are in. Engagement is down 15%. Trust in leadership is at an all-time low. Your response? Form a committee to analyze the data and create an actio",
+   "size": "16px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "7",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "span",
+   "region": "footer",
+   "y": 2144,
+   "text": "0",
+   "size": "12px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "footer",
+   "y": 2144,
+   "text": "Post not marked as liked",
+   "size": "12px",
+   "family": "forum",
+   "align": "center"
+  },
+  {
+   "role": "h2",
+   "region": "section#?",
+   "y": 2280,
+   "text": "Comments",
+   "size": "14px",
+   "family": "caudex",
+   "align": "start"
+  },
+  {
+   "role": "button",
+   "region": "section#?",
+   "y": 2358,
+   "text": "Write a comment...",
+   "size": "14px",
+   "family": "forum",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2445,
+   "text": "L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2463,
+   "text": "Employment Mediator · Workplace Conflict Coach",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2499,
+   "text": "10736 Jefferson Blvd, #363",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2517,
+   "text": "Culver City, CA 90230",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2535,
+   "text": "Therese@ThereseWhite.com",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2553,
+   "text": "323-291-4813",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2553,
+   "text": "​​​​",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2588,
+   "text": "© 2026 L. Therese White",
+   "size": "15px",
+   "family": "arial",
+   "align": "start"
+  },
+  {
+   "role": "p",
+   "region": "footer",
+   "y": 2612,
+   "text": "​Legal​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2630,
+   "text": "Privacy Policy",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2648,
+   "text": "Terms of Use",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2666,
+   "text": "Cookie Preferences",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  },
+  {
+   "role": "a",
+   "region": "footer",
+   "y": 2684,
+   "text": "Accessibility​",
+   "size": "15px",
+   "family": "arial",
+   "align": "right"
+  }
+ ],
+ "sections": [
+  {
+   "tag": "HEADER",
+   "id": "SITE_HEADER",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 320,
+    "h": 124
+   },
+   "position": "sticky",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 31,
+    "right": 210,
+    "width": 179,
+    "padTop": 24,
+    "padBottom": 24
+   },
+   "headings": [],
+   "imgCount": 1
+  },
+  {
+   "tag": "SECTION",
+   "id": "comp-mtcaqeij",
+   "rect": {
+    "x": 0,
+    "y": 124,
+    "w": 320,
+    "h": 2304
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "bg": "rgb(255, 255, 255)",
+     "img": "none"
+    },
+    {
+     "tag": "ARTICLE",
+     "id": "",
+     "bg": "rgb(255, 255, 255)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": -460,
+    "right": 1300,
+    "width": 1760,
+    "padTop": 35,
+    "padBottom": 35
+   },
+   "headings": [
+    "H1: Why a $15,000 team retreat failed miserably",
+    "H2: Recent Posts",
+    "H2: Comments"
+   ],
+   "imgCount": 1
+  },
+  {
+   "tag": "FOOTER",
+   "id": "SITE_FOOTER",
+   "rect": {
+    "x": 0,
+    "y": 2428,
+    "w": 320,
+    "h": 274
+   },
+   "position": "relative",
+   "bg": "rgba(0, 0, 0, 0)",
+   "bgImg": "none",
+   "bgLayers": [
+    {
+     "tag": "DIV",
+     "id": "",
+     "testid": "colorUnderlay",
+     "bg": "rgb(232, 230, 230)",
+     "img": "none"
+    }
+   ],
+   "content": {
+    "left": 3,
+    "right": 298,
+    "width": 295,
+    "padTop": 17,
+    "padBottom": 0
+   },
+   "headings": [],
+   "imgCount": 0
+  }
+ ],
+ "buttons": [
+  {
+   "label": "More actions",
+   "tag": "BUTTON",
+   "cls": "MHuRVq",
+   "href": null,
+   "region": "header",
+   "rect": {
+    "x": 278,
+    "y": 232,
+    "w": 24,
+    "h": 24
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 13.3333px/normal w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Share via Facebook",
+   "tag": "BUTTON",
+   "cls": "qXlEOR",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 18,
+    "y": 1708,
+    "w": 19,
+    "h": 19
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 13.3333px/0px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Share via X (Twitter)",
+   "tag": "BUTTON",
+   "cls": "qXlEOR",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 67,
+    "y": 1708,
+    "w": 19,
+    "h": 19
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 13.3333px/0px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Share via LinkedIn",
+   "tag": "BUTTON",
+   "cls": "qXlEOR",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 116,
+    "y": 1708,
+    "w": 19,
+    "h": 19
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 13.3333px/0px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Share via link",
+   "tag": "BUTTON",
+   "cls": "qXlEOR",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 165,
+    "y": 1708,
+    "w": 19,
+    "h": 19
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 13.3333px/0px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 283,
+    "y": 1770,
+    "w": 19,
+    "h": 19
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 14px/14px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": -279,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": -19,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 241,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 501,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 761,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 1021,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Post not marked as liked",
+   "tag": "BUTTON",
+   "cls": "Kh5HMz",
+   "href": null,
+   "region": "footer",
+   "rect": {
+    "x": 1281,
+    "y": 2144,
+    "w": 19,
+    "h": 18
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(65, 65, 65)",
+   "radius": "0px",
+   "padding": "0px",
+   "shadow": "none",
+   "font": "forum, serif 12px/12px w400 lsnormal none",
+   "transition": "all"
+  },
+  {
+   "label": "Write a comment...",
+   "tag": "BUTTON",
+   "cls": "yh5VQB",
+   "href": null,
+   "region": "section#?",
+   "rect": {
+    "x": 21,
+    "y": 2337,
+    "w": 278,
+    "h": 56
+   },
+   "bg": "rgba(0, 0, 0, 0)",
+   "color": "rgb(65, 65, 65)",
+   "border": "0px none rgb(0, 0, 0)",
+   "radius": "0px",
+   "padding": "16px",
+   "shadow": "none",
+   "font": "forum, serif 14px/21px w400 lsnormal none",
+   "transition": "all"
+  }
+ ],
+ "links": [
+  {
+   "text": "",
+   "href": "https://www.theresewhite.com",
+   "region": "header",
+   "target": "_self",
+   "color": "rgb(0, 0, 238)",
+   "deco": "none",
+   "font": "Arial 10px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 31,
+    "y": 24,
+    "w": 179,
+    "h": 76
+   }
+  },
+  {
+   "text": "L. Therese White",
+   "href": "https://www.theresewhite.com/profile/283157b9-d363-4441-9704-f8e9c6399ba672329/profile",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 12px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 62,
+    "y": 226,
+    "w": 81,
+    "h": 18
+   }
+  },
+  {
+   "text": "#1",
+   "href": "https://www.theresewhite.com/blog/hashtags/1",
+   "region": "section#?",
+   "target": "_blank",
+   "color": "rgb(216, 199, 189)",
+   "deco": "none",
+   "font": "forum 16px w700",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 54,
+    "y": 395,
+    "w": 13,
+    "h": 18
+   }
+  },
+  {
+   "text": "#2",
+   "href": "https://www.theresewhite.com/blog/hashtags/2",
+   "region": "section#?",
+   "target": "_blank",
+   "color": "rgb(216, 199, 189)",
+   "deco": "none",
+   "font": "forum 16px w700",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 54,
+    "y": 563,
+    "w": 15,
+    "h": 18
+   }
+  },
+  {
+   "text": "#3",
+   "href": "https://www.theresewhite.com/blog/hashtags/3",
+   "region": "section#?",
+   "target": "_blank",
+   "color": "rgb(216, 199, 189)",
+   "deco": "none",
+   "font": "forum 16px w700",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 54,
+    "y": 875,
+    "w": 15,
+    "h": 18
+   }
+  },
+  {
+   "text": "See All",
+   "href": "https://www.theresewhite.com/blog",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 14px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 263,
+    "y": 1852,
+    "w": 39,
+    "h": 27
+   }
+  },
+  {
+   "text": "Your culture survey results are worthless (here's what works)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-your-culture-survey-results-are-worthless-here-s-what-works",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": -460,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Stop asking why employees quit (do this instead)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-stop-asking-why-employees-quit-do-this-instead",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": -200,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Why conflict resolution training fails (and what actually works)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-why-conflict-resolution-training-fails-and-what-actually-works",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 60,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Your culture survey results are worthless (here's what works)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-your-culture-survey-results-are-worthless-here-s-what-works",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 320,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Stop asking why employees quit (do this instead)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-stop-asking-why-employees-quit-do-this-instead",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 580,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Why conflict resolution training fails (and what actually works)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-why-conflict-resolution-training-fails-and-what-actually-works",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 840,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Your culture survey results are worthless (here's what works)",
+   "href": "https://www.theresewhite.com/post/triple-take-tuesdays-your-culture-survey-results-are-worthless-here-s-what-works",
+   "region": "header",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "caudex 18px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 1100,
+    "y": 1923,
+    "w": 200,
+    "h": 46
+   }
+  },
+  {
+   "text": "Therese@ThereseWhite.com",
+   "href": "mailto:Therese@ThereseWhite.com",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 2535,
+    "w": 196,
+    "h": 17
+   }
+  },
+  {
+   "text": "323-291-4813",
+   "href": "tel:323-291-4813",
+   "region": "footer",
+   "target": "",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "arial 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 18,
+    "y": 2553,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Privacy Policy",
+   "href": "https://www.theresewhite.com/privacy-policy",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 190,
+    "y": 2631,
+    "w": 93,
+    "h": 17
+   }
+  },
+  {
+   "text": "Terms of Use",
+   "href": "https://www.theresewhite.com/terms-of-use",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 195,
+    "y": 2649,
+    "w": 88,
+    "h": 17
+   }
+  },
+  {
+   "text": "Cookie Preferences",
+   "href": "https://www.theresewhite.com/cookie-preferences",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 151,
+    "y": 2667,
+    "w": 132,
+    "h": 17
+   }
+  },
+  {
+   "text": "Accessibility​",
+   "href": "https://www.theresewhite.com/accessibility",
+   "region": "footer",
+   "target": "_self",
+   "color": "rgb(65, 65, 65)",
+   "deco": "none",
+   "font": "forum 15px w400",
+   "ariaCurrent": null,
+   "rect": {
+    "x": 201,
+    "y": 2685,
+    "w": 82,
+    "h": 17
+   }
+  }
+ ],
+ "images": [
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/1d1667_22e61df08fe64f6399a3ccf6f27b95c1~mv2.png/v1/fill/w_173,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therese%20High%20Res%20Logo.png",
+   "alt": "Therese High Res Logo.png",
+   "region": "header",
+   "rect": {
+    "x": 34,
+    "y": 27,
+    "w": 173,
+    "h": 70
+   },
+   "natural": "173x70",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "6px (ancestor)",
+   "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px (ancestor)",
+   "border": "3px solid rgb(29, 44, 243) (ancestor)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "IMG",
+   "src": "https://static.wixstatic.com/media/2b690a_b609aa27f2114a8cbab0ae81c376a7b6~mv2.png",
+   "alt": "Writer: L. Therese White",
+   "region": "header",
+   "rect": {
+    "x": 18,
+    "y": 228,
+    "w": 32,
+    "h": 32
+   },
+   "natural": "206x220",
+   "fit": "cover",
+   "pos": "50% 50%",
+   "radius": "50% (ancestor)",
+   "shadow": "none",
+   "border": "0px rgb(65, 65, 65)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  },
+  {
+   "tag": "svg",
+   "src": null,
+   "region": "other",
+   "rect": {
+    "x": 256,
+    "y": 475,
+    "w": 44,
+    "h": 44
+   },
+   "natural": null,
+   "fit": "fill",
+   "pos": "50% 50%",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px rgb(0, 0, 0)",
+   "clip": "none",
+   "mask": null,
+   "filter": "none",
+   "opacity": "1"
+  }
+ ],
+ "forms": [],
+ "colors": {
+  "rgb(244, 239, 235)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  },
+  "rgb(232, 230, 230)": {
+   "count": 2,
+   "props": {
+    "bg": 2
+   },
+   "regions": {
+    "header": 1,
+    "footer": 1
+   }
+  },
+  "rgb(29, 44, 243)": {
+   "count": 3,
+   "props": {
+    "bg": 1,
+    "border": 2
+   },
+   "regions": {
+    "header": 3
+   }
+  },
+  "rgba(255, 255, 255, 0)": {
+   "count": 1,
+   "props": {
+    "bg": 1
+   },
+   "regions": {
+    "header": 1
+   }
+  },
+  "rgb(65, 65, 65)": {
+   "count": 135,
+   "props": {
+    "bg": 5,
+    "text": 87,
+    "svg-fill": 43
+   },
+   "regions": {
+    "header": 20,
+    "section#?": 37,
+    "footer": 77,
+    "other": 1
+   }
+  },
+  "rgb(255, 255, 255)": {
+   "count": 12,
+   "props": {
+    "bg": 10,
+    "text": 1,
+    "svg-fill": 1
+   },
+   "regions": {
+    "section#comp-mtcaqeij": 3,
+    "section#?": 8,
+    "other": 1
+   }
+  },
+  "rgb(216, 199, 189)": {
+   "count": 5,
+   "props": {
+    "bg": 2,
+    "text": 3
+   },
+   "regions": {
+    "section#comp-mtcaqeij": 1,
+    "section#?": 4
+   }
+  },
+  "rgba(65, 65, 65, 0.2)": {
+   "count": 11,
+   "props": {
+    "border": 11
+   },
+   "regions": {
+    "footer": 9,
+    "section#?": 2
+   }
+  },
+  "rgba(65, 65, 65, 0.3)": {
+   "count": 2,
+   "props": {
+    "border": 2
+   },
+   "regions": {
+    "section#?": 2
+   }
+  },
+  "rgb(0, 0, 0)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  },
+  "rgb(199, 199, 199)": {
+   "count": 1,
+   "props": {
+    "svg-fill": 1
+   },
+   "regions": {
+    "other": 1
+   }
+  }
+ },
+ "header": {
+  "rect": {
+   "x": 0,
+   "y": 0,
+   "w": 320,
+   "h": 124
+  },
+  "position": "sticky",
+  "top": "0px",
+  "z": "50",
+  "bg": "rgba(0, 0, 0, 0)",
+  "bgLayers": [
+   {
+    "id": "",
+    "testid": "colorUnderlay",
+    "bg": "rgb(232, 230, 230)",
+    "rect": {
+     "x": 0,
+     "y": -13,
+     "w": 320,
+     "h": 137
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "testid": "linkElement",
+    "bg": "rgb(29, 44, 243)",
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    },
+    "shadow": "rgba(0, 0, 0, 0.5) 0px 0px 3px 0px",
+    "borderBottom": "3px solid rgb(29, 44, 243)"
+   },
+   {
+    "id": "",
+    "bg": "rgba(255, 255, 255, 0)",
+    "rect": {
+     "x": 219,
+     "y": 11,
+     "w": 73,
+     "h": 70
+    },
+    "shadow": "none",
+    "borderBottom": "0px solid rgb(65, 65, 65)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 36,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 45,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   },
+   {
+    "id": "",
+    "bg": "rgb(65, 65, 65)",
+    "rect": {
+     "x": 245,
+     "y": 54,
+     "w": 22,
+     "h": 2
+    },
+    "shadow": "none",
+    "borderBottom": "0px none rgb(0, 0, 0)"
+   }
+  ],
+  "wrapperPos": "static",
+  "navItems": [
+   {
+    "text": "",
+    "href": "https://www.theresewhite.com",
+    "ariaCurrent": null,
+    "rect": {
+     "x": 31,
+     "y": 24,
+     "w": 179,
+     "h": 76
+    }
+   }
+  ]
+ },
+ "navs": [
+  {
+   "ariaLabel": "Site",
+   "region": "header",
+   "visible": false,
+   "items": [
+    {
+     "text": "Home",
+     "href": "https://www.theresewhite.com",
+     "current": null
+    },
+    {
+     "text": "About Therese",
+     "href": "https://www.theresewhite.com/about-therese",
+     "current": null
+    },
+    {
+     "text": "Endorsements",
+     "href": "https://www.theresewhite.com/team-1-1",
+     "current": null
+    },
+    {
+     "text": "Case Studies",
+     "href": "https://www.theresewhite.com/case-studies",
+     "current": null
+    },
+    {
+     "text": "FAQ",
+     "href": "https://www.theresewhite.com/services-3",
+     "current": null
+    },
+    {
+     "text": "Blog",
+     "href": "https://www.theresewhite.com/blog",
+     "current": null
+    },
+    {
+     "text": "Contact",
+     "href": "https://www.theresewhite.com/contact",
+     "current": null
+    }
+   ]
+  }
+ ],
+ "headings": [
+  {
+   "tag": "H1",
+   "region": "header",
+   "text": "Why a $15,000 team retreat failed miserably"
+  },
+  {
+   "tag": "H2",
+   "region": "header",
+   "text": "Recent Posts"
+  },
+  {
+   "tag": "H2",
+   "region": "section#?",
+   "text": "Comments"
+  }
+ ],
+ "hamburger": [
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER_TOGGLE",
+   "aria": "Open navigation menu",
+   "visible": true
+  },
+  {
+   "tag": "DIV",
+   "id": "MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "overlay-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "container-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgLayers_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "bgMedia_MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "DIV",
+   "id": "inlineContentParent-MENU_AS_CONTAINER",
+   "aria": null,
+   "visible": false
+  },
+  {
+   "tag": "NAV",
+   "id": "MENU_AS_CONTAINER_EXPANDABLE_MENU",
+   "aria": "Site",
+   "visible": false
+  }
+ ],
+ "iframes": [],
+ "cookieDismissed": false,
+ "bannerText": null
+}
