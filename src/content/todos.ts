@@ -208,8 +208,8 @@ export const todos: Todo[] = [
     id: "first-build-direction",
     title: "Decide whether the first build is the exact Wix copy or the simplified design",
     detail:
-      "The style bible at /stylebible describes two designs: the Wix site as measured (22 colors, about 90 text styles) and a simplified Recommended system (6 colors, 6 text sizes, one button style). Building the exact copy first and simplifying later means building the site twice. Building the simplified design first means Therese sees design changes before she has agreed to leave Wix. The homepage sample at /stylebible/compare shows the two side by side, with identical words, to help make the call.",
-    status: "open",
+      "The style bible at /stylebible describes two designs: the Wix site as measured (22 colors, about 90 text styles) and a simplified Recommended system (6 colors, 6 text sizes, one button style). Building the exact copy first and simplifying later means building the site twice. Building the simplified design first means Therese sees design changes before she has agreed to leave Wix. The homepage sample at /stylebible/compare shows the two side by side, with identical words, to help make the call. Done 2026-10-18: James chose the near-exact Wix copy for the first build, and it is now the test site. The simplified design waits for phase two.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Design",
@@ -219,7 +219,7 @@ export const todos: Todo[] = [
     id: "copy-review",
     title: "Review the site's words with Therese, as a separate step from the design",
     detail:
-      "The design sample at /stylebible/home keeps every word of the Wix homepage unchanged, on purpose, so the design can be judged alone. Copy gets its own page and its own conversation later. Items already raised by the style bible's red team: replacing \"Click Here\" with labels that name the outcome, such as \"Book a confidential assessment\"; moving the panel logos and the 30+ years and 1,100+ mediations figures up to just under the headline; and whether to keep leading with the AI avatar video.",
+      "The design sample at /stylebible/home keeps every word of the Wix homepage unchanged, on purpose, so the design can be judged alone. Copy gets its own page and its own conversation later. Items already raised by the style bible's red team: replacing \"Click Here\" with labels that name the outcome, such as \"Book a confidential assessment\"; moving the panel logos and the 30+ years and 1,100+ mediations figures up to just under the headline; and whether to keep leading with the AI avatar video. Column 3 of /stylebible/compare (/stylebible/home-new, words in src/content/home-new.ts) is a full proposal for the homepage words, for this conversation.",
     status: "open",
     owner: "James",
     priority: "normal",
@@ -241,11 +241,22 @@ export const todos: Todo[] = [
     id: "stylebible-before-cutover",
     title: "Take /stylebible down, or put it behind /admin, before the move to theresewhite.com",
     detail:
-      "The style bible and its samples (/stylebible, /stylebible/home, /stylebible/compare) are unlinked and noindex on the test site, but anyone with the address can open them, and the bible criticizes the current design in plain terms. They should not go live on Therese's real domain. The source is docs/style-bible/index.html and src/app/(landing)/stylebible/.",
+      "The style bible and its samples (/stylebible, /stylebible/home, /stylebible/home-new, /stylebible/compare) are unlinked and noindex on the test site, but anyone with the address can open them, and the bible criticizes the current design in plain terms. They should not go live on Therese's real domain. The source is docs/style-bible/index.html and src/app/(landing)/stylebible/.",
     status: "open",
     owner: "Dev",
     priority: "normal",
     area: "Deploy",
+    added: "2026-10-18",
+  },
+  {
+    id: "wix-placeholders",
+    title: "Fix the unfinished placeholders copied word for word from Wix",
+    detail:
+      "The rebuild copies the Wix pages exactly, so it also copies text that was never finished there. Each one needs Therese's wording, and each fix should be made on Wix too while Wix is still live. Accessibility: \"within [NUMBER] business days\", \"escalate by emailing [EMAIL ADDRESS]\", and \"This site is built on the Wix platform\". Cookie Preferences: a line that is only \".\", and a list of cookies that Wix sets, which stops being true when the site leaves Wix. Terms of Use: section 8 has lost its heading and starts with a stray \"1\". Privacy Policy: it names Wix Analytics and Wix email delivery, which may not be what the new site uses. Blog posts: \"[Link: .XXX/TripleTakeTuesdays/Date]\" in every post, \"Add subtitle.\" and an unlinked \"Click here to learn more.\" in two, and a link to ThereseWhite.com/back-issues, which probably does not exist. Words live in src/content/wix/legal.ts and content/posts/.",
+    status: "open",
+    owner: "Therese",
+    priority: "normal",
+    area: "Content",
     added: "2026-10-18",
   },
 ];
