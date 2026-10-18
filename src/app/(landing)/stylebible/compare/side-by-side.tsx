@@ -1,17 +1,23 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { columns, type ColumnKey } from "./compare-content";
 
 /**
- * Shows the Wix homepage and the redesigned sample next to each other, at
- * the same scale, so they can be compared section by section.
+ * Shows three versions of the homepage next to each other, at the same
+ * scale, so they can be compared section by section:
  *
- * Each side is drawn at a real screen width (1,440 pixels for desktop, 390
- * for a phone) and then shrunk to fit its column. Without that, the sample
- * would be squeezed into half a screen and show its tablet layout, which is
- * not a fair comparison. The Wix side is a full-page screenshot taken on
- * 2026-10-16; the sample side is the live page at /stylebible/home/,
- * loaded in a frame.
+ *  1. Wix today: a full-page screenshot taken on 2026-10-16.
+ *  2. /stylebible/home/: the Wix words in the recommended design.
+ *  3. /stylebible/home-new/: new words and a new layout.
+ *
+ * Each version is drawn at a real screen width (1,440 pixels for desktop,
+ * 390 for a phone) and then shrunk to fit its column. Without that, a sample
+ * squeezed into a third of the screen would show its phone layout, which is
+ * not a fair comparison.
+ *
+ * Below 1,000 pixels wide, three columns are too narrow to read, so the page
+ * shows one column at a time with buttons to switch between them.
  */
 
 const VIEWS = {
@@ -20,6 +26,14 @@ const VIEWS = {
 } as const;
 
 type View = keyof typeof VIEWS;
+
+const SAMPLE_SRC: Record<Exclude<ColumnKey, "wix">, string> = {
+  same: "/stylebible/home/",
+  new: "/stylebible/home-new/",
+};
+
+const GAP = 20;
+const NARROW = "(max-width: 999px)";
 
 function useWidth<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -34,26 +48,26 @@ function useWidth<T extends HTMLElement>() {
   return [ref, width] as const;
 }
 
-function Pane({ title, note, children }: { title: string; note: string; children: React.ReactNode }) {
-  return (
-    <div style={{ display: "grid", gap: 8, alignContent: "start", minWidth: 0 }}>
-      <div>
-        <div style={{ fontWeight: 700, fontSize: 17, color: "#000" }}>{title}</div>
-        <div style={{ fontSize: 14, color: "#5f5c5a" }}>{note}</div>
-      </div>
-      {children}
-    </div>
-  );
+function useNarrow() {
+  const [narrow, setNarrow] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia(NARROW);
+    const update = () => setNarrow(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return narrow;
 }
 
-function Sample({ view, paneWidth }: { view: View; paneWidth: number }) {
+function Sample({ src, view, shown, title }: { src: string; view: View; shown: number; title: string }) {
   const frame = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState(2000);
   const { width } = VIEWS[view];
-  const scale = paneWidth ? Math.min(1, paneWidth / width) : 0;
+  const scale = shown ? shown / width : 0;
 
   // The frame is as tall as the page inside it, so the outer page scrolls
-  // both sides together. Fonts and images settle after load, so measure a
+  // every column together. Fonts and images settle after load, so measure a
   // few more times.
   const measure = useCallback(() => {
     const doc = frame.current?.contentDocument;
@@ -65,12 +79,12 @@ function Sample({ view, paneWidth }: { view: View; paneWidth: number }) {
   }, [measure]);
 
   return (
-    <div style={{ height: height * scale, overflow: "hidden", border: "1px solid #d8c7bd", background: "#fff" }}>
+    <div style={{ width: shown || "100%", height: height * scale, overflow: "hidden", border: "1px solid #d8c7bd", background: "#fff" }}>
       <iframe
         ref={frame}
         key={view}
-        src="/stylebible/home/"
-        title={`Redesigned homepage sample, ${VIEWS[view].label}`}
+        src={src}
+        title={title}
         onLoad={onLoad}
         scrolling="no"
         style={{ width, height, border: 0, transform: `scale(${scale})`, transformOrigin: "0 0", display: "block" }}
@@ -79,57 +93,78 @@ function Sample({ view, paneWidth }: { view: View; paneWidth: number }) {
   );
 }
 
+const pill = (active: boolean): React.CSSProperties => ({
+  fontSize: 15,
+  fontWeight: 600,
+  minHeight: 40,
+  padding: "6px 16px",
+  borderRadius: 100,
+  border: "2px solid #1a78c9",
+  background: active ? "#1a78c9" : "#fff",
+  color: active ? "#fff" : "#145e9e",
+  cursor: "pointer",
+});
+
 export function SideBySide() {
-  const [view, setView] = useState<View>("desktop");
-  const [paneRef, paneWidth] = useWidth<HTMLDivElement>();
+  // Until someone picks a size, a phone reader sees the phone versions and
+  // everyone else sees desktop.
+  const [chosen, setView] = useState<View | null>(null);
+  const [focus, setFocus] = useState<ColumnKey>("new");
+  const narrow = useNarrow();
+  const [gridRef, gridWidth] = useWidth<HTMLDivElement>();
+  const view: View = chosen ?? (narrow ? "phone" : "desktop");
   const { width, wixSrc, label } = VIEWS[view];
-  const shown = paneWidth ? Math.min(paneWidth, width) : 0;
+
+  const visible = narrow ? columns.filter((c) => c.key === focus) : columns;
+  const columnWidth = gridWidth ? (gridWidth - GAP * (visible.length - 1)) / visible.length : 0;
+  const shown = columnWidth ? Math.min(columnWidth, width) : 0;
 
   return (
-    <div style={{ display: "grid", gap: 20 }}>
-      <div role="group" aria-label="Screen size" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+    <div id="columns" style={{ display: "grid", gap: 16, scrollMarginTop: 16 }}>
+      <div role="group" aria-label="Screen size" style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
         {(Object.keys(VIEWS) as View[]).map((v) => (
-          <button
-            key={v}
-            type="button"
-            aria-pressed={view === v}
-            onClick={() => setView(v)}
-            style={{
-              fontSize: 15,
-              fontWeight: 600,
-              padding: "8px 18px",
-              borderRadius: 100,
-              border: "2px solid #1a78c9",
-              background: view === v ? "#1a78c9" : "#fff",
-              color: view === v ? "#fff" : "#1a78c9",
-              cursor: "pointer",
-            }}
-          >
+          <button key={v} type="button" aria-pressed={view === v} onClick={() => setView(v)} style={pill(view === v)}>
             {v === "desktop" ? "Desktop" : "Phone"}
           </button>
         ))}
-        <span style={{ alignSelf: "center", fontSize: 14, color: "#5f5c5a" }}>{label}. Scroll the page to move down both together.</span>
+        <span style={{ fontSize: 14, color: "#5f5c5a" }}>{label}. Scroll the page to move down all columns together.</span>
       </div>
 
-      <div className="sbs-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", gap: 24, alignItems: "start" }}>
-        <Pane title="Wix today" note="Screenshot of www.theresewhite.com, October 16, 2026">
-          <div ref={paneRef} style={{ minWidth: 0 }}>
-            {/* Plain img: a fixed screenshot shown at a computed width, not a responsive image. */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={wixSrc}
-              alt={`The live Wix homepage, full length, ${label}`}
-              style={{ width: shown || "100%", height: "auto", display: "block", border: "1px solid #d8c7bd" }}
-            />
+      {narrow && (
+        <div role="group" aria-label="Which version to show" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          {columns.map((c) => (
+            <button key={c.key} type="button" aria-pressed={focus === c.key} onClick={() => setFocus(c.key)} style={pill(focus === c.key)}>
+              {c.key === "wix" ? "1. Wix today" : c.key === "same" ? "2. Same words" : "3. New words"}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div
+        ref={gridRef}
+        style={{ display: "grid", gridTemplateColumns: `repeat(${visible.length}, minmax(0,1fr))`, gap: GAP, alignItems: "start" }}
+      >
+        {visible.map((c) => (
+          <div key={c.key} style={{ display: "grid", gap: 8, alignContent: "start", minWidth: 0 }}>
+            {/* Fixed height so the three pages start level even when a note wraps. */}
+            <div style={{ minHeight: narrow ? undefined : 64 }}>
+              <div style={{ fontWeight: 700, fontSize: 17, color: "#000" }}>{c.title}</div>
+              <div style={{ fontSize: 14, color: "#5f5c5a" }}>{c.note}</div>
+            </div>
+            {c.key === "wix" ? (
+              /* Plain img: a fixed screenshot shown at a computed width, not a responsive image. */
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={wixSrc}
+                alt={`The live Wix homepage, full length, ${label}`}
+                style={{ width: shown || "100%", height: "auto", display: "block", border: "1px solid #d8c7bd" }}
+              />
+            ) : (
+              <Sample src={SAMPLE_SRC[c.key]} view={view} shown={shown} title={`${c.title}, ${label}`} />
+            )}
           </div>
-        </Pane>
-        <Pane title="Recommended design" note="Same words, same order. Only the design changes.">
-          <div style={{ width: shown || "100%" }}>
-            <Sample view={view} paneWidth={shown} />
-          </div>
-        </Pane>
+        ))}
       </div>
-      <style>{`@media (max-width: 760px) { .sbs-grid { grid-template-columns: minmax(0,1fr) !important; } }`}</style>
     </div>
   );
 }

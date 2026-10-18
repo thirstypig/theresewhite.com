@@ -1,0 +1,167 @@
+/* Layout for the compare page's reading sections. The comparison itself is
+   styled inline in side-by-side.tsx. */
+.page {
+  background: #ffffff;
+  color: #3a3a3a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 40px;
+}
+.intro {
+  display: grid;
+  gap: 8px;
+  max-width: 820px;
+}
+.intro p,
+.panel p {
+  margin: 0;
+}
+.h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.15;
+  color: #000;
+  font-weight: 700;
+}
+.h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #000;
+  font-weight: 700;
+  text-wrap: balance;
+}
+.link {
+  color: #145e9e;
+}
+.lede {
+  font-size: 17px;
+  line-height: 1.55;
+}
+.panel {
+  display: grid;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 12px;
+  background: #f6f1ec;
+}
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px 32px;
+}
+.group {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-width: 0;
+}
+.groupLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #145e9e;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.list li {
+  display: grid;
+  gap: 3px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+.tag {
+  justify-self: start;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 100px;
+}
+.site {
+  background: #dcebf8;
+  color: #12355b;
+}
+.judgment {
+  background: #efe3d6;
+  color: #6a4b2f;
+}
+.note {
+  font-size: 13px;
+  color: #6a6560;
+}
+.legend {
+  font-size: 14px;
+  color: #5f5c5a;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+}
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.reasonPanel {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #e4dcd4;
+  min-width: 0;
+}
+.reasonPanel p {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .reasons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .panel,
+  .reasonPanel {
+    padding: 20px;
+  }
+}
+.reasonList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+.reasonList li {
+  display: grid;
+  gap: 2px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.reasonLead {
+  font-weight: 700;
+  color: #000;
+}
+.finding {
+  font-size: 12px;
+  color: #6a6560;
+}
+.limit {
+  font-size: 15px;
+  line-height: 1.5;
+  padding-top: 14px;
+  border-top: 1px solid #e4dcd4;
+}
