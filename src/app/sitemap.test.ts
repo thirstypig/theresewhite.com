@@ -31,6 +31,10 @@ const NOT_IN_SITEMAP: Record<string, string> = {
     "Campaign landing page for a LinkedIn post, the second design under test. Same duplicate-content reason as /lp/a.",
   "/stylebible":
     "The design guide for James, Therese and Bill. Unlinked and noindex: it critiques the current site and is not for visitors.",
+  "/stylebible/home":
+    "Design sample for the style bible: the Wix homepage's words in the recommended design. Unlinked and noindex.",
+  "/stylebible/compare":
+    "The Wix homepage next to the design sample, for the style bible. Unlinked and noindex.",
 };
 
 /**
