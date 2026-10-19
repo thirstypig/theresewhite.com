@@ -40,7 +40,7 @@ src/lib/site-config.ts  Deployment URL + the staging noindex switch.
 src/lib/conflict-cost.ts  Calculator maths, ported verbatim from Therese's v2.
 src/components/         Shared UI.
 src/app/                One folder per route, inside two route groups:
-                        (site) carries the header and footer, (landing)
+                        (site) carries the Wix header and footer, (landing)
                         renders bare. Parentheses never appear in a URL.
 scripts/                Build-time checks that are not part of the app.
                         verify-built-output.mjs reads ./out and fails the
@@ -89,10 +89,20 @@ name the failure a test prevents, don't add it.
 There is no `CHANGELOG.md` or `ROADMAP.md`; the git log and `todos.ts` cover
 both. Don't create them without asking.
 
-**Copy is migrated verbatim** from the live Wix site, with three exceptions:
-the About page, the Collaborate page, and the campaign landing pages are
-drafted, marked `DRAFT COPY` or `TODO(therese)` in `site.ts`, and await
-Therese's own words. Nothing biographical was invented for any of them.
+**Since 2026-10-18 the site is a near-exact copy of the live Wix site**, in
+design and in words, at the Wix addresses. James chose this for the first
+build; the redesign is a later phase, previewed at `/stylebible/compare/`. The
+copied words live in `src/content/wix-home.ts`, `src/content/wix/*.ts` and,
+for the blog, one Markdown file per post in `content/posts/` (the format
+TinaCMS edits, for when the blog moves to it). Wix's text is in
+`docs/wix-capture/`. The few deliberate differences from Wix are listed in
+the comments of each page and in PR #25.
+
+Two kinds of copy are not from Wix: the Collaborate page and the campaign
+landing pages are drafted, marked `DRAFT COPY` or `TODO(therese)` in
+`site.ts`, and await Therese's own words. Nothing biographical was invented
+for either. `site.ts` also still holds the first rebuild's edited copy, used by
+the landing pages and by Services and Process, which are off the menu.
 
 The conflict calculator is the opposite case — its copy is migrated, but from
 Therese's own calculator, `workplace-conflict-calculator-v2.html` in the repo
@@ -103,12 +113,13 @@ root, rather than from Wix. Every word is hers, exactly as written.
 - **Collaborate page** — the whole page is drafted, not migrated; the Wix site
   has no equivalent. Highest priority open content item — see `collaborate-voice`
   in `todos.ts`.
-- **About page** — assembled from claims evidenced elsewhere on the site. Needs
-  rewriting in her voice.
+- **Placeholders copied from Wix** — "[NUMBER] business days", the
+  "[Link: .XXX…]" lines in blog posts, and similar. See `wix-placeholders` in
+  `todos.ts`.
 - **Landing pages** (`/lp/a`, `/lp/b`) — the hero and contact copy in the
   `landing` export is drafted. The calculator in the middle of both pages is
   her own and needs nothing.
-- **Privacy and terms** — generic templates, not reviewed by a lawyer.
+- **Privacy and terms** — now the Wix text, which has not been reviewed by a lawyer either.
 - **EEOC and Kenneth Cloke** entries in `credentials` — read off cropped logo
   images, so worth confirming.
 
@@ -180,6 +191,6 @@ The calculator is also published on its own at
 **calculator.theresewhite.com**, because theresewhite.com is still on Wix.
 DEPLOY.md, "The calculator's own address", explains how.
 
-The 15 Wix redirects can't run on GitHub Pages (no server to issue a 301).
-They're preserved as a table in [DEPLOY.md](./DEPLOY.md) and must be restored
-at cutover, or every existing link and search ranking breaks.
+The rebuilt pages use the Wix addresses, so their links survive the move with
+no redirect. The Wix addresses for pages that were not rebuilt are listed in
+[DEPLOY.md](./DEPLOY.md) and must be handled at cutover, or those links break.

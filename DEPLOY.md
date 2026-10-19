@@ -326,20 +326,26 @@ Not yet — only when the design is approved.
    off Wix, or point the records at GitHub Pages. **Check for MX records
    first** — if her email runs through Wix, those must be recreated before the
    switch or her email stops.
-4. **Restore the redirects.** GitHub Pages can't issue 301s, so the Wix URL map
-   below has to be handled either by moving to a host that supports redirects,
-   or by generating static meta-refresh pages. Either way it must happen, or
-   every existing link and search ranking breaks:
+4. **Restore the redirects.** Since 2026-10-18 the site uses the Wix
+   addresses for every page it rebuilt (`/about-therese`, `/team-1-1`,
+   `/case-studies`, `/services-3`, `/blog`, `/post/*`, `/privacy-policy` and
+   the rest), so those links keep working with no redirect at all. What is
+   left are Wix addresses for pages that were not rebuilt. GitHub Pages can't
+   issue 301s, so these need either a host that supports redirects or static
+   forwarding pages like `src/components/moved-page.tsx`. Either way they must
+   be handled, or those links and their search rankings break:
 
    | Old | New |
    |---|---|
-   | `/services-3` | `/faq` |
-   | `/team-1-1` | `/endorsements` |
-   | `/general-8`, `/newsletterontheway` | `/contact/thank-you` |
+   | `/general-8`, `/newsletterontheway` | `/contact` |
    | `/book-online`, `/service-page/*` | `/contact` |
-   | `/newsletterarchive`, `/copy-of-newsletter` | `/` |
+   | `/newsletterarchive`, `/copy-of-newsletter` | `/blog` |
+   | `/tripletaketuesdays*` (five dated newsletter pages) | `/blog` |
    | `/frommeltdowntoresolution`, `/product-page/*` | `/` |
-   | `/pricing-plans/*`, `/challenges`, `/challenge-page/*` | `/services` |
-   | `/blog`, `/post/*` | `/` |
+   | `/cost-of-concflict-calculator` (misspelled on Wix) | `https://calculator.theresewhite.com` |
+   | `/pricing-plans/*`, `/challenges`, `/challenge-page/*` | `/` |
+
+   The first rebuild's own tidy addresses (`/about`, `/endorsements`,
+   `/faq`, `/privacy`, `/terms`) already forward to the Wix ones.
 
 5. Submit the site to Google Search Console and confirm the redirects resolve.
