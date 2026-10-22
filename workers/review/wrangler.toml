@@ -1,0 +1,15 @@
+# Review comments for book.theresewhite.com and calculator.theresewhite.com.
+# Deploy from this folder with `npx wrangler deploy`. That is a production
+# action: it changes what reviewers' comments go to.
+name = "theresewhite-review"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Only these two pages may call this Worker from a browser.
+ALLOWED_ORIGINS = "https://book.theresewhite.com,https://calculator.theresewhite.com"
+
+# Its own storage. Never share it with another project.
+[[kv_namespaces]]
+binding = "COMMENTS"
+id = "a422a6b15df142ef8229dba0f39199de"  # theresewhite-review-COMMENTS

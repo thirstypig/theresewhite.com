@@ -29,6 +29,28 @@ export type Todo = {
 
 export const todos: Todo[] = [
   {
+    id: "review-password",
+    title: "Set the review password for the book and calculator pages",
+    detail:
+      "The password screen and Feedback tab are built (DEPLOY.md, \"Reviewer feedback\") but stay off until a password exists. In your own terminal, not through Claude, run scripts/set-review-passphrase.sh from the project folder; it asks for the password without showing it and saves only a scrambled version on GitHub. Then run the deploy. Give reviewers the two addresses and the password. Until then both pages publish open to everyone, as they do today.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Review",
+    added: "2026-10-22",
+  },
+  {
+    id: "review-overlay-remove",
+    title: "Take the review password and Feedback tab off before either page goes public",
+    detail:
+      "Before the book page goes on LinkedIn, or the calculator is linked from anywhere, delete the REVIEW_PASSPHRASE_HASH repository variable and run the deploy: both pages then publish without the password screen or the Feedback tab. Read and save the comments first (DEPLOY.md, \"Reviewer feedback\"). The comments service, theresewhite-review on Cloudflare, can be deleted once nobody needs the comments.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Review",
+    added: "2026-10-22",
+  },
+  {
     id: "book-site-setup",
     title: "Finish the one-time setup for book.theresewhite.com",
     detail:
@@ -142,7 +164,7 @@ export const todos: Todo[] = [
     id: "calculator-subdomain-dns",
     title: "Point the Wix home page's calculator button at calculator.theresewhite.com",
     detail:
-      "Done 2026-10-16. calculator.theresewhite.com is live over https, and the live home page's \"Click To See Your Numbers\" button now opens it in a new tab instead of the claude.ai artifact (checked on www.theresewhite.com). At cutover, the subdomain should redirect to /conflict-calculator on the main site rather than go dark; DEPLOY.md, \"At cutover\", has the steps.",
+      "Done 2026-10-16. calculator.theresewhite.com is live over https, and the live home page's \"Click To See Your Numbers\" button opened it in a new tab instead of the claude.ai artifact (checked on www.theresewhite.com). By 2026-10-22 that link was gone: the live home page no longer links to the calculator, so nobody arrives there from Wix, which is why it was put behind the review password. At cutover, the subdomain should redirect to /conflict-calculator on the main site rather than go dark; DEPLOY.md, \"At cutover\", has the steps.",
     status: "done",
     owner: "James",
     priority: "high",

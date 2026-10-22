@@ -53,7 +53,7 @@ public/logos/           Panel and affiliation logos, normalized to uniform tiles
 
 ## Tests
 
-`npm test` — Vitest, node environment, 100 tests across nine files. They run in
+`npm test` — Vitest, node environment, 115 tests across ten files. They run in
 CI before the build, so a failure blocks the deploy.
 
 Every one of them guards a failure that returns 200 and looks correct in a
@@ -64,6 +64,7 @@ catches it.
 |---|---|
 | `src/lib/conflict-cost.test.ts` | The calculator's arithmetic, pinned to four sets of figures read off Therese's own calculator script (`workplace-conflict-calculator-v2.html`), including the benefits toggle and out-of-range entries. She may quote these figures — a "cleanup" that changes them is the regression this exists to catch. |
 | `scripts/build-calculator-site.test.ts` | The step that publishes calculator.theresewhite.com and book.theresewhite.com. Guards the ways it can publish a broken site while looking fine: leaving out `.nojekyll` (GitHub would then drop every script and stylesheet), publishing a page built for the main site's address, leaving out a file the page needs (such as the logo), publishing a link to a page the subdomain does not have, leaving out the book's PDF (the page only links to it after signup, so a scan of the page cannot find it), and giving the book's LinkedIn card the site's generic image instead of the cover. |
+| `workers/review/test/worker.test.js` | The comments service behind the Feedback tab: that it answers only the two review pages, that a malformed thread name cannot read or overwrite anything else it stores, and that empty, oversized and malformed comments are refused. |
 | `src/components/book-signup-form.test.ts` | Where a book signup came from, which is stored on the Kit subscriber: a tagged LinkedIn link, an untagged one (falls back to the referring site), and a visit from nowhere (`direct`). |
 | `src/lib/site-config.test.ts` | The staging `noindex` switch. Fails in two directions: a crawlable duplicate competing with her live site, or the launched site shipping `noindex` and vanishing from search. |
 | `src/app/sitemap.test.ts` | That every page reaches the sitemap or is on the documented exclusion list. A new page can ship, return 200, look fine, and never be submitted to a search engine — a failure with no symptom. The exclusion list is the durable part: it records *why* each absent route is absent. |
@@ -197,6 +198,10 @@ The free guide, *From Meltdown to Resolution*, has its own signup page at
 **book.theresewhite.com**, for links in LinkedIn posts. Signups go to
 Therese's Kit account, each one recording which post sent it. DEPLOY.md,
 "The free book's own address", explains how it works and how to tag links.
+
+While they are unannounced, both subdomains can sit behind a review password
+with a Feedback tab for comments and pins. DEPLOY.md, "Reviewer feedback",
+explains how to turn it on and off and where comments are kept.
 
 The rebuilt pages use the Wix addresses, so their links survive the move with
 no redirect. The Wix addresses for pages that were not rebuilt are listed in

@@ -104,6 +104,10 @@ jobs:
       NEXT_PUBLIC_SITE_URL: https://calculator.theresewhite.com
       NEXT_PUBLIC_CLARITY_ID: xxajqpw2g7
       NEXT_PUBLIC_GA_ID: G-4QVRMZJVWS
+      # The review password screen and feedback panel (DEPLOY.md, "Reviewer
+      # feedback"). Only a hash of the password; leave it unset to publish
+      # the page open to everyone.
+      REVIEW_PASSPHRASE_HASH: ${{ vars.REVIEW_PASSPHRASE_HASH }}
     steps:
       - uses: actions/checkout@v7
 
@@ -163,6 +167,8 @@ jobs:
       NEXT_PUBLIC_GA_ID: G-4QVRMZJVWS
       NEXT_PUBLIC_KIT_FORM_ID: ${{ vars.NEXT_PUBLIC_KIT_FORM_ID }}
       NEXT_PUBLIC_KIT_SENDS_COPY: ${{ vars.NEXT_PUBLIC_KIT_SENDS_COPY }}
+      # The review password screen and feedback panel, as above.
+      REVIEW_PASSPHRASE_HASH: ${{ vars.REVIEW_PASSPHRASE_HASH }}
     steps:
       - uses: actions/checkout@v7
 

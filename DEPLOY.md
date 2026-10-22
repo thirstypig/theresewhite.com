@@ -283,7 +283,7 @@ Two differences from the main site, both deliberate:
 | Add a deploy key that can write to that repository only, and store its private half as the `CALCULATOR_DEPLOY_KEY` secret here | GitHub | Done 2026-10-16 |
 | After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `calculator.theresewhite.com`; Enforce HTTPS | That repository | Done 2026-10-16 |
 | Add a DNS record: type **CNAME**, host **`calculator`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | Done 2026-10-16 |
-| Point the Wix home page's "Click To See Your Numbers" button at `https://calculator.theresewhite.com` (it opens the claude.ai artifact today) | Wix editor | Done 2026-10-16 |
+| Point the Wix home page's "Click To See Your Numbers" button at `https://calculator.theresewhite.com` (it opens the claude.ai artifact today) | Wix editor | Done 2026-10-16; the link was gone again by 2026-10-22, so nothing on Wix links here now |
 
 **If the security certificate stalls.** On 2026-10-16 GitHub went 40 minutes
 without requesting one, even though its own domain check (the API's
@@ -436,6 +436,79 @@ If the security certificate stalls, the fix in the calculator's section above
 Like the calculator, the address must keep working, because LinkedIn posts
 will have linked to it. The page can move to `/book` on the main site and the
 subdomain become a redirect to it, keeping the tags on the link.
+
+---
+
+## Reviewer feedback: a password screen and a Feedback tab
+
+While book.theresewhite.com and calculator.theresewhite.com are unannounced,
+both can be put behind a **review password**, and reviewers get a yellow
+**Feedback** tab on the right edge of the window, at mid-height. It opens a
+panel where they leave comments on the page, or use **Pin on page** to click
+a spot and leave a comment pinned there. Everyone with the password sees all
+comments, with the time each was left. Adapted from the same tool on
+1234.pasadenaworks.com and vipok.pasadenaworks.com (the vipok project's
+version).
+
+What it is, and is not:
+
+- **The password screen is not security.** It runs in the visitor's browser
+  and the page's code is public, so a determined person can get past it. It
+  keeps casual visitors and search engines out of an unfinished page. Nothing
+  confidential should go on either page or in a comment.
+- **It only touches the two subdomains.** It is added when the deploy
+  assembles them (`addReviewOverlay` in `scripts/build-calculator-site.mjs`),
+  never to the main site. The scripts are `review/gate.js` (password screen)
+  and `review/overlay.js` (Feedback tab and pins).
+- **Pins are placed by position on the whole page**, so a pin left on a
+  desktop can sit off target on a phone, where the page is laid out
+  differently. Each page has one comment thread: `book:en:home` and
+  `calculator:en:home`.
+
+### Turning it on, changing the password, turning it off
+
+- **On, or a new password:** in your own terminal (not through Claude, so the
+  password is never written into a chat log), from the project folder, run
+  `scripts/set-review-passphrase.sh`. It asks twice without showing what you
+  type and saves only a scrambled version (a SHA-256 hash) as the
+  `REVIEW_PASSPHRASE_HASH` repository variable. Then run the deploy
+  (`gh workflow run deploy.yml`, or push to `main`). Capital letters and
+  spaces at either end are ignored. A new password locks everyone out until
+  they enter it.
+- **Off:** delete `REVIEW_PASSPHRASE_HASH` (GitHub → Settings → Secrets and
+  variables → Actions → Variables) and run the deploy. Both pages then
+  publish open, with no Feedback tab. Do this before the book page goes on
+  LinkedIn or the calculator is linked from anywhere.
+
+### Where comments are stored
+
+A small Cloudflare service, **theresewhite-review**, at
+`https://theresewhite-review.jimmyc316.workers.dev`, on James's Cloudflare
+account (free plan), with its own storage, `theresewhite-review-COMMENTS`.
+Source: `workers/review/`. It answers only the two pages' addresses; other
+websites get "Origin not allowed". Its address is a public endpoint all the
+same (the limit stops other websites, not scripts), so treat comments as
+readable by anyone who looks.
+
+- **Reading the comments:**
+  `curl -H 'Origin: https://book.theresewhite.com' 'https://theresewhite-review.jimmyc316.workers.dev/comments?thread=book:en:home'`
+  (and `calculator:en:home` for the calculator).
+- **Clearing handled comments:** the service has no delete. From
+  `workers/review/`, either delete a whole thread with
+  `npx wrangler kv key delete "book:en:home" --namespace-id a422a6b15df142ef8229dba0f39199de --remote`,
+  or save the comments to keep as a JSON list (oldest first) and replace the
+  thread with
+  `npx wrangler kv key put "book:en:home" --path=keep.json --namespace-id a422a6b15df142ef8229dba0f39199de --remote`.
+  Save a copy of the thread first.
+- **Changing the service:** edit `workers/review/`, run its tests
+  (`npx vitest run workers`), then `npx wrangler deploy` from that folder.
+  Deploying is a production action.
+- **Comments don't work on a local copy** of the page: the service only
+  answers the two real addresses. To try the whole thing locally, run a local
+  copy of the service:
+  `(cd workers/review && npx wrangler dev --local --port 8787 --var ALLOWED_ORIGINS:http://localhost:4324)`,
+  build the page with `REVIEW_API=http://localhost:8787` and a
+  `REVIEW_PASSPHRASE_HASH`, and serve it on port 4324.
 
 ---
 
