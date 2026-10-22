@@ -19,6 +19,7 @@
 
 # calculator.theresewhite.com, assembled by scripts/build-calculator-site.mjs
 /calculator-site/
+/book-site/
 
 # production
 /build

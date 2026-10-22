@@ -19,6 +19,8 @@ const APP_DIR = fileURLToPath(new URL(".", import.meta.url));
 const NOT_IN_SITEMAP: Record<string, string> = {
   "/admin": "Password-gated. Nothing there should be discoverable.",
   "/admin/todo": "Password-gated. Nothing there should be discoverable.",
+  "/book":
+    "The source of book.theresewhite.com, the free-guide signup page for LinkedIn posts, published from a second build. noindex everywhere: it exists for shared links, not search.",
   "/calculator":
     "The source of calculator.theresewhite.com, which is published from a second build. On the main site it is a noindex duplicate of /conflict-calculator without the header and footer.",
   "/conflict-calculator":

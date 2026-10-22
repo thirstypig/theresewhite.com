@@ -2,7 +2,12 @@ import { existsSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, it, expect } from "vitest";
-import { assembleCalculatorSite, localReferences } from "./build-calculator-site.mjs";
+import {
+  assembleCalculatorSite,
+  assembleSite,
+  localReferences,
+  SITES,
+} from "./build-calculator-site.mjs";
 
 /**
  * calculator.theresewhite.com is published by copying one page out of a
@@ -102,6 +107,69 @@ describe("assembleCalculatorSite", () => {
     expect(problems).toHaveLength(1);
     expect(problems[0]).toContain("/about");
     expect(existsSync(site)).toBe(false);
+  });
+});
+
+describe("assembleSite for book.theresewhite.com", () => {
+  const BOOK_PAGE =
+    '<meta property="og:url" content="https://book.theresewhite.com/">' +
+    '<img src="/book/cover.webp">';
+
+  function fakeBookBuild(pageHtml: string): { out: string; site: string } {
+    const root = mkdtempSync(join(tmpdir(), "book-site-"));
+    dirs.push(root);
+    const out = join(root, "out");
+    mkdirSync(join(out, "book"), { recursive: true });
+    mkdirSync(join(out, "_next", "static"), { recursive: true });
+    writeFileSync(join(out, "book", "index.html"), pageHtml);
+    writeFileSync(join(out, "book", "cover.webp"), "webp");
+    writeFileSync(join(out, "book", "og.png"), "book card");
+    writeFileSync(join(out, "book", "from-meltdown-to-resolution.pdf"), "pdf");
+    writeFileSync(join(out, "_next", "static", "app.js"), "// app");
+    writeFileSync(join(out, "og.png"), "site card");
+    return { out, site: join(root, "site") };
+  }
+
+  it("publishes the book page with its own domain and the cover as the link preview", () => {
+    // Regression guarded: copying the site's generic card as og.png, which
+    // would show a LinkedIn card with no book on it.
+    const { out, site } = fakeBookBuild(BOOK_PAGE);
+
+    expect(assembleSite(SITES.book, out, site)).toEqual([]);
+    expect(readFileSync(join(site, "index.html"), "utf8")).toBe(BOOK_PAGE);
+    expect(readFileSync(join(site, "og.png"), "utf8")).toBe("book card");
+    expect(readFileSync(join(site, "CNAME"), "utf8")).toBe("book.theresewhite.com\n");
+    expect(existsSync(join(site, ".nojekyll"))).toBe(true);
+    expect(existsSync(join(site, "book", "cover.webp"))).toBe(true);
+  });
+
+  it("includes the PDF, even though the page's HTML never names it", () => {
+    // Regression guarded: the download link only appears after signup, so a
+    // scan of the built HTML cannot find it, and the button would 404.
+    const { out, site } = fakeBookBuild(BOOK_PAGE);
+
+    assembleSite(SITES.book, out, site);
+    expect(
+      readFileSync(join(site, "book", "from-meltdown-to-resolution.pdf"), "utf8"),
+    ).toBe("pdf");
+  });
+
+  it("refuses to publish without the PDF", () => {
+    const { out, site } = fakeBookBuild(BOOK_PAGE);
+    rmSync(join(out, "book", "from-meltdown-to-resolution.pdf"));
+
+    const problems = assembleSite(SITES.book, out, site);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toContain("from-meltdown-to-resolution.pdf");
+  });
+
+  it("refuses the book page built for the calculator's address", () => {
+    const { out, site } = fakeBookBuild(
+      '<meta property="og:url" content="https://calculator.theresewhite.com/">',
+    );
+
+    const problems = assembleSite(SITES.book, out, site);
+    expect(problems[0]).toContain("NEXT_PUBLIC_SITE_URL=https://book.theresewhite.com");
   });
 });
 

@@ -314,6 +314,82 @@ button, which now goes to the Wix home page, only once the main site is live.
 
 ---
 
+## The free book's own address: book.theresewhite.com
+
+A one-page site that gives away Therese's guide, *From Meltdown to
+Resolution* (24 pages, PDF), in exchange for a first name and an email, so
+that LinkedIn posts have somewhere to send people. It is built and published
+exactly like the calculator above, from a third repository,
+**thirstypig/theresewhite-book**, by the `book-site` job in
+`.github/workflows/deploy.yml`. The page's source is
+`src/app/(landing)/book/page.tsx`; its words are `src/content/book.ts`.
+
+What happens when someone signs up:
+
+1. Their first name and email go to **Therese's Kit account**, through the
+   Kit form whose number is the `NEXT_PUBLIC_KIT_FORM_ID` repository
+   variable. The page needs no Kit password or API key to do this.
+2. **Where they came from goes with them**, into four Kit custom fields:
+   `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`. These are read
+   from the link they clicked (see "Tagging LinkedIn links" below). With no
+   tags, `utm_source` holds the site that sent them (`linkedin.com`, say) or
+   `direct`.
+3. The page swaps the form for a **Download** button and a link to her
+   booking calendar. The PDF is `public/book/from-meltdown-to-resolution.pdf`,
+   compressed from the 8.4 MB original to 0.8 MB.
+4. If they accepted the cookie banner, Google Analytics records a
+   `generate_lead` event carrying the same four values.
+
+Why the Kit fields matter more than Google Analytics here: Analytics only
+counts visitors who click Accept on the cookie banner, so it misses everyone
+who ignores it. The Kit record has the source for every person who signs up.
+
+What anyone can do with the PDF: its address is public, so someone could pass
+the direct link around without filling in the form. That was accepted in
+exchange for an instant download.
+
+### Tagging LinkedIn links
+
+Every post should link to the page with tags on the end, so each signup
+records which post produced it:
+
+```
+https://book.theresewhite.com/?utm_source=linkedin&utm_medium=social&utm_campaign=meltdown-launch&utm_content=2026-10-28-post
+```
+
+- `utm_source`: where the link is posted (`linkedin`, `newsletter`, `email`).
+- `utm_medium`: the kind of channel (`social`, `email`, `paid`).
+- `utm_campaign`: the push this belongs to (`meltdown-launch`).
+- `utm_content`: which post. Use the date it went out, or a short name, so
+  two posts in the same campaign can be told apart.
+
+Use lowercase and hyphens, and reuse the exact same words every time, because
+`LinkedIn` and `linkedin` count as two different sources.
+
+### One-time setup
+
+| Step | Where | Who |
+|---|---|---|
+| Create the form "From Meltdown to Resolution" (Grow → Landing Pages & Forms → Form → Inline). Its look does not matter; the page posts to it | Therese's Kit account | James |
+| Create four custom fields: `utm_source`, `utm_medium`, `utm_campaign`, `utm_content` | Therese's Kit account | James |
+| Set the repository variable `NEXT_PUBLIC_KIT_FORM_ID` to the form's number (the digits in its address in Kit) | This repository → Settings → Secrets and variables → Actions → Variables | James |
+| Decide how Kit emails the copy of the guide, then set `NEXT_PUBLIC_KIT_SENDS_COPY` to `true` so the thank-you message mentions it. Until then the message does not promise an email | Kit, then this repository | James |
+| Create the public repository `thirstypig/theresewhite-book` | GitHub | Not done |
+| Add a deploy key that can write to that repository only, and store its private half as the `BOOK_DEPLOY_KEY` secret here. Until it exists the `book-site` job skips publishing with a warning | GitHub | Not done |
+| After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `book.theresewhite.com`; Enforce HTTPS | That repository | Not done |
+| Add a DNS record: type **CNAME**, host **`book`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | Not done |
+
+If the security certificate stalls, the fix in the calculator's section above
+(remove the custom domain and add it back) applies here too.
+
+### At cutover
+
+Like the calculator, the address must keep working, because LinkedIn posts
+will have linked to it. The page can move to `/book` on the main site and the
+subdomain become a redirect to it, keeping the tags on the link.
+
+---
+
 ## Step 6 — Later: cutting over to theresewhite.com
 
 Not yet — only when the design is approved.
