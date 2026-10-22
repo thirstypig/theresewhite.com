@@ -25,6 +25,8 @@ tags:
   - https-certificate
   - negative-dns-caching
   - cross-repo-deploy
+  - repository-variables
+updated: 2026-10-22
 related:
   - './nextjs-static-export-github-pages-source-and-subpath.md'
   - '../../../DEPLOY.md'
@@ -118,6 +120,43 @@ checking the certificate directly
 (`openssl s_client -connect <host>:443 -servername <host>`) on every address
 the name resolves to, before changing anything.
 
+## Added 2026-10-22: the third site, book.theresewhite.com
+
+The same script now publishes the free-guide page, from a third repository
+(`thirstypig/theresewhite-book`). The script's `SITES` table holds what
+differs per site. Three new lessons, and one thing that went better:
+
+- **A file the page only links to after a click is invisible to the
+  reference scan.** The PDF's download button appears only after signup, so
+  the built HTML never names it, and the scan in failure 2 would have left it
+  out: a 404 on the one file the page exists to deliver. Such files are
+  listed explicitly per site (`extras`), and a test fails if the PDF goes
+  missing.
+- **The link-preview image differs per site, but the tag does not.** Every
+  page names `/og.png`. Rather than change that tag (and the checks built on
+  it), the script publishes each site's own image *as* `og.png`; for the book
+  that is the cover (`public/book/og.png`).
+- **A repository variable changed after a deploy was queued is not seen by
+  that deploy.** `REVIEW_PASSPHRASE_HASH` was set about 15 seconds after a
+  merge queued a deploy. That deploy ran as if the variable were empty and
+  published both pages without their password screen; its log said so
+  (`REVIEW_PASSPHRASE_HASH is not set`). A deploy started afterwards picked
+  it up. [Likely: variables are read when a run is queued, not when its jobs
+  start. That fits the timestamps, but GitHub's docs weren't checked.] After
+  changing a variable, start a new deploy (`gh workflow run deploy.yml`) and
+  check its log, rather than trusting one that was already waiting.
+- **Better this time: Pages and the certificate needed no help.** Pages
+  switched itself on when the first push created the `gh-pages` branch (so
+  `POST .../pages` answers 409 "already enabled"; set the domain with
+  `PUT`), and https worked within a minute of setting the custom domain.
+  Failure 3 can still happen, so its fix stays.
+
+Not solved: `npm run build` sometimes fails to download a Google font
+(`Can't resolve '@vercel/turbopack-next/internal/font/google/font'`); it did
+in 2 of 5 deploys on 2026-10-22. Re-running the failed job
+(`gh run rerun <id> --failed`) worked both times. The cause and a lasting fix
+(a retry, or fonts stored in the repository) are open in `todos.ts`.
+
 ## Checklist for the next subdomain like this
 
 1. Assemble with the script, never a hand-made list; confirm `.nojekyll` and
@@ -127,3 +166,7 @@ the name resolves to, before changing anything.
 4. If `https_certificate` is still null after about 15 minutes while
    `/pages/health` says eligible, remove the domain and add it back.
 5. Set `https_enforced`, then check the live page in a fresh browser tab.
+6. List any file the page reaches only through a click or script in the
+   site's `extras`, and give the site its own `og.png` if it needs one.
+7. After changing a repository variable the deploy reads, start a fresh
+   deploy and look for the variable's effect in its log.

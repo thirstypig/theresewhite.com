@@ -29,11 +29,22 @@ export type Todo = {
 
 export const todos: Todo[] = [
   {
+    id: "deploy-font-flake",
+    title: "Stop deploys failing when a Google font won't download",
+    detail:
+      "On 2026-10-22, 2 of 5 deploys failed in npm run build with \"Can't resolve '@vercel/turbopack-next/internal/font/google/font'\": the build fetches the site's typefaces (next/font/google) from Google, and sometimes that fetch fails. Nothing breaks for visitors, since a failed deploy leaves the previous version online, but the change doesn't go out until someone re-runs the failed job (gh run rerun <id> --failed), which has worked every time. Two fixes, neither started: retry the build step once in .github/workflows/deploy.yml (small, treats the symptom), or store the font files in the repository with next/font/local so the build never downloads them (removes the cause, touches every font declaration). The cause is not confirmed beyond the error text.",
+    status: "open",
+    owner: "Dev",
+    priority: "normal",
+    area: "Deploy",
+    added: "2026-10-22",
+  },
+  {
     id: "review-password",
     title: "Set the review password for the book and calculator pages",
     detail:
-      "The password screen and Feedback tab are built (DEPLOY.md, \"Reviewer feedback\") but stay off until a password exists. In your own terminal, not through Claude, run scripts/set-review-passphrase.sh from the project folder; it asks for the password without showing it and saves only a scrambled version on GitHub. Then run the deploy. Give reviewers the two addresses and the password. Until then both pages publish open to everyone, as they do today.",
-    status: "open",
+      "Done 2026-10-22. Both pages ask for the password (\"knicks\", chosen by James) and show the yellow Feedback tab; checked on the live calculator in a fresh browser. To change it, run scripts/set-review-passphrase.sh in your own terminal (it asks for at least 8 characters), then start a fresh deploy.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Review",
