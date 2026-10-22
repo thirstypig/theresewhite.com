@@ -374,49 +374,42 @@ therese@theresewhite.com. Before the book it had two forms, "Newsletter" and
 from newsletter signups. Kit does not let outside tools create forms, so this
 part is done by hand, logged in as Therese at kit.com.
 
-1. **Create the four source fields.** These are four blank boxes on every
-   subscriber's record. The page fills them in with the post that sent each
-   person; nobody types into them, and Therese's existing subscribers are
-   unaffected. The names must be exactly these, lowercase with underscores,
-   or the page's values are silently dropped: `utm_source`, `utm_medium`,
-   `utm_campaign`, `utm_content`.
+Steps 1, 2, 4 and 5 were done on 2026-10-22; step 3 is open.
 
-   Where to add them: **not** the Subscribers page while the list is empty.
-   With no subscribers it shows only a "Let's add your first subscriber"
-   screen (1 subscriber, Import CSV, Other provider, Set up
-   recommendations), with no way to add a field. Instead either let Claude
-   create them through Kit's API (it needs an explicit go-ahead, since it
-   changes her account), or add them inside the form editor from step 2, or
-   from any subscriber's record once one exists.
-2. **Create the book's form.** A Kit "form" here is only an inbox that
-   receives signups. Kit does **not** build the landing page; that is
-   book.theresewhite.com, made in this repository. So: **Grow → Landing
-   Pages & Forms → Create new → Form** (not "Landing Page") **→ Inline**,
-   any template. Name it "From Meltdown to Resolution". Its look does not
-   matter: visitors never see it, because the page sends to it behind the
-   scenes.
-3. **Attach the PDF and set how people are added.** In that form, open
-   **Settings → Incentive** (Kit also calls it the Confirmation Email):
-   - Keep **Send incentive email** (or "Send confirmation email") **on**, and
-     under it choose **Download** and upload
-     `public/book/from-meltdown-to-resolution.pdf`. This is the emailed copy.
-   - Turn **Auto-confirm new subscribers** **on**. Without it, Kit holds each
-     person as "unconfirmed", left out of Therese's emails, until they click
-     the link in that email. With it, they join her list as soon as they sign
-     up, and still receive the PDF by email. That matches the instant
-     download the page already gives them.
-   - Edit the email's subject and words in Therese's voice; Kit's default is
-     generic.
-   - Save.
-4. **Copy the form's number.** It is the string of digits in the form's
-   address in your browser (`app.kit.com/forms/designers/<number>/edit`).
-   Send it to Claude, or set it yourself in step 5.
-5. **Connect the page to the form.** In this repository on GitHub,
-   **Settings → Secrets and variables → Actions → Variables**, add:
-   - `NEXT_PUBLIC_KIT_FORM_ID` = the form's number;
-   - `NEXT_PUBLIC_KIT_SENDS_COPY` = `true`, which turns on the thank-you
-     line "A copy is on its way to your inbox too." Leave it out if step 3's
-     email is turned off.
+1. **Create the four source fields.** Done through Kit's API. These are four
+   blank boxes on every subscriber's record that the page fills in with the
+   post that sent each person; nobody types into them. The names must be
+   exactly `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, or the
+   page's values are silently dropped. (With an empty list, Kit's
+   Subscribers page is an onboarding screen with no way to add a field; the
+   form editor's "Add Custom Field" or the API are the ways in.)
+2. **Create the book's form.** Done: **"From Meltdown to Resolution", form
+   10084320.** A Kit "form" here is only an inbox that receives signups;
+   Kit does **not** build the landing page, which is book.theresewhite.com.
+   The path was **Audience growth → Landing pages & forms → Forms tab → New
+   form → Inline → "Clare" template**, renamed with the pencil, then **Save &
+   Publish**. Its look does not matter: visitors never see it.
+3. **Attach the PDF and set how people are added.** Open the form
+   (`app.kit.com/forms/designers/10084320/edit`), click **Settings** in the
+   top bar, then the **Confirmation email** tab:
+   - Leave **Send confirmation email** checked. Click **Edit Email
+     Contents** and rewrite the subject and words in Therese's voice; Kit's
+     default asks people to confirm, which no longer fits.
+   - Check **Auto-confirm new subscribers**. Without it, Kit holds each
+     person off her list until they click the email. With it, they join
+     immediately and still get the email.
+   - Under **After confirming redirect to**, choose **Download** and upload
+     `public/book/from-meltdown-to-resolution.pdf`. The email's button then
+     downloads the book.
+   - **Save**, then **Save & Publish**.
+   - On the **General** tab the success message does not matter: the page
+     shows its own.
+4. **The form's number** is 10084320, the digits in the editor's address.
+5. **Connect the page to the form.** `NEXT_PUBLIC_KIT_FORM_ID` = `10084320`
+   is set (this repository → Settings → Secrets and variables → Actions →
+   Variables). After step 3, also add `NEXT_PUBLIC_KIT_SENDS_COPY` = `true`,
+   which turns on the thank-you line "A copy is on its way to your inbox
+   too."
 6. **Test it once the page is live.** Sign up with your own address through a
    tagged link. In Kit, the subscriber should appear under the form,
    confirmed, with the four fields filled in, and the email with the PDF
@@ -427,8 +420,9 @@ part is done by hand, logged in as Therese at kit.com.
 
 | Step | Where | Who |
 |---|---|---|
-| Steps 1–3 above: four source fields, the book's form, its email and auto-confirm | Therese's Kit account | James |
-| Steps 4–5 above: set `NEXT_PUBLIC_KIT_FORM_ID` and `NEXT_PUBLIC_KIT_SENDS_COPY` | This repository → Settings → Secrets and variables → Actions → Variables | James, or Claude given the number |
+| Steps 1–2 above: four source fields and the book's form | Therese's Kit account | Done 2026-10-22 |
+| Step 3 above: the email's wording, auto-confirm, and the PDF | Therese's Kit account | James |
+| Step 5 above: `NEXT_PUBLIC_KIT_FORM_ID` set to 10084320; `NEXT_PUBLIC_KIT_SENDS_COPY` still to add after step 3 | This repository → Settings → Secrets and variables → Actions → Variables | Form number done 2026-10-22 |
 | Create the public repository `thirstypig/theresewhite-book` | GitHub | Not done |
 | Add a deploy key that can write to that repository only, and store its private half as the `BOOK_DEPLOY_KEY` secret here. Until it exists the `book-site` job skips publishing with a warning | GitHub | Not done |
 | After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `book.theresewhite.com`; Enforce HTTPS | That repository | Not done |
