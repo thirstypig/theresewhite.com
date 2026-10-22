@@ -43,7 +43,7 @@ export const todos: Todo[] = [
     id: "review-password",
     title: "Set the review password for the book and calculator pages",
     detail:
-      "Done 2026-10-22. Both pages ask for the password (\"knicks\", chosen by James) and show the yellow Feedback tab; checked on the live calculator in a fresh browser. To change it, run scripts/set-review-passphrase.sh in your own terminal (it asks for at least 8 characters), then start a fresh deploy.",
+      "Done 2026-10-22. Both pages ask for the review password (James has it and shares it with reviewers privately; it is never written into this repository) and show the yellow Feedback tab; checked on the live calculator in a fresh browser. To change it, run scripts/set-review-passphrase.sh in your own terminal (it asks for at least 8 characters), then start a fresh deploy.",
     status: "done",
     owner: "James",
     priority: "high",
