@@ -106,7 +106,7 @@ html.vr-placing #vr-panel,html.vr-placing #vr-panel *,html.vr-placing #vr-hint,h
     form.style.cssText = "display:grid;gap:6px";
     const panel = el("aside", { id: "vr-panel", hidden: true }, [
       el("div", { className: "vr-head" }, [el("p", { className: "vr-title" }, ["Feedback ", routeLabel]), closeBtn]),
-      el("p", { className: "vr-note", textContent: "Everyone with the review password can read these comments. Use Pin on page to point at a spot." }),
+      el("p", { className: "vr-note", textContent: "Comments are not private: other reviewers see them, and so could anyone who finds where they are stored. Don't include anything confidential. Use Pin on page to point at a spot." }),
       form, status, list,
     ]);
     panel.setAttribute("aria-label", "Review feedback");
