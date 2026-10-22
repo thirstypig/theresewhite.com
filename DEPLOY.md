@@ -377,14 +377,24 @@ part is done by hand, logged in as Therese at kit.com.
 1. **Create the four source fields.** These are four blank boxes on every
    subscriber's record. The page fills them in with the post that sent each
    person; nobody types into them, and Therese's existing subscribers are
-   unaffected. Open **Subscribers**, click any subscriber, and under their
-   details use **Add a new field** four times. The names must be exactly
-   these, lowercase with underscores, or the page's values are silently
-   dropped: `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`.
-2. **Create the book's form.** **Grow → Landing Pages & Forms → Create new →
-   Form → Inline**, any template. Name it "From Meltdown to Resolution". Its
-   look does not matter: visitors never see it, because the page sends to it
-   behind the scenes.
+   unaffected. The names must be exactly these, lowercase with underscores,
+   or the page's values are silently dropped: `utm_source`, `utm_medium`,
+   `utm_campaign`, `utm_content`.
+
+   Where to add them: **not** the Subscribers page while the list is empty.
+   With no subscribers it shows only a "Let's add your first subscriber"
+   screen (1 subscriber, Import CSV, Other provider, Set up
+   recommendations), with no way to add a field. Instead either let Claude
+   create them through Kit's API (it needs an explicit go-ahead, since it
+   changes her account), or add them inside the form editor from step 2, or
+   from any subscriber's record once one exists.
+2. **Create the book's form.** A Kit "form" here is only an inbox that
+   receives signups. Kit does **not** build the landing page; that is
+   book.theresewhite.com, made in this repository. So: **Grow → Landing
+   Pages & Forms → Create new → Form** (not "Landing Page") **→ Inline**,
+   any template. Name it "From Meltdown to Resolution". Its look does not
+   matter: visitors never see it, because the page sends to it behind the
+   scenes.
 3. **Attach the PDF and set how people are added.** In that form, open
    **Settings → Incentive** (Kit also calls it the Confirmation Email):
    - Keep **Send incentive email** (or "Send confirmation email") **on**, and
