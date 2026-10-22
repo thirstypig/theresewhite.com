@@ -41,12 +41,12 @@ export const todos: Todo[] = [
   },
   {
     id: "book-kit-email-copy",
-    title: "Decide how Kit emails the guide, then turn on the thank-you line",
+    title: "Set up the book's form in Kit, with the emailed copy",
     detail:
-      "James chose an instant download plus an emailed copy. Kit's built-in \"incentive email\" is also a please-confirm email, which may hold new subscribers as unconfirmed until they click; a Kit automation that sends the link on signup may fit better. Check which one her plan allows, set it up, then set the NEXT_PUBLIC_KIT_SENDS_COPY repository variable to true so the page says a copy is on its way. It stays silent until then, so nobody waits for an email that never comes.",
+      "Done by hand in Therese's Kit account, because Kit does not let outside tools create forms. DEPLOY.md, \"Kit, step by step\", has the exact clicks: four source fields (utm_source, utm_medium, utm_campaign, utm_content), a form named \"From Meltdown to Resolution\", its incentive email carrying the PDF with \"Auto-confirm new subscribers\" turned on, then the NEXT_PUBLIC_KIT_FORM_ID and NEXT_PUBLIC_KIT_SENDS_COPY=true repository variables. Auto-confirm adds people to her list immediately instead of holding them until they click the email; that it still sends the PDF is what Kit's help describes, but it is untested until the first real signup.",
     status: "open",
     owner: "James",
-    priority: "normal",
+    priority: "high",
     area: "Book page",
     added: "2026-10-22",
   },
