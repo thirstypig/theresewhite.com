@@ -49,6 +49,9 @@ import { fileURLToPath } from "node:url";
 
 export const CALCULATOR_HOST = "calculator.theresewhite.com";
 
+/** The repository's root folder, where review/ lives. */
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
 /**
  * The one-page subdomains this script can publish. Each is a page from the
  * main build, published as the home page of its own address.
@@ -168,6 +171,61 @@ export function assembleSite(site, outDir, siteDir) {
   return [];
 }
 
+/**
+ * Where reviewers' comments are stored: the theresewhite-review Worker in
+ * workers/review/, on James's Cloudflare account.
+ */
+export const REVIEW_API = "https://theresewhite-review.jimmyc316.workers.dev";
+
+/**
+ * Puts the review password screen and the feedback panel (review/gate.js and
+ * review/overlay.js) on an assembled one-page site.
+ *
+ * Runs after assembleSite, on the finished folder, so the two scripts never
+ * reach the main site and the reference scan above never sees them. `hash` is
+ * the SHA-256 of "theresewhite-review:" plus the lowercased password, made by
+ * scripts/set-review-passphrase.sh; the password itself never reaches the
+ * build. `thread` names the page's comment thread, such as "book:en:home".
+ *
+ * Returns a list of problems; empty means the page now asks for the password.
+ *
+ * @param {string} siteDir
+ * @param {{ hash: string, api: string, thread: string }} review
+ * @param {string} [reviewDir] where gate.js and overlay.js live
+ * @returns {string[]}
+ */
+export function addReviewOverlay(siteDir, review, reviewDir = join(ROOT, "review")) {
+  if (!/^[0-9a-f]{64}$/.test(review.hash)) {
+    return ["REVIEW_PASSPHRASE_HASH is not a SHA-256 hash. Set it with scripts/set-review-passphrase.sh."];
+  }
+  // http is allowed only for a local copy of the Worker, when testing.
+  if (!/^(https:\/\/[^\s"'<>]+|http:\/\/localhost(:\d+)?(\/[^\s"'<>]*)?)$/.test(review.api)) {
+    return [`The review comments address "${review.api}" is not an https address.`];
+  }
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*:[a-z0-9]+(?:-[a-z0-9]+)*:[a-z0-9]+(?:-[a-z0-9]+)*$/.test(review.thread)) {
+    return [`"${review.thread}" is not a valid comment thread name.`];
+  }
+  const page = join(siteDir, "index.html");
+  const html = readFileSync(page, "utf8");
+  if (!/<head>/i.test(html)) return [`${page} has no <head> to put the password screen in.`];
+
+  // The config is plain data, written as JSON with "<" escaped so nothing in it
+  // can close the script tag. gate.js loads without `defer` so the page is
+  // hidden before it is drawn; overlay.js waits for the page and the unlock.
+  const config = JSON.stringify(review).replace(/</g, "\\u003c");
+  const tags =
+    `<script>window.TW_REVIEW=${config};</script>` +
+    `<script src="/review/gate.js"></script>` +
+    `<script src="/review/overlay.js" defer></script>`;
+  writeFileSync(page, html.replace(/<head>/i, (m) => m + tags));
+
+  mkdirSync(join(siteDir, "review"), { recursive: true });
+  for (const name of ["gate.js", "overlay.js"]) {
+    cpSync(join(reviewDir, name), join(siteDir, "review", name));
+  }
+  return [];
+}
+
 function main() {
   const outDir = process.argv[2] ?? "out";
   const siteDir = process.argv[3] ?? "calculator-site";
@@ -183,6 +241,26 @@ function main() {
     process.exit(1);
   }
   console.log(`Site assembled in ${siteDir}/ for ${site.host}`);
+
+  // The review password screen and feedback panel, while the page is under
+  // review. Without the hash the page publishes open to everyone.
+  const hash = (process.env.REVIEW_PASSPHRASE_HASH ?? "").trim();
+  if (!hash) {
+    console.log(
+      `::warning::REVIEW_PASSPHRASE_HASH is not set, so ${site.host} has no review password or feedback panel.`,
+    );
+    return;
+  }
+  const reviewProblems = addReviewOverlay(siteDir, {
+    hash,
+    api: (process.env.REVIEW_API ?? "").trim() || REVIEW_API,
+    thread: `${name}:en:home`,
+  });
+  if (reviewProblems.length > 0) {
+    for (const problem of reviewProblems) console.error(`::error::${problem}`);
+    process.exit(1);
+  }
+  console.log(`Review password and feedback panel added to ${site.host} (thread ${name}:en:home)`);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

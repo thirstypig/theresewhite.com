@@ -3,6 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, it, expect } from "vitest";
 import {
+  addReviewOverlay,
   assembleCalculatorSite,
   assembleSite,
   localReferences,
@@ -170,6 +171,65 @@ describe("assembleSite for book.theresewhite.com", () => {
 
     const problems = assembleSite(SITES.book, out, site);
     expect(problems[0]).toContain("NEXT_PUBLIC_SITE_URL=https://book.theresewhite.com");
+  });
+});
+
+describe("addReviewOverlay", () => {
+  const HASH = "a".repeat(64);
+  const REVIEW = { hash: HASH, api: "https://review.example.workers.dev", thread: "book:en:home" };
+
+  function fakeSite(html = '<!DOCTYPE html><html><head><meta charSet="utf-8"/></head><body>page</body></html>') {
+    const root = mkdtempSync(join(tmpdir(), "review-site-"));
+    dirs.push(root);
+    const site = join(root, "site");
+    const review = join(root, "review");
+    mkdirSync(site);
+    mkdirSync(review);
+    writeFileSync(join(site, "index.html"), html);
+    writeFileSync(join(review, "gate.js"), "// gate");
+    writeFileSync(join(review, "overlay.js"), "// overlay");
+    return { site, review };
+  }
+
+  it("puts the password screen first in <head>, before anything is drawn", () => {
+    // Regression guarded: a gate loaded late, or with `defer`, lets the page
+    // flash on screen before it is hidden.
+    const { site, review } = fakeSite();
+    expect(addReviewOverlay(site, REVIEW, review)).toEqual([]);
+    const html = readFileSync(join(site, "index.html"), "utf8");
+    expect(html).toMatch(
+      /^<!DOCTYPE html><html><head><script>window\.TW_REVIEW=\{[^<]*"thread":"book:en:home"\};<\/script><script src="\/review\/gate\.js"><\/script><script src="\/review\/overlay\.js" defer><\/script><meta/,
+    );
+    expect(existsSync(join(site, "review", "gate.js"))).toBe(true);
+    expect(existsSync(join(site, "review", "overlay.js"))).toBe(true);
+  });
+
+  it("refuses anything that is not a hash, so a password typed in by mistake never ships", () => {
+    const { site, review } = fakeSite();
+    const problems = addReviewOverlay(site, { ...REVIEW, hash: "blue heron" }, review);
+    expect(problems[0]).toContain("set-review-passphrase.sh");
+    expect(readFileSync(join(site, "index.html"), "utf8")).not.toContain("blue heron");
+  });
+
+  it("refuses a thread name the comments service would reject", () => {
+    const { site, review } = fakeSite();
+    expect(addReviewOverlay(site, { ...REVIEW, thread: "Book:EN" }, review)).toHaveLength(1);
+  });
+
+  it("accepts a local copy of the comments service, but not a look-alike address", () => {
+    const { site, review } = fakeSite();
+    expect(addReviewOverlay(site, { ...REVIEW, api: "http://localhost:8787" }, review)).toEqual([]);
+    const other = fakeSite();
+    expect(
+      addReviewOverlay(other.site, { ...REVIEW, api: "http://localhost.evil.example" }, other.review),
+    ).toHaveLength(1);
+  });
+
+  it("refuses a comments address that could break out of the script tag", () => {
+    const { site, review } = fakeSite();
+    expect(
+      addReviewOverlay(site, { ...REVIEW, api: 'https://x.dev/"</script><script>alert(1)' }, review),
+    ).toHaveLength(1);
   });
 });
 
