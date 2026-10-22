@@ -374,7 +374,7 @@ therese@theresewhite.com. Before the book it had two forms, "Newsletter" and
 from newsletter signups. Kit does not let outside tools create forms, so this
 part is done by hand, logged in as Therese at kit.com.
 
-Steps 1, 2, 4 and 5 were done on 2026-10-22; step 3 is open.
+Steps 1–5 were done on 2026-10-22, except rewriting the email's words (step 3, first bullet) and adding `NEXT_PUBLIC_KIT_SENDS_COPY`.
 
 1. **Create the four source fields.** Done through Kit's API. These are four
    blank boxes on every subscriber's record that the page fills in with the
@@ -404,6 +404,12 @@ Steps 1, 2, 4 and 5 were done on 2026-10-22; step 3 is open.
    - **Save**, then **Save & Publish**.
    - On the **General** tab the success message does not matter: the page
      shows its own.
+   - Kit cannot attach files to emails; it sends a download link instead,
+     which is what the **Download** setting does. That is also kinder to
+     work inboxes, which often block attachments.
+   - The email's footer shows a Seattle street address. That is Kit's
+     default for accounts without their own; US law requires a postal
+     address in marketing email, and Therese may prefer hers.
 4. **The form's number** is 10084320, the digits in the editor's address.
 5. **Connect the page to the form.** `NEXT_PUBLIC_KIT_FORM_ID` = `10084320`
    is set (this repository → Settings → Secrets and variables → Actions →
@@ -421,12 +427,12 @@ Steps 1, 2, 4 and 5 were done on 2026-10-22; step 3 is open.
 | Step | Where | Who |
 |---|---|---|
 | Steps 1–2 above: four source fields and the book's form | Therese's Kit account | Done 2026-10-22 |
-| Step 3 above: the email's wording, auto-confirm, and the PDF | Therese's Kit account | James |
+| Step 3 above: auto-confirm on and the PDF attached under Download (done 2026-10-22); the email's words still Kit's default "confirm your subscription" | Therese's Kit account | Wording open |
 | Step 5 above: `NEXT_PUBLIC_KIT_FORM_ID` set to 10084320; `NEXT_PUBLIC_KIT_SENDS_COPY` still to add after step 3 | This repository → Settings → Secrets and variables → Actions → Variables | Form number done 2026-10-22 |
-| Create the public repository `thirstypig/theresewhite-book` | GitHub | Not done |
-| Add a deploy key that can write to that repository only, and store its private half as the `BOOK_DEPLOY_KEY` secret here. Until it exists the `book-site` job skips publishing with a warning | GitHub | Not done |
-| After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `book.theresewhite.com`; Enforce HTTPS | That repository | Not done |
-| Add a DNS record: type **CNAME**, host **`book`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | Not done |
+| Create the public repository `thirstypig/theresewhite-book` | GitHub | Done 2026-10-22 |
+| Add a deploy key that can write to that repository only, and store its private half as the `BOOK_DEPLOY_KEY` secret here. Until it exists the `book-site` job skips publishing with a warning | GitHub | Done 2026-10-22 |
+| After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `book.theresewhite.com`; Enforce HTTPS. (GitHub turned Pages on by itself when the branch arrived; the domain and HTTPS were then set through its API, and the certificate was issued within a minute.) | That repository | Done 2026-10-22 |
+| Add a DNS record: type **CNAME**, host **`book`**, value **`thirstypig.github.io`** | Therese's Wix account → Domains → theresewhite.com → DNS records | Done 2026-10-22 |
 
 If the security certificate stalls, the fix in the calculator's section above
 (remove the custom domain and add it back) applies here too.

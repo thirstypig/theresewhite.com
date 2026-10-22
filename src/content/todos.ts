@@ -32,8 +32,8 @@ export const todos: Todo[] = [
     id: "book-site-setup",
     title: "Finish the one-time setup for book.theresewhite.com",
     detail:
-      "The free-guide page is built and merged, but it is not reachable yet. Four things remain, listed with exact steps in DEPLOY.md under \"The free book's own address\": create the GitHub repository thirstypig/theresewhite-book and its deploy key (the BOOK_DEPLOY_KEY secret), turn on Pages there with the custom domain, add a CNAME record for `book` in Therese's Wix DNS, and in Kit create the form and the four utm_ custom fields, then set the NEXT_PUBLIC_KIT_FORM_ID repository variable. Until the form number is set the page still hands out the guide but records nobody.",
-    status: "open",
+      "Done 2026-10-22. The page is live at https://book.theresewhite.com with HTTPS, published from thirstypig/theresewhite-book with its own deploy key; the `book` CNAME record is in Therese's Wix DNS; and NEXT_PUBLIC_KIT_FORM_ID points at Kit form 10084320. A local test signup reached Kit with the source fields written.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Book page",
@@ -41,9 +41,9 @@ export const todos: Todo[] = [
   },
   {
     id: "book-kit-email-copy",
-    title: "Set up the book's form in Kit, with the emailed copy",
+    title: "Rewrite the book's Kit email, then turn on the thank-you line",
     detail:
-      "Done by hand in Therese's Kit account, because Kit does not let outside tools create forms. DEPLOY.md, \"Kit, step by step\", has the exact clicks: four source fields (utm_source, utm_medium, utm_campaign, utm_content), a form named \"From Meltdown to Resolution\", its incentive email carrying the PDF with \"Auto-confirm new subscribers\" turned on, then the NEXT_PUBLIC_KIT_FORM_ID and NEXT_PUBLIC_KIT_SENDS_COPY=true repository variables. Auto-confirm adds people to her list immediately instead of holding them until they click the email; that it still sends the PDF is what Kit's help describes, but it is untested until the first real signup.",
+      "Kit form 10084320 now auto-confirms new subscribers and sends the PDF as a download link (Kit cannot attach files). But the email still carries Kit's default words, \"Important: confirm your subscription\", which make no sense with auto-confirm on. Replace them in Kit (form → Settings → Confirmation email → Edit Email Contents), keeping the download button, then set the NEXT_PUBLIC_KIT_SENDS_COPY repository variable to true and redeploy so the page says a copy is on its way. Also consider replacing the Seattle postal address in the email footer, which is Kit's default, with Therese's own.",
     status: "open",
     owner: "James",
     priority: "high",
