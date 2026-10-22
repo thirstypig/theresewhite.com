@@ -144,13 +144,15 @@ export const logo = {
  * the period — rather than in this site's own formatting. Every link goes to
  * the live page of that name, so it stays right as long as Wix is serving;
  * replace this with the main site's own nav and footer at cutover.
+ *
+ * The menu was checked again on 2026-10-22: the live site no longer shows
+ * Case Studies, so neither does this one.
  */
 export const liveSite = {
   home: "https://www.theresewhite.com",
   nav: [
     { label: "About Therese", href: "https://www.theresewhite.com/about-therese" },
     { label: "Endorsements", href: "https://www.theresewhite.com/team-1-1" },
-    { label: "Case Studies", href: "https://www.theresewhite.com/case-studies" },
     { label: "FAQ", href: "https://www.theresewhite.com/services-3" },
     { label: "Blog", href: "https://www.theresewhite.com/blog" },
     { label: "Contact", href: "https://www.theresewhite.com/contact" },
