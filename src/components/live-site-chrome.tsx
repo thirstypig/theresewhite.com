@@ -40,7 +40,7 @@ export function LiveSiteHeader() {
           />
         </a>
 
-        {/* Six items do not fit a phone, so the row scrolls sideways rather
+        {/* Five items do not fit a phone, so the row scrolls sideways rather
             than wrapping into a ragged second line — the same choice the main
             site's header makes. */}
         <nav aria-label="theresewhite.com" className="-mx-6 overflow-x-auto px-6 [scrollbar-width:none] md:mx-0 md:px-0">
