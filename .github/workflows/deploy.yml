@@ -145,6 +145,66 @@ jobs:
           # its history would be nothing but old copies of the same page.
           git push -q --force git@github.com:thirstypig/theresewhite-calculator.git gh-pages
 
+  # book.theresewhite.com, the free-guide signup page for LinkedIn posts.
+  # Published exactly like the calculator above, from a third repository,
+  # thirstypig/theresewhite-book, with the PDF beside the page. Signups go to
+  # Therese's Kit account; the form's number is the NEXT_PUBLIC_KIT_FORM_ID
+  # repository variable (public by design: Kit's form address needs no key).
+  #
+  # Until the BOOK_DEPLOY_KEY secret exists this job skips the publish step
+  # with a warning rather than failing, so the one-time setup in DEPLOY.md
+  # can happen after this merges without turning every deploy red.
+  book-site:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SITE_URL: https://book.theresewhite.com
+      NEXT_PUBLIC_CLARITY_ID: xxajqpw2g7
+      NEXT_PUBLIC_GA_ID: G-4QVRMZJVWS
+      NEXT_PUBLIC_KIT_FORM_ID: ${{ vars.NEXT_PUBLIC_KIT_FORM_ID }}
+      NEXT_PUBLIC_KIT_SENDS_COPY: ${{ vars.NEXT_PUBLIC_KIT_SENDS_COPY }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/build-calculator-site.mjs out book-site book
+
+      # LinkedIn reads these tags to draw the post's card, so a broken card
+      # is a broken post.
+      - name: Assert the book page ships its own link-preview card
+        run: node scripts/verify-built-output.mjs book-site
+
+      # Without the form number the page still works but sends nobody to Kit.
+      - name: Warn if signups are not connected to Kit
+        if: ${{ vars.NEXT_PUBLIC_KIT_FORM_ID == '' }}
+        run: echo "::warning::NEXT_PUBLIC_KIT_FORM_ID is not set, so book.theresewhite.com gives the guide away without recording anyone in Kit."
+
+      - name: Publish to thirstypig/theresewhite-book
+        env:
+          DEPLOY_KEY: ${{ secrets.BOOK_DEPLOY_KEY }}
+        run: |
+          if [ -z "$DEPLOY_KEY" ]; then
+            echo "::warning::The BOOK_DEPLOY_KEY secret is not set, so book.theresewhite.com was not updated. DEPLOY.md explains the one-time setup."
+            exit 0
+          fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/book_key
+          chmod 600 ~/.ssh/book_key
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/book_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+          cd book-site
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Publish ${{ github.sha }} from ${{ github.repository }}"
+          git push -q --force git@github.com:thirstypig/theresewhite-book.git gh-pages
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

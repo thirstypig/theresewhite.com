@@ -385,3 +385,57 @@ input[type="range"] {
   background: transparent;
   cursor: pointer;
 }
+
+/*
+ * The free book's look, worn by book.theresewhite.com: the colors of the PDF
+ * itself, so the page and the download read as one thing. Sampled from the
+ * book's pages on 2026-10-22 — #1F3864 is its heading bars, #5B9BD5 the light
+ * blue rule under them and the cover's bottom edge, #EAF0F8 its pale quote
+ * panels, and the cover runs from #284A7A at the top to #1B2E52.
+ *
+ * Its typefaces are Lora (titles) and Inter (everything else), the two the
+ * PDF embeds. The page loads them with next/font and exposes them as
+ * --font-book-serif and --font-book-sans; the cookie banner sits outside
+ * that wrapper and falls back to the system sans.
+ *
+ * Doubled class, last in the file, for the same reason as `.lp-lock` above:
+ * it has to beat the dark-mode tokens or a visitor in dark mode gets half a
+ * theme.
+ */
+.lp-book.lp-book {
+  --paper: #ffffff;
+  --cream: #eaf0f8;
+  --band: #1f3864;
+  --heading: #1f3864;
+  --charcoal: #2b2f36;
+  --muted: #5a6473;
+  --slate: #5b9bd5;
+  --rule: #d5deea;
+  --rule-strong: #5b9bd5;
+  --btn: #1f3864;
+  --btn-fg: #ffffff;
+  --btn-hover: #2c5390;
+  --accent-line: #5b9bd5;
+  --band-fg: #ffffff;
+  --band-muted: #c9d8ec;
+  --band-rule: #5b9bd5;
+  --sand: #ffffff;
+  --deep: #1b2e52;
+  color-scheme: light;
+
+  font-family: var(--font-book-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+.lp-book .book-serif {
+  font-family: var(--font-book-serif, Georgia, serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+}
+
+/* The main site's utility face is a monospace; the book has none. */
+.lp-book .label {
+  font-family: var(--font-book-sans, ui-sans-serif, system-ui, sans-serif);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}

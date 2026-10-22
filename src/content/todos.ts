@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-10-18";
+export const TODOS_UPDATED = "2026-10-22";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -28,6 +28,39 @@ export type Todo = {
 };
 
 export const todos: Todo[] = [
+  {
+    id: "book-site-setup",
+    title: "Finish the one-time setup for book.theresewhite.com",
+    detail:
+      "The free-guide page is built and merged, but it is not reachable yet. Four things remain, listed with exact steps in DEPLOY.md under \"The free book's own address\": create the GitHub repository thirstypig/theresewhite-book and its deploy key (the BOOK_DEPLOY_KEY secret), turn on Pages there with the custom domain, add a CNAME record for `book` in Therese's Wix DNS, and in Kit create the form and the four utm_ custom fields, then set the NEXT_PUBLIC_KIT_FORM_ID repository variable. Until the form number is set the page still hands out the guide but records nobody.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Book page",
+    added: "2026-10-22",
+  },
+  {
+    id: "book-kit-email-copy",
+    title: "Decide how Kit emails the guide, then turn on the thank-you line",
+    detail:
+      "James chose an instant download plus an emailed copy. Kit's built-in \"incentive email\" is also a please-confirm email, which may hold new subscribers as unconfirmed until they click; a Kit automation that sends the link on signup may fit better. Check which one her plan allows, set it up, then set the NEXT_PUBLIC_KIT_SENDS_COPY repository variable to true so the page says a copy is on its way. It stays silent until then, so nobody waits for an email that never comes.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Book page",
+    added: "2026-10-22",
+  },
+  {
+    id: "book-page-review",
+    title: "Have Therese read the book page's words",
+    detail:
+      "Every line on book.theresewhite.com was drafted from the book itself (its subtitle, Welcome, Introduction, contents and cheat sheet) and the two endorsements are quoted exactly as the book prints them, but she has not seen the page. The words are all in src/content/book.ts. The page also calls the email field \"Work email\"; change it to \"Email\" if she would rather hear from people's personal addresses too.",
+    status: "open",
+    owner: "Therese",
+    priority: "normal",
+    area: "Book page",
+    added: "2026-10-22",
+  },
   {
     id: "web3forms-key",
     title: "Set the Web3Forms access key",

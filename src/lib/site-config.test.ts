@@ -94,3 +94,25 @@ describe("the calculator site", () => {
     expect(main.PRIVACY_HREF).toBe("/privacy");
   });
 });
+
+describe("the book site", () => {
+  beforeEach(() => vi.resetModules());
+  afterEach(() => vi.unstubAllEnvs());
+
+  it("is recognized, is not production, and is not the calculator", async () => {
+    const config = await loadWith("https://book.theresewhite.com");
+    expect(config.IS_BOOK_SITE).toBe(true);
+    expect(config.IS_CALCULATOR_SITE).toBe(false);
+    expect(config.IS_STANDALONE_SITE).toBe(true);
+    expect(config.IS_PRODUCTION_SITE).toBe(false);
+  });
+
+  it("sends the privacy link to the live site, since it has no /privacy page", async () => {
+    const book = await loadWith("https://book.theresewhite.com");
+    expect(book.PRIVACY_HREF).toBe("https://www.theresewhite.com/privacy-policy");
+
+    const main = await loadWith("https://theresewhite.bahtzang.com");
+    expect(main.IS_BOOK_SITE).toBe(false);
+    expect(main.IS_STANDALONE_SITE).toBe(false);
+  });
+});
