@@ -396,7 +396,7 @@ export function ConflictCalculator({
                 className="mt-1 size-4 shrink-0 accent-[var(--btn)]"
               />
               <span>
-                <span className="block text-base font-medium text-heading">
+                <span className="block text-lg font-bold text-heading">
                   {copy.loaded.label}
                 </span>
                 <Help>{copy.loaded.help}</Help>

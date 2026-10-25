@@ -5,8 +5,8 @@ import { book } from "@/content/book";
 import { calendlyUrl } from "@/content/wix/chrome";
 
 /**
- * The signup form on book.theresewhite.com: a first name and an email go to
- * Therese's Kit account, and the download appears in place.
+ * The signup form on book.theresewhite.com: a first and last name and an
+ * email go to Therese's Kit account, and the download appears in place.
  *
  * Where the visitor came from travels WITH the signup, in four Kit custom
  * fields (utm_source, utm_medium, utm_campaign, utm_content). That is the
@@ -94,6 +94,9 @@ export function BookSignupForm() {
     const body = new FormData();
     body.set("email_address", String(form.get("email") ?? ""));
     body.set("first_name", String(form.get("first_name") ?? ""));
+    // Kit has no built-in last name; this lands in the "last_name" custom
+    // field, and Kit drops it if that field does not exist in the account.
+    body.set("fields[last_name]", String(form.get("last_name") ?? ""));
     for (const key of UTM_KEYS) body.set(`fields[${key}]`, source[key]);
 
     setSending(true);
@@ -179,6 +182,17 @@ export function BookSignupForm() {
             name="first_name"
             required
             autoComplete="given-name"
+            className={field}
+          />
+        </p>
+        <p className="m-0">
+          <label htmlFor="book-last-name" className="text-sm font-semibold text-heading">
+            {book.form.lastNameLabel}
+          </label>
+          <input
+            id="book-last-name"
+            name="last_name"
+            autoComplete="family-name"
             className={field}
           />
         </p>

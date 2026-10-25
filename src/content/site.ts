@@ -545,7 +545,7 @@ export const calculator = {
   },
 
   loaded: {
-    label: "Add benefits, taxes, and overhead burden to base salary",
+    label: "Add benefits, taxes, and overhead burden to base salary?",
     help: "Adds about 30% to salary-based costs to approximate fully loaded cost. Off by default. So figures based on base salary only will lean lower than the true cost.",
   },
 
@@ -599,8 +599,8 @@ export const calculator = {
     exampleBadge: "Example values",
     loadedBadge: "Loaded +30%",
     lines: {
-      pair: "A · Primary pair bandwidth lost",
-      ripple: "B · Ripple colleagues and bosses drag",
+      pair: "A · The two people in conflict: Productivity Lost",
+      ripple: "B · Colleagues and Bosses: Ripple effect",
       outOfPocket: "C · Out-of-pocket costs so far",
       lostBusiness: "D · Lost business",
     },
