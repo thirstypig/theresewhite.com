@@ -473,6 +473,9 @@ What it is, and is not:
 
 ### Turning it on, changing the password, turning it off
 
+**Currently off** (since 2026-10-26, when both pages were declared ready to
+launch). Both pages are open to anyone, with no Feedback tab.
+
 - **On, or a new password:** in your own terminal (not through Claude, so the
   password is never written into a chat log), from the project folder, run
   `scripts/set-review-passphrase.sh`. It asks twice without showing what you

@@ -54,8 +54,8 @@ export const todos: Todo[] = [
     id: "review-overlay-remove",
     title: "Take the review password and Feedback tab off before either page goes public",
     detail:
-      "Before the book page goes on LinkedIn, or the calculator is linked from anywhere, delete the REVIEW_PASSPHRASE_HASH repository variable and run the deploy: both pages then publish without the password screen or the Feedback tab. Read and save the comments first (DEPLOY.md, \"Reviewer feedback\"). The comments service, theresewhite-review on Cloudflare, can be deleted once nobody needs the comments.",
-    status: "open",
+      "Done 2026-10-26: James called both pages ready, so the REVIEW_PASSPHRASE_HASH repository variable was deleted and the site redeployed. book.theresewhite.com and calculator.theresewhite.com now open with no password screen and no Feedback tab. The last comments were saved locally first; the only one still open, the Calendly link in the PDF, is its own to-do (book-pdf-calendly). The comments service, theresewhite-review on Cloudflare, is still running and costs nothing; it can be deleted whenever nobody needs the old comments. To turn the review tools back on, see DEPLOY.md, \"Reviewer feedback\".",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Review",
