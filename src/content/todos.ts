@@ -32,7 +32,7 @@ export const todos: Todo[] = [
     id: "deploy-font-flake",
     title: "Stop deploys failing when a Google font won't download",
     detail:
-      "On 2026-10-22, 2 of 5 deploys failed in npm run build with \"Can't resolve '@vercel/turbopack-next/internal/font/google/font'\": the build fetches the site's typefaces (next/font/google) from Google, and sometimes that fetch fails. Nothing breaks for visitors, since a failed deploy leaves the previous version online, but the change doesn't go out until someone re-runs the failed job (gh run rerun <id> --failed), which has worked every time. Two fixes, neither started: retry the build step once in .github/workflows/deploy.yml (small, treats the symptom), or store the font files in the repository with next/font/local so the build never downloads them (removes the cause, touches every font declaration). The cause is not confirmed beyond the error text.",
+      "On 2026-10-22, 2 of 5 deploys failed in npm run build with \"Can't resolve '@vercel/turbopack-next/internal/font/google/font'\": the build fetches the site's typefaces (next/font/google) from Google, and sometimes that fetch fails. Nothing breaks for visitors, since a failed deploy leaves the previous version online, but the change doesn't go out until someone re-runs the failed job (gh run rerun <id> --failed), which has worked every time. Two fixes, neither started: retry the build step once in .github/workflows/deploy.yml (small, treats the symptom), or store the font files in the repository with next/font/local so the build never downloads them (removes the cause, touches every font declaration). The cause is not confirmed beyond the error text. It is not specific to GitHub's build machines: the same error stopped a local preview (npm run dev) on 2026-10-25, and restarting the preview cleared it, which points at the download from Google rather than at the deploy setup.",
     status: "open",
     owner: "Dev",
     priority: "normal",
@@ -84,10 +84,32 @@ export const todos: Todo[] = [
     added: "2026-10-22",
   },
   {
+    id: "book-kit-last-name",
+    title: "Create the last_name field in Kit so the book page keeps last names",
+    detail:
+      "Since 2026-10-25 the book page's form has a Last name box (optional), sent to Kit as fields[last_name]. Kit has no built-in last name, so until Therese's account has a custom field whose key is exactly last_name, Kit discards it and saves only first name and email. Two ways: in Kit's form editor for form 10084320 use Add Custom Field and name it last_name, or tell Claude to create it through Kit's API. Signups before the fix have no last name.",
+    status: "open",
+    owner: "James",
+    priority: "high",
+    area: "Book page",
+    added: "2026-10-26",
+  },
+  {
+    id: "book-pdf-calendly",
+    title: "Add the Calendly booking link to the guide's cheat sheet",
+    detail:
+      "A reviewer asked for Therese's Calendly booking address at the bottom of the cheat sheet page in the PDF itself. That needs the guide's original design file (the book was From-Meltdown-To-Resolution-v11.pdf), which is not in this repository; only the compressed public/book/from-meltdown-to-resolution.pdf is. Whoever holds the design file adds the link and exports a new PDF; then replace the file in public/book/, keeping its name, and Kit's download (form Settings, Confirmation email, Download) needs the new file uploaded too. This is the one comment still open in the book page's Feedback tab.",
+    status: "open",
+    owner: "Therese",
+    priority: "normal",
+    area: "Book page",
+    added: "2026-10-26",
+  },
+  {
     id: "book-page-review",
     title: "Have Therese read the book page's words",
     detail:
-      "Every line on book.theresewhite.com was drafted from the book itself (its subtitle, Welcome, Introduction, contents and cheat sheet) and the two endorsements are quoted exactly as the book prints them, but she has not seen the page. The words are all in src/content/book.ts. The page also calls the email field \"Work email\"; change it to \"Email\" if she would rather hear from people's personal addresses too.",
+      "The page was cut down to one screen on 2026-10-25 and 2026-10-26 from reviewer comments in the Feedback tab (PRs #33 and #34), and the intro, the form's wording and the scope line under the form are now the reviewer's own words. If Therese was not that reviewer, she should still read it once: every word is in src/content/book.ts.",
     status: "open",
     owner: "Therese",
     priority: "normal",

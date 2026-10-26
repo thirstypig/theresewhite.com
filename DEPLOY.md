@@ -506,6 +506,19 @@ readable by anyone who looks.
   thread with
   `npx wrangler kv key put "book:en:home" --path=keep.json --namespace-id a422a6b15df142ef8229dba0f39199de --remote`.
   Save a copy of the thread first.
+- **Working out what a pin points at:** pins are numbered oldest first,
+  counting only pinned comments, and a reviewer's "pin #14" means that
+  number in the Feedback tab at the time. Numbers shift once older comments
+  are cleared. Each pin is stored as a percentage across and down the whole
+  page, so open the live page at desktop width (1440 pixels wide worked on
+  2026-10-25), unlock it, and look at where the pins land. On the
+  calculator, the results column on the right stays on screen while the
+  reviewer scrolls, so a pin there can look like it is in empty space; it
+  belongs to whatever in that column was beside it when they clicked.
+- **If a save to the store fails** with "Authentication error [code:
+  10000]", run the same command again. On 2026-10-25 and 2026-10-26 the
+  first write of the session failed this way and the retry worked. Always
+  read the thread back afterwards to confirm.
 - **Changing the service:** edit `workers/review/`, run its tests
   (`npx vitest run workers`), then `npx wrangler deploy` from that folder.
   Deploying is a production action.
