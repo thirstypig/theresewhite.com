@@ -540,12 +540,12 @@ export const calculator = {
   ],
 
   howTo: {
-    lead: "How to use it.",
+    lead: "How to use the calculator.",
     body: "Work through sections A to C. Type exact figures for salaries and costs, and use the sliders for hours, which are estimates anyway. The results on the right update as you go. The starting values are examples; replace them with your own.",
   },
 
   loaded: {
-    label: "Add benefits, taxes, and overhead burden to base salary?",
+    label: "Check to add benefits, taxes, and overhead burden to base salary",
     help: "Adds about 30% to salary-based costs to approximate fully loaded cost. Off by default. So figures based on base salary only will lean lower than the true cost.",
   },
 
@@ -599,7 +599,7 @@ export const calculator = {
     exampleBadge: "Example values",
     loadedBadge: "Loaded +30%",
     lines: {
-      pair: "A · The two people in conflict: Productivity Lost",
+      pair: "A · The two people in conflict: Productivity lost",
       ripple: "B · Colleagues and Bosses: Ripple effect",
       outOfPocket: "C · Out-of-pocket costs so far",
       lostBusiness: "D · Lost business",
@@ -624,7 +624,7 @@ export const calculator = {
       "I keep my active caseload small on purpose. That way, when we work together, you get my full attention, not a piece of it.",
     ask: "Feel free to get in touch if you’d like to talk through a situation. Just click the link below.",
     button: "Schedule Your Free Confidential Assessment",
-    urgentTitle: "For Urgent Matters Only.",
+    urgentTitle: "For Urgent Matters",
     /** Read as one sentence: before + phone + middle + email + after. */
     urgentBefore: "If your situation is pressing, call me at ",
     urgentPhone: "323-291-4813",
@@ -635,8 +635,10 @@ export const calculator = {
       "I answer my own phone and read my own email. Say it’s urgent and I’ll treat it that way.",
   },
 
+  /** Read as one paragraph: method, then the privacy line in bold. */
   method:
-    "Every diverted hour is valued at base salary, assuming 2,080 working hours per person per year and 4.333 weeks per month. Unless the benefits toggle is on, benefits and overhead (typically about 30% of salary) are excluded, as are downstream costs such as turnover (lost business is included only if you enter an estimate in D), and people in conflict still do some useful work, so treat the result as an order of magnitude, not an accounting figure. Nothing you enter is stored or sent anywhere.",
+    "Every diverted hour is valued at base salary, assuming 2,080 working hours per person per year and 4.333 weeks per month. Unless the benefits toggle is on, benefits and overhead (typically about 30% of salary) are excluded, as are downstream costs such as turnover. Lost business is included only if you enter an estimate in D. And people in conflict still do some useful work, so treat the result as an order of magnitude, not an accounting figure.",
+  privacy: "Nothing you enter is stored or sent anywhere.",
 
   disclaimer: {
     title: "Disclaimer.",
