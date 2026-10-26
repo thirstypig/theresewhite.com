@@ -14,6 +14,13 @@ import { contact, liveSite, logo } from "@/content/site";
  *    font at 19px. From tablet width up it stays at the top of the window
  *    while scrolling, as the live one does. Not on a phone, where it would
  *    hold a sixth of the screen.
+ *  - Menu buttons, re-measured 2026-10-26 at a 1440px window: 43px tall,
+ *    8px apart, and 42px of space either side of the label ("About Therese"
+ *    210px wide, "FAQ" 121px). At 1280px and wider they match that exactly.
+ *    Full size needs 846px beside the logo, which the usual 1152px-wide
+ *    content area leaves with nothing to spare, so the header widens to
+ *    1280px there. Narrower windows keep smaller buttons, so all five stay
+ *    in view without scrolling sideways.
  *  - Footer: the same gray, contact details on the left and the legal links
  *    on the right, underlined.
  *
@@ -25,7 +32,7 @@ const forum = Forum({ weight: "400", subsets: ["latin"], display: "swap" });
 export function LiveSiteHeader() {
   return (
     <header className="z-40 border-b md:sticky md:top-0 border-rule bg-[#e8e6e6]">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-2.5 md:flex-row md:items-center md:gap-3">
+      <div className="mx-auto flex max-w-6xl flex-col xl:max-w-7xl gap-3 px-6 py-2.5 md:flex-row md:items-center md:gap-3">
         <a
           href={liveSite.home}
           className="inline-block shrink-0 self-start rounded-[6px] border-[3px] border-[#1d2cf3] bg-white shadow-[0_8px_10px_-6px_rgba(0,0,0,0.55)]"
@@ -44,12 +51,12 @@ export function LiveSiteHeader() {
             than wrapping into a ragged second line — the same choice the main
             site's header makes. */}
         <nav aria-label="theresewhite.com" className="-mx-6 overflow-x-auto px-6 [scrollbar-width:none] md:mx-0 md:px-0">
-          <ul className={`${forum.className} flex gap-1.5`}>
+          <ul className={`${forum.className} flex gap-1.5 xl:gap-2`}>
             {liveSite.nav.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block border border-white bg-[#0d63d1] px-4 py-2 text-base tracking-[0.05em] whitespace-nowrap text-white transition-colors hover:bg-[#2e92e5] md:px-6 md:text-[19px]"
+                  className="block border border-white bg-[#0d63d1] px-4 py-2 text-base tracking-[0.05em] whitespace-nowrap text-white transition-colors hover:bg-[#2e92e5] md:px-6 md:text-[19px] xl:flex xl:h-[43px] xl:items-center xl:px-[42px] xl:py-0"
                 >
                   {item.label}
                 </a>
@@ -68,7 +75,7 @@ export function LiveSiteFooter() {
     "underline underline-offset-2 transition-colors hover:text-black";
   return (
     <footer className="bg-[#e8e6e6] text-[15px] leading-snug text-charcoal">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-8 sm:flex-row sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col xl:max-w-7xl gap-8 px-6 py-8 sm:flex-row sm:justify-between">
         <div>
           {f.lines.map((line) => (
             <p key={line}>{line}</p>
