@@ -4,6 +4,7 @@ import { CalculatorIntro } from "@/components/calculator-intro";
 import { ConflictCalculator } from "@/components/conflict-calculator";
 import { LiveSiteFooter, LiveSiteHeader } from "@/components/live-site-chrome";
 import { calculator } from "@/content/site";
+import { calendlyUrl } from "@/content/wix/chrome";
 import { IS_CALCULATOR_SITE } from "@/lib/site-config";
 
 /**
@@ -18,8 +19,9 @@ import { IS_CALCULATOR_SITE } from "@/lib/site-config";
  * In the bare landing layout because the subdomain has no other pages: the
  * main site's header, full of links to /about and /services, would be a
  * header full of 404s. The live site's header links to the live pages
- * instead. The calculator's button goes to the live site in a new tab, as
- * Therese's original does.
+ * instead. The calculator's button, "Schedule Your Free Confidential
+ * Assessment", opens Therese's Calendly booking page in a new tab (James's
+ * request, 2026-10-26; it went to the live home page before).
  *
  * It wears the live theresewhite.com identity rather than the rebuild's:
  * Arial and Arial Bold with black headlines, the Wix site's gray and blues,
@@ -48,7 +50,7 @@ export default function StandaloneCalculator() {
       <LiveSiteHeader />
       <CalculatorIntro fontClass="display-wix" />
       <ConflictCalculator
-        ctaHref="https://theresewhite.com"
+        ctaHref={calendlyUrl}
         ctaExternal
         fontClass="display-wix"
         stickyTop="lg:top-[9.5rem]"

@@ -297,7 +297,8 @@ export function ConflictCalculator({
   /**
    * Where "Schedule Your Free Confidential Assessment" goes. The main site
    * sends it to /contact; the landing pages to their own on-page form; the
-   * standalone calculator site, which has no other pages, to the live site.
+   * standalone calculator site, which has no other pages, to Therese's
+   * Calendly booking page.
    */
   ctaHref: string;
   /** Open the button in a new tab, as the original does for its link out. */
