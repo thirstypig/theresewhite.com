@@ -21,15 +21,15 @@ export function CalculatorIntro({
   return (
     <section className="border-b border-rule bg-cream">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-        <p className="label text-muted">{calculator.eyebrow}</p>
+        <p className="label text-sm! text-muted">{calculator.eyebrow}</p>
         <h1 className={`${fontClass} mt-4 max-w-3xl text-4xl text-heading sm:text-5xl`}>
           {calculator.title}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-charcoal">
+        <p className="mt-6 text-lg leading-relaxed font-bold text-charcoal sm:text-xl">
           {calculator.sub}
         </p>
 
-        <dl className="mt-12 grid gap-x-12 gap-y-8 md:grid-cols-3">
+        <dl className="mt-8 grid gap-x-12 gap-y-8 md:grid-cols-3">
           {calculator.intro.map((item) => (
             <div key={item.title} className="border-t border-rule-strong pt-5">
               <dt className={`${fontClass} text-xl text-heading`}>{item.title}</dt>
@@ -40,12 +40,14 @@ export function CalculatorIntro({
           ))}
         </dl>
 
-        <p className="mt-12 max-w-3xl border-l-2 border-rule-strong pl-5 text-base leading-relaxed text-charcoal">
-          <strong className="font-semibold text-heading">
+        <div className="mt-10 border-t border-rule-strong pt-5">
+          <h2 className={`${fontClass} m-0 text-xl text-heading`}>
             {calculator.howTo.lead}
-          </strong>{" "}
-          {calculator.howTo.body}
-        </p>
+          </h2>
+          <p className="mt-2 mb-0 max-w-3xl text-base leading-relaxed text-charcoal">
+            {calculator.howTo.body}
+          </p>
+        </div>
       </div>
     </section>
   );

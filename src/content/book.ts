@@ -45,7 +45,7 @@ export const book = {
   },
 
   form: {
-    heading: "Get the free guide",
+    heading: "Get the free guide with one-page cheat sheet",
     firstNameLabel: "First name",
     lastNameLabel: "Last name",
     emailLabel: "Best email",
@@ -71,11 +71,13 @@ export const book = {
     },
   },
 
-  /** Shown under the signup form. */
+  /**
+   * Shown under the signup form. The only statement of what the scripts are
+   * not for: the footer's shorter copy was removed on 2026-10-25 because a
+   * reviewer pointed out it repeated this.
+   */
   scope:
     "These scripts are for everyday workplace friction. They are not for complaints of harassment, discrimination, retaliation, or safety concerns, etc. Start with HR or counsel for those. Nothing in this document is legal advice.",
 
-  disclaimer:
-    "For everyday workplace friction. These scripts are not for complaints of harassment, discrimination, retaliation, or safety concerns; start with HR or counsel. Not legal advice.",
   copyright: "© 2026 L. Therese White, Kennedy White, Inc.",
 } as const;

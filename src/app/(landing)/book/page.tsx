@@ -64,7 +64,7 @@ export default function BookPage() {
             they sit in a column beside the text and the form. */}
         <div className="mx-auto grid max-w-6xl gap-8 px-6 pt-10 pb-16 md:grid-cols-[1.15fr_0.85fr] md:gap-x-16 md:gap-y-10 md:pt-16 md:pb-20">
           <div className="order-1 md:col-start-1 md:row-start-1">
-            <p className="label m-0 text-xs text-[#9cc3ea]">{book.hero.eyebrow}</p>
+            <p className="label m-0 text-base! text-[#9cc3ea]">{book.hero.eyebrow}</p>
             <h1 className="book-serif mt-4 text-4xl text-white sm:text-6xl">{book.title}</h1>
             <p className="mt-4 text-lg leading-snug font-semibold text-[#dce6f3] sm:text-xl">
               {book.subtitle}
@@ -113,8 +113,7 @@ export default function BookPage() {
 
       <footer className="bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-8 text-sm leading-relaxed text-muted">
-          <p className="m-0">{book.disclaimer}</p>
-          <p className="mt-3 mb-0">
+          <p className="m-0">
             {book.copyright} &middot;{" "}
             <a href={PRIVACY_HREF} className="underline underline-offset-2 hover:text-heading">
               Privacy policy

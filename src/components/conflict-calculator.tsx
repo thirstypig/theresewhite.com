@@ -377,7 +377,7 @@ export function ConflictCalculator({
 
   return (
     <section className={className}>
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6 pt-16 pb-8 sm:pt-20 sm:pb-10">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-start">
           {/* ---------------- Inputs ---------------- */}
           <div className="space-y-6">
@@ -595,7 +595,7 @@ export function ConflictCalculator({
                 {close.button}
               </a>
               <div className="mt-6 border-t border-rule pt-5">
-                <h3 className="label text-slate">{close.urgentTitle}</h3>
+                <h3 className="text-lg font-bold text-heading">{close.urgentTitle}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal">
                   {close.urgentBefore}
                   <a
@@ -621,8 +621,11 @@ export function ConflictCalculator({
           </aside>
         </div>
 
-        <div className="mt-14 max-w-3xl space-y-3 border-t border-rule pt-8 text-xs leading-relaxed text-muted">
-          <p>{copy.method}</p>
+        <div className="mt-8 max-w-3xl space-y-3 border-t border-rule pt-6 text-xs leading-relaxed text-muted">
+          <p>
+            {copy.method}{" "}
+            <b className="font-semibold text-charcoal">{copy.privacy}</b>
+          </p>
           <p>
             <b className="font-semibold text-charcoal">{copy.disclaimer.title}</b>
             {copy.disclaimer.body}
