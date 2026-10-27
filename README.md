@@ -199,9 +199,12 @@ The free guide, *From Meltdown to Resolution*, has its own signup page at
 Therese's Kit account, each one recording which post sent it. DEPLOY.md,
 "The free book's own address", explains how it works and how to tag links.
 
-While they are unannounced, both subdomains can sit behind a review password
-with a Feedback tab for comments and pins. DEPLOY.md, "Reviewer feedback",
-explains how to turn it on and off and where comments are kept.
+Both subdomains were reviewed behind a password with a Feedback tab for
+comments and pins. That was turned off on 2026-10-26, when both pages were
+declared ready, so both are now open to anyone. DEPLOY.md, "Reviewer
+feedback", explains how to turn it back on and where comments are kept.
+On calculator.theresewhite.com, "Schedule Your Free Confidential
+Assessment" opens Therese's Calendly booking page.
 
 The rebuilt pages use the Wix addresses, so their links survive the move with
 no redirect. The Wix addresses for pages that were not rebuilt are listed in
