@@ -157,6 +157,33 @@ in 2 of 5 deploys on 2026-10-22. Re-running the failed job
 (`gh run rerun <id> --failed`) worked both times. The cause and a lasting fix
 (a retry, or fonts stored in the repository) are open in `todos.ts`.
 
+## Added 2026-10-26: "the deploy succeeded" does not mean the subdomain is live
+
+Two lessons from turning the review password off and launching both pages.
+
+- **Each subdomain goes live about a minute after the deploy reports
+  success.** The deploy pushes each page to its own repository
+  (`thirstypig/theresewhite-book`, `thirstypig/theresewhite-calculator`),
+  and that repository's GitHub Pages build then has to finish. Checked
+  immediately after a green deploy, both subdomains still served the old
+  page (`last-modified` from the previous deploy). This happened twice in one
+  day and looked like a failed publish both times. It wasn't one. The
+  calculator's build finished 2 seconds after the check that looked wrong.
+  Before concluding a page didn't update, run
+  `gh api repos/thirstypig/theresewhite-<site>/pages/builds/latest` and wait
+  for `built`. Even then, a browser that loaded the page recently may show
+  the old copy for up to 10 minutes (`cache-control: max-age=600`).
+- **In a shell loop, `$t:en:home` quietly breaks the comment-reading
+  command.** The Mac's shell (zsh) reads `$t:e` as "the extension of `$t`".
+  The thread name was mangled and the comments service answered
+  `{"error":"Invalid thread"}`, which looks like a broken service. Write
+  `${t}:en:home`. The single command in DEPLOY.md, "Reviewer feedback", is
+  unaffected, because it has no variable.
+
+Also: three pull requests merged back to back start three deploys. GitHub
+cancels the queued middle one, which is harmless, because the last deploy
+contains every change.
+
 ## Checklist for the next subdomain like this
 
 1. Assemble with the script, never a hand-made list; confirm `.nojekyll` and
@@ -170,3 +197,5 @@ in 2 of 5 deploys on 2026-10-22. Re-running the failed job
    site's `extras`, and give the site its own `og.png` if it needs one.
 7. After changing a repository variable the deploy reads, start a fresh
    deploy and look for the variable's effect in its log.
+8. After a deploy, wait for the subdomain repository's Pages build to say
+   `built` before checking the live page.
