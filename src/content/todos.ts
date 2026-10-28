@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-10-22";
+export const TODOS_UPDATED = "2026-10-28";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -74,10 +74,10 @@ export const todos: Todo[] = [
   },
   {
     id: "book-kit-email-copy",
-    title: "Rewrite the book's Kit email, then turn on the thank-you line",
+    title: "Rewrite the book's Kit email",
     detail:
-      "Kit form 10084320 now auto-confirms new subscribers and sends the PDF as a download link (Kit cannot attach files). But the email still carries Kit's default words, \"Important: confirm your subscription\", which make no sense with auto-confirm on. Replace them in Kit (form → Settings → Confirmation email → Edit Email Contents), keeping the download button, then set the NEXT_PUBLIC_KIT_SENDS_COPY repository variable to true and redeploy so the page says a copy is on its way. Also consider replacing the Seattle postal address in the email footer, which is Kit's default, with Therese's own.",
-    status: "open",
+      "Done 2026-10-28. The email every book signup gets now carries James's copy: subject \"Congratulations. Your “Meltdown to Resolution” scripts are here.\", a greeting with the reader's first name (or \"there\"), \"Click here\" links plus full copy-and-paste addresses for the PDF and the calculator, and the calculator sentence in bold. It comes from \"Therese White\" (it used to show therese@theresewhite.com) with her Culver City address in the footer instead of Kit's Seattle one; both of those are account-wide Kit settings, so every future Kit email uses them too. Two things Kit will not let us change on the free plan: the blue button (Kit requires it; it now says \"Download book\" and downloads the same guide) and the footer's \"Update your profile\" link. James signed up himself and the email arrived. James decided not to turn on the page's \"A copy is on its way to your inbox too.\" line (the NEXT_PUBLIC_KIT_SENDS_COPY repository variable stays unset), because the thank-you message already offers the download. To change the email's words: Kit → form 10084320 → Settings → Confirmation email → Edit Email Contents → Save, then Save & Publish.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Book page",
