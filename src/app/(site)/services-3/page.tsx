@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EB_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import { pageMetadata } from "@/lib/page-metadata";
 import { AssessmentBand } from "@/components/wix/wix-ui";
 import { wixFaq } from "@/content/wix/faq";
@@ -29,9 +29,16 @@ import { wixFaq } from "@/content/wix/faq";
  * the name and simply let several stay open, which is harmless.
  *
  * EB Garamond is loaded here, not with the shared Wix fonts, because this
- * introduction is the only place the site uses it.
+ * introduction is the only place the site uses it. The file is stored in
+ * src/fonts, so the build never downloads it.
  */
-const garamond = EB_Garamond({ weight: "700", subsets: ["latin"], display: "swap" });
+const garamond = localFont({
+  src: "../../../fonts/eb-garamond/eb-garamond-latin-700.woff2",
+  weight: "700",
+  style: "normal",
+  display: "swap",
+  adjustFontFallback: "Times New Roman",
+});
 
 export const metadata: Metadata = pageMetadata({
   title: "FAQ",
