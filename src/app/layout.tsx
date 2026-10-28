@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Instrument_Sans, Martian_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Consent } from "@/components/consent";
 import { contact } from "@/content/site";
@@ -11,25 +11,44 @@ import {
 } from "@/lib/page-metadata";
 
 /* Display: high-contrast serif — authority with a pulse. */
-const fraunces = Fraunces({
+/*
+ * The font files live in src/fonts and ship with the site, so the build never
+ * downloads anything from Google Fonts. Each file is the "latin" file Google
+ * Fonts serves for the same request (src/fonts/<family>/ holds the license).
+ * Fraunces and Instrument Sans are variable fonts, one file covering every
+ * weight in the range given; adjustFontFallback picks the stand-in font that
+ * is resized to match while the real one loads, the same one Google's loader
+ * used (Times New Roman for serifs, Arial otherwise).
+ */
+const fraunces = localFont({
+  src: "../fonts/fraunces/fraunces-latin-variable.woff2",
+  weight: "100 900",
+  style: "normal",
   variable: "--font-fraunces",
-  subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 });
 
 /* Body: humanist sans that stays warm at long paragraph lengths. */
-const instrumentSans = Instrument_Sans({
+const instrumentSans = localFont({
+  src: "../fonts/instrument-sans/instrument-sans-latin-variable.woff2",
+  weight: "400 700",
+  style: "normal",
   variable: "--font-instrument-sans",
-  subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: "Arial",
 });
 
 /* Utility: the voice of the signed record — labels, steps, figures. */
-const martianMono = Martian_Mono({
+const martianMono = localFont({
+  // One file serves both weights, exactly as Google Fonts sends it.
+  src: [
+    { path: "../fonts/martian-mono/martian-mono-latin-400-500.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/martian-mono/martian-mono-latin-400-500.woff2", weight: "500", style: "normal" },
+  ],
   variable: "--font-martian-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
   display: "swap",
+  adjustFontFallback: "Arial",
 });
 
 const title = SITE_TITLE;

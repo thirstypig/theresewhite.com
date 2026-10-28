@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Forum } from "next/font/google";
+import localFont from "next/font/local";
 import { contact, liveSite, logo } from "@/content/site";
 
 /**
@@ -25,9 +25,16 @@ import { contact, liveSite, logo } from "@/content/site";
  *    on the right, underlined.
  *
  * Forum is loaded here rather than in the root layout, so only pages that
- * use this header download it.
+ * use this header download it. The file is stored in src/fonts, so the build
+ * itself never downloads it.
  */
-const forum = Forum({ weight: "400", subsets: ["latin"], display: "swap" });
+const forum = localFont({
+  src: "../fonts/forum/forum-latin-400.woff2",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  adjustFontFallback: "Arial",
+});
 
 export function LiveSiteHeader() {
   return (

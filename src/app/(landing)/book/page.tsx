@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Inter, Lora } from "next/font/google";
+import localFont from "next/font/local";
 import { pageMetadata } from "@/lib/page-metadata";
 import { BookSignupForm } from "@/components/book-signup-form";
 import { book } from "@/content/book";
@@ -32,18 +32,28 @@ import { IS_BOOK_SITE, PRIVACY_HREF } from "@/lib/site-config";
  * `/og.png` tag every page carries points at the cover there.
  */
 
-const serif = Lora({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  style: ["normal", "italic"],
+// The font files are stored in src/fonts, so the build never downloads them.
+// Where one file covers several weights, that is how Google Fonts sends it.
+const bookSerif = localFont({
+  src: [
+    { path: "../../../fonts/lora/lora-latin-500-600.woff2", weight: "500", style: "normal" },
+    { path: "../../../fonts/lora/lora-latin-500-600.woff2", weight: "600", style: "normal" },
+    { path: "../../../fonts/lora/lora-latin-500-600-italic.woff2", weight: "500", style: "italic" },
+    { path: "../../../fonts/lora/lora-latin-500-600-italic.woff2", weight: "600", style: "italic" },
+  ],
   display: "swap",
   variable: "--font-book-serif",
+  adjustFontFallback: "Times New Roman",
 });
-const sans = Inter({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
+const bookSans = localFont({
+  src: [
+    { path: "../../../fonts/inter/inter-latin-400-700.woff2", weight: "400", style: "normal" },
+    { path: "../../../fonts/inter/inter-latin-400-700.woff2", weight: "600", style: "normal" },
+    { path: "../../../fonts/inter/inter-latin-400-700.woff2", weight: "700", style: "normal" },
+  ],
   display: "swap",
   variable: "--font-book-sans",
+  adjustFontFallback: "Arial",
 });
 
 export const metadata: Metadata = pageMetadata({
@@ -56,7 +66,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function BookPage() {
   return (
-    <div className={`lp-book lp-lock bg-paper ${serif.variable} ${sans.variable}`}>
+    <div className={`lp-book lp-lock bg-paper ${bookSerif.variable} ${bookSans.variable}`}>
       <section className="bg-[linear-gradient(180deg,#284a7a_0%,#1b2e52_100%)] text-white">
         {/* On a phone, which is where most LinkedIn visitors are, the form
             comes straight after the title so it is on the first screen; the

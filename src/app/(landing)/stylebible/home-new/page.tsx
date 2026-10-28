@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import localFont from "next/font/local";
 import { pageMetadata } from "@/lib/page-metadata";
 import { liveSite } from "@/content/site";
 import { wixHome } from "@/content/wix-home";
@@ -28,19 +28,27 @@ export const metadata: Metadata = pageMetadata({
   noindex: true,
 });
 
-const serif = Source_Serif_4({
+// The font files are stored in src/fonts, so the build never downloads them.
+const newSerif = localFont({
+  src: [
+    { path: "../../../../fonts/source-serif-4/source-serif-4-latin-600.woff2", weight: "600", style: "normal" },
+    { path: "../../../../fonts/source-serif-4/source-serif-4-latin-600-italic.woff2", weight: "600", style: "italic" },
+  ],
   variable: "--new-serif",
-  subsets: ["latin"],
-  weight: ["600"],
-  style: ["normal", "italic"],
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 });
 
-const sans = Source_Sans_3({
+// One file serves all three weights, exactly as Google Fonts sends it.
+const newSans = localFont({
+  src: [
+    { path: "../../../../fonts/source-sans-3/source-sans-3-latin-400-700.woff2", weight: "400", style: "normal" },
+    { path: "../../../../fonts/source-sans-3/source-sans-3-latin-400-700.woff2", weight: "600", style: "normal" },
+    { path: "../../../../fonts/source-sans-3/source-sans-3-latin-400-700.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--new-sans",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
   display: "swap",
+  adjustFontFallback: "Arial",
 });
 
 const link = (label: string) => liveSite.nav.find((n) => n.label === label)!.href;
@@ -60,7 +68,7 @@ export default function HomeNewSamplePage() {
   const { header, hero, proof, symptoms, cost, quote, blueprint, reasons, endorsements, panels, expect, close } = homeNew;
 
   return (
-    <div className={`lp-lock ${s.page} ${serif.variable} ${sans.variable}`}>
+    <div className={`lp-lock ${s.page} ${newSerif.variable} ${newSans.variable}`}>
       <header className={s.header}>
         <div className={`${s.wrap} ${s.headerInner}`}>
           <a href={liveSite.home} aria-label="L. Therese White, home">
