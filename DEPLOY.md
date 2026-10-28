@@ -374,7 +374,7 @@ therese@theresewhite.com. Before the book it had two forms, "Newsletter" and
 from newsletter signups. Kit does not let outside tools create forms, so this
 part is done by hand, logged in as Therese at kit.com.
 
-Steps 1–5 were done on 2026-10-22, except rewriting the email's words (step 3, first bullet) and adding `NEXT_PUBLIC_KIT_SENDS_COPY`.
+Steps 1–5 were done on 2026-10-22. The email's words (step 3, first bullet) were rewritten on 2026-10-28, and James's own signup that day confirmed the email arrives. `NEXT_PUBLIC_KIT_SENDS_COPY` was left off on purpose (see step 5).
 
 1. **Create the four source fields.** Done through Kit's API. These are four
    blank boxes on every subscriber's record that the page fills in with the
@@ -393,8 +393,14 @@ Steps 1–5 were done on 2026-10-22, except rewriting the email's words (step 3,
    (`app.kit.com/forms/designers/10084320/edit`), click **Settings** in the
    top bar, then the **Confirmation email** tab:
    - Leave **Send confirmation email** checked. Click **Edit Email
-     Contents** and rewrite the subject and words in Therese's voice; Kit's
-     default asks people to confirm, which no longer fits.
+     Contents** to change the subject and words; then **Save**, and **Save &
+     Publish** on the form. Done 2026-10-28 with James's copy. In the
+     editor, write the reader's first name as
+     `{{ subscriber.first_name | default: "there" }}`; Kit leaves
+     `{{first_name}}` unfilled. Kit will not let anyone delete the blue
+     button or the footer's "Unsubscribe | Update your profile" line; the
+     button's label can change (it says "Download book") but not where it
+     goes.
    - Check **Auto-confirm new subscribers**. Without it, Kit holds each
      person off her list until they click the email. With it, they join
      immediately and still get the email.
@@ -407,28 +413,32 @@ Steps 1–5 were done on 2026-10-22, except rewriting the email's words (step 3,
    - Kit cannot attach files to emails; it sends a download link instead,
      which is what the **Download** setting does. That is also kinder to
      work inboxes, which often block attachments.
-   - The email's footer shows a Seattle street address. That is Kit's
-     default for accounts without their own; US law requires a postal
-     address in marketing email, and Therese may prefer hers.
+   - The sender name and the footer's postal address are account-wide, set
+     under Kit → Settings → Email (`app.kit.com/account_settings/email`).
+     Since 2026-10-28 they are "Therese White" and 10736 Jefferson Blvd,
+     #363, Culver City, CA 90230, copied from the live site. Before that the
+     footer showed Kit's own Seattle address. US law requires a postal
+     address in marketing email.
 4. **The form's number** is 10084320, the digits in the editor's address.
 5. **Connect the page to the form.** `NEXT_PUBLIC_KIT_FORM_ID` = `10084320`
    is set (this repository → Settings → Secrets and variables → Actions →
-   Variables). After step 3, also add `NEXT_PUBLIC_KIT_SENDS_COPY` = `true`,
-   which turns on the thank-you line "A copy is on its way to your inbox
-   too."
+   Variables). A second variable, `NEXT_PUBLIC_KIT_SENDS_COPY` = `true`,
+   would add the thank-you line "A copy is on its way to your inbox too."
+   James chose on 2026-10-28 to leave it unset: the thank-you message
+   already offers the download, so the line adds nothing.
 6. **Test it once the page is live.** Sign up with your own address through a
    tagged link. In Kit, the subscriber should appear under the form,
    confirmed, with the four fields filled in, and the email with the PDF
-   should arrive. Step 3's combination (auto-confirm on, email still sent) is
-   what Kit's help pages describe, but it is untested here until this test.
+   should arrive. Step 3's combination (auto-confirm on, email still sent)
+   was confirmed on 2026-10-28, when James signed up and got the email.
 
 ### One-time setup
 
 | Step | Where | Who |
 |---|---|---|
 | Steps 1–2 above: four source fields and the book's form | Therese's Kit account | Done 2026-10-22 |
-| Step 3 above: auto-confirm on and the PDF attached under Download (done 2026-10-22); the email's words still Kit's default "confirm your subscription" | Therese's Kit account | Wording open |
-| Step 5 above: `NEXT_PUBLIC_KIT_FORM_ID` set to 10084320; `NEXT_PUBLIC_KIT_SENDS_COPY` still to add after step 3 | This repository → Settings → Secrets and variables → Actions → Variables | Form number done 2026-10-22 |
+| Step 3 above: auto-confirm on and the PDF attached under Download (done 2026-10-22); the email rewritten in James's copy (done 2026-10-28) | Therese's Kit account | Done 2026-10-28 |
+| Step 5 above: `NEXT_PUBLIC_KIT_FORM_ID` set to 10084320 (2026-10-22); `NEXT_PUBLIC_KIT_SENDS_COPY` left unset by choice (2026-10-28) | This repository → Settings → Secrets and variables → Actions → Variables | Done 2026-10-22 |
 | Create the public repository `thirstypig/theresewhite-book` | GitHub | Done 2026-10-22 |
 | Add a deploy key that can write to that repository only, and store its private half as the `BOOK_DEPLOY_KEY` secret here. Until it exists the `book-site` job skips publishing with a warning | GitHub | Done 2026-10-22 |
 | After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `book.theresewhite.com`; Enforce HTTPS. (GitHub turned Pages on by itself when the branch arrived; the domain and HTTPS were then set through its API, and the certificate was issued within a minute.) | That repository | Done 2026-10-22 |
