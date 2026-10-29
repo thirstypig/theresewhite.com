@@ -503,7 +503,11 @@ export function ConflictCalculator({
             >
               <div className="on-dark bg-band p-6 text-band-fg sm:p-8">
                 <p className="label flex flex-wrap items-center gap-2 text-band-muted">
-                  {r.total}
+                  {/* Larger than the 11px label style (James, 2026-10-29), so the
+                      headline over the total reads at a glance. Sized on its own
+                      span because .label is plain CSS and outranks a size class on
+                      the paragraph; the two badges beside it keep the small size. */}
+                  <span className="text-base sm:text-lg">{r.total}</span>
                   {!edited ? (
                     <span className="rounded-full border border-band-rule px-2 py-0.5 text-band-fg">
                       {r.exampleBadge}
