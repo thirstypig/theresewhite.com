@@ -346,6 +346,16 @@ body {
   border-radius: 6px;
 }
 
+/* The shared form fields (src/components/form-field.tsx) carry rounded-sm,
+   which the pill rule above would otherwise turn into ovals: a multi-line
+   message box became one on the Contact draft (2026-10-29). Element plus
+   class outranks the pill rule, so fields stay lightly rounded. */
+.lp-wix input.rounded-sm,
+.lp-wix textarea.rounded-sm,
+.lp-wix select.rounded-sm {
+  border-radius: 6px;
+}
+
 /* The live site has no monospace anywhere. `.label` is the main site's
    utility face, so inside the Wix scope it reverts to bold Arial. */
 .lp-wix .label {
