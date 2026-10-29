@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-10-28";
+export const TODOS_UPDATED = "2026-10-29";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -357,5 +357,16 @@ export const todos: Todo[] = [
     priority: "normal",
     area: "Content",
     added: "2026-10-18",
+  },
+  {
+    id: "contact-page-redesign",
+    title: "Redesign the Contact page: an email form on top, the Calendly button just below",
+    detail:
+      "James asked for this on 2026-10-29. The top of /contact becomes an email form, and directly under it sits a \"Schedule Your Assessment\" button that opens Therese's Calendly page (calendlyUrl in src/content/wix/chrome.ts). This reverses the 2026-10-17 decision that Contact leads with Calendly and has no form, so update the note at the top of src/content/wix/contact.ts when it ships. The old form is still in the code (src/components/contact-form.tsx, sent through Web3Forms, landing on /contact/thank-you/), so the work is mostly layout, not a new form. Still to decide before building: where the rest of the current page goes (the \"In 30 to 45 minutes, I'll help you answer\" list, the urgent phone-and-email note, and the chalkboard picture), and whether the form needs any fields beyond name, email and message. Finish the Web3Forms delivery check first (web3forms-live-test), so the new form is known to reach Therese.",
+    status: "open",
+    owner: "Dev",
+    priority: "normal",
+    area: "Forms",
+    added: "2026-10-29",
   },
 ];
