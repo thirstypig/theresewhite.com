@@ -140,10 +140,10 @@ export const todos: Todo[] = [
   },
   {
     id: "web3forms-live-test",
-    title: "Send one real test submission",
+    title: "Confirm the test submission reached Therese",
     detail:
-      "Everything is verified up to the point of actually sending — that last step delivers a real email to Therese's inbox, so it needs a person to decide when. Submit the form at /contact/, confirm you land on /contact/thank-you/, that the mail arrives, and that hitting reply reaches the sender rather than a noreply address.",
-    status: "open",
+      "The contact form came off /contact on 2026-10-17 (Contact leads with Calendly), so the only emailed form left on the site is the referral-partner form at /collaborate/. James sent a test through it on 2026-10-28 and is checking with Therese whether it arrived. Confirm three things: the form lands on /collaborate/thank-you/, the email reaches the inbox Web3Forms delivers to, and hitting Reply reaches the sender rather than a noreply address.",
+    status: "in-progress",
     owner: "James",
     priority: "high",
     area: "Forms",
@@ -197,7 +197,7 @@ export const todos: Todo[] = [
     id: "calculator-launch",
     title: "Launch the conflict calculator with the ad campaign",
     detail:
-      "Replaced on 2026-10-16 with Therese's second version, which is also live on its own at calculator.theresewhite.com once the DNS record in calculator-subdomain-dns exists. Either address can go in the ads now. Both are noindex. To let /conflict-calculator appear in search: remove the noindex line in its page metadata, add it to src/app/sitemap.ts, and remove its entry from NOT_IN_SITEMAP in src/app/sitemap.test.ts. The new calculator collects no email, so ad traffic no longer uses up the Web3Forms allowance; leads arrive only through the contact and landing-page forms.",
+      "Replaced on 2026-10-16 with Therese's second version, which is also live on its own at calculator.theresewhite.com once the DNS record in calculator-subdomain-dns exists. Either address can go in the ads now. Both are noindex. To let /conflict-calculator appear in search: remove the noindex line in its page metadata, add it to src/app/sitemap.ts, and remove its entry from NOT_IN_SITEMAP in src/app/sitemap.test.ts. The new calculator collects no email, so ad traffic no longer uses up the Web3Forms allowance; leads arrive only through the referral-partner form on /collaborate, Calendly, and Therese's email and phone.",
     status: "open",
     owner: "James",
     priority: "normal",
@@ -252,8 +252,8 @@ export const todos: Todo[] = [
     id: "landing-page-winner",
     title: "Pick a landing page and give it a real URL",
     detail:
-      "Two designs are live for the LinkedIn post: /lp/a is a conventional high-converting layout in the site's own palette, /lp/b wears the live theresewhite.com identity — its blues, Arial Bold, pill buttons. Same calculator and same copy underneath, so the only variable is design. Both are noindex and both stamp their source into the Web3Forms subject line, so the inbox says which one produced a lead. Once one wins: delete the other, move the survivor off /lp/* to a real URL before the post goes out, and update the sitemap exclusion list in src/app/sitemap.test.ts. Therese should also read the hero and contact copy in the `landing` export — the rest of both pages is already her own calculator wording.",
-    status: "open",
+      "Done 2026-10-28: James retired both test designs. calculator.theresewhite.com is the landing page in use for the LinkedIn post, so /lp/a, /lp/b, their contact form (src/components/landing-contact-form.tsx) and their draft copy (the `landing` export in src/content/site.ts) were deleted. Before that, /lp/a was a conventional layout in the rebuild's palette and /lp/b wore the live theresewhite.com look; both carried the same calculator and were noindex.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Marketing",
@@ -351,7 +351,7 @@ export const todos: Todo[] = [
     id: "wix-placeholders",
     title: "Fix the unfinished placeholders copied word for word from Wix",
     detail:
-      "The rebuild copies the Wix pages exactly, so it also copies text that was never finished there. Each one needs Therese's wording, and each fix should be made on Wix too while Wix is still live. Accessibility: \"within [NUMBER] business days\", \"escalate by emailing [EMAIL ADDRESS]\", and \"This site is built on the Wix platform\". Cookie Preferences: a line that is only \".\", and a list of cookies that Wix sets, which stops being true when the site leaves Wix. Terms of Use: section 8 has lost its heading and starts with a stray \"1\". Privacy Policy: it names Wix Analytics and Wix email delivery, which may not be what the new site uses. Blog posts: \"[Link: .XXX/TripleTakeTuesdays/Date]\" in every post, \"Add subtitle.\" and an unlinked \"Click here to learn more.\" in two, and a link to ThereseWhite.com/back-issues, which probably does not exist. Words live in src/content/wix/legal.ts and content/posts/.",
+      "The rebuild copies the Wix pages exactly, so it also copies text that was never finished there. Each one needs Therese's wording, and each fix should be made on Wix too while Wix is still live. Accessibility: \"within [NUMBER] business days\", \"escalate by emailing [EMAIL ADDRESS]\", and \"This site is built on the Wix platform\". Cookie Preferences: a line that is only \".\", and a list of cookies that Wix sets, which stops being true when the site leaves Wix. Terms of Use: section 8 has lost its heading and starts with a stray \"1\". Privacy Policy: it names Wix Analytics and Wix email delivery, which may not be what the new site uses. Blog posts: \"Add subtitle.\" and an unlinked \"Click here to learn more.\" in two. (The \"[Link: .XXX/TripleTakeTuesdays/Date]\" line in every post and the ThereseWhite.com/back-issues link were removed on 2026-10-28, when the Triple Take Tuesdays name was retired.) Words live in src/content/wix/legal.ts and content/posts/.",
     status: "open",
     owner: "Therese",
     priority: "normal",

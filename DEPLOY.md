@@ -177,19 +177,21 @@ and the legal pages.
 
 Already done — this section is reference, not a task.
 
-A static site has no server to receive a POST, so all three forms submit
+A static site has no server to receive a POST, so its one remaining form submits
 directly to **Web3Forms** (<https://web3forms.com>). The calculator used to
 have a fourth, an email gate in front of its projections; the version that
 replaced it on 2026-10-16 collects nothing.
 
 | Form | Submits as | Subject line it sends |
 |---|---|---|
-| `/contact` | plain HTML POST | Assessment request from theresewhite.com |
 | `/collaborate` | plain HTML POST | Partner inquiry from theresewhite.com |
-| `/lp/a` and `/lp/b` | `fetch` | Landing page inquiry (lp-a / lp-b) |
 
-The two plain-HTML forms need no JavaScript at all: they work before hydration
-and with JS disabled, then redirect to a thank-you page.
+It needs no JavaScript at all: it works before hydration and with JS disabled,
+then redirects to a thank-you page. The contact form came off `/contact` on
+2026-10-17 (Contact now leads with Calendly; `src/components/contact-form.tsx`
+is kept, unused), and the `/lp/a` and `/lp/b` landing pages and their form
+were deleted on 2026-10-28, because calculator.theresewhite.com is the landing
+page in use.
 
 The `fetch` form confirms in place instead. It sits on pages with no
 navigation, where leaving ends the visit.
@@ -266,8 +268,7 @@ Two differences from the main site, both deliberate:
   live site's own header (her logo, `public/brand/therese-white-logo.webp`,
   and its menu) and footer, every link going to the live page of that name.
   It sits beside the Wix site until the cutover, so it should look like part
-  of it. The colors are the `.lp-wix` theme in `globals.css`, shared with
-  `/lp/b`; the header and footer are `src/components/live-site-chrome.tsx`.
+  of it. The colors are the `.lp-wix` theme in `globals.css`; the header and footer are `src/components/live-site-chrome.tsx`.
   The one thing not matched exactly is the button lettering: the live site
   uses Lulo Clean, a font Wix licenses only for its own sites, so the buttons
   use bold capitals in Arial with wide spacing instead.

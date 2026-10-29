@@ -116,12 +116,9 @@ root, rather than from Wix. Every word is hers, exactly as written.
 - **Collaborate page** — the whole page is drafted, not migrated; the Wix site
   has no equivalent. Highest priority open content item — see `collaborate-voice`
   in `todos.ts`.
-- **Placeholders copied from Wix** — "[NUMBER] business days", the
-  "[Link: .XXX…]" lines in blog posts, and similar. See `wix-placeholders` in
+- **Placeholders copied from Wix** — "[NUMBER] business days", "Add
+  subtitle." in blog posts, and similar. See `wix-placeholders` in
   `todos.ts`.
-- **Landing pages** (`/lp/a`, `/lp/b`) — the hero and contact copy in the
-  `landing` export is drafted. The calculator in the middle of both pages is
-  her own and needs nothing.
 - **Privacy and terms** — now the Wix text, which has not been reviewed by a lawyer either.
 - **EEOC and Kenneth Cloke** entries in `credentials` — read off cropped logo
   images, so worth confirming.
