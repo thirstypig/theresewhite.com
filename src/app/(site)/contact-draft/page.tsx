@@ -9,11 +9,11 @@ import { ContactForm } from "@/components/contact-form";
  * DRAFT of the redesigned Contact page, for review on staging only
  * (todo `contact-page-redesign`, asked for by James on 2026-10-29).
  *
- * The change from /contact: an email form at the top, and directly under it a
- * "Schedule Your Assessment" button that opens Therese's Calendly page. This
- * reverses the 2026-10-17 decision that Contact leads with Calendly and has no
- * form. Everything else from the current page is kept, moved below the button,
- * so the review can decide what stays.
+ * Top to bottom: a short note inviting people to write, the email form, the
+ * "Schedule Your Assessment" button to Therese's Calendly page, the urgent
+ * note, then the assessment section from the current /contact, which ends
+ * with the same button again. This reverses the 2026-10-17 decision that
+ * Contact leads with Calendly and has no form.
  *
  * The form is the existing src/components/contact-form.tsx, unchanged. Its
  * labels and button words were drafted for an earlier design, not written by
@@ -31,24 +31,54 @@ export const metadata: Metadata = pageMetadata({
   noindex: true,
 });
 
+/**
+ * DRAFT COPY, written 2026-10-29 in Therese's first-person voice for the
+ * review. Not hers yet: she approves or rewrites it before this goes live.
+ * The rest of the page's words are the Wix copy from src/content/wix/contact.ts.
+ */
+const draft = {
+  formHeading: "Send me a note",
+  formIntro:
+    "Prefer to write first? Tell me a little about what’s happening, and I’ll get back to you myself. Everything you send stays between us.",
+  orCall: "Or, if you’d rather talk it through:",
+};
+
+function ScheduleButton() {
+  return (
+    <a
+      href={calendlyUrl}
+      target="_blank"
+      rel="noopener"
+      className="inline-block rounded-full bg-[#1d2cf3] px-10 py-4 text-[20px] leading-none text-white transition-colors hover:bg-[#0d63d1] md:text-[24px]"
+    >
+      {c.scheduleLink}
+    </a>
+  );
+}
+
 export default function ContactDraftPage() {
   return (
     <div className="bg-white pb-8 md:pb-[48px]">
       <div className="bg-[#fafafa]">
         <div className="mx-auto max-w-[968px] px-5 pt-4 pb-10 md:px-6 md:pt-[15px] md:pb-[28px] xl:px-0">
-          <header className="text-center">
-            <h1 className="text-[40px] leading-[1.4] text-[#414141] md:text-[60px]">{c.title}</h1>
-            <p className="mt-1 text-[26px] leading-[1.15] text-black md:mt-[10px] md:text-[36px] md:leading-[36px]">
-              {c.subtitle}
-            </p>
-          </header>
+          <h1 className="text-center text-[40px] leading-[1.4] text-[#414141] md:text-[60px]">{c.title}</h1>
 
-          {/* 1. The email form. Its button takes the page's electric blue
-              rather than the earlier design's teal, so the two buttons on
-              this page match. Overridden here only: /collaborate's form
-              shares these colors and is unchanged. */}
+          {/* 1. A short invitation, then the email form. */}
+          <div className="mx-auto mt-6 max-w-[720px] text-center md:mt-[24px]">
+            <h2 className="text-[26px] leading-[1.15] text-black md:text-[36px] md:leading-[36px]">
+              {draft.formHeading}
+            </h2>
+            <p className="mt-4 text-[18px] leading-[1.4] text-[#414141] md:text-[22px]">{draft.formIntro}</p>
+          </div>
+
+          {/* lp-wix sets the form in Arial, makes its button a pill and its
+              fields lightly rounded, as on the calculator. The inline colors
+              then turn the button electric blue to match the Calendly button;
+              they win over lp-wix's lighter blue because they sit on the
+              element itself. Scoped to this box: /collaborate's form shares
+              these parts and is unchanged. */}
           <div
-            className="mx-auto mt-8 max-w-[720px] rounded-[3px] border border-[#e0e0e0] bg-white p-6 md:mt-[41px] md:p-10"
+            className="lp-wix mx-auto mt-8 max-w-[720px] rounded-[3px] border border-[#e0e0e0] bg-white p-6 md:mt-[32px] md:p-10"
             style={
               {
                 "--btn": "#1d2cf3",
@@ -61,16 +91,12 @@ export default function ContactDraftPage() {
           </div>
 
           {/* 2. Directly below: the Calendly button. */}
-          <p className="mt-10 text-center md:mt-[48px]">
-            <a
-              href={calendlyUrl}
-              target="_blank"
-              rel="noopener"
-              className="inline-block rounded-full bg-[#1d2cf3] px-10 py-4 text-[20px] leading-none text-white transition-colors hover:bg-[#0d63d1] md:text-[24px]"
-            >
-              {c.scheduleLink}
-            </a>
-          </p>
+          <div className="mt-10 text-center md:mt-[48px]">
+            <p className="text-[18px] leading-[1.4] text-[#414141] md:text-[22px]">{draft.orCall}</p>
+            <p className="mt-4">
+              <ScheduleButton />
+            </p>
+          </div>
 
           <div className="mt-6 text-center text-[16px] leading-[1.3] md:mt-[25px] md:text-[20px] md:leading-[25.2px]">
             <p className="font-bold text-[#ed4545]">
@@ -87,8 +113,12 @@ export default function ContactDraftPage() {
             <p className="text-black">{c.urgentFollowUp}</p>
           </div>
 
-          {/* 3. The rest of the current page, unchanged, for the review to keep or cut. */}
-          <p className="mt-12 text-center text-[22px] leading-[1.25] text-[#414141] md:mt-[64px] md:text-[30px] md:leading-[36px]">
+          {/* 3. The assessment section from the current page, ending with the
+              same button, so someone who reads to the bottom can book there. */}
+          <h2 className="mt-14 text-center text-[26px] leading-[1.15] text-black md:mt-[72px] md:text-[36px] md:leading-[36px]">
+            {c.subtitle}
+          </h2>
+          <p className="mt-6 text-center text-[22px] leading-[1.25] text-[#414141] md:mt-[36px] md:text-[30px] md:leading-[36px]">
             {c.reassurance[0]}
             <br />
             {c.reassurance[1]}
@@ -120,6 +150,10 @@ export default function ContactDraftPage() {
             <p className="text-black">{c.closing[0]}</p>
             <p className="text-[#414141]">{c.closing[1]}</p>
           </div>
+
+          <p className="mt-10 text-center md:mt-[48px]">
+            <ScheduleButton />
+          </p>
         </div>
       </div>
     </div>
