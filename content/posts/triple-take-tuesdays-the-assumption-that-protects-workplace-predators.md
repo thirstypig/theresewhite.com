@@ -16,8 +16,6 @@ wixUrl: "https://www.theresewhite.com/post/triple-take-tuesdays-the-assumption-t
 
 **KEEP IN MIND:** Innocent intent may explain a mistake, but it should never excuse repeated harm. Impact, not intent, is the true measure of a healthy workplace.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
 
 L. Therese White\

@@ -16,8 +16,6 @@ wixUrl: "https://www.theresewhite.com/post/triple-take-tuesdays-why-conflict-res
 
 **KEEP IN MIND:** Training gives people knowledge; coaching gives them self-awareness.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
 
 L. Therese White\

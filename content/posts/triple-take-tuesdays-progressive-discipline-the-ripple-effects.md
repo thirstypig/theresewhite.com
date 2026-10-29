@@ -16,8 +16,6 @@ wixUrl: "https://www.theresewhite.com/post/triple-take-tuesdays-progressive-disc
 
 **KEEP IN MIND:** Progressive discipline protects you from lawsuits, but not from losing your company’s soul.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
 
 L. Therese White\
