@@ -27,10 +27,6 @@ const NOT_IN_SITEMAP: Record<string, string> = {
     "noindex until the ad campaign runs. Footer-linked, so it is reachable by browsing — but deliberately kept out of search until launch. Launching it is a todo.",
   "/contact/thank-you": "Post-submit confirmation. noindex.",
   "/collaborate/thank-you": "Post-submit confirmation. noindex.",
-  "/lp/a":
-    "Campaign landing page for a LinkedIn post. noindex: it carries the same calculator as /conflict-calculator, so indexing it would compete with that page for the same terms.",
-  "/lp/b":
-    "Campaign landing page for a LinkedIn post, the second design under test. Same duplicate-content reason as /lp/a.",
   "/stylebible":
     "The design guide for James, Therese and Bill. Unlinked and noindex: it critiques the current site and is not for visitors.",
   "/stylebible/home":

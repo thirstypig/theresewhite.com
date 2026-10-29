@@ -29,7 +29,7 @@ import { IS_CALCULATOR_SITE } from "@/lib/site-config";
  * footer, every link going to the live page of that name. Visitors arrive from the Wix site and
  * from ads that sit alongside it, and a page in the rebuild's teal and serif
  * would look like someone else's. The look is the `.lp-wix` theme in
- * globals.css, the same one landing page B uses, so the two cannot drift.
+ * globals.css.
  * Switch to the rebuild's look at cutover, when the main site changes too.
  *
  * `path` is "/" in that build, so the canonical and link-preview URL say

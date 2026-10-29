@@ -53,7 +53,7 @@ const links = [
     items: [
       {
         name: "Web3Forms",
-        note: "Delivers all three forms: contact, collaborate, and the landing pages. Free tier is 250 submissions/month, shared across all three. The calculator collects nothing.",
+        note: "Delivers the one remaining form, the referral-partner form on /collaborate. The contact form came off /contact on 2026-10-17 and the /lp landing pages were retired on 2026-10-28. Free tier is 250 submissions/month. The calculator collects nothing.",
         href: "https://web3forms.com/",
       },
     ],
@@ -112,8 +112,6 @@ const pages = [
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Therese's Workplace Conflict Cost Calculator, every word verbatim from workplace-conflict-calculator-v2.html. noindex until the campaign runs." },
   { path: "/calculator", note: "The same calculator in the live Wix site's look, with no site header or footer. The source of calculator.theresewhite.com. noindex." },
-  { path: "/lp/a", note: "Campaign landing page for a LinkedIn post. noindex." },
-  { path: "/lp/b", note: "The same page in the live theresewhite.com identity. noindex." },
   { path: "/stylebible", note: "Style bible, with /stylebible/compare (three homepage versions), /home and /home-new. Unlinked, noindex." },
   { path: "/404", note: "Not found. Exists as a real page mainly so it declares its own metadata." },
   { path: "/admin", note: "This page. Gated, noindex." },
