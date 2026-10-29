@@ -26,6 +26,8 @@ const NOT_IN_SITEMAP: Record<string, string> = {
   "/conflict-calculator":
     "noindex until the ad campaign runs. Footer-linked, so it is reachable by browsing — but deliberately kept out of search until launch. Launching it is a todo.",
   "/contact/thank-you": "Post-submit confirmation. noindex.",
+  "/contact-draft":
+    "Draft of the redesigned Contact page (form on top, Calendly button below), for review on staging. Unlinked and noindex; delete it once the design moves into /contact.",
   "/collaborate/thank-you": "Post-submit confirmation. noindex.",
   "/stylebible":
     "The design guide for James, Therese and Bill. Unlinked and noindex: it critiques the current site and is not for visitors.",
