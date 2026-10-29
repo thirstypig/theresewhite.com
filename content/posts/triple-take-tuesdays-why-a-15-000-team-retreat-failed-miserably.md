@@ -22,8 +22,6 @@ wixUrl: "https://www.theresewhite.com/post/triple-take-tuesdays-why-a-15-000-tea
 
 **KEEP IN MIND:** A retreat is the icing, not the cake. The critical work of fixing systems and mending relationships comes first. Otherwise, it’s like hiring a DJ for a party where nobody’s dancing. Wasted time and money.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
 
 L. Therese White\

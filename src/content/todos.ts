@@ -32,12 +32,23 @@ export const todos: Todo[] = [
     id: "deploy-font-flake",
     title: "Stop deploys failing when a Google font won't download",
     detail:
-      "On 2026-10-22, 2 of 5 deploys failed in npm run build with \"Can't resolve '@vercel/turbopack-next/internal/font/google/font'\": the build fetches the site's typefaces (next/font/google) from Google, and sometimes that fetch fails. Nothing breaks for visitors, since a failed deploy leaves the previous version online, but the change doesn't go out until someone re-runs the failed job (gh run rerun <id> --failed), which has worked every time. Two fixes, neither started: retry the build step once in .github/workflows/deploy.yml (small, treats the symptom), or store the font files in the repository with next/font/local so the build never downloads them (removes the cause, touches every font declaration). The cause is not confirmed beyond the error text. It is not specific to GitHub's build machines: the same error stopped a local preview (npm run dev) on 2026-10-25, and restarting the preview cleared it, which points at the download from Google rather than at the deploy setup.",
-    status: "open",
+      "Fixed 2026-10-28 (PR #41): the site now keeps its own copies of its 11 fonts in src/fonts/ and loads them with next/font/local, so the build no longer downloads anything from Google. All three builds passed with Google Fonts blocked, the first deploy afterward (run 40794650270) passed every job on the first try, and the live main, book and calculator sites load no Google Fonts addresses. Watch the next few deploys to confirm; if a build still fails with a font error, reopen this. Background: on 2026-10-22, 2 of 5 deploys failed in npm run build with \"Can't resolve '@vercel/turbopack-next/internal/font/google/font'\": the build fetches the site's typefaces (next/font/google) from Google, and sometimes that fetch fails. Nothing breaks for visitors, since a failed deploy leaves the previous version online, but the change doesn't go out until someone re-runs the failed job (gh run rerun <id> --failed), which has worked every time. Two fixes, neither started: retry the build step once in .github/workflows/deploy.yml (small, treats the symptom), or store the font files in the repository with next/font/local so the build never downloads them (removes the cause, touches every font declaration). The cause is not confirmed beyond the error text. It is not specific to GitHub's build machines: the same error stopped a local preview (npm run dev) on 2026-10-25, and restarting the preview cleared it, which points at the download from Google rather than at the deploy setup.",
+    status: "done",
     owner: "Dev",
     priority: "normal",
     area: "Deploy",
     added: "2026-10-22",
+  },
+  {
+    id: "wix-remove-triple-take",
+    title: "Remove Triple Take Tuesdays from the Wix site",
+    detail:
+      "James decided on 2026-10-28 to drop the name \"Triple Take Tuesdays\"; Therese's newsletter is now Therese's Field Notes. Already done through the Wix connection: every Triple Take Tuesdays page, the newsletter pages, the empty /cost-of-concflict-calculator page and the old /frommeltdowntoresolution form are hidden from Google, and every other page has its own Google title and description. Still to do in the Wix Editor, step by step in Remove-Triple-Take-Tuesdays-Guide.pdf (James's Downloads): delete 12 pages, remove the Wix Online Programs app (its /challenges page shows template programs such as \"Green Smoothies Diet\" at $80), then tell Claude \"pages deleted\" so it adds redirects (old issues and newsletter pages to /blog, the calculator page to calculator.theresewhite.com, the free-guide pages to book.theresewhite.com). Same guide covers the Editor-only search fixes: image descriptions on the home page, a social-share picture, and the home page's http:// calculator link. The old issues are still unpublished Wix blog drafts and can be republished as Field Notes posts.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Wix site",
+    added: "2026-10-28",
   },
   {
     id: "review-password",
@@ -76,7 +87,7 @@ export const todos: Todo[] = [
     id: "book-kit-email-copy",
     title: "Rewrite the book's Kit email",
     detail:
-      "Done 2026-10-28. The email every book signup gets now carries James's copy: subject \"Congratulations. Your “Meltdown to Resolution” scripts are here.\", a greeting with the reader's first name (or \"there\"), \"Click here\" links plus full copy-and-paste addresses for the PDF and the calculator, and the calculator sentence in bold. It comes from \"Therese White\" (it used to show therese@theresewhite.com) with her Culver City address in the footer instead of Kit's Seattle one; both of those are account-wide Kit settings, so every future Kit email uses them too. Two things Kit will not let us change on the free plan: the blue button (Kit requires it; it now says \"Download book\" and downloads the same guide) and the footer's \"Update your profile\" link. James signed up himself and the email arrived. James decided not to turn on the page's \"A copy is on its way to your inbox too.\" line (the NEXT_PUBLIC_KIT_SENDS_COPY repository variable stays unset), because the thank-you message already offers the download. To change the email's words: Kit → form 10084320 → Settings → Confirmation email → Edit Email Contents → Save, then Save & Publish.",
+      "Done 2026-10-28. The email every book signup gets now carries James's final copy: subject \"Your “From Meltdown to Resolution” scripts, plus one more tool\", a mention of Therese's Field Notes (her occasional newsletter, sent by hand from Kit as a broadcast), a greeting with the reader's first name (or \"there\"), \"Click here\" links plus full copy-and-paste addresses for the PDF and the calculator, and the calculator sentence in bold. It comes from \"Therese White\" (it used to show therese@theresewhite.com) with her Culver City address in the footer instead of Kit's Seattle one; both of those are account-wide Kit settings, so every future Kit email uses them too. Two things Kit will not let us change on the free plan: the blue button (Kit requires it; it now says \"Download book\" and downloads the same guide) and the footer's \"Update your profile\" link. James signed up himself and the email arrived. James decided not to turn on the page's \"A copy is on its way to your inbox too.\" line (the NEXT_PUBLIC_KIT_SENDS_COPY repository variable stays unset), because the thank-you message already offers the download. To change the email's words: Kit → form 10084320 → Settings → Confirmation email → Edit Email Contents → Save, then Save & Publish.",
     status: "done",
     owner: "James",
     priority: "high",
@@ -87,8 +98,8 @@ export const todos: Todo[] = [
     id: "book-kit-last-name",
     title: "Create the last_name field in Kit so the book page keeps last names",
     detail:
-      "Since 2026-10-25 the book page's form has a Last name box (optional), sent to Kit as fields[last_name]. Kit has no built-in last name, so until Therese's account has a custom field whose key is exactly last_name, Kit discards it and saves only first name and email. Two ways: in Kit's form editor for form 10084320 use Add Custom Field and name it last_name, or tell Claude to create it through Kit's API. Signups before the fix have no last name.",
-    status: "open",
+      "Done 2026-10-28. Therese's Kit account now has a custom field labeled \"Last name\" whose key is last_name (Kit field 1412484), which matches the fields[last_name] the book page's form sends, so new signups keep their last name. It was added with Add Custom Field on a subscriber's record in Kit. Signups before 2026-10-28 have no last name, and there is no way to recover them.",
+    status: "done",
     owner: "James",
     priority: "high",
     area: "Book page",

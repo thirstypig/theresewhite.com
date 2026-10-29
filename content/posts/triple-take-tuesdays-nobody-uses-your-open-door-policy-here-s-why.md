@@ -16,8 +16,6 @@ wixUrl: "https://www.theresewhite.com/post/triple-take-tuesdays-nobody-uses-your
 
 **KEEP IN MIND:** An unused open-door policy is often an early sign of a failing performance review.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
 
 L. Therese White\

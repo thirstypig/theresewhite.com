@@ -16,8 +16,6 @@ wixUrl: "https://www.theresewhite.com/post/triple-take-tuesdays-why-your-best-em
 
 **KEEP IN MIND:** Fairness isn't equal treatment . . . it's proportional reward for contribution.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
 
 L. Therese White\
@@ -29,5 +27,3 @@ Workplace Conflict Resolution Coach\
 
 **P.P.S.** Get my ebook, **"From Meltdown To Resolution”. Add subtitle.** It's FREE. Click here to learn more.\
 Fairness isn't equal treatment—it's proportional reward for contribution.
-
-**P.P.P.S.** Want to see all the *Triple Take Tuesdays* back issues? Go to [ThereseWhite.com/back-issues](http://ThereseWhite.com/back-issues).

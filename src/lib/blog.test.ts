@@ -27,6 +27,17 @@ const WIX_SLUGS = [
 /** Spaces, non-breaking spaces and line breaks all count as one space. */
 const squash = (s: string) => s.replace(/[\s ]+/g, " ").trim();
 
+/**
+ * Lines deliberately removed from every post after the capture: James
+ * retired the "Triple Take Tuesdays" name on 2026-10-28. Everything else must
+ * still match Wix word for word.
+ */
+const RETIRED_LINES = [
+  /Want to share this issue of Triple Take Tuesdays\? Just copy and paste this link: \[Link: \.XXX\/TripleTakeTuesdays\/Date\]/g,
+  /P\.P\.P\.S\. Want to see all the Triple Take Tuesdays back issues\? Go to ThereseWhite\.com\/back-issues\./g,
+];
+const withoutRetired = (s: string) => squash(RETIRED_LINES.reduce((text, line) => text.replace(line, ""), s));
+
 describe("blog posts", () => {
   it("has the ten Wix posts, in Wix's order", () => {
     expect(getAllPosts().map((p) => p.slug)).toEqual(WIX_SLUGS);
@@ -42,7 +53,7 @@ describe("blog posts", () => {
       const start = capture.text.indexOf(post.updated ? "Updated:" : "1 min read");
       const afterLine = capture.text.indexOf("\n", start);
       const end = capture.text.indexOf("Recent Posts");
-      const wix = squash(capture.text.slice(afterLine, end));
+      const wix = withoutRetired(squash(capture.text.slice(afterLine, end)));
       expect(squash(markdownToPlainText(post.body)), post.slug).toBe(wix);
     }
   });

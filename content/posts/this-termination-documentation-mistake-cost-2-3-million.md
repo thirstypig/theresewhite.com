@@ -15,6 +15,4 @@ wixUrl: "https://www.theresewhite.com/post/this-termination-documentation-mistak
 
 **KEEP IN MIND:** The paper trail you think protects just might be the path that leads you astray.
 
-Want to share this issue of *Triple Take Tuesdays*? Just copy and paste this link: [Link: .XXX/TripleTakeTuesdays/Date]
-
 *Let's pick up the pieces together.*
