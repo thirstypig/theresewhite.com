@@ -362,11 +362,22 @@ export const todos: Todo[] = [
     id: "contact-page-redesign",
     title: "Redesign the Contact page: an email form on top, the Calendly button just below",
     detail:
-      "James asked for this on 2026-10-29. The top of /contact becomes an email form, and directly under it sits a \"Schedule Your Assessment\" button that opens Therese's Calendly page (calendlyUrl in src/content/wix/chrome.ts). This reverses the 2026-10-17 decision that Contact leads with Calendly and has no form, so update the note at the top of src/content/wix/contact.ts when it ships. The old form is still in the code (src/components/contact-form.tsx, sent through Web3Forms, landing on /contact/thank-you/), so the work is mostly layout, not a new form. Still to decide before building: where the rest of the current page goes (the \"In 30 to 45 minutes, I'll help you answer\" list, the urgent phone-and-email note, and the chalkboard picture), and whether the form needs any fields beyond name, email and message. Finish the Web3Forms delivery check first (web3forms-live-test), so the new form is known to reach Therese.",
+      "James asked for this on 2026-10-29. A draft is live on staging at https://theresewhite.bahtzang.com/contact-draft/ (PRs #45 and #47), unlinked and hidden from search; the real /contact is unchanged. Top to bottom: \"Contact\", a short invitation (\"Send me a note. Prefer to write first? Tell me a little about what's happening, and I'll get back to you myself. Everything you send stays between us.\"), the existing Web3Forms form (src/components/contact-form.tsx) in Arial with a blue pill button, \"Or, if you'd rather talk it through:\" and the \"Schedule Your Assessment\" Calendly button, the urgent phone-and-email note, then the current page's assessment section, ending with the Calendly button again. Still to decide before it replaces /contact: (1) Therese approves the new wording, which is drafted in her voice, not hers, especially \"Everything you send stays between us\"; (2) button names, since \"Request an assessment\" and \"Schedule Your Assessment\" are easy to confuse (suggested: \"Send a message\" and \"Book a call\"); (3) which of the form's seven fields to keep (name, email, organization, role, phone, urgency, \"What's going on?\"); (4) the thank-you page's promises of a reply within one business day and same-day calls. Finish the Web3Forms delivery check first (web3forms-live-test). To ship: move the layout from src/app/(site)/contact-draft/page.tsx into src/app/(site)/contact/page.tsx, update the 2026-10-17 note at the top of src/content/wix/contact.ts, delete the draft folder and its line in src/app/sitemap.test.ts.",
     status: "open",
     owner: "Dev",
     priority: "normal",
     area: "Forms",
+    added: "2026-10-29",
+  },
+  {
+    id: "book-kit-email-edits",
+    title: "Decide on four suggested edits to the book's Kit email",
+    detail:
+      "Suggested on 2026-10-29 after reviewing the email new signups get from book.theresewhite.com (edited in Kit: the form From Meltdown to Resolution, top-bar Settings, Confirmation email in the pop-up's left-hand list, Edit Email Contents). None is made yet; each needs James's OK, and new wording needs Therese's. (1) Offer the free 30-minute call: the page's thank-you screen offers it, but the email, which people keep, does not. (2) The download is offered three times before any message (Click here link, copy-and-paste address, Download book button); drop the Click here link and keep the address, since the button cannot be deleted. (3) The guide has three names (guide, book, scripts); rename the button \"Download the guide\" to match the page. (4) Mention the one-page cheat sheet, which the signup form promises. After any edit, sign up once more and read the email on a phone: the final copy saved on 2026-10-28 has probably never been delivered to an inbox.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Book page",
     added: "2026-10-29",
   },
 ];
