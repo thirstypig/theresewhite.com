@@ -149,7 +149,7 @@ export function ContactForm() {
           Request an assessment
         </button>
         <span className="text-xs text-muted">
-          Goes straight to Therese. Nothing is shared with anyone else.
+          Goes straight to me. Nothing is shared with anyone else.
         </span>
       </div>
     </form>
