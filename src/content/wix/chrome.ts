@@ -51,5 +51,10 @@ export const wixAssessmentCta = {
   href: "/contact",
 } as const;
 
-/** The booking page the Contact page's button opens. */
-export const calendlyUrl = "https://calendly.com/therese-theresewhite/30min";
+/**
+ * Therese's Calendly booking page. Used by the Contact page, the book page's
+ * thank-you screen and calculator.theresewhite.com's "Schedule Your Free
+ * Confidential Assessment" button. Changed on 2026-11-07: the old
+ * therese-theresewhite/30min page no longer exists.
+ */
+export const calendlyUrl = "https://calendly.com/therese-white-meeting/assessment";
