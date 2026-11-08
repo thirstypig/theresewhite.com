@@ -109,7 +109,7 @@ export const todos: Todo[] = [
     id: "book-pdf-calendly",
     title: "Add the Calendly booking link to the guide's cheat sheet",
     detail:
-      "A reviewer asked for Therese's Calendly booking address at the bottom of the cheat sheet page in the PDF itself. That needs the guide's original design file (the book was From-Meltdown-To-Resolution-v11.pdf), which is not in this repository; only the compressed public/book/from-meltdown-to-resolution.pdf is. Whoever holds the design file adds the link and exports a new PDF; then replace the file in public/book/, keeping its name, and Kit's download (form Settings, Confirmation email, Download) needs the new file uploaded too. This is the one comment still open in the book page's Feedback tab.",
+      "A reviewer asked for Therese's Calendly booking address at the bottom of the cheat sheet page in the PDF itself. Use https://calendly.com/therese-white-meeting/assessment, the address the site's booking buttons have used since 2026-11-07 (PR #49); the older calendly.com/therese-theresewhite/30min page no longer exists. That needs the guide's original design file (the book was From-Meltdown-To-Resolution-v11.pdf), which is not in this repository; only the compressed public/book/from-meltdown-to-resolution.pdf is. Whoever holds the design file adds the link and exports a new PDF; then replace the file in public/book/, keeping its name, and Kit's download (form Settings, Confirmation email, Download) needs the new file uploaded too. This is the one comment still open in the book page's Feedback tab.",
     status: "open",
     owner: "Therese",
     priority: "normal",
