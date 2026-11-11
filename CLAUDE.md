@@ -46,3 +46,7 @@ should care.
 Before writing anything — a message, a commit, a comment — ask whether someone
 who ships software for a living, but has not read this code, could act on it
 without a follow-up question. If not, rewrite it.
+
+## Status file
+
+STATUS.md is read by Jimmy's claude.ai assistant as the source of truth. Whenever a change affects scope, stack, hosting, URLs, shipped features, open bugs, or next phases, update STATUS.md and its Last updated date in the SAME commit.
