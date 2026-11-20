@@ -34,7 +34,7 @@ Static Next.js rebuild of the Wix marketing site for L. Therese White, employmen
 - Contact redesign drafted on staging (2026-10-29).
 - Booking buttons repointed to a new Calendly page after the old one died (2026-11-07).
 - Book signups also join "Therese's Field Notes", the monthly Kit newsletter, and get a separate welcome email from a second Kit form (10215781) (2026-11-19).
-- Homepage comparison at `/stylebible/compare` refreshed to Therese's November Wix changes; version 2 (`/stylebible/home`, same words) redesigned in the style bible's second-edition rules (2026-11-20).
+- Homepage comparison at `/stylebible/compare` refreshed to Therese's November Wix changes; version 2 (`/stylebible/home`, same words) redesigned in the style bible's second-edition rules (2026-11-20). Same day, after James's review: version 2's panel logos became one grey row and its calculator a two-part card; version 3's calculator band now lists what the calculator adds up.
 
 ## In progress
 - Version 2 homepage design: next is turning on comment pins on `/stylebible` so Bill (mainly) and Therese can review and approve it. Once approved, the rest of the site gets built in that design.

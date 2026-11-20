@@ -67,6 +67,7 @@ const ICONS = {
   tools: "M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z",
   check: "M5 12.5l4.5 4.5L19 7.5",
   play: "M8 5v14l11-7z",
+  calculator: "M6 3h12v18H6zM9 7h6M9 11h.01M12 11h.01M15 11h.01M9 14h.01M12 14h.01M15 14h.01M9 17h.01M12 17h.01M15 17h.01",
 } as const;
 
 function Icon({ name, className }: { name: keyof typeof ICONS; className?: string }) {
@@ -169,28 +170,27 @@ export default function HomeSamplePage() {
         {/* 3. Calculator */}
         <section className={s.section}>
           <div className={s.wrap}>
+            {/* Two halves of one card: the question on navy, the answer on white.
+                Wix's three heading lines run together here; the last line keeps
+                the red family Wix uses, lightened so it reads on navy. */}
             <div className={s.calcCard}>
-              <h2 className={s.costTitle}>
-                {calculator.costTitle.map((line, i) => (
-                  <span key={line}>
-                    {line}
-                    {i < calculator.costTitle.length - 1 && <br />}
-                  </span>
-                ))}
-              </h2>
+              <div className={s.calcLead}>
+                <Icon name="calculator" className={s.calcIcon} />
+                <h2 className={s.costTitle}>
+                  {calculator.costTitle[0]} {calculator.costTitle[1]}{" "}
+                  <span className={s.costAccent}>{calculator.costTitle[2]}</span>
+                </h2>
+              </div>
               <div className={s.calcSide}>
                 <p className={s.smallHeading}>
                   {calculator.tryLead}
                   <em className={s.costName}>{calculator.tryName}</em>
                 </p>
                 <p>
-                  {calculator.body[0]}
-                  <br />
-                  {calculator.body[1]}
-                  <br />
-                  {calculator.body[2]}
+                  {calculator.body[0]} {calculator.body[1]}
                 </p>
-                <a className={`${s.button} ${s.buttonOutline}`} href={calculator.href}>
+                <p className={s.calcNote}>{calculator.body[2]}</p>
+                <a className={s.button} href={calculator.href}>
                   {calculator.button}
                 </a>
                 <p className={s.small}>{calculator.fineprint}</p>
@@ -276,12 +276,14 @@ export default function HomeSamplePage() {
         </section>
 
         {/* 7. Panels */}
-        <section className={s.section}>
+        {/* One quiet row of grey logos, as in version 3: proof that should
+            reassure without competing with the reasons above it. */}
+        <section className={`${s.section} ${s.sectionCompact}`}>
           <div className={`${s.wrap} ${s.stack}`}>
-            <h2 className={`${s.sectionTitle} ${s.center}`}>{panels.title}</h2>
+            <h2 className={s.panelsTitle}>{panels.title}</h2>
             <ul className={s.logos}>
               {panels.logos.map((logo) => (
-                <li key={logo.src} className={s.logoTile}>
+                <li key={logo.src} className={s.logoItem}>
                   <Image src={logo.src} width={440} height={220} alt={logo.alt} />
                   {/* On Wix this line is live text under the Ken Cloke logo, not part of the picture. */}
                   {logo.src === "/logos/cloke.png" && <span className={s.logoCaption}>{wixHomeImages.clokeCaption}</span>}
