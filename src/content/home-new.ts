@@ -67,6 +67,14 @@ export const homeNew = {
     body: "My free calculator puts a number on the hidden costs so far, and on what they will be if nothing changes. It takes about two minutes.",
     button: "Open the cost calculator",
     fineprint: "For planning only. Not legal or financial advice.",
+    // The calculator's own four sections (A to D in workplace-conflict-calculator-v2.html).
+    countsTitle: "What it adds up",
+    counts: [
+      "The two people in conflict",
+      "The ripple effect on colleagues and bosses",
+      "Out-of-pocket costs so far",
+      "Lost or delayed business",
+    ],
   },
 
   quote: {

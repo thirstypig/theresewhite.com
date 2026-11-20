@@ -170,12 +170,26 @@ export default function HomeNewSamplePage() {
             <div className={s.costText}>
               <h2 className={`${s.serif} ${s.h2}`}>{cost.title}</h2>
               <p className={s.lead}>{cost.body}</p>
+              <div className={s.costAction}>
+                <a className={`${s.button} ${s.buttonLight}`} href={wixHome.calculator.href}>
+                  {cost.button}
+                </a>
+                <p className={s.small}>{cost.fineprint}</p>
+              </div>
             </div>
-            <div className={s.costAction}>
-              <a className={`${s.button} ${s.buttonLight}`} href={wixHome.calculator.href}>
-                {cost.button}
-              </a>
-              <p className={s.small}>{cost.fineprint}</p>
+            {/* The calculator's own four sections, A to D, so the letters mean something. */}
+            <div className={s.costCard}>
+              <p className={s.costCardTitle}>{cost.countsTitle}</p>
+              <ol className={s.costList}>
+                {cost.counts.map((item, i) => (
+                  <li key={item}>
+                    <span className={s.costLetter} aria-hidden="true">
+                      {"ABCD"[i]}
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </section>

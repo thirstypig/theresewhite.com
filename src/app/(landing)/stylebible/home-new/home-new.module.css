@@ -391,8 +391,8 @@
 /* Cost band */
 .cost {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 64px;
   align-items: center;
 }
 .cost p {
@@ -406,20 +406,65 @@
   display: grid;
   gap: 12px;
   justify-items: start;
-  padding: 32px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  margin-top: 8px;
 }
 .costAction .small {
   color: #b9c8d8;
 }
+/* A white card listing what the calculator counts, so the band shows the tool rather than an empty box. */
+.costCard {
+  display: grid;
+  gap: 20px;
+  padding: 36px;
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
+}
+.costCardTitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a5550;
+}
+.costList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+.costList li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #e8e1db;
+  font-size: 17px;
+  font-weight: 600;
+}
+.costList li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.costLetter {
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e8f1fa;
+  color: #145e9e;
+  font-weight: 700;
+  font-size: 15px;
+}
 @media (max-width: 900px) {
   .cost {
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
+    gap: 32px;
   }
-  .costAction {
+  .costCard {
     padding: 24px;
   }
   .costAction .button {

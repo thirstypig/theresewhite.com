@@ -147,6 +147,11 @@ export const reasoning = {
         finding: "Red team 9",
       },
       {
+        lead: "Proof and the calculator each do one job.",
+        body: "The six panel logos sit in one quiet grey row instead of large color tiles, so they reassure without pulling the eye from the reasons above them or adding six more color schemes to the page. The calculator becomes a single card: the question on navy, the answer and one solid button on white.",
+        finding: "Red team 2",
+      },
+      {
         lead: "What is hers stays.",
         body: "The pill button, her blue, the cream and warm backgrounds, her portrait, the panels and every word of her voice carry over.",
         finding: "Red team 10",
