@@ -20,9 +20,18 @@ import { calendlyUrl } from "@/content/wix/chrome";
  * not an API key. The number is NEXT_PUBLIC_KIT_FORM_ID, a repository
  * variable. Without it (local development) nothing is sent, and the page
  * says so in the browser console rather than pretending.
+ *
+ * Every signup also joins Therese's Field Notes, the monthly newsletter, by
+ * a second post to a second Kit form (NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID).
+ * That form's own confirmation email is the "welcome to Field Notes" email.
+ * It is done this way because Kit's free plan has no automations that could
+ * send a second email after the first. The second post never holds up the
+ * guide: if it fails, the visitor still gets the guide and is still on the
+ * list through the book form; they only miss the welcome email.
  */
 
 const KIT_FORM_ID = process.env.NEXT_PUBLIC_KIT_FORM_ID;
+const KIT_NEWSLETTER_FORM_ID = process.env.NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID;
 
 /**
  * True once Kit is set to email a copy of the guide on signup. Until then
@@ -107,6 +116,17 @@ export function BookSignupForm() {
         body,
       });
       if (!res.ok) throw new Error(`Kit answered ${res.status}`);
+      if (KIT_NEWSLETTER_FORM_ID) {
+        // Not awaited, and failures are ignored on purpose; see the note at
+        // the top of this file. keepalive lets it finish even if the visitor
+        // leaves the page right away.
+        fetch(`https://app.kit.com/forms/${KIT_NEWSLETTER_FORM_ID}/subscriptions`, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body,
+          keepalive: true,
+        }).catch(() => {});
+      }
       // Only reaches Google if the visitor accepted the cookie banner;
       // otherwise gtag was never loaded and this does nothing.
       window.gtag?.("event", "generate_lead", {

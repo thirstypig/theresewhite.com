@@ -166,6 +166,9 @@ jobs:
       NEXT_PUBLIC_CLARITY_ID: xxajqpw2g7
       NEXT_PUBLIC_GA_ID: G-4QVRMZJVWS
       NEXT_PUBLIC_KIT_FORM_ID: ${{ vars.NEXT_PUBLIC_KIT_FORM_ID }}
+      # The second Kit form, "Therese's Field Notes" (10215781): each book
+      # signup also joins the monthly newsletter and gets its welcome email.
+      NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID: ${{ vars.NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID }}
       NEXT_PUBLIC_KIT_SENDS_COPY: ${{ vars.NEXT_PUBLIC_KIT_SENDS_COPY }}
       # The review password screen and feedback panel, as above.
       REVIEW_PASSPHRASE_HASH: ${{ vars.REVIEW_PASSPHRASE_HASH }}

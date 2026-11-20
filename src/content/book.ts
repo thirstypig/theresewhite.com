@@ -51,7 +51,7 @@ export const book = {
     emailLabel: "Best email",
     button: "Send me the guide",
     sending: "Sending…",
-    note: "Free and confidential. You’ll get the guide instantly, plus occasional messages from me. Unsubscribe anytime.",
+    note: "Free and confidential. You’ll get the guide instantly, plus my Field Notes on the first Tuesday of each month. Unsubscribe anytime.",
     error:
       "That didn’t go through. Check your email address and try again.",
   },

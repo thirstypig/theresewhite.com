@@ -432,6 +432,20 @@ Steps 1–5 were done on 2026-10-22. The email's words (step 3, first bullet) we
    confirmed, with the four fields filled in, and the email with the PDF
    should arrive. Step 3's combination (auto-confirm on, email still sent)
    was confirmed on 2026-10-28, when James signed up and got the email.
+7. **Field Notes, the monthly newsletter (since 2026-11-19).** Every book
+   signup is also posted to a second Kit form, "Therese's Field Notes"
+   (number 10215781), through the repository variable
+   `NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID` = `10215781`. That form has
+   auto-confirm on, and its confirmation email is the welcome to Field Notes
+   (edited in the form's Settings → Confirmation email). Its required button,
+   "Read my field notes", goes to https://www.theresewhite.com/blog. So a new
+   signup gets two emails: the guide, then the welcome. Kit's free plan has
+   no automations, which is why a second form does this job. If the variable
+   is empty, signups still work and still join the list; they just get no
+   welcome email. Kit's built-in "Newsletter site" form (9955240) was
+   considered and rejected: its confirmation email cannot be edited.
+   Issues go out on the first Tuesday of each month as Kit broadcasts,
+   drafted by Claude and sent only after James approves.
 
 ### One-time setup
 
@@ -440,6 +454,7 @@ Steps 1–5 were done on 2026-10-22. The email's words (step 3, first bullet) we
 | Steps 1–2 above: four source fields and the book's form | Therese's Kit account | Done 2026-10-22 |
 | Step 3 above: auto-confirm on and the PDF attached under Download (done 2026-10-22); the email rewritten in James's copy (done 2026-10-28) | Therese's Kit account | Done 2026-10-28 |
 | Step 5 above: `NEXT_PUBLIC_KIT_FORM_ID` set to 10084320 (2026-10-22); `NEXT_PUBLIC_KIT_SENDS_COPY` left unset by choice (2026-10-28) | This repository → Settings → Secrets and variables → Actions → Variables | Done 2026-10-22 |
+| Step 7 above: the "Therese's Field Notes" form (10215781) with its welcome email, and `NEXT_PUBLIC_KIT_NEWSLETTER_FORM_ID` set to 10215781 | Therese's Kit account; this repository's Variables | Done 2026-11-19 |
 | Create the public repository `thirstypig/theresewhite-book` | GitHub | Done 2026-10-22 |
 | Add a deploy key that can write to that repository only, and store its private half as the `BOOK_DEPLOY_KEY` secret here. Until it exists the `book-site` job skips publishing with a warning | GitHub | Done 2026-10-22 |
 | After the first deploy creates the `gh-pages` branch: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`; custom domain `book.theresewhite.com`; Enforce HTTPS. (GitHub turned Pages on by itself when the branch arrived; the domain and HTTPS were then set through its API, and the certificate was issued within a minute.) | That repository | Done 2026-10-22 |
