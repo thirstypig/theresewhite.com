@@ -1,6 +1,6 @@
 # STATUS — theresewhite.com
 
-**Last updated:** 2026-11-11
+**Last updated:** 2026-11-19
 
 ## One-line description
 Static Next.js rebuild of the Wix marketing site for L. Therese White, employment mediator and workplace conflict coach, plus a calculator subdomain and a free-guide signup subdomain.
@@ -33,8 +33,11 @@ Static Next.js rebuild of the Wix marketing site for L. Therese White, employmen
 - Deploys survive Google Fonts outages; test landing pages retired; "Triple Take Tuesdays" removed from blog (2026-10-28).
 - Contact redesign drafted on staging (2026-10-29).
 - Booking buttons repointed to a new Calendly page after the old one died (2026-11-07).
+- Book signups also join "Therese's Field Notes", the monthly Kit newsletter, and get a separate welcome email from a second Kit form (10215781) (2026-11-19).
 
 ## In progress
+- Field Notes issue #1 drafted in Kit for Tuesday 2026-12-01; awaiting a test send and James's approval. Still to test: whether the welcome email reaches someone already on the list.
+- Field Notes monthly draft: Claude drafts each issue about 5 days before the first Tuesday; where that job runs is not yet decided.
 - Confirming the `/collaborate` form submission reached Therese.
 - Contact redesign: needs wording approval, button names, field list, thank-you promises.
 
@@ -56,6 +59,7 @@ Static Next.js rebuild of the Wix marketing site for L. Therese White, employmen
 ## Decisions changed recently
 - First build switched from simplified rebuild to exact Wix copy (2026-10-18).
 - Calculator v2 replaced v1; email gate removed (2026-10-16).
+- Monthly newsletter is "Therese's Field Notes" on the first Tuesday; Triple Take Tuesdays name dropped; every issue needs James's OK (2026-11-19).
 - Contact form removed from `/contact` in favor of Calendly (2026-10-17); redesign proposes restoring it.
 - Review gate off; both subdomains public (2026-10-26).
 - Test landing pages retired for calculator.theresewhite.com (2026-10-28).
