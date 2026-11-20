@@ -104,12 +104,12 @@ export const columns = [
   {
     key: "wix",
     title: "1. Wix today",
-    note: "Screenshot of www.theresewhite.com, October 16, 2026.",
+    note: "Screenshot of www.theresewhite.com, November 20, 2026.",
   },
   {
     key: "same",
     title: "2. Recommended design, same words",
-    note: "Every word and section from Wix, in the same order. Only the design changes.",
+    note: "Every word and section from Wix as of November 20, 2026, in the same order. Only the design changes.",
   },
   {
     key: "new",
@@ -128,7 +128,7 @@ export const reasoning = {
     items: [
       {
         lead: "The page looks like one established practice, not several.",
-        body: "Wix uses 22 colors, seven of them blues, and about 90 text styles. Column 2 uses six colors, two typefaces and six sizes everywhere. Visitors do not count colors, but they sense inconsistency, and consistency is a large part of looking established.",
+        body: "Wix uses 22 colors, seven of them blues, and about 90 text styles. Column 2 uses six colors, two typefaces, six sizes, one corner shape and one spacing unit everywhere. Visitors do not count colors, but they sense inconsistency, and consistency is a large part of looking established.",
         finding: "Red team 2 and 4",
       },
       {
@@ -138,7 +138,7 @@ export const reasoning = {
       },
       {
         lead: "The booking button stands out, and stays calm.",
-        body: "Six heavy blue menu tabs compete with the call to action, and every button flashes red. Column 2 uses quiet text links with one blue Contact button in the header, and buttons deepen to a darker blue instead of alarm red.",
+        body: "Six heavy blue menu tabs compete with the call to action, and every button flashes red. Column 2 uses quiet text links with one blue Contact button in a header that stays on screen while scrolling, and buttons deepen to a darker blue instead of alarm red.",
         finding: "Red team 3 and 8",
       },
       {
@@ -153,7 +153,7 @@ export const reasoning = {
       },
     ],
     limit:
-      "What column 2 cannot fix: the words. “Click Here” still does not say what happens, the proof still sits halfway down, and the price is still a bullet in a list. That is what column 3 is for.",
+      "What column 2 cannot fix: the words and their order. “Click Here” still does not say what happens, and the panel logos still sit near the bottom of the page. That is what column 3 is for.",
   },
   new: {
     title: "Why column 3 changes the words and the layout",
@@ -162,7 +162,7 @@ export const reasoning = {
     items: [
       {
         lead: "Opening: “Is this my problem?” answered in the first line.",
-        body: "Wix opens with a 16-word question about risk. Column 3 opens with the situation itself, “When two people you can’t afford to lose can’t work together,” then one sentence on what she does about it. Both are her ideas, from her own hero bullets and tagline.",
+        body: "Column 3 opens with the situation itself, “When two people you can’t afford to lose can’t work together,” then one sentence on what she does about it. Therese has since put the same headline on Wix (November 2026), so columns 1, 2 and 3 now open with the same words.",
         finding: "Copy change",
       },
       {
@@ -177,7 +177,7 @@ export const reasoning = {
       },
       {
         lead: "Proof comes before the pitch.",
-        body: "30+ years, 1,100+ mediations, practicing since 1992, then the six panel logos, all directly under the opening. On Wix the logos come after the video, about halfway down the page.",
+        body: "30+ years, 1,100+ mediations, practicing since 1992, then the six panel logos, all directly under the opening. On Wix the logos sit near the bottom, after the three reasons.",
         finding: "Red team 6",
       },
       {
@@ -197,7 +197,7 @@ export const reasoning = {
       },
       {
         lead: "The price is stated plainly, as a figure.",
-        body: "“Engagements start at $5,000,” in large type next to what to expect. Her public price is unusual candor that filters out poor-fit inquiries; on Wix it is bold text inside the fifth bullet of a list.",
+        body: "“Engagements start at $5,000,” in large type next to what to expect. A public price is unusual candor that filters out poor-fit inquiries. Therese took the price off Wix in November 2026, so whether column 3 keeps it is now her call.",
         finding: "Red team 10",
       },
       {
