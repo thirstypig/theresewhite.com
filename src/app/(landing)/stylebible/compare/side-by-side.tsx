@@ -7,7 +7,7 @@ import { columns, type ColumnKey } from "./compare-content";
  * Shows three versions of the homepage next to each other, at the same
  * scale, so they can be compared section by section:
  *
- *  1. Wix today: a full-page screenshot taken on 2026-10-16.
+ *  1. Wix today: a full-page screenshot taken on 2026-11-20.
  *  2. /stylebible/home/: the Wix words in the recommended design.
  *  3. /stylebible/home-new/: new words and a new layout.
  *

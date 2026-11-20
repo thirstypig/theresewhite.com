@@ -1,6 +1,6 @@
 # STATUS — theresewhite.com
 
-**Last updated:** 2026-11-19
+**Last updated:** 2026-11-20
 
 ## One-line description
 Static Next.js rebuild of the Wix marketing site for L. Therese White, employment mediator and workplace conflict coach, plus a calculator subdomain and a free-guide signup subdomain.
@@ -34,14 +34,17 @@ Static Next.js rebuild of the Wix marketing site for L. Therese White, employmen
 - Contact redesign drafted on staging (2026-10-29).
 - Booking buttons repointed to a new Calendly page after the old one died (2026-11-07).
 - Book signups also join "Therese's Field Notes", the monthly Kit newsletter, and get a separate welcome email from a second Kit form (10215781) (2026-11-19).
+- Homepage comparison at `/stylebible/compare` refreshed to Therese's November Wix changes; version 2 (`/stylebible/home`, same words) redesigned in the style bible's second-edition rules (2026-11-20).
 
 ## In progress
+- Version 2 homepage design: next is turning on comment pins on `/stylebible` so Bill (mainly) and Therese can review and approve it. Once approved, the rest of the site gets built in that design.
 - Field Notes issue #1 drafted in Kit for Tuesday 2026-12-01; awaiting a test send and James's approval. Still to test: whether the welcome email reaches someone already on the list.
 - Field Notes monthly draft job runs on James's Mac (`scripts/field-notes/draft.sh`, every Thursday 9 a.m.; acts only on the Thursday before a first Tuesday). It saves a Kit draft and never sends; a safety check blocks any scheduling. Needs a long-lived Claude Code token in the Keychain to keep working past 2026-11-22.
 - Confirming the `/collaborate` form submission reached Therese.
 - Contact redesign: needs wording approval, button names, field list, thank-you promises.
 
 ## Open bugs / known issues
+- Test site homepage `/` still shows the October 18 Wix words; Therese changed the live Wix homepage since (new headline, free-guide section, price removed). Must be updated before cutover.
 - Placeholders copied verbatim from Wix ("[NUMBER] business days", "Add subtitle.").
 - Privacy and terms not lawyer-reviewed.
 - `/stylebible` public on staging; must come down before cutover.

@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-10-29";
+export const TODOS_UPDATED = "2026-11-20";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -313,6 +313,28 @@ export const todos: Todo[] = [
     priority: "high",
     area: "Design",
     added: "2026-10-18",
+  },
+  {
+    id: "home-match-wix-november",
+    title: "Update the test site's homepage to match Therese's November changes on Wix",
+    detail:
+      "The test site's homepage at / is meant to be a word-for-word copy of the live Wix homepage, but Therese changed Wix after it was built on 2026-10-18, so if the site switched over today it would show her old headline. Her changes, recorded at the top of src/content/wix-home-current.ts: a new opening line, headline and sentence in place of the question and three bullets; the \"Where I Work . . .\" box and the $5,000 price removed; a new free-guide section linking to book.theresewhite.com; the video moved above the calculator; and \"3 Reasons\" moved above the panel logos. The words are already captured (2026-11-20). What remains is rebuilding src/app/(site)/page.tsx in the Wix layout to use them, then retiring the October words in src/content/wix-home.ts. Must be done before the switch from Wix, unless the redesigned version 2 replaces this page first.",
+    status: "open",
+    owner: "Dev",
+    priority: "high",
+    area: "Content",
+    added: "2026-11-20",
+  },
+  {
+    id: "v2-review-with-bill",
+    title: "Turn on comment pins so Bill and Therese can review the version 2 homepage",
+    detail:
+      "Version 2 of the homepage (/stylebible/home/, compared with Wix at /stylebible/compare/) was redesigned on 2026-11-20 in the style bible's second-edition rules, with Wix's words unchanged. James wants it approved by Therese and, mainly, Bill, before building out the rest of the site in that design. The comment tool from 1234 and vipok already exists in this project (review/gate.js and review/overlay.js, with comments stored by the theresewhite-review Cloudflare Worker), but it is only wired into the book and calculator sites and has been off since 2026-10-26. Adding it to the /stylebible pages on the test site is the next step. Open questions: the same password as before or a new one, and whether the pins go on the sample page alone or on the comparison page too.",
+    status: "open",
+    owner: "James",
+    priority: "normal",
+    area: "Design",
+    added: "2026-11-20",
   },
   {
     id: "copy-review",
