@@ -37,7 +37,7 @@ Static Next.js rebuild of the Wix marketing site for L. Therese White, employmen
 
 ## In progress
 - Field Notes issue #1 drafted in Kit for Tuesday 2026-12-01; awaiting a test send and James's approval. Still to test: whether the welcome email reaches someone already on the list.
-- Field Notes monthly draft: Claude drafts each issue about 5 days before the first Tuesday; where that job runs is not yet decided.
+- Field Notes monthly draft job runs on James's Mac (`scripts/field-notes/draft.sh`, every Thursday 9 a.m.; acts only on the Thursday before a first Tuesday). It saves a Kit draft and never sends; a safety check blocks any scheduling. Needs a long-lived Claude Code token in the Keychain to keep working past 2026-11-22.
 - Confirming the `/collaborate` form submission reached Therese.
 - Contact redesign: needs wording approval, button names, field list, thank-you promises.
 
