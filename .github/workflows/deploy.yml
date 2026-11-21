@@ -28,6 +28,13 @@ jobs:
       # Until it is set, the contact page shows phone and email instead of a
       # form that goes nowhere.
       NEXT_PUBLIC_WEB3FORMS_KEY: ${{ vars.NEXT_PUBLIC_WEB3FORMS_KEY }}
+      # The password for /admin and the style bible pages, as a scrambled
+      # copy (a SHA-256 hash) saved by scripts/set-admin-password.sh. Not a
+      # secret: it ships in the page. Until the variable exists this is an
+      # empty string, and the site uses its built-in password
+      # (src/lib/admin-password.ts). A value that is not a hash fails the
+      # build on purpose.
+      NEXT_PUBLIC_ADMIN_PASSWORD_HASH: ${{ vars.NEXT_PUBLIC_ADMIN_PASSWORD_HASH }}
     steps:
       - uses: actions/checkout@v7
 
@@ -67,7 +74,11 @@ jobs:
       # the output was wrong — that is the whole lesson of the 2026-08-11
       # failure, which shipped for a week with every page returning 200.
       # See docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md
-      - name: Assert every page ships its own link-preview card
+      #
+      # The same step checks that /admin and the style bible pages ship only
+      # their password screen, so a page that lost its lock stops the deploy
+      # instead of being published open.
+      - name: Assert link-preview cards, and that locked pages ship locked
         run: npm run verify:build
 
       # A 200 on / proves nothing here: the HTML is always fine, it's the

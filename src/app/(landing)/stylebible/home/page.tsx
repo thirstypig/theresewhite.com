@@ -21,8 +21,9 @@ import s from "./home-sample.module.css";
  * in the "Recommended system" chapter of docs/style-bible/index.html. If
  * a value here changes, change it there too.
  *
- * Unlinked and noindex, like /stylebible itself. Links go to the live Wix
- * pages of the same name, so nothing here points at the rebuild's own pages.
+ * Locked behind the admin password (../layout.tsx), unlinked and noindex,
+ * like /stylebible itself. Links go to the live Wix pages of the same name,
+ * so nothing here points at the rebuild's own pages.
  */
 export const metadata: Metadata = pageMetadata({
   title: "Homepage Sample",
