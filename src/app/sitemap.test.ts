@@ -30,13 +30,13 @@ const NOT_IN_SITEMAP: Record<string, string> = {
     "Draft of the redesigned Contact page (form on top, Calendly button below), for review on staging. Unlinked and noindex; delete it once the design moves into /contact.",
   "/collaborate/thank-you": "Post-submit confirmation. noindex.",
   "/stylebible":
-    "The design guide for James, Therese and Bill. Unlinked and noindex: it critiques the current site and is not for visitors.",
+    "The design guide for James, Therese and Bill. Password-gated, unlinked and noindex: it critiques the current site and is not for visitors.",
   "/stylebible/home":
-    "Design sample for the style bible: the Wix homepage's words in the recommended design. Unlinked and noindex.",
+    "Design sample for the style bible: the Wix homepage's words in the recommended design. Password-gated, unlinked and noindex.",
   "/stylebible/compare":
-    "The Wix homepage next to the design samples, for the style bible. Unlinked and noindex.",
+    "The Wix homepage next to the design samples, for the style bible. Password-gated, unlinked and noindex.",
   "/stylebible/home-new":
-    "Design sample for the style bible: the homepage with proposed new copy and a modern layout, the third column of /stylebible/compare. Unlinked and noindex.",
+    "Design sample for the style bible: the homepage with proposed new copy and a modern layout, the third column of /stylebible/compare. Password-gated, unlinked and noindex.",
   "/about": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
   "/endorsements": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",
   "/faq": "Moved to the Wix address on 2026-10-18. A forwarding page, noindex, so the old address does not compete with the new one.",

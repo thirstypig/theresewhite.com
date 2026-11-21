@@ -7,11 +7,11 @@ import { pageMetadata } from "@/lib/page-metadata";
  * The style bible, at /stylebible: the live Wix site measured page by page,
  * the red-team review, and the recommended system for phase two.
  *
- * Unlinked on purpose. Nothing on the site points here, it is left out of the
- * sitemap, and it is noindex, so only people who are given the address find
- * it. It is for James, Therese and Bill, not for visitors. Remove it, or move
- * it behind /admin, before the site moves to theresewhite.com: it criticises
- * the current design in plain terms.
+ * For James, Therese and Bill, not for visitors: it criticises the current
+ * design in plain terms. Three things keep it out of the way. It is locked
+ * behind the admin password, by the layout in this folder (./layout.tsx),
+ * along with every other page under /stylebible. Nothing on the site links
+ * to it and it is left out of the sitemap. And it is noindex.
  *
  * There is one source, `docs/style-bible/index.html`, which is also what gets
  * published as the private Claude artifact. This page reads that file when

@@ -17,8 +17,9 @@ import s from "./home-new.module.css";
  * `src/content/home-new.ts`, whose header lists where every fact comes from.
  * The panel logos and the calculator address are shared with the Wix copy.
  *
- * Unlinked and noindex, like the rest of /stylebible. Links go to the live
- * Wix pages, so nothing here points at the rebuild's own pages.
+ * Locked behind the admin password (../layout.tsx), unlinked and noindex,
+ * like the rest of /stylebible. Links go to the live Wix pages, so nothing
+ * here points at the rebuild's own pages.
  */
 export const metadata: Metadata = pageMetadata({
   title: "Homepage Sample, New Copy",

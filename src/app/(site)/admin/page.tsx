@@ -112,7 +112,7 @@ const pages = [
   { path: "/collaborate/thank-you", note: "Post-submit confirmation. noindex." },
   { path: "/conflict-calculator", note: "Therese's Workplace Conflict Cost Calculator, every word verbatim from workplace-conflict-calculator-v2.html. noindex until the campaign runs." },
   { path: "/calculator", note: "The same calculator in the live Wix site's look, with no site header or footer. The source of calculator.theresewhite.com. noindex." },
-  { path: "/stylebible", note: "Style bible, with /stylebible/compare (three homepage versions), /home and /home-new. Unlinked, noindex." },
+  { path: "/stylebible", note: "Style bible, with /stylebible/compare (three homepage versions), /home and /home-new. Locked behind the same password as this page since 2026-11-21. Unlinked, noindex." },
   { path: "/404", note: "Not found. Exists as a real page mainly so it declares its own metadata." },
   { path: "/admin", note: "This page. Gated, noindex." },
   { path: "/admin/todo", note: "Outstanding work, from src/content/todos.ts" },
@@ -146,8 +146,23 @@ const tests = [
   },
   {
     file: "scripts/verify-built-output.test.ts",
-    count: 38,
-    note: "The checker that reads the built site before it goes live. Its tests are written backwards — the examples fed to it are the broken pages that actually shipped, so if it ever stops catching them it fails its own suite. Also covers the two ways a checker can lie: finding no pages at all and calling that a pass, and trusting a file named .png instead of reading its first bytes",
+    count: 46,
+    note: "The checker that reads the built site before it goes live. Its tests are written backwards — the examples fed to it are the broken pages that actually shipped, so if it ever stops catching them it fails its own suite. Also covers the two ways a checker can lie: finding no pages at all and calling that a pass, and trusting a file named .png instead of reading its first bytes. Since 2026-11-21 it also checks that /admin and the style bible pages ship only their password screen, so a page that lost its lock stops the deploy",
+  },
+  {
+    file: "src/lib/admin-password.test.ts",
+    count: 9,
+    note: "Which password opens /admin and the style bible. Guards the two ways the setting can go wrong: missing (which must fall back to the built-in password, not lock everyone out) and garbled (which must stop the build, not quietly keep the old password)",
+  },
+  {
+    file: "src/lib/admin-session.test.ts",
+    count: 7,
+    note: "Remembering, for one browser tab, that the password was entered: locked until then, open on the next page afterwards, and still workable in a browser that refuses to store anything",
+  },
+  {
+    file: "scripts/set-admin-password.test.ts",
+    count: 4,
+    note: "Runs the real password-changing script and hands its result to the real password check, so the two can never scramble a password differently and lock James out",
   },
   {
     file: "scripts/build-calculator-site.test.ts",
@@ -317,15 +332,25 @@ export default function AdminPage() {
 
           <Card title="Changing the admin password">
             <p className="text-sm leading-relaxed text-charcoal">
-              Generate a hash, then set it as the repo variable{" "}
-              <code className="font-mono text-heading">
-                NEXT_PUBLIC_ADMIN_PASSWORD_HASH
-              </code>{" "}
-              and re-run the deploy.
+              One password opens this page, the todo list and every page
+              under <code className="font-mono text-heading">/stylebible</code>.
+              To change it, run this in your own terminal from the project
+              folder, then push to <code className="font-mono text-heading">main</code>{" "}
+              or re-run the deploy:
             </p>
             <pre className="mt-3 overflow-x-auto rounded-sm border border-rule bg-cream p-4 font-mono text-xs text-charcoal">
-              printf %s &apos;your-new-password&apos; | shasum -a 256
+              scripts/set-admin-password.sh
             </pre>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              It asks for the password twice without showing it and saves only
+              a scrambled copy, as the repo variable{" "}
+              <code className="font-mono text-heading">
+                NEXT_PUBLIC_ADMIN_PASSWORD_HASH
+              </code>
+              . Until that variable exists, the site uses the password it was
+              built with, which is written in this project&rsquo;s public
+              history. Never type the password into a file or a chat.
+            </p>
           </Card>
 
           <Card title="Outstanding work">

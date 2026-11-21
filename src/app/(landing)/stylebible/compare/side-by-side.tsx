@@ -67,22 +67,36 @@ function Sample({ src, view, shown, title }: { src: string; view: View; shown: n
   const scale = shown ? shown / width : 0;
 
   // The frame is as tall as the page inside it, so the outer page scrolls
-  // every column together. Fonts and images settle after load, so measure a
-  // few more times.
+  // every column together.
   const measure = useCallback(() => {
     const doc = frame.current?.contentDocument;
     if (doc) setHeight(doc.documentElement.scrollHeight);
   }, []);
+
+  // The sample is a locked page (see ../layout.tsx). When it finishes
+  // loading it is still showing the empty password screen; its real content
+  // is drawn a moment later, once it sees this tab is unlocked, and its
+  // pictures arrive after that. So one measurement at load is too early, and
+  // the frame would cut the page off. Instead, measure again every time the
+  // page inside changes height.
+  const watcher = useRef<ResizeObserver | null>(null);
   const onLoad = useCallback(() => {
     measure();
-    [300, 1000, 2500].forEach((ms) => setTimeout(measure, ms));
+    watcher.current?.disconnect();
+    const inner = frame.current?.contentWindow;
+    const body = frame.current?.contentDocument?.body;
+    if (!inner || !body) return;
+    // Made by the frame's own window, which is the one that lays the page out.
+    const observer = new inner.ResizeObserver(measure);
+    observer.observe(body);
+    watcher.current = observer;
   }, [measure]);
+  useEffect(() => () => watcher.current?.disconnect(), []);
 
   return (
     <div style={{ width: shown || "100%", height: height * scale, overflow: "hidden", border: "1px solid #d8c7bd", background: "#fff" }}>
       <iframe
         ref={frame}
-        key={view}
         src={src}
         title={title}
         onLoad={onLoad}
@@ -160,7 +174,11 @@ export function SideBySide() {
                 style={{ width: shown || "100%", height: "auto", display: "block", border: "1px solid #d8c7bd" }}
               />
             ) : (
-              <Sample src={SAMPLE_SRC[c.key]} view={view} shown={shown} title={`${c.title}, ${label}`} />
+              /* Keyed by screen size so each size starts from a fresh frame.
+                 A frame can grow to fit its page but never shrinks, so reusing
+                 the tall phone frame for the shorter desktop page left blank
+                 space under it. */
+              <Sample key={view} src={SAMPLE_SRC[c.key]} view={view} shown={shown} title={`${c.title}, ${label}`} />
             )}
           </div>
         ))}

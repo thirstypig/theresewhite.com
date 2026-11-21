@@ -10,7 +10,7 @@
  * commits introduced, and refresh `updated`.
  */
 
-export const TODOS_UPDATED = "2026-11-20";
+export const TODOS_UPDATED = "2026-11-21";
 
 export type TodoStatus = "open" | "in-progress" | "done";
 export type TodoOwner = "Therese" | "James" | "Dev";
@@ -109,7 +109,7 @@ export const todos: Todo[] = [
     id: "book-pdf-calendly",
     title: "Add the Calendly booking link to the guide's cheat sheet",
     detail:
-      "A reviewer asked for Therese's Calendly booking address at the bottom of the cheat sheet page in the PDF itself. Use https://calendly.com/therese-white-meeting/assessment, the address the site's booking buttons have used since 2026-11-07 (PR #49); the older calendly.com/therese-theresewhite/30min page no longer exists. That needs the guide's original design file (the book was From-Meltdown-To-Resolution-v11.pdf), which is not in this repository; only the compressed public/book/from-meltdown-to-resolution.pdf is. Whoever holds the design file adds the link and exports a new PDF; then replace the file in public/book/, keeping its name, and Kit's download (form Settings, Confirmation email, Download) needs the new file uploaded too. This is the one comment still open in the book page's Feedback tab.",
+      "On hold since 2026-11-21: James is leaving Calendly as it is until the planned move to Cal.com is worked on, which he expects soon. A reviewer asked for Therese's Calendly booking address at the bottom of the cheat sheet page in the PDF itself. Use https://calendly.com/therese-white-meeting/assessment, the address the site's booking buttons have used since 2026-11-07 (PR #49); the older calendly.com/therese-theresewhite/30min page no longer exists. That needs the guide's original design file (the book was From-Meltdown-To-Resolution-v11.pdf), which is not in this repository; only the compressed public/book/from-meltdown-to-resolution.pdf is. Whoever holds the design file adds the link and exports a new PDF; then replace the file in public/book/, keeping its name, and Kit's download (form Settings, Confirmation email, Download) needs the new file uploaded too. This is the one comment still open in the book page's Feedback tab.",
     status: "open",
     owner: "Therese",
     priority: "normal",
@@ -120,7 +120,7 @@ export const todos: Todo[] = [
     id: "book-page-review",
     title: "Have Therese read the book page's words",
     detail:
-      "The page was cut down to one screen on 2026-10-25 and 2026-10-26 from reviewer comments in the Feedback tab (PRs #33 and #34), and the intro, the form's wording and the scope line under the form are now the reviewer's own words. If Therese was not that reviewer, she should still read it once: every word is in src/content/book.ts.",
+      "Set aside on 2026-11-21: James said to leave the to-dos about Therese's own words for now. The page was cut down to one screen on 2026-10-25 and 2026-10-26 from reviewer comments in the Feedback tab (PRs #33 and #34), and the intro, the form's wording and the scope line under the form are now the reviewer's own words. If Therese was not that reviewer, she should still read it once: every word is in src/content/book.ts.",
     status: "open",
     owner: "Therese",
     priority: "normal",
@@ -164,7 +164,7 @@ export const todos: Todo[] = [
     id: "about-voice",
     title: "Rewrite the About page in Therese's voice",
     detail:
-      "The live Wix site had no bio page, so there was nothing to migrate. The current copy is assembled only from claims evidenced elsewhere on the site — nothing biographical was invented. Gaps worth filling: how she came into this work, what she did before it, and what transformative mediation means to her in plain language. Marked DRAFT COPY in src/content/site.ts.",
+      "Set aside on 2026-11-21: James said to leave the to-dos about Therese's own words for now. The live Wix site had no bio page, so there was nothing to migrate. The current copy is assembled only from claims evidenced elsewhere on the site — nothing biographical was invented. Gaps worth filling: how she came into this work, what she did before it, and what transformative mediation means to her in plain language. Marked DRAFT COPY in src/content/site.ts.",
     status: "open",
     owner: "Therese",
     priority: "high",
@@ -186,10 +186,10 @@ export const todos: Todo[] = [
     id: "admin-password",
     title: "Change the admin password",
     detail:
-      "Still on the default. Generate a hash with `printf %s 'new-password' | shasum -a 256` and set NEXT_PUBLIC_ADMIN_PASSWORD_HASH as a repo variable. Remember the gate is obfuscation, not security — never put anything confidential behind it.",
+      "Still the password the site was built with, which is written in this project's public history, so anyone who goes looking can find it. Since 2026-11-21 the same password also opens the style bible pages (/stylebible), so it matters more than it did. To change it: in your own terminal, from the project folder, run scripts/set-admin-password.sh, then push to main or re-run the deploy. It asks for the password twice without showing it and saves only a scrambled copy, as the NEXT_PUBLIC_ADMIN_PASSWORD_HASH repository variable. Before 2026-11-21 the instructions here could not have worked, because the deploy never read that variable; it does now. Never write the password in a file, a to-do or a chat. Remember the gate is obfuscation, not security — never put anything confidential behind it.",
     status: "open",
     owner: "James",
-    priority: "normal",
+    priority: "high",
     area: "Admin",
     added: "2026-08-04",
   },
@@ -241,7 +241,7 @@ export const todos: Todo[] = [
     id: "collaborate-voice",
     title: "Rewrite the /collaborate copy in Therese's voice",
     detail:
-      "The whole page is drafted, not migrated — the Wix site has no equivalent, so there was nothing to copy. Review covers the whole `collaborate` export in src/content/site.ts, plus the drafted prose living outside it in src/app/collaborate/thank-you/page.tsx and src/components/partner-form.tsx. The six handoff descriptions under `partnerTypes` matter most: they assert things about other people's professional boundaries, including whether an ombuds keeps confidentiality over what they learn and whether outside counsel stays lead on the matter. Those need to be right rather than plausible. One line needs an explicit yes or no, not just a wording pass: under `ways`, \"Bring me in alongside you\" says \"Your engagement, your client, your name on it\" — that describes white-label subcontracting, a business model nothing else on the site supports, and it sits next to the mediator-impartiality reasoning in the `collaborate` export's own header comment.",
+      "Set aside on 2026-11-21: James said to leave the to-dos about Therese's own words for now. The whole page is drafted, not migrated — the Wix site has no equivalent, so there was nothing to copy. Review covers the whole `collaborate` export in src/content/site.ts, plus the drafted prose living outside it in src/app/collaborate/thank-you/page.tsx and src/components/partner-form.tsx. The six handoff descriptions under `partnerTypes` matter most: they assert things about other people's professional boundaries, including whether an ombuds keeps confidentiality over what they learn and whether outside counsel stays lead on the matter. Those need to be right rather than plausible. One line needs an explicit yes or no, not just a wording pass: under `ways`, \"Bring me in alongside you\" says \"Your engagement, your client, your name on it\" — that describes white-label subcontracting, a business model nothing else on the site supports, and it sits next to the mediator-impartiality reasoning in the `collaborate` export's own header comment.",
     status: "open",
     owner: "Therese",
     priority: "high",
@@ -329,7 +329,7 @@ export const todos: Todo[] = [
     id: "v2-review-with-bill",
     title: "Turn on comment pins so Bill and Therese can review the version 2 homepage",
     detail:
-      "Version 2 of the homepage (/stylebible/home/, compared with Wix at /stylebible/compare/) was redesigned on 2026-11-20 in the style bible's second-edition rules, with Wix's words unchanged. James wants it approved by Therese and, mainly, Bill, before building out the rest of the site in that design. The comment tool from 1234 and vipok already exists in this project (review/gate.js and review/overlay.js, with comments stored by the theresewhite-review Cloudflare Worker), but it is only wired into the book and calculator sites and has been off since 2026-10-26. Adding it to the /stylebible pages on the test site is the next step. Open questions: the same password as before or a new one, and whether the pins go on the sample page alone or on the comparison page too.",
+      "Version 2 of the homepage (/stylebible/home/, compared with Wix at /stylebible/compare/) was redesigned on 2026-11-20 in the style bible's second-edition rules, with Wix's words unchanged. James wants it approved by Therese and, mainly, Bill, before building out the rest of the site in that design. The comment tool from 1234 and vipok already exists in this project (review/gate.js and review/overlay.js, with comments stored by the theresewhite-review Cloudflare Worker), but it is only wired into the book and calculator sites and has been off since 2026-10-26. Adding it to the /stylebible pages on the test site is the next step. Since 2026-11-21 those pages are locked behind the admin password, so Bill and Therese cannot open a link to them until they are given a password. Open questions: whether they get the admin password (which also opens /admin and this list) or a reviewer password of their own for these pages, and whether the pins go on the sample page alone or on the comparison page too.",
     status: "open",
     owner: "James",
     priority: "normal",
@@ -340,7 +340,7 @@ export const todos: Todo[] = [
     id: "copy-review",
     title: "Review the site's words with Therese, as a separate step from the design",
     detail:
-      "The design sample at /stylebible/home keeps every word of the Wix homepage unchanged, on purpose, so the design can be judged alone. Copy gets its own page and its own conversation later. Items already raised by the style bible's red team: replacing \"Click Here\" with labels that name the outcome, such as \"Book a confidential assessment\"; moving the panel logos and the 30+ years and 1,100+ mediations figures up to just under the headline; and whether to keep leading with the AI avatar video. Column 3 of /stylebible/compare (/stylebible/home-new, words in src/content/home-new.ts) is a full proposal for the homepage words, for this conversation.",
+      "Set aside on 2026-11-21: James said to leave the to-dos about Therese's own words for now. The design sample at /stylebible/home keeps every word of the Wix homepage unchanged, on purpose, so the design can be judged alone. Copy gets its own page and its own conversation later. Items already raised by the style bible's red team: replacing \"Click Here\" with labels that name the outcome, such as \"Book a confidential assessment\"; moving the panel logos and the 30+ years and 1,100+ mediations figures up to just under the headline; and whether to keep leading with the AI avatar video. Column 3 of /stylebible/compare (/stylebible/home-new, words in src/content/home-new.ts) is a full proposal for the homepage words, for this conversation.",
     status: "open",
     owner: "James",
     priority: "normal",
@@ -362,8 +362,8 @@ export const todos: Todo[] = [
     id: "stylebible-before-cutover",
     title: "Take /stylebible down, or put it behind /admin, before the move to theresewhite.com",
     detail:
-      "The style bible and its samples (/stylebible, /stylebible/home, /stylebible/home-new, /stylebible/compare) are unlinked and noindex on the test site, but anyone with the address can open them, and the bible criticizes the current design in plain terms. They should not go live on Therese's real domain. The source is docs/style-bible/index.html and src/app/(landing)/stylebible/.",
-    status: "open",
+      "Done 2026-11-21: James chose to lock it instead of taking it down. Every page under /stylebible (the style bible, the two sample homepages and the comparison page) now opens with the same password as /admin. The lock is applied in one place, src/app/(landing)/stylebible/layout.tsx, so a page added to that folder later is locked too, and the deploy now reads the built pages and stops if any of them would be published without the password screen (auditLock in scripts/verify-built-output.mjs). What the lock is and is not: it keeps visitors and search engines out, but the pages' words still travel with the page as data and this project is public on GitHub, so nothing confidential belongs there. The password is still the one the site was built with; changing it is its own to-do (admin-password). Background: the style bible and its samples were unlinked and noindex on the test site, but anyone with the address could open them, and the bible criticizes the current design in plain terms. They should not be readable on Therese's real domain.",
+    status: "done",
     owner: "Dev",
     priority: "normal",
     area: "Deploy",
@@ -384,7 +384,7 @@ export const todos: Todo[] = [
     id: "contact-page-redesign",
     title: "Redesign the Contact page: an email form on top, the Calendly button just below",
     detail:
-      "James asked for this on 2026-10-29. A draft is live on staging at https://theresewhite.bahtzang.com/contact-draft/ (PRs #45 and #47), unlinked and hidden from search; the real /contact is unchanged. Top to bottom: \"Contact\", a short invitation (\"Send me a note. Prefer to write first? Tell me a little about what's happening, and I'll get back to you myself. Everything you send stays between us.\"), the existing Web3Forms form (src/components/contact-form.tsx) in Arial with a blue pill button, \"Or, if you'd rather talk it through:\" and the \"Schedule Your Assessment\" Calendly button, the urgent phone-and-email note, then the current page's assessment section, ending with the Calendly button again. Still to decide before it replaces /contact: (1) Therese approves the new wording, which is drafted in her voice, not hers, especially \"Everything you send stays between us\"; (2) button names, since \"Request an assessment\" and \"Schedule Your Assessment\" are easy to confuse (suggested: \"Send a message\" and \"Book a call\"); (3) which of the form's seven fields to keep (name, email, organization, role, phone, urgency, \"What's going on?\"); (4) the thank-you page's promises of a reply within one business day and same-day calls. Finish the Web3Forms delivery check first (web3forms-live-test). To ship: move the layout from src/app/(site)/contact-draft/page.tsx into src/app/(site)/contact/page.tsx, update the 2026-10-17 note at the top of src/content/wix/contact.ts, delete the draft folder and its line in src/app/sitemap.test.ts.",
+      "On hold since 2026-11-21: James is leaving Calendly as it is until the planned move to Cal.com is worked on, which he expects soon. James asked for this on 2026-10-29. A draft is live on staging at https://theresewhite.bahtzang.com/contact-draft/ (PRs #45 and #47), unlinked and hidden from search; the real /contact is unchanged. Top to bottom: \"Contact\", a short invitation (\"Send me a note. Prefer to write first? Tell me a little about what's happening, and I'll get back to you myself. Everything you send stays between us.\"), the existing Web3Forms form (src/components/contact-form.tsx) in Arial with a blue pill button, \"Or, if you'd rather talk it through:\" and the \"Schedule Your Assessment\" Calendly button, the urgent phone-and-email note, then the current page's assessment section, ending with the Calendly button again. Still to decide before it replaces /contact: (1) Therese approves the new wording, which is drafted in her voice, not hers, especially \"Everything you send stays between us\"; (2) button names, since \"Request an assessment\" and \"Schedule Your Assessment\" are easy to confuse (suggested: \"Send a message\" and \"Book a call\"); (3) which of the form's seven fields to keep (name, email, organization, role, phone, urgency, \"What's going on?\"); (4) the thank-you page's promises of a reply within one business day and same-day calls. Finish the Web3Forms delivery check first (web3forms-live-test). To ship: move the layout from src/app/(site)/contact-draft/page.tsx into src/app/(site)/contact/page.tsx, update the 2026-10-17 note at the top of src/content/wix/contact.ts, delete the draft folder and its line in src/app/sitemap.test.ts.",
     status: "open",
     owner: "Dev",
     priority: "normal",
@@ -395,7 +395,7 @@ export const todos: Todo[] = [
     id: "book-kit-email-edits",
     title: "Decide on four suggested edits to the book's Kit email",
     detail:
-      "Suggested on 2026-10-29 after reviewing the email new signups get from book.theresewhite.com (edited in Kit: the form From Meltdown to Resolution, top-bar Settings, Confirmation email in the pop-up's left-hand list, Edit Email Contents). None is made yet; each needs James's OK, and new wording needs Therese's. (1) Offer the free 30-minute call: the page's thank-you screen offers it, but the email, which people keep, does not. (2) The download is offered three times before any message (Click here link, copy-and-paste address, Download book button); drop the Click here link and keep the address, since the button cannot be deleted. (3) The guide has three names (guide, book, scripts); rename the button \"Download the guide\" to match the page. (4) Mention the one-page cheat sheet, which the signup form promises. After any edit, sign up once more and read the email on a phone: the final copy saved on 2026-10-28 has probably never been delivered to an inbox.",
+      "Set aside on 2026-11-21: James said to leave the to-dos about Therese's own words for now. Suggested on 2026-10-29 after reviewing the email new signups get from book.theresewhite.com (edited in Kit: the form From Meltdown to Resolution, top-bar Settings, Confirmation email in the pop-up's left-hand list, Edit Email Contents). None is made yet; each needs James's OK, and new wording needs Therese's. (1) Offer the free 30-minute call: the page's thank-you screen offers it, but the email, which people keep, does not. (2) The download is offered three times before any message (Click here link, copy-and-paste address, Download book button); drop the Click here link and keep the address, since the button cannot be deleted. (3) The guide has three names (guide, book, scripts); rename the button \"Download the guide\" to match the page. (4) Mention the one-page cheat sheet, which the signup form promises. After any edit, sign up once more and read the email on a phone: the final copy saved on 2026-10-28 has probably never been delivered to an inbox.",
     status: "open",
     owner: "James",
     priority: "normal",

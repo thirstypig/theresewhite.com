@@ -12,6 +12,10 @@
  *
  * Post-mortem:
  * docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md
+ *
+ * Since 2026-11-21 it also checks, for the same reason and in the same
+ * place, that the pages meant to sit behind the admin password (/admin and
+ * /stylebible) ship only their password screen. See auditLock below.
  */
 
 import { readdirSync, readFileSync, existsSync } from "node:fs";
@@ -208,6 +212,83 @@ export function auditPage({ relPath, html, origin, homepageTitle }) {
   return problems;
 }
 
+/**
+ * Sections published behind the admin password screen
+ * (src/components/admin-gate.tsx): /admin, and the style bible with its
+ * sample pages, which criticizes the current design in plain terms.
+ * Each ends in a slash so "admin/" does not also match "administration/".
+ */
+const LOCKED_SECTIONS = ["admin/", "stylebible/"];
+
+/**
+ * The most text a locked page may show before the password is entered. The
+ * password screen ships one short sentence for visitors with JavaScript off;
+ * the smallest real page in these sections is several thousand characters.
+ */
+const PASSWORD_SCREEN_TEXT_LIMIT = 200;
+
+/** @param {string} relPath */
+function isLockedPage(relPath) {
+  return LOCKED_SECTIONS.some((section) => relPath.startsWith(section));
+}
+
+/**
+ * Checks that a page in a locked section ships only the password screen.
+ *
+ * The lock is drawn by the browser, so the risk is a page whose words are
+ * already in the HTML before any password is entered: a visitor with
+ * JavaScript off, or a crawler, would read them. That happens if a page is
+ * added outside the layout that applies the lock, or if the lock is changed
+ * to draw the page underneath itself.
+ *
+ * What this does NOT check, on purpose: the words still travel with the page
+ * as data inside <script> tags, ready for when the password is right. That
+ * is the known limit of a lock on a site with no server, and it is why
+ * nothing confidential belongs on these pages.
+ *
+ * Pages outside the locked sections return no problems.
+ *
+ * @param {{ relPath: string, html: string }} input
+ * @returns {string[]}
+ */
+export function auditLock({ relPath, html }) {
+  if (!isLockedPage(relPath)) return [];
+
+  const withoutCode = html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, "");
+
+  // From the first <main> to the LAST </main>. The sample homepages carry a
+  // <main> of their own inside the layout's, and stopping at the first
+  // closing tag would skip everything after it.
+  const main = /<main\b[^>]*>([\s\S]*)<\/main>/i.exec(withoutCode);
+  if (!main) {
+    return [
+      `${relPath}: no <main> found, so this check cannot tell whether the page is locked. ` +
+        `Locked pages are expected to draw inside the layout's <main>.`,
+    ];
+  }
+
+  if (!/\bdata-admin-gate\b/.test(main[1])) {
+    return [
+      `${relPath}: is not behind the password screen, so it would be published open. ` +
+        `Pages under /stylebible are locked by src/app/(landing)/stylebible/layout.tsx; ` +
+        `pages under /admin wrap themselves in <AdminGate>.`,
+    ];
+  }
+
+  const text = main[1].replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  if (text.length > PASSWORD_SCREEN_TEXT_LIMIT) {
+    return [
+      `${relPath}: has the password screen but also ships ${text.length} characters of readable text ` +
+        `before any password is entered, starting "${text.slice(0, 120)}". ` +
+        `Only the password screen's own sentence should be there.`,
+    ];
+  }
+
+  return [];
+}
+
 /** Filenames Next emits for a page a visitor can land on. */
 const PAGE_FILES = new Set(["index.html", "404.html"]);
 
@@ -275,26 +356,42 @@ function main() {
   const homepageTitle = metaContent(parseMetaTags(homepageHtml), "og:title") ?? "";
 
   const pages = builtPages(outDir);
+  /** @param {string} relPath */
+  const read = (relPath) => readFileSync(join(outDir, relPath), "utf8");
+
   const problems = pages.flatMap((relPath) =>
-    auditPage({
-      relPath,
-      html: readFileSync(join(outDir, relPath), "utf8"),
-      origin,
-      homepageTitle,
-    }),
+    auditPage({ relPath, html: read(relPath), origin, homepageTitle }),
   );
   problems.push(...auditOgImageFile(outDir));
 
+  const lockedPages = pages.filter(isLockedPage);
+  const lockProblems = lockedPages.flatMap((relPath) => auditLock({ relPath, html: read(relPath) }));
+
+  // Both audits report before either one stops the deploy, so a single run
+  // shows everything that is wrong.
   if (problems.length > 0) {
     for (const p of problems) console.error(`  ${p}`);
     console.error(
       `::error::${problems.length} link-preview problem(s) in ${pages.length} built pages. ` +
         `See docs/solutions/deployment-issues/link-previews-open-graph-inheritance-and-image-content-type.md`,
     );
-    process.exit(1);
   }
+  if (lockProblems.length > 0) {
+    for (const p of lockProblems) console.error(`  ${p}`);
+    console.error(
+      `::error::${lockProblems.length} of the ${lockedPages.length} page(s) under /admin and /stylebible ` +
+        `would be published without their password screen. See src/components/admin-gate.tsx.`,
+    );
+  }
+  if (problems.length > 0 || lockProblems.length > 0) process.exit(1);
 
   console.log(`Link-preview audit clean: ${pages.length} pages on ${origin}`);
+  // The calculator and book sites are one public page each, with nothing to lock.
+  if (lockedPages.length > 0) {
+    console.log(
+      `Lock audit clean: ${lockedPages.length} pages under /admin and /stylebible ship only the password screen`,
+    );
+  }
 }
 
 // Only run when invoked directly, so the test file can import the pure parts

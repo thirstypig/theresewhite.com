@@ -11,8 +11,10 @@ import s from "./compare.module.css";
  * the reasoning behind columns two and three; that text lives in
  * compare-content.ts.
  *
- * Unlinked and noindex, like the rest of /stylebible. Linked from the style
- * bible's "Side by side" chapter.
+ * Locked behind the admin password (../layout.tsx), unlinked and noindex,
+ * like the rest of /stylebible. Linked from the style bible's "Side by side"
+ * chapter. The two samples it shows inside itself are locked pages too; they
+ * open because the password, once entered, covers the whole browser tab.
  */
 export const metadata: Metadata = pageMetadata({
   title: "Homepage Side by Side",

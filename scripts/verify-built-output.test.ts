@@ -433,3 +433,92 @@ describe("auditOgImageFile", () => {
     expect(auditOgImageFile(dir).join(" ")).toMatch(/not a PNG/);
   });
 });
+
+import { auditLock } from "./verify-built-output.mjs";
+
+/**
+ * /admin and the style bible pages are published behind a password screen
+ * (src/components/admin-gate.tsx). The lock only means something if the page
+ * a visitor receives really does hold back its words until the password is
+ * entered, so this is checked in the built HTML, the same as the link-preview
+ * cards above.
+ */
+describe("auditLock", () => {
+  /** A built page: the shell every page has, with `main` as its content. */
+  const builtPage = (main: string, { head = "", afterMain = "" } = {}) =>
+    `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/>${head}</head>` +
+    `<body><header>L. Therese White</header><main id="main" class="flex-1">${main}</main>` +
+    `<footer>Los Angeles</footer>${afterMain}</body></html>`;
+
+  /** What the password screen ships before anyone has entered anything. */
+  const PASSWORD_SCREEN =
+    `<section class="bg-cream" data-admin-gate="checking"><noscript>` +
+    `<p>This page is private. Turn on JavaScript to enter the password.</p></noscript></section>`;
+
+  /** Enough words to be a real page, not a password screen. */
+  const PAGE_WORDS =
+    `<h1>Homepage, three ways</h1><p>${"The page looks like one established practice, not several. ".repeat(8)}</p>`;
+
+  it("passes a page that ships only the password screen", () => {
+    expect(auditLock({ relPath: "stylebible/index.html", html: builtPage(PASSWORD_SCREEN) })).toEqual([]);
+  });
+
+  it("rejects a style bible page that ships its words with no password screen", () => {
+    // What the site did before the lock, and what a new page added outside
+    // src/app/(landing)/stylebible/ would do.
+    const problems = auditLock({ relPath: "stylebible/home/index.html", html: builtPage(PAGE_WORDS) });
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/^stylebible\/home\/index\.html: /);
+    expect(problems[0]).toMatch(/password screen/);
+  });
+
+  it("rejects a page that has the password screen and ships its words as well", () => {
+    // The lock is present, so a check for the marker alone would pass, yet a
+    // visitor with JavaScript off, or a crawler, would read the whole page.
+    const problems = auditLock({
+      relPath: "stylebible/compare/index.html",
+      html: builtPage(PASSWORD_SCREEN + PAGE_WORDS),
+    });
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/^stylebible\/compare\/index\.html: /);
+    expect(problems[0]).toMatch(/Homepage, three ways/);
+  });
+
+  it("counts words that come after a second <main> nested inside the first", () => {
+    // The sample homepages carry their own <main> inside the layout's. Reading
+    // only as far as the first closing tag would miss everything after it.
+    const nested = `${PASSWORD_SCREEN}<main><p>Short.</p></main>${PAGE_WORDS}`;
+    expect(auditLock({ relPath: "stylebible/home/index.html", html: builtPage(nested) })).toHaveLength(1);
+  });
+
+  it("does not count the page data the browser holds inside script tags", () => {
+    // A known limit of this kind of lock, stated in admin-gate.tsx: the words
+    // travel with the page as data and are shown once the password is right.
+    // The audit is about what a visitor sees and a crawler reads as the page.
+    const data = `<script>self.__next_f.push([1,"${"The page looks like one established practice. ".repeat(20)}"])</script>`;
+    expect(
+      auditLock({ relPath: "stylebible/index.html", html: builtPage(PASSWORD_SCREEN, { head: data, afterMain: data }) }),
+    ).toEqual([]);
+  });
+
+  it("checks /admin and anything nested under a locked section", () => {
+    expect(auditLock({ relPath: "admin/index.html", html: builtPage(PAGE_WORDS) })).toHaveLength(1);
+    expect(auditLock({ relPath: "admin/todo/index.html", html: builtPage(PAGE_WORDS) })).toHaveLength(1);
+  });
+
+  it("leaves every other page alone", () => {
+    // Public pages are meant to ship their words. That includes a folder
+    // whose name merely begins the same way as a locked one.
+    expect(auditLock({ relPath: "index.html", html: builtPage(PAGE_WORDS) })).toEqual([]);
+    expect(auditLock({ relPath: "contact/index.html", html: builtPage(PAGE_WORDS) })).toEqual([]);
+    expect(auditLock({ relPath: "stylebible-notes/index.html", html: builtPage(PAGE_WORDS) })).toEqual([]);
+    expect(auditLock({ relPath: "administration/index.html", html: builtPage(PAGE_WORDS) })).toEqual([]);
+  });
+
+  it("reports a locked page it cannot read, instead of passing it", () => {
+    const noMain = `<!DOCTYPE html><html><head></head><body>${PASSWORD_SCREEN}</body></html>`;
+    const problems = auditLock({ relPath: "stylebible/index.html", html: noMain });
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toMatch(/<main>/);
+  });
+});
