@@ -100,11 +100,14 @@ only raise the alarm.
 4. **Asset paths.** Confirms `out/index.html` still addresses `/_next/*` from
    the site root. A stray `basePath` would 404 every stylesheet and script
    while the HTML kept returning 200.
-5. **Link-preview cards.** `npm run verify:build` walks the built HTML and
-   checks that every page names `/og.png`, advertises its own `og:url`, and
-   carries its own `og:title` rather than the homepage's. A page that sets only
-   a title and description inherits the whole homepage card, and nothing else
-   in the toolchain notices.
+5. **Link-preview cards, and locked pages.** `npm run verify:build` walks the
+   built HTML and checks that every page names `/og.png`, advertises its own
+   `og:url`, and carries its own `og:title` rather than the homepage's. A page
+   that sets only a title and description inherits the whole homepage card,
+   and nothing else in the toolchain notices. Since 2026-11-21 the same step
+   checks that every page under `/admin` and `/stylebible` ships only its
+   password screen, so a page that lost its lock stops the deploy instead of
+   being published open (see "The password on /admin and the style bible").
 6. **The served image header** *(post-deploy)*. Fetches `og.png` from the live
    URL and fails unless it comes back as `image/png`. Next emits the generated
    image with no file extension and GitHub Pages types files by extension, so
@@ -471,6 +474,71 @@ subdomain become a redirect to it, keeping the tags on the link.
 
 ---
 
+## The password on /admin and the style bible
+
+One password opens `/admin`, `/admin/todo` and every page under
+`/stylebible`: the style bible, the two sample homepages (`/stylebible/home`
+and `/stylebible/home-new`) and the comparison page (`/stylebible/compare`).
+The style bible pages were locked on 2026-11-21. They are for James, Therese
+and Bill; the bible criticizes the current design in plain terms and the
+samples are unapproved drafts, so none of it should be readable by a visitor
+who finds the address.
+
+Entering the password once opens all of those pages for as long as the
+browser tab stays open. A new tab asks again.
+
+What it is, and is not:
+
+- **It is not security.** The lock runs in the visitor's browser. The page a
+  visitor receives shows only the password screen, but the page's words still
+  travel with it as data, and this repository is public on GitHub. It keeps
+  visitors and search engines out. Nothing confidential belongs on these
+  pages.
+- **It is not the review password.** The next section describes a separate
+  password screen with a Feedback tab, used on book.theresewhite.com and
+  calculator.theresewhite.com while they were under review. The two share
+  nothing.
+- **New pages are locked without anyone remembering to.** The lock for the
+  style bible lives in one file, `src/app/(landing)/stylebible/layout.tsx`,
+  which covers everything in that folder. Pages under `/admin` wrap
+  themselves in `<AdminGate>` (`src/components/admin-gate.tsx`).
+- **The deploy checks it.** `npm run verify:build` reads the built pages and
+  fails if any page under `/admin` or `/stylebible` would be published
+  showing more than its password screen.
+
+### Changing the password
+
+Until it is changed, the password is the one the site was built with. That
+password is written in this project's public history, so treat it as known.
+
+In your own terminal (not through Claude, so the password is never written
+into a chat log), from the project folder, run:
+
+```
+scripts/set-admin-password.sh
+```
+
+It asks for the new password twice without showing it and saves only a
+scrambled copy (a SHA-256 hash) as the `NEXT_PUBLIC_ADMIN_PASSWORD_HASH`
+repository variable. Then push to `main`, or run the deploy
+(`gh workflow run deploy.yml`). Once that deploy finishes, the new password
+works and the old one stops working. Two delays to expect: a browser can
+hold the previous copy of the site for up to ten minutes, and a tab that was
+already unlocked stays open until it is closed.
+
+- **The match is exact.** Capital letters and spaces count.
+- **Pick a few random words, not one short word.** The scrambled copy ships
+  in the page, and a short or common password can be worked out from it.
+- **To go back to the built-in password,** delete the variable (GitHub →
+  Settings → Secrets and variables → Actions → Variables) and run the deploy.
+- **If the variable is ever set to something that is not a hash,** the build
+  fails with a message naming it. That is deliberate: the alternative is to
+  keep the old password quietly while you believe it changed.
+- **Never write the password itself** in a file in this project, a to-do, a
+  commit message or a chat.
+
+---
+
 ## Reviewer feedback: a password screen and a Feedback tab
 
 While book.theresewhite.com and calculator.theresewhite.com are unannounced,
@@ -595,3 +663,7 @@ Not yet — only when the design is approved.
    `/faq`, `/privacy`, `/terms`) already forward to the Wix ones.
 
 5. Submit the site to Google Search Console and confirm the redirects resolve.
+6. **Change the admin password before the switch**, if it is still the
+   built-in one (`scripts/set-admin-password.sh`). `/admin` and the style
+   bible move to theresewhite.com along with everything else, and the
+   built-in password is in this project's public history.
